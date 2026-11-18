@@ -52,13 +52,9 @@ npm run test:e2e:cloudflare
 ## 現在の状況（2026-11-19）
 
 - **公開先**: https://nihongo-ai.fifatvgame.workers.dev（Version 479e9baa-920e-468b、Workers Free）。初回は「No access to the specified resource」で失敗し、`npx wrangler logout` → `npx wrangler login --device --browser=false` で再認証して成功しました。
-- **未解決の不具合**: SSRページはステータス200とヘッダーを返しますが、本文が約19〜20KBで途切れ（例：`…/_next/static/chunks/2mk`）、接続が閉じません。`/api/auth/status`は正常（約0.28秒）で、`/`は307でリダイレクトします。
-- **推定原因**: Workers Freeの1リクエストあたりCPU上限（10ms）またはメモリ上限の超過。workerdのローカルプレビューには制限がないため再現しません。
-- **調査の制約**: WSLからは`wrangler tail`が「fetch failed」になり、GraphQL Analyticsにも接続できません。ダッシュボードの「Workers & Pages → nihongo-ai → Metrics」で、エラー種別（Exceeded CPU / Memory）とCPU時間を確認してください。
-- **無料のまま試す修正案**:
-  1. ログイン不要の画面を事前に生成し、静的アセットまたはOpenNextの静的キャッシュから返す
-  2. 教材データ（`src/content/generated`、約3.4MB）がSSRで丸ごと読み込まれないよう、レベル・レッスン単位に分ける
-  3. `src/proxy.ts`の`refreshAuth`を、認証が必要なパスやCookieがあるリクエストに限定する
+- **ページ途中停止（解決済み）**: 公開直後の確認では、SSRの本文が約20KBで途切れたように見えました。2026-11-19に再確認したところ、全画面が200で`</html>`まで届き、本人のブラウザでも表示・回答・ログイン保存に問題はありませんでした。静的アセット（Workerを通らない）の取得も遅かったため、原因は公開直後の反映待ちと、検証環境（WSL）の回線の遅さと判断しました。
+- **調査の制約**: WSLからは`wrangler tail`が「fetch failed」になります。CPU超過などを疑うときは、ダッシュボードの「Workers & Pages → nihongo-ai → Metrics」で確認してください。
+- **今後の改善候補**: 約400KBのクライアントJSチャンクに、教材カタログ（約280KB）が含まれている可能性があります。分割すれば初回表示が速くなります。
 - **公開待ちの変更**: 選択問題の1クリック判定、Web Audioによる効果音（[src/lib/sound.ts](../src/lib/sound.ts)）、エアロ風テーマ（[src/app/aero.css](../src/app/aero.css)）。コミット済みで、まだデプロイしていません。
 - **デプロイの方法**: 本人のターミナルで `npm run deploy:cloudflare` を実行します。Claudeは実行しません。
 
