@@ -92,6 +92,10 @@ export function Practice({lessonId, questions, onExit}: {lessonId: string; quest
   // After checking, move focus to the action button so Enter continues and the feedback stays in view.
   useEffect(() => {if (checked) submitRef.current?.focus();}, [checked]);
 
+  // Always call the latest choose() so the handler sees the current `ready` state.
+  const chooseRef = useRef<(choice: string) => void>(() => {});
+  useEffect(() => {chooseRef.current = choose;});
+
   // Keyboard: 1–4 (or A–D) pick an answer; Enter checks / continues even when nothing is focused.
   useEffect(() => {
     if (!question || finished) return;
@@ -108,7 +112,7 @@ export function Practice({lessonId, questions, onExit}: {lessonId: string; quest
       const position = /^[1-9]$/.test(key) ? Number(key) - 1 : 'abcdefgh'.indexOf(key);
       if (position < 0 || position >= choices.length) return;
       event.preventDefault();
-      choose(choices[position]);
+      chooseRef.current(choices[position]);
     }
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
