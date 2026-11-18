@@ -1,5 +1,5 @@
 import {z} from 'zod';
-import {allQuestions, getLesson, placementQuestions} from '@/content/lessons';
+import {getLessonMeta, isKnownQuestion, placementQuestions} from '@/content/catalog';
 
 const localeSchema = z.enum(['en', 'ru']);
 export const pkceFlowIdSchema = z.string().regex(/^[a-zA-Z0-9_-]{8,64}$/);
@@ -19,9 +19,10 @@ export const submissionSchema = z.object({
   answers: z.array(z.object({questionId: z.string().min(1).max(100), answer: z.string().trim().min(1).max(120)}).strict()).min(1).max(100)
 }).strict().superRefine((value, context) => {
   const ids = value.answers.map(a => a.questionId);
-  const lesson = getLesson(value.lessonId);
-  const expected = lesson?.questions ?? (value.lessonId === 'placement' ? placementQuestions : value.lessonId === 'review' ? allQuestions : null);
-  if (!expected || new Set(ids).size !== ids.length || ids.some(id => !expected.some(q => q.id === id)) || (value.lessonId !== 'review' && ids.length !== expected.length)) {
+  const lesson = getLessonMeta(value.lessonId);
+  const expected = lesson?.questionIds ?? (value.lessonId === 'placement' ? placementQuestions.map(q => q.id) : null);
+  const allowed = (id: string) => value.lessonId === 'review' ? isKnownQuestion(id) : Boolean(expected?.includes(id));
+  if ((!expected && value.lessonId !== 'review') || new Set(ids).size !== ids.length || ids.some(id => !allowed(id)) || (value.lessonId !== 'review' && ids.length !== expected?.length)) {
     context.addIssue({code: 'custom', message: 'Invalid lesson questions'});
   }
 });

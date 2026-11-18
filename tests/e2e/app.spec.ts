@@ -1,5 +1,7 @@
 import {expect, test} from '@playwright/test';
 import {placementQuestions} from '../../src/content/lessons';
+import catalogData from '../../src/content/generated/catalog.json';
+const catalog = catalogData.lessons;
 
 test('English and Russian pages render with localized metadata and no horizontal overflow', async ({page}) => {
   for (const locale of ['en', 'ru']) {
@@ -52,7 +54,7 @@ test('a real practice result survives a locale switch and page reload', async ({
 test('lesson filters, empty search, daily goals, and reset confirmation work', async ({page}) => {
   await page.goto('/en/lessons');
   await page.getByRole('button', {name: 'Vocabulary', exact: true}).click();
-  await expect(page.locator('.course-grid .lesson-card')).toHaveCount(10);
+  await expect(page.locator('.course-grid .lesson-card')).toHaveCount(catalog.filter(l => l.level === 'N5' && l.category === 'vocabulary').length);
   await page.getByRole('textbox', {name: 'Find a lesson…'}).fill('nonexistent');
   await expect(page.locator('.course-grid .lesson-card')).toHaveCount(0);
   await expect(page.getByText('No lessons found. Try another search.')).toBeVisible();
@@ -90,7 +92,7 @@ test('mobile navigation opens, closes, and routes to lessons', async ({page, isM
   test.skip(!isMobile, 'Mobile navigation only');
   await page.goto('/en');
   await page.getByRole('button', {name: 'Open navigation'}).click();
-  await page.getByRole('link', {name: 'My learning', exact: true}).click();
+  await page.getByRole('complementary').getByRole('link', {name: 'My learning', exact: true}).click();
   await expect(page).toHaveURL(/\/en\/lessons/);
   await expect(page.getByRole('button', {name: 'Open navigation'})).toHaveAttribute('aria-expanded', 'false');
 });

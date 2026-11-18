@@ -1,4 +1,4 @@
-import {apiFailure, apiJson, ApiError, authLimiter, authRateKey, readJson, requireSameOrigin} from '@/lib/api-security';
+import {apiFailure, apiJson, ApiError, limitAuthRequest, readJson, requireSameOrigin} from '@/lib/api-security';
 import {loginSchema, newPasswordSchema, recoverySchema, registerSchema} from '@/lib/auth-schemas';
 import {createSupabaseServerClient} from '@/lib/supabase/server';
 import {getAppUrl} from '@/lib/config';
@@ -18,7 +18,7 @@ function providerFailure(error: {status?: number; code?: string}, status: number
 export async function GET(request: Request, {params}: Props) {
   try {
     if ((await params).action !== 'status') throw new ApiError(404, 'not_found');
-    authLimiter.consume(authRateKey(request, 'status'), 60, 60000);
+    await limitAuthRequest(request, 'status');
     const client = await createSupabaseServerClient();
     if (!client) throw new ApiError(503, 'not_configured');
     const {data, error} = await client.auth.getUser();
@@ -31,7 +31,7 @@ export async function POST(request: Request, {params}: Props) {
     requireSameOrigin(request);
     const {action} = await params;
     if (!actions.some(value => value === action)) throw new ApiError(404, 'not_found');
-    authLimiter.consume(authRateKey(request, action), action === 'register' || action === 'recover' ? 3 : 15, 60000);
+    await limitAuthRequest(request, action);
     const client = await createSupabaseServerClient();
     if (!client) throw new ApiError(503, 'not_configured');
     if (action === 'logout') {

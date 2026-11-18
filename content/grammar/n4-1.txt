@@ -1,0 +1,313 @@
+# N4 grammar, part 1
+
+@ n4-potential | Potential form: can do | Потенциальная форма | 能
+S: The potential form says what someone can do. Ru-verbs: drop る, add られる (食べられる). U-verbs: change the final u-sound to e + る (書く→書ける, 話す→話せる). する→できる, 来る→来られる. The object is often marked with が.
+S: Потенциальная форма выражает возможность. Ру-глаголы: убрать る, добавить られる (食べられる). У-глаголы: конечный звук «у» → «э» + る (書く→書ける, 話す→話せる). する→できる, 来る→来られる. Объект часто отмечается が.
+E: 私は漢字が少し読めます。 | I can read a few kanji. | Я умею читать немного кандзи.
+Q: 日本語が（　）。 | I can speak Japanese. | Я умею говорить по-японски. | 話されます / *話せます / 話しれます / 話させます | 話す → 話せる (す → せ + る). | 話す → 話せる (す → せ + る).
+Q: 刺身が（　）か。 | Can you eat sashimi? | Вы можете есть сасими? | 食べれます / *食べられます / 食べさせます / 食べります | Ru-verb potential: 食べられる. | Потенциальная форма ру-глагола: 食べられる.
+Q: 明日、何時に（　）か。 | What time can you come tomorrow? | Во сколько вы сможете прийти завтра? | 来れます / 来ります / *来られます / 来させます | The standard potential of 来る is 来られる. | Нормативная потенциальная форма 来る — 来られる.
+
+@ n4-koto-ga-dekiru | ことができる: be able to | ことができる: мочь | 出
+S: Dictionary form + ことができる is a slightly formal way to say “can”: ピアノを弾くことができます. With a noun: 日本語ができます. Negative: ことができません.
+S: Словарная форма + ことができる — чуть более формальное «мочь»: ピアノを弾くことができます. С существительным: 日本語ができます. Отрицание: ことができません.
+E: ここでお金を払うことができます。 | You can pay here. | Здесь можно заплатить.
+Q: 私は泳ぐ（　）ができます。 | I can swim. | Я умею плавать. | の / もの / *こと / ところ | The pattern is dictionary form + ことができる. | Конструкция — словарная форма + ことができる.
+Q: このカードで買い物（　）できます。 | You can shop with this card. | По этой карте можно делать покупки. | を / *が / に / で | Noun + ができる. | Существительное + ができる.
+Q: 図書館で本を借りる（　）。 | You can borrow books at the library. | В библиотеке можно брать книги. | ことです / *ことができます / ことがあります / ことにします | “Can”: ことができます. | «Можно»: ことができます.
+
+@ n4-ta-koto-ga-aru | たことがある: have done (experience) | たことがある: опыт | 経
+S: た form + ことがある talks about experience: 富士山に登ったことがあります (I have climbed Mt. Fuji). Negative: たことがありません. It is not used for things you did very recently or do routinely.
+S: Форма на た + ことがある говорит об опыте: 富士山に登ったことがあります (Я поднимался на Фудзи). Отрицание: たことがありません. Не используется для недавних или привычных действий.
+E: 日本の映画を見たことがありますか。 | Have you ever seen a Japanese movie? | Вы когда-нибудь смотрели японский фильм?
+Q: すしを（　）ことがありますか。 | Have you ever eaten sushi? | Вы когда-нибудь ели суши? | 食べる / *食べた / 食べて / 食べない | Experience uses the た form. | Опыт — форма на た.
+Q: 北海道へは一度も行った（　）。 | I have never been to Hokkaido. | Я ни разу не был на Хоккайдо. | ことがあります / *ことがありません / ことにします / ことができます | Never: たことがありません. | «Никогда»: たことがありません.
+Q: 着物を着た（　）があります。 | I have worn a kimono before. | Мне доводилось надевать кимоно. | の / *こと / もの / とき | The fixed pattern is たことがある. | Устойчивая конструкция — たことがある.
+
+@ n4-koto-ga-aru-sometimes | ことがある: sometimes | ことがある: бывает | 時
+S: Dictionary form (or ない form) + ことがある means “there are times when”: 朝ご飯を食べないことがあります (Sometimes I skip breakfast). Compare with たことがある (experience).
+S: Словарная форма (или форма на ない) + ことがある — «бывает, что»: 朝ご飯を食べないことがあります (Бывает, я не завтракаю). Сравните с たことがある (опыт).
+E: 電車が遅れることがあります。 | Sometimes the train is late. | Бывает, что поезд опаздывает.
+Q: 忙しいときは昼ご飯を（　）ことがあります。 | When busy, I sometimes skip lunch. | Когда занят, бывает, не обедаю. | 食べなくて / *食べない / 食べた / 食べて | “Sometimes don't”: ない form + ことがある. | «Бывает, не делаю»: форма на ない + ことがある.
+Q: このエレベーターはときどき止まる（　）。 | This elevator sometimes stops. | Этот лифт иногда останавливается. | ことにします / *ことがあります / ことができます / ことになります | Occasional events: ことがある. | Иногда происходящее — ことがある.
+Q: 週末は家で仕事をする（　）があります。 | Sometimes I work at home on weekends. | По выходным бывает, работаю дома. | もの / の / *こと / ところ | Dictionary form + ことがある. | Словарная форма + ことがある.
+
+@ n4-tsumori | つもり: intend to | つもり: собираться | 予
+S: Dictionary form + つもりです states an intention: 来年日本へ行くつもりです. “Intend not to”: ないつもりです. It expresses a plan you have decided on.
+S: Словарная форма + つもりです выражает намерение: 来年日本へ行くつもりです. «Не собираюсь»: ないつもりです. Выражает решённый план.
+E: 夏休みは国へ帰るつもりです。 | I plan to go home for summer vacation. | На летние каникулы собираюсь домой.
+Q: 来年、大学を（　）つもりです。 | I intend to graduate from university next year. | В следующем году собираюсь окончить университет. | 卒業した / *卒業する / 卒業して / 卒業し | つもり follows the dictionary form. | つもり идёт после словарной формы.
+Q: もうたばこは吸わない（　）です。 | I intend not to smoke anymore. | Я больше не собираюсь курить. | はず / *つもり / そう / ところ | Intention: つもり. | Намерение — つもり.
+Q: 週末は何をする（　）ですか。 | What do you plan to do this weekend? | Что собираетесь делать в выходные? | *つもり / ため / よう / こと | Asking about plans: するつもり. | Вопрос о планах — するつもり.
+
+@ n4-yotei | 予定: plan, schedule | 予定: по плану | 定
+S: Dictionary form or noun + の + 予定です describes a scheduled plan, more objective than つもり: 会議は三時に始まる予定です. 来週は出張の予定です.
+S: Словарная форма или существительное + の + 予定です — запланированное событие, объективнее, чем つもり: 会議は三時に始まる予定です. 来週は出張の予定です.
+E: 飛行機は十時に着く予定です。 | The plane is scheduled to arrive at ten. | Самолёт по расписанию прибывает в десять.
+Q: 来月、引っ越す（　）です。 | I'm scheduled to move next month. | В следующем месяце по плану переезжаю. | *予定 / はず / そう / ため | Scheduled plan: 予定. | Запланированное событие — 予定.
+Q: 明日は会議（　）予定です。 | Tomorrow there is a meeting scheduled. | Завтра по плану совещание. | が / *の / を / に | Noun + の + 予定. | Существительное + の + 予定.
+Q: 新しい駅は来年できる（　）です。 | The new station is scheduled to open next year. | Новую станцию планируют открыть в следующем году. | つもり / *予定 / ところ / ばかり | Official schedules use 予定, not つもり. | Официальные планы — 予定, а не つもり.
+
+@ n4-volitional | Volitional form: let's | Волевая форма | 意
+S: The volitional form is the casual “let's”: ru-verbs よう (食べよう), u-verbs change u → o + う (行こう, 飲もう), しよう, 来よう. It is the plain version of ましょう.
+S: Волевая форма — разговорное «давай»: ру-глаголы よう (食べよう), у-глаголы: «у» → «о» + う (行こう, 飲もう), しよう, 来よう. Простой вариант ましょう.
+E: 一緒に帰ろう。 | Let's go home together. | Пойдём домой вместе.
+Q: 疲れたね。少し（　）。 | I'm tired. Let's rest a bit. | Устали, да? Давай немного отдохнём. | 休むう / 休みよう / *休もう / 休んよう | 休む → 休もう. | 休む → 休もう.
+Q: 映画を（　）よ。 | Let's watch a movie! | Давай посмотрим фильм! | 見ろう / *見よう / 見こう / 見おう | Ru-verb: 見る → 見よう. | Ру-глагол: 見る → 見よう.
+Q: 明日、テニスを（　）か。 | Shall we play tennis tomorrow? | Сыграем завтра в теннис? | しろう / *しよう / すろう / さよう | する → しよう. | する → しよう.
+
+@ n4-you-to-omou | (よ)うと思う: thinking of doing | (よ)うと思う: думаю сделать | 思
+S: Volitional form + と思っています says you are thinking of doing something: 来年、留学しようと思っています. と思います is for a decision made now; と思っています for one you have held for a while.
+S: Волевая форма + と思っています — «думаю сделать»: 来年、留学しようと思っています. と思います — решение сейчас; と思っています — намерение, которое есть уже какое-то время.
+E: 週末、海へ行こうと思っています。 | I'm thinking of going to the beach this weekend. | Думаю в выходные съездить на море.
+Q: 新しいパソコンを（　）と思っています。 | I'm thinking of buying a new computer. | Думаю купить новый компьютер. | 買いよう / *買おう / 買うよう / 買えよう | Volitional + と思う. | Волевая форма + と思う.
+Q: 今晩は早く寝よう（　）思います。 | I think I'll go to bed early tonight. | Думаю, сегодня лягу пораньше. | を / が / *と / に | The quote particle と comes before 思う. | Перед 思う — частица цитирования と.
+Q: 来年から日本語の学校に（　）と思っています。 | I'm thinking of attending a Japanese school from next year. | Думаю со следующего года ходить в школу японского. | 通え / 通いよう / *通おう / 通いろう | 通う → 通おう. | 通う → 通おう.
+
+@ n4-you-ni-suru | ようにする: try to, make a habit of | ようにする: стараться | 努
+S: Dictionary form (or ない form) + ようにする means making an effort to do something regularly: 毎日野菜を食べるようにしています. Negative: 夜遅く食べないようにしています.
+S: Словарная форма (или форма на ない) + ようにする — стараться регулярно что-то делать: 毎日野菜を食べるようにしています. Отрицание: 夜遅く食べないようにしています.
+E: 毎朝、歩くようにしています。 | I try to walk every morning. | Стараюсь гулять каждое утро.
+Q: 毎日、日本語のニュースを聞く（　）しています。 | I try to listen to Japanese news every day. | Стараюсь каждый день слушать японские новости. | ことに / *ように / そうに / ために | Regular effort: ようにする. | Регулярное старание — ようにする.
+Q: 甘い物を（　）ようにしています。 | I try not to eat sweets. | Стараюсь не есть сладкое. | 食べなくて / 食べないで / *食べない / 食べず | ない form + ようにする. | Форма на ない + ようにする.
+Q: 約束の時間に遅れないように（　）ください。 | Please make sure not to be late for appointments. | Постарайтесь не опаздывать на встречи. | なって / *して / いて / あって | ようにしてください: please make sure to. | ようにしてください — «постарайтесь».
+
+@ n4-you-ni-naru | ようになる: come to be able, start to | ようになる: стать способным | 変
+S: Dictionary form or potential + ようになる describes a gradual change: 漢字が読めるようになりました (I've become able to read kanji). With ない: なくなる (食べなくなった).
+S: Словарная или потенциальная форма + ようになる — постепенное изменение: 漢字が読めるようになりました (Я научился читать кандзи). С отрицанием: なくなる (食べなくなった).
+E: 日本語が話せるようになりました。 | I've become able to speak Japanese. | Я научился говорить по-японски.
+Q: 練習して、泳げる（　）なりました。 | After practicing, I became able to swim. | Потренировавшись, я научился плавать. | ことに / *ように / ために / そうに | Change in ability: ようになる. | Изменение способности — ようになる.
+Q: 最近、野菜を食べる（　）になりました。 | Recently I've started eating vegetables. | В последнее время я стал есть овощи. | の / *よう / ため / そう | ようになる also means a change in habit. | ようになる также означает изменение привычки.
+Q: 子供のとき、肉が好きでしたが、今は（　）。 | As a child I liked meat, but now I don't eat it anymore. | В детстве любил мясо, а теперь перестал есть. | 食べないようにします / *食べなくなりました / 食べられません / 食べてしまいました | “No longer”: なくなる. | «Перестать»: なくなる.
+
+@ n4-tame-ni | ために: in order to | ために: для того чтобы | 為
+S: Dictionary form or noun + の + ために states a purpose when the subject controls the action: 家を買うために貯金しています. 健康のために走ります.
+S: Словарная форма или существительное + の + ために — цель, когда субъект контролирует действие: 家を買うために貯金しています. 健康のために走ります.
+E: 日本で働くために日本語を勉強しています。 | I study Japanese in order to work in Japan. | Я учу японский, чтобы работать в Японии.
+Q: 車を買う（　）、アルバイトをしています。 | I work part-time in order to buy a car. | Подрабатываю, чтобы купить машину. | ように / *ために / ので / のに | A deliberate goal: ために. | Сознательная цель — ために.
+Q: 健康（　）ために、毎日歩きます。 | I walk every day for my health. | Каждый день гуляю ради здоровья. | が / を / *の / に | Noun + のために. | Существительное + のために.
+Q: 試験に合格する（　）、毎晩勉強しています。 | I study every night to pass the exam. | Каждый вечер занимаюсь, чтобы сдать экзамен. | *ために / そうに / ばかり / ところ | The subject works toward the goal: ために. | Субъект стремится к цели — ために.
+
+@ n4-you-ni-purpose | ように: so that | ように: чтобы | 様
+S: ように expresses a purpose with verbs that are not directly controlled: potential forms, ない forms, or changes: よく見えるように前に座ります. 忘れないようにメモします.
+S: ように выражает цель с неконтролируемыми глаголами: потенциальными, формами на ない, изменениями: よく見えるように前に座ります. 忘れないようにメモします.
+E: かぜをひかないように、コートを着ます。 | I wear a coat so I won't catch a cold. | Надеваю пальто, чтобы не простудиться.
+Q: 後ろの人にも聞こえる（　）、大きい声で話してください。 | Please speak loudly so the people at the back can hear. | Говорите громко, чтобы задним рядам было слышно. | ために / *ように / ので / のに | 聞こえる is not controllable, so use ように. | 聞こえる не контролируется, поэтому ように.
+Q: 忘れない（　）、手帳に書きます。 | I write it in my planner so I don't forget. | Записываю в ежедневник, чтобы не забыть. | のに / *ように / ことに / はずに | ない form + ように. | Форма на ない + ように.
+Q: 早く治る（　）、薬を飲んで寝ます。 | I take medicine and sleep so I'll get better quickly. | Пью лекарство и сплю, чтобы скорее поправиться. | *ように / ために / ことに / ばかりに | Recovery is not controllable: ように. | Выздоровление не контролируется — ように.
+
+@ n4-sou-looks | そうだ: looks like (appearance) | そうだ: выглядит | 様
+S: ます stem or adjective stem + そうだ describes how something looks: おいしそう (looks tasty), 雨が降りそう (looks like rain). いい → よさそう, ない → なさそう. Not used with obvious features like きれい or 赤い.
+S: Основа на ます или основа прилагательного + そうだ — как что-то выглядит: おいしそう (выглядит вкусно), 雨が降りそう (похоже, будет дождь). いい → よさそう, ない → なさそう. Не используется с очевидными признаками вроде きれい или 赤い.
+E: このケーキはおいしそうですね。 | This cake looks delicious. | Этот торт выглядит аппетитно.
+Q: 空が暗いですね。雨が（　）です。 | The sky is dark. It looks like rain. | Небо тёмное. Похоже, будет дождь. | 降る / *降り / 降った / 降って | Appearance: ます stem + そうだ. | Внешний вид: основа на ます + そうだ.
+Q: この問題は（　）ですね。 | This problem looks difficult. | Эта задача кажется трудной. | 難しいそう / *難しそう / 難しくそう / 難しかそう | い-adjective: drop い + そう. | い-прилагательное: убрать い + そう.
+Q: 田中さんは元気が（　）です。 | Mr. Tanaka looks like he has no energy. | Танака выглядит вялым. | なそう / ないそう / *なさそう / なくそう | ない → なさそう. | ない → なさそう.
+
+@ n4-sou-hearsay | そうだ: I hear that | そうだ: говорят | 聞
+S: Plain form + そうだ reports information you heard: 明日は雨が降るそうです. The source often comes with によると: 天気予報によると. Note the difference: 降りそう (looks like) vs 降るそう (I hear).
+S: Простая форма + そうだ передаёт услышанное: 明日は雨が降るそうです. Источник часто с によると: 天気予報によると. Сравните: 降りそう (похоже) и 降るそう (говорят).
+E: 田中さんは来月結婚するそうです。 | I hear Mr. Tanaka is getting married next month. | Говорят, Танака женится в следующем месяце.
+Q: 天気予報によると、明日は雪が（　）そうです。 | According to the forecast, it will snow tomorrow. | По прогнозу, завтра пойдёт снег. | 降り / *降る / 降って / 降ら | Hearsay: plain form + そうだ. | Пересказ: простая форма + そうだ.
+Q: あの店のケーキはとても（　）そうです。（友達に聞きました） | I hear that shop's cake is very good (a friend told me). | Говорят, торт в том кафе очень вкусный (рассказал друг). | おいし / *おいしい / おいしく / おいしさ | Hearsay keeps い: おいしいそうだ. | Пересказ сохраняет い: おいしいそうだ.
+Q: 山田さんは先生（　）そうです。 | I hear Ms. Yamada is a teacher. | Говорят, Ямада — учитель. | の / *だ / な / に | Noun + だ + そうだ. | Существительное + だ + そうだ.
+
+@ n4-you-da | ようだ: it seems | ようだ: похоже | 似
+S: Plain form + ようだ expresses a judgment based on what you observe: 誰もいないようです. Nouns take の (病気のようだ), な-adjectives keep な (静かなようだ). It also means “like”: 夢のような話.
+S: Простая форма + ようだ — вывод на основе наблюдения: 誰もいないようです. Существительные берут の (病気のようだ), な-прилагательные сохраняют な (静かなようだ). Также значит «как»: 夢のような話.
+E: 隣の部屋に誰かいるようです。 | It seems someone is in the next room. | Похоже, в соседней комнате кто-то есть.
+Q: 電気が消えています。誰もいない（　）です。 | The lights are off. It seems nobody is home. | Свет выключен. Похоже, никого нет. | そう / *よう / らしく / はず | Judgment from evidence: ようだ. | Вывод по признакам — ようだ.
+Q: 熱がある。かぜ（　）ようだ。 | I have a fever. It seems I've caught a cold. | У меня жар. Похоже, простуда. | な / が / *の / で | Noun + のようだ. | Существительное + のようだ.
+Q: まるで夢の（　）話ですね。 | It's like a dream, isn't it? | Прямо как во сне! | そうな / *ような / らしい / みたく | まるで…のような: just like. | まるで…のような — «прямо как».
+
+@ n4-mitai | みたいだ: seems, like (casual) | みたいだ: похоже (разг.) | 似
+S: みたいだ is the casual version of ようだ. It follows nouns and な-adjectives directly (without の or な): 子供みたい, 雨みたい. Before a noun: みたいな.
+S: みたいだ — разговорный вариант ようだ. Ставится прямо после существительных и な-прилагательных (без の или な): 子供みたい, 雨みたい. Перед существительным — みたいな.
+E: 外は雨みたいだね。 | It seems to be raining outside. | Кажется, на улице дождь.
+Q: 彼は子供（　）ことを言う。 | He says childish things. | Он говорит как ребёнок. | ような / *みたいな / らしく / そうな | Before a noun, みたいな; it follows nouns directly. | Перед существительным — みたいな, прямо после существительного.
+Q: 彼女は人形（　）かわいい。 | She is cute like a doll. | Она милая, как куколка. | *みたいに / ようで / らしく / そうに | Noun + みたいに (adverb form): like a doll. | Существительное + みたいに: как кукла.
+Q: あの人はまるで日本人（　）だ。 | That person is just like a Japanese person. | Тот человек прямо как японец. | のみたい / *みたい / なみたい / ようみたい | みたい attaches directly to a noun. | みたい присоединяется прямо к существительному.
+
+@ n4-rashii | らしい: apparently; typical of | らしい: по-видимому; типичный | 然
+S: Plain form + らしい means “apparently”, based on what you heard or saw: 彼は会社をやめたらしい. Noun + らしい also means “typical of”: 男らしい (manly), 春らしい天気.
+S: Простая форма + らしい — «по-видимому», на основе услышанного или увиденного: 彼は会社をやめたらしい. Существительное + らしい также означает «типичный»: 男らしい (мужественный), 春らしい天気.
+E: 今日は春らしい天気ですね。 | Today's weather is very spring-like. | Сегодня настоящая весенняя погода.
+Q: 田中さんは会社をやめた（　）。（うわさで聞いた） | Apparently Mr. Tanaka quit his job (I heard a rumor). | Похоже, Танака уволился (слышал слух). | ことだ / つもりだ / *らしい / はずだ | Hearsay with some uncertainty: らしい. | Слух с долей неуверенности — らしい.
+Q: 今日は暖かくて、春（　）天気です。 | It's warm today — real spring weather. | Сегодня тепло — настоящая весенняя погода. | ような / みたいな / *らしい / そうな | Noun + らしい: typical of. | Существительное + らしい — «типичный».
+Q: 彼は男（　）、強い人です。 | He is a manly, strong person. | Он мужественный и сильный человек. | *らしくて / ようで / そうで / みたいで | 男らしい → 男らしくて. | 男らしい → 男らしくて.
+
+@ n4-hazu | はずだ: should be, expected | はずだ: должно быть | 筈
+S: Plain form + はずだ states a strong expectation based on reasons: 彼はもう着いたはずです. はずがない means “there is no way”: そんなはずがない.
+S: Простая форма + はずだ — уверенное ожидание на основании фактов: 彼はもう着いたはずです. はずがない — «не может быть»: そんなはずがない.
+E: 会議は三時に終わるはずです。 | The meeting should end at three. | Совещание должно закончиться в три.
+Q: 九時に出たから、もう着いた（　）です。 | He left at nine, so he should have arrived by now. | Он вышел в девять, значит, уже должен быть на месте. | つもり / *はず / よう / そう | Expectation based on facts: はず. | Ожидание на основании фактов — はず.
+Q: 彼は日本に十年住んでいたから、日本語が上手な（　）だ。 | He lived in Japan for ten years, so he should be good at Japanese. | Он прожил в Японии десять лет, значит, хорошо говорит по-японски. | *はず / つもり / ため / まま | な-adjective + な + はず. | な-прилагательное + な + はず.
+Q: 鍵をかけたから、ドアが開いている（　）。 | I locked it, so there's no way the door is open. | Я запер, так что дверь не может быть открыта. | はずだ / *はずがない / つもりだ / ことがない | No way: はずがない. | «Не может быть» — はずがない.
+
+@ n4-kamo-shirenai | かもしれない: might | かもしれない: может быть | 多
+S: Plain form + かもしれない means “might, maybe”, with less certainty than でしょう: 午後は雨が降るかもしれません. Nouns and な-adjectives drop だ: 病気かもしれない.
+S: Простая форма + かもしれない — «может быть», с меньшей уверенностью, чем でしょう: 午後は雨が降るかもしれません. У существительных и な-прилагательных だ опускается: 病気かもしれない.
+E: 明日は雪が降るかもしれません。 | It might snow tomorrow. | Завтра, может быть, пойдёт снег.
+Q: 道がこんでいるから、遅れる（　）。 | The roads are crowded, so I might be late. | Дороги загружены, возможно, опоздаю. | はずです / *かもしれません / つもりです / ことです | Possibility: かもしれません. | Возможность — かもしれません.
+Q: あの人は先生（　）。 | That person might be a teacher. | Тот человек, может быть, учитель. | だかもしれません / なかもしれません / *かもしれません / をかもしれません | Noun + かもしれない directly, without だ. | Существительное + かもしれない без だ.
+Q: 電話に出ない。もう寝た（　）。 | He isn't answering. Maybe he's already asleep. | Не отвечает. Может, уже спит. | *かもしれない / つもりだ / ことがある / ところだ | Guess with low certainty: かもしれない. | Неуверенное предположение — かもしれない.
+
+@ n4-to-omou | と思う: I think | と思う: я думаю | 思
+S: Plain form + と思います states an opinion or guess: 明日は晴れると思います. Nouns and な-adjectives take だ: いい人だと思います. “I don't think…” usually negates the clause: 来ないと思います.
+S: Простая форма + と思います выражает мнение или предположение: 明日は晴れると思います. Существительные и な-прилагательные берут だ: いい人だと思います. «Не думаю, что…» обычно — отрицание в придаточном: 来ないと思います.
+E: この本はおもしろいと思います。 | I think this book is interesting. | Думаю, эта книга интересная.
+Q: 田中さんはもう帰った（　）思います。 | I think Mr. Tanaka has already gone home. | Думаю, Танака уже ушёл домой. | を / が / *と / に | Quote particle と + 思う. | Частица と + 思う.
+Q: あの人はとても親切（　）と思います。 | I think that person is very kind. | Думаю, тот человек очень добрый. | な / の / *だ / で | な-adjective + だ + と思う. | な-прилагательное + だ + と思う.
+Q: 明日は雨が（　）と思います。 | I don't think it will rain tomorrow. | Думаю, завтра дождя не будет. | 降ります / *降らない / 降りません / 降って | Plain negative + と思う. | Простое отрицание + と思う.
+
+@ n4-to-iu-quote | と言う: say that (quoting) | と言う: сказать, что | 言
+S: Use と before 言う to quote speech. Direct: 「行きます」と言いました. Indirect uses the plain form: 田中さんは来ないと言いました. Questions use か: 何時か聞きました.
+S: Перед 言う используется と для цитирования. Прямая речь: 「行きます」と言いました. Косвенная — простая форма: 田中さんは来ないと言いました. Вопросы — с か: 何時か聞きました.
+E: 先生は明日テストがあると言いました。 | The teacher said there is a test tomorrow. | Учитель сказал, что завтра контрольная.
+Q: 田中さんは「すぐ行きます」（　）言いました。 | Mr. Tanaka said, “I'll come right away.” | Танака сказал: «Сейчас приду». | を / が / *と / に | Quoting speech: と言う. | Цитирование: と言う.
+Q: 母は今日は遅く（　）と言いました。 | My mother said she'll be late today. | Мама сказала, что сегодня задержится. | なります / *なる / なって / なり | Indirect speech uses the plain form. | Косвенная речь — простая форма.
+Q: 「ありがとう」は日本語で何（　）言いますか。 | How do you say “thank you” in Japanese? | Как по-японски «спасибо»? | を / *と / が / で | 何と言いますか: how do you say. | 何と言いますか — «как сказать».
+
+@ n4-to-iu-named | という: called, named | という: называемый | 称
+S: A という B means “a B called A”: 「さくら」という店 (a shop called Sakura). It introduces a name the listener may not know. ～というのは explains a word: 「ゆかた」というのは夏の着物です.
+S: A という B — «B под названием A»: 「さくら」という店 (магазин «Сакура»). Вводит название, которое собеседник может не знать. ～というのは объясняет слово: 「ゆかた」というのは夏の着物です.
+E: 「花子」という人から電話がありました。 | There was a call from a person named Hanako. | Звонил человек по имени Ханако.
+Q: 駅の前に「みどり」（　）レストランがあります。 | There's a restaurant called Midori in front of the station. | Перед станцией есть ресторан «Мидори». | とした / *という / というの / といって | A という B: a B called A. | A という B — «B под названием A».
+Q: 「花見」（　）、桜を見ることです。 | “Hanami” means viewing cherry blossoms. | «Ханами» — это любование сакурой. | *というのは / といって / ということが / という人は | Explaining a word: というのは. | Объяснение слова — というのは.
+Q: これは何という花ですか。…「あじさい」（　）花です。 | What is this flower called? …It's called ajisai. | Как называется этот цветок? …Адзисай. | と言った / *という / といって / といえ | Answer: ～という花です. | Ответ: ～という花です.
+
+@ n4-to-conditional | と: whenever, if (natural result) | と: если (естественный результат) | 条
+S: Dictionary form + と describes a natural or automatic result: 春になると暖かくなります. このボタンを押すと、水が出ます. The second clause cannot be a request, wish, or intention.
+S: Словарная форма + と описывает естественное, автоматическое следствие: 春になると暖かくなります. このボタンを押すと、水が出ます. Во второй части не может быть просьбы, желания или намерения.
+E: まっすぐ行くと、駅があります。 | If you go straight, there's the station. | Если идти прямо, будет станция.
+Q: このボタンを押す（　）、切符が出ます。 | When you press this button, a ticket comes out. | Если нажать эту кнопку, выйдет билет. | ば / たら / *と / なら | Automatic result: と. | Автоматический результат — と.
+Q: 冬になる（　）、雪が降ります。 | When winter comes, it snows. | Когда наступает зима, идёт снег. | *と / ので / のに / ても | Natural seasonal result: と. | Естественная смена времени года — と.
+Q: 右に曲がる（　）、郵便局が見えます。 | If you turn right, you'll see the post office. | Если повернуть направо, увидите почту. | ても / まで / *と / のに | Giving directions often uses と. | В объяснении дороги часто используется と.
+
+@ n4-ba | ば: if (condition) | ば: если (условие) | 若
+S: The ば form states a condition: verbs change the final u-sound to e + ば (行けば, 食べれば), い-adjectives い → ければ (安ければ), nouns and な-adjectives use なら. ～ばいい gives advice: どうすればいいですか.
+S: Форма на ば выражает условие: у глаголов конечный звук «у» → «э» + ば (行けば, 食べれば), у い-прилагательных い → ければ (安ければ), существительные и な-прилагательные — なら. ～ばいい даёт совет: どうすればいいですか.
+E: 安ければ、買います。 | If it's cheap, I'll buy it. | Если дёшево — куплю.
+Q: 時間が（　）、行きます。 | If I have time, I'll go. | Если будет время, пойду. | あると / *あれば / あっても / あるので | ある → あれば. | ある → あれば.
+Q: もっと（　）ば、買います。 | If it were cheaper, I'd buy it. | Если бы было дешевле, купил бы. | 安い / 安く / *安けれ / 安かれ | い-adjective: 安い → 安ければ. | い-прилагательное: 安い → 安ければ.
+Q: 駅へ行きたいんですが、どう（　）いいですか。 | I want to go to the station. What should I do? | Хочу на станцию. Как лучше добраться? | して / *すれば / すると / しても | Asking for advice: どうすればいい. | Просьба о совете — どうすればいい.
+
+@ n4-tara | たら: if, when | たら: если, когда | 時
+S: た form + ら means “if” or “when (after)”: 雨が降ったら、行きません. 駅に着いたら、電話してください. Unlike と, the second clause can be a request or intention.
+S: Форма на た + ら — «если» или «когда (после того как)»: 雨が降ったら、行きません. 駅に着いたら、電話してください. В отличие от と, во второй части может быть просьба или намерение.
+E: 家に着いたら、メールをください。 | When you get home, please send me a message. | Когда доберёшься домой, напиши мне.
+Q: 宿題が（　）、遊んでもいいです。 | When your homework is finished, you can play. | Когда закончишь уроки, можешь играть. | 終わると / *終わったら / 終わって / 終わるので | Request/permission after a condition: たら. | Разрешение после условия — たら.
+Q: もし宝くじに（　）、何を買いますか。 | If you won the lottery, what would you buy? | Если бы вы выиграли в лотерею, что бы купили? | 当たると / 当たって / *当たったら / 当たるのに | Hypothetical with もし: たら. | Гипотеза с もし — たら.
+Q: 駅に着い（　）、電話してください。 | Please call when you reach the station. | Позвоните, когда доберётесь до станции. | ても / *たら / たり / てから | 着く → 着いたら. | 着く → 着いたら.
+
+@ n4-nara | なら: if it's the case that | なら: если речь о | 若
+S: なら picks up a topic or what the other person said and gives advice: 京都へ行くなら、秋がいいですよ. Noun + なら: 日本語なら、山田先生がいいです.
+S: なら подхватывает тему или слова собеседника и даёт совет: 京都へ行くなら、秋がいいですよ. Существительное + なら: 日本語なら、山田先生がいいです.
+E: 時計を買うなら、あの店がいいですよ。 | If you're buying a watch, that shop is good. | Если покупаете часы, советую тот магазин.
+Q: 北海道へ行く（　）、冬がいいですよ。 | If you're going to Hokkaido, winter is good. | Если едете на Хоккайдо, лучше зимой. | と / *なら / たら / ので | Advice on the listener's plan: なら. | Совет по планам собеседника — なら.
+Q: すしを食べたいんですが。…すし（　）、あの店がおいしいですよ。 | I want to eat sushi. …If it's sushi, that shop is good. | Хочу суши. …Если суши, то вон то место вкусное. | と / *なら / ば / たら | Picking up the topic: noun + なら. | Подхватывая тему: существительное + なら.
+Q: 疲れた（　）、少し休んだらどうですか。 | If you're tired, why not rest a bit? | Если устали, может, отдохнёте? | ので / と / *なら / のに | なら responds to the other person's situation. | なら реагирует на ситуацию собеседника.
+
+@ n4-temo | ても: even if | ても: даже если | 雖
+S: て form + も means “even if / even though”: 雨が降っても、行きます. い-adjectives: くても (高くても), nouns and な-adjectives: でも (静かでも). With question words: いくら考えても (no matter how much I think).
+S: Форма на て + も — «даже если»: 雨が降っても、行きます. い-прилагательные: くても (高くても), существительные и な-прилагательные: でも (静かでも). С вопросительными словами: いくら考えても (сколько ни думай).
+E: いくら練習しても、上手になりません。 | No matter how much I practice, I don't improve. | Сколько ни тренируюсь, лучше не становится.
+Q: 雨が（　）、試合はあります。 | Even if it rains, the match will be held. | Даже если пойдёт дождь, матч состоится. | 降ったら / *降っても / 降ると / 降るなら | “Even if”: ても. | «Даже если» — ても.
+Q: この時計は（　）、買いたいです。 | Even if this watch is expensive, I want to buy it. | Даже если эти часы дорогие, хочу купить. | 高いでも / *高くても / 高かっても / 高けても | い-adjective: 高い → 高くても. | い-прилагательное: 高い → 高くても.
+Q: いくら（　）、わかりません。 | No matter how much I think, I don't understand. | Сколько ни думаю, не понимаю. | 考えたら / 考えると / *考えても / 考えれば | いくら…ても: no matter how much. | いくら…ても — «сколько ни».
+
+@ n4-noni | のに: even though (unexpected) | のに: хотя (вопреки ожиданиям) | 乍
+S: Plain form + のに expresses a result contrary to expectation, often with regret or complaint: 約束したのに、来ませんでした. Nouns and な-adjectives take な: 日曜日なのに働いた.
+S: Простая форма + のに — результат вопреки ожиданиям, часто с сожалением или упрёком: 約束したのに、来ませんでした. Существительные и な-прилагательные берут な: 日曜日なのに働いた.
+E: たくさん勉強したのに、テストが悪かった。 | Even though I studied a lot, the test went badly. | Хотя я много учился, тест прошёл плохо.
+Q: 約束した（　）、彼は来ませんでした。 | Even though he promised, he didn't come. | Хотя он обещал, он не пришёл. | ので / から / *のに / ために | Unexpected result with complaint: のに. | Неожиданный результат с упрёком — のに.
+Q: 日曜日（　）のに、仕事に行きました。 | Even though it was Sunday, I went to work. | Хотя было воскресенье, я пошёл на работу. | だ / の / *な / で | Noun + な + のに. | Существительное + な + のに.
+Q: 薬を飲んだ（　）、熱が下がりません。 | Even though I took medicine, my fever won't go down. | Хотя я выпил лекарство, температура не спадает. | から / *のに / ので / と | Expected result did not happen: のに. | Ожидаемое не произошло — のに.
+
+@ n4-node | ので: because (objective) | ので: так как | 由
+S: Plain form + ので gives a reason in a soft, objective way, common in polite requests and excuses: 頭が痛いので、早く帰ってもいいですか. Nouns and な-adjectives take な: 休みなので.
+S: Простая форма + ので даёт причину мягко и объективно; часто в вежливых просьбах и извинениях: 頭が痛いので、早く帰ってもいいですか. Существительные и な-прилагательные берут な: 休みなので.
+E: 電車が遅れたので、遅刻しました。 | I was late because the train was delayed. | Я опоздал, так как поезд задержался.
+Q: 熱がある（　）、今日は休ませてください。 | I have a fever, so please let me take today off. | У меня температура, позвольте сегодня не выходить. | のに / ても / *ので / けど | Polite reason before a request: ので. | Вежливая причина перед просьбой — ので.
+Q: 明日は休み（　）ので、ゆっくり寝ます。 | Tomorrow is a day off, so I'll sleep in. | Завтра выходной, так что высплюсь. | だ / *な / の / で | Noun + な + ので. | Существительное + な + ので.
+Q: 雨が降っている（　）、タクシーで行きましょう。 | It's raining, so let's take a taxi. | Идёт дождь, давайте поедем на такси. | のに / *ので / ても / まで | The rain is the reason: ので. | Дождь — причина: ので.
+
+@ n4-shi | し: and also (listing reasons) | し: и к тому же | 且
+S: Plain form + し lists several reasons or features: この店は安いし、おいしいし、よく来ます. It implies there are more reasons. Nouns and な-adjectives take だ: 静かだし.
+S: Простая форма + し перечисляет несколько причин или черт: この店は安いし、おいしいし、よく来ます. Подразумевает, что есть и другие причины. Существительные и な-прилагательные берут だ: 静かだし.
+E: 今日は雨だし、寒いし、出かけたくない。 | It's raining and cold today, so I don't want to go out. | Сегодня дождь, да ещё холодно, не хочу выходить.
+Q: この部屋は広い（　）、駅にも近いし、いいですね。 | This room is spacious and close to the station — nice. | Комната просторная, да и до станции близко — хорошо. | から / *し / ので / のに | Listing reasons: し. | Перечисление причин — し.
+Q: 彼は親切だ（　）、頭もいいし、人気があります。 | He is kind and smart, so he's popular. | Он добрый, да ещё и умный, поэтому популярен. | *し / けど / のに / ても | ～し、～し lists qualities. | ～し、～し перечисляет качества.
+Q: 今日は休みだし、天気もいい（　）、出かけよう。 | It's a day off and the weather is nice, so let's go out. | Выходной, да и погода хорошая — пойдём гулять. | のに / *し / ても / けど | The second reason also takes し. | Вторая причина тоже с し.
+
+@ n4-sugiru | すぎる: too much | すぎる: слишком | 過
+S: ます stem or adjective stem + すぎる means “too much”: 食べすぎる (overeat), 高すぎる (too expensive), 静かすぎる. It conjugates as a ru-verb: すぎました, すぎて.
+S: Основа на ます или основа прилагательного + すぎる — «слишком»: 食べすぎる (переесть), 高すぎる (слишком дорогой), 静かすぎる. Спрягается как ру-глагол: すぎました, すぎて.
+E: 昨日、お酒を飲みすぎました。 | I drank too much yesterday. | Вчера я перебрал с алкоголем.
+Q: このかばんは（　）すぎて、買えません。 | This bag is too expensive to buy. | Эта сумка слишком дорогая, не могу купить. | 高い / 高く / *高 / 高かった | い-adjective: drop い + すぎる. | い-прилагательное: убрать い + すぎる.
+Q: 食べ（　）、おなかが痛いです。 | I ate too much and my stomach hurts. | Переел, болит живот. | すぎって / *すぎて / すぎで / すぎくて | すぎる → すぎて. | すぎる → すぎて.
+Q: この問題は簡単（　）、つまらない。 | This problem is too easy — boring. | Эта задача слишком простая — скучно. | すぎるで / *すぎて / なすぎて / にすぎて | な-adjective stem + すぎる. | Основа な-прилагательного + すぎる.
+
+@ n4-yasui-nikui | やすい・にくい: easy / hard to | やすい・にくい: легко / трудно | 易
+S: ます stem + やすい means “easy to do”, + にくい means “hard to do”: 読みやすい本, 歩きにくい道. Both conjugate as い-adjectives.
+S: Основа на ます + やすい — «легко делать», + にくい — «трудно делать»: 読みやすい本, 歩きにくい道. Оба спрягаются как い-прилагательные.
+E: このペンは書きやすいです。 | This pen is easy to write with. | Этой ручкой удобно писать.
+Q: この辞書は字が大きくて、（　）です。 | This dictionary has big letters and is easy to read. | В этом словаре крупный шрифт, его легко читать. | 読むやすい / *読みやすい / 読んでやすい / 読みにくい | ます stem + やすい. | Основа на ます + やすい.
+Q: この靴は（　）です。 | These shoes are hard to walk in. | В этих туфлях трудно ходить. | 歩くにくい / 歩きやすい / *歩きにくい / 歩いてにくい | Hard to do: ます stem + にくい. | Трудно делать: основа на ます + にくい.
+Q: 先生の説明はわかり（　）です。 | The teacher's explanation is easy to understand. | Объяснение учителя легко понять. | にくい / すぎ / *やすい / ながら | わかりやすい: easy to understand. | わかりやすい — «понятный».
+
+@ n4-kata | 方: way of doing | 方: способ | 方
+S: ます stem + 方 means “how to do”: 作り方 (how to make), 使い方 (how to use). The object takes の: 漢字の書き方.
+S: Основа на ます + 方 — «способ делать»: 作り方 (как готовить), 使い方 (как пользоваться). Объект берёт の: 漢字の書き方.
+E: この機械の使い方を教えてください。 | Please tell me how to use this machine. | Объясните, пожалуйста, как пользоваться этим аппаратом.
+Q: カレーの作り（　）を知っていますか。 | Do you know how to make curry? | Вы знаете, как готовить карри? | こと / *方 / もの / ところ | ます stem + 方 = way of doing. | Основа на ます + 方 — способ.
+Q: この漢字（　）読み方がわかりません。 | I don't know how to read this kanji. | Не знаю, как читается этот кандзи. | を / が / *の / に | Object + の + ～方. | Объект + の + ～方.
+Q: 駅への（　）方を教えてください。 | Please tell me how to get to the station. | Подскажите, как пройти к станции. | 行く / 行って / *行き / 行った | ます stem 行き + 方. | Основа 行き + 方.
+
+@ n4-compound-verbs | 始める・終わる・続ける | Начинать, заканчивать, продолжать | 始
+S: ます stem + 始める (start doing), + 終わる (finish doing), + 続ける (keep doing): 読み始める, 書き終わる, 歩き続ける. They behave as normal verbs.
+S: Основа на ます + 始める (начать делать), + 終わる (закончить делать), + 続ける (продолжать делать): 読み始める, 書き終わる, 歩き続ける. Ведут себя как обычные глаголы.
+E: 雨が降り始めました。 | It started to rain. | Начался дождь.
+Q: 去年から日本語を習い（　）。 | I started learning Japanese last year. | Я начал учить японский в прошлом году. | 終わりました / *始めました / 続きました / すぎました | Start doing: ます stem + 始める. | Начать делать: основа на ます + 始める.
+Q: この本はもう読み（　）か。 | Have you finished reading this book? | Вы уже дочитали эту книгу? | 始めました / *終わりました / 出しました / すぎました | Finish doing: ます stem + 終わる. | Закончить делать: основа на ます + 終わる.
+Q: 三時間も歩き（　）、疲れました。 | I kept walking for three hours and got tired. | Три часа шёл без остановки и устал. | 始めて / 終わって / *続けて / 出して | Keep doing: ます stem + 続ける. | Продолжать делать: основа на ます + 続ける.
+
+@ n4-te-shimau | てしまう: finish; end up (regret) | てしまう: закончить; нечаянно | 了
+S: て form + しまう means doing something completely, or something that happened with regret: 宿題をやってしまいました (finished), 財布をなくしてしまった (lost my wallet, unfortunately). Casual: ちゃう / じゃう.
+S: Форма на て + しまう — сделать полностью или что-то, о чём жалеют: 宿題をやってしまいました (доделал), 財布をなくしてしまった (к сожалению, потерял кошелёк). Разг.: ちゃう / じゃう.
+E: 電車に傘を忘れてしまいました。 | I left my umbrella on the train (unfortunately). | Я, к сожалению, забыл зонт в поезде.
+Q: 大事なコップを（　）しまいました。 | I broke an important cup (unfortunately). | Я разбил важную чашку. | 割る / 割った / *割って / 割り | て form + しまう. | Форма на て + しまう.
+Q: ケーキを全部食べて（　）。 | I ended up eating the whole cake. | Я съел весь торт. | おきました / みました / *しまいました / ありました | Complete/regret: てしまう. | Полностью/сожаление — てしまう.
+Q: 寝坊して、バスに乗り遅れ（　）。 | I overslept and missed the bus (casual). | Проспал и опоздал на автобус (разг.). | てた / *ちゃった / ておいた / てみた | Casual てしまった → ちゃった. | Разг. てしまった → ちゃった.
+
+@ n4-te-oku | ておく: do in advance | ておく: сделать заранее | 置
+S: て form + おく means doing something in advance or leaving it in a state: 旅行の前にホテルを予約しておきます. 窓を開けておいてください (Leave the window open). Casual: とく.
+S: Форма на て + おく — сделать заранее или оставить в состоянии: 旅行の前にホテルを予約しておきます. 窓を開けておいてください (Оставьте окно открытым). Разг.: とく.
+E: パーティーの前に飲み物を買っておきます。 | I'll buy drinks before the party. | Куплю напитки заранее, до вечеринки.
+Q: 授業の前に、新しい言葉を調べて（　）。 | I look up new words before class. | Перед уроком заранее смотрю новые слова. | しまいます / *おきます / みます / あります | Preparation in advance: ておく. | Подготовка заранее — ておく.
+Q: 暑いから、窓を開けて（　）ください。 | It's hot, so please leave the window open. | Жарко, оставьте, пожалуйста, окно открытым. | *おいて / しまって / みて / いって | Leave in a state: ておく. | Оставить в состоянии — ておく.
+Q: 明日の会議の資料を前もってコピーし（　）。（ふつう） | I'll copy the materials for tomorrow's meeting (casual). | Скопирую материалы к завтрашнему совещанию (разг.). | ちゃう / *とく / てる / てく | Casual ておく → とく. | Разг. ておく → とく.
+
+@ n4-te-aru | てある: has been done (result) | てある: сделано (результат) | 有
+S: Transitive verb て form + ある describes a state resulting from someone's intentional action: 壁に絵がかけてあります. The object usually takes が. Compare: 窓が開いている (just open) vs 窓が開けてある (opened on purpose).
+S: Форма на て переходного глагола + ある — состояние как результат чьего-то намеренного действия: 壁に絵がかけてあります. Объект обычно с が. Сравните: 窓が開いている (просто открыто) и 窓が開けてある (специально открыли).
+E: 机の上にメモが置いてあります。 | A note has been left on the desk. | На столе оставлена записка.
+Q: 黒板に名前が（　）あります。 | A name has been written on the blackboard. | На доске написано имя. | 書く / *書いて / 書き / 書いた | て form + ある. | Форма на て + ある.
+Q: ホテルはもう予約して（　）。 | The hotel has already been booked. | Гостиница уже забронирована. | みます / *あります / おきます / しまいます | Result of a deliberate action: てある. | Результат намеренного действия — てある.
+Q: 冷蔵庫にビール（　）冷やしてあります。 | Beer has been chilled in the fridge. | Пиво охлаждается в холодильнике. | を / で / *が / に | The object takes が with てある. | Объект с てある — が.
+
+@ n4-te-miru | てみる: try doing | てみる: попробовать | 試
+S: て form + みる means trying something to see what it is like: この服を着てみてもいいですか. It is not “attempt hard”, but “do and see”.
+S: Форма на て + みる — попробовать сделать, чтобы узнать, каково это: この服を着てみてもいいですか. Это не «пытаться изо всех сил», а «сделать и посмотреть».
+E: 一度、日本のお祭りに行ってみたいです。 | I'd like to try going to a Japanese festival once. | Хочу хоть раз сходить на японский праздник.
+Q: おいしいですよ。食べて（　）ください。 | It's delicious. Please try it. | Очень вкусно. Попробуйте. | おいて / *みて / しまって / いって | Try and see: てみる. | Попробовать — てみる.
+Q: この靴をはいて（　）もいいですか。 | May I try on these shoes? | Можно примерить эти туфли? | *みて / おいて / あって / いて | Trying on: はいてみる. | Примерить — はいてみる.
+Q: わからない言葉は辞書で調べて（　）。 | Try looking up words you don't know in a dictionary. | Незнакомые слова попробуйте поискать в словаре. | おきました / *みましょう / ありましょう / しまいましょう | Suggesting a try: てみましょう. | Предложение попробовать — てみましょう.
+
+@ n4-te-iku-kuru | ていく・てくる: going / coming | ていく・てくる: движение и изменение | 来
+S: て form + いく/くる add direction or change over time. 持っていく (take along), 買ってくる (go and buy, then come back). Changes: 寒くなってきた (has gotten colder up to now), これから増えていく (will keep increasing).
+S: Форма на て + いく/くる добавляют направление или изменение во времени. 持っていく (взять с собой), 買ってくる (сходить купить и вернуться). Изменения: 寒くなってきた (стало холоднее к настоящему), これから増えていく (будет и дальше расти).
+E: ちょっとジュースを買ってきます。 | I'll go buy some juice (and come back). | Схожу куплю сока.
+Q: 出かけるとき、傘を持って（　）ください。 | When you go out, please take an umbrella with you. | Когда будете выходить, возьмите зонт. | きて / *いって / みて / おいて | Take something along (away from here): ていく. | Взять с собой (отсюда туда) — ていく.
+Q: 最近、暖かくなって（　）。 | It has gotten warmer recently. | В последнее время потеплело. | いきました / *きました / みました / おきました | Change up to now: てくる. | Изменение к настоящему — てくる.
+Q: これから、日本に住む外国人は増えて（　）でしょう。 | From now on, foreign residents in Japan will keep increasing. | Впредь иностранцев в Японии будет всё больше. | くる / *いく / みる / おく | Change from now into the future: ていく. | Изменение от настоящего в будущее — ていく.

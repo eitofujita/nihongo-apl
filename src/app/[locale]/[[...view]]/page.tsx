@@ -7,7 +7,7 @@ import {Courses, LessonDetail, Review} from '@/components/learning';
 import {History, Placement, Pricing, Settings, Tutor, Welcome} from '@/components/secondary-pages';
 import {AccountPanel} from '@/components/account-panel';
 import {EmailVerification} from '@/components/email-verification';
-import {getLesson} from '@/content/lessons';
+import {getLessonMeta} from '@/content/catalog';
 import {getAppUrl, getPlusPrice} from '@/lib/config';
 import {routing} from '@/i18n/routing';
 
@@ -35,7 +35,9 @@ export default async function Page({params, searchParams}: Props) {
   setRequestLocale(locale);
   if (view.length === 0) return <Dashboard/>;
   if (view[0] === 'lessons' && view.length === 2) {
-    if (!getLesson(view[1])) notFound();
+    // Only the lightweight index is used on the server; the lesson body loads in the browser,
+    // which keeps the Cloudflare Worker bundle small.
+    if (!getLessonMeta(view[1])) notFound();
     return <LessonDetail key={view[1]} lessonId={view[1]}/>;
   }
   if (view.length !== 1) notFound();

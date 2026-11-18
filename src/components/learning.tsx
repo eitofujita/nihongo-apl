@@ -1,29 +1,43 @@
 'use client';
 
-import {useRef, useState} from 'react';
+import {useEffect, useRef, useState} from 'react';
 import {useLocale, useNow, useTranslations} from 'next-intl';
-import {ArrowLeft, ArrowRight, BookOpen, Check, CheckCircle2, Clock3, RotateCcw, Search, Sparkles, Sprout, X} from 'lucide-react';
+import {ArrowLeft, ArrowRight, BookOpen, Check, CheckCircle2, Keyboard, RotateCcw, Search, Sparkles, Sprout, X} from 'lucide-react';
 import {Link} from '@/i18n/navigation';
-import {getLesson, isCorrect, lessons, placementQuestions, vocabulary, type Question} from '@/content/lessons';
+import {getLessonMeta, isCorrect, LEVELS, lessons, levelStats, placementQuestions, type Level} from '@/content/catalog';
+import {loadLesson, loadQuestions, type FullLesson} from '@/content/load';
+import type {Question} from '@/content/schemas';
 import type {Locale} from '@/i18n/routing';
 import type {SubmittedAnswer} from '@/lib/auth-schemas';
-import {answerInputSchema, dueQuestions, getRecommendation, type PracticeAnswer} from '@/lib/progress';
+import {answerInputSchema, dueQuestionIds, getRecommendation, getStats, type PracticeAnswer} from '@/lib/progress';
 import {LessonCard, PageHeading} from './dashboard';
 import {useProgress} from './progress-provider';
 
 export function LessonDetail({lessonId}: {lessonId: string}) {
   const t = useTranslations('App');
+  const [lesson, setLesson] = useState<FullLesson | null>(null);
+  const [failed, setFailed] = useState(false);
+  useEffect(() => {
+    let active = true;
+    loadLesson(lessonId).then(found => {if (active) {if (found) setLesson(found); else setFailed(true);}}).catch(() => {if (active) setFailed(true);});
+    return () => {active = false;};
+  }, [lessonId]);
+  if (failed) return <EmptyState title={t('errorTitle')} text={t('errorText')}/>;
+  if (!lesson) return <p className="loading-note" role="status">{t('loading')}</p>;
+  return <LessonBody lesson={lesson}/>;
+}
+
+function LessonBody({lesson}: {lesson: FullLesson}) {
+  const t = useTranslations('App');
   const locale = useLocale() as Locale;
   const [practicing, setPracticing] = useState(false);
-  const lesson = getLesson(lessonId);
-  if (!lesson) return <EmptyState title={t('notFound')} text={t('courseSub')}/>;
-  if (practicing) return <Practice lessonId={lessonId}/>;
+  if (practicing) return <Practice lessonId={lesson.id} questions={lesson.questions} onExit={() => {setPracticing(false); window.scrollTo({top: 0});}}/>;
   return <article className="lesson-study">
     <Link className="back-link" href="/lessons"><ArrowLeft size={16}/>{t('backLessons')}</Link>
-    <PageHeading title={lesson.title[locale]} subtitle={t(lesson.category) + ' · JLPT N5'}/>
+    <PageHeading title={lesson.title[locale]} subtitle={`JLPT ${lesson.level} · ${t('lessonNumber', {number: lesson.levelNumber})} · ${t(lesson.category)}`}/>
     <section className="study-section"><h2>{t('studyTitle')}</h2><p>{lesson.study[locale]}</p></section>
     {lesson.words.length > 0 ? <section className="study-section"><h2>{t('wordList')}</h2><div className="word-table"><table><thead><tr><th>{t('japaneseLabel')}</th><th>{t('readingLabel')}</th><th>{t('meaningLabel')}</th></tr></thead><tbody>{lesson.words.map(word => <tr key={word.id}><td lang="ja">{word.japanese}</td><td lang="ja">{word.reading}</td><td>{word.meanings[locale]}</td></tr>)}</tbody></table></div></section> : <section className="study-section"><h2>{t('examplesTitle')}</h2>{lesson.examples.map(example => <div className="study-example" key={example.japanese}><p lang="ja">{example.japanese}</p><p>{example.translations[locale]}</p></div>)}</section>}
-    <div className="study-action"><span>{t('questions', {count: lesson.questions.length})}</span><button className="button primary" onClick={() => setPracticing(true)}>{t('startPractice')}<ArrowRight size={17}/></button></div>
+    <div className="study-action"><span>{t('questions', {count: lesson.questions.length})}</span><button className="button primary" onClick={() => {setPracticing(true); window.scrollTo({top: 0});}}>{t('startPractice')}<ArrowRight size={17}/></button></div>
   </article>;
 }
 
@@ -39,16 +53,24 @@ export function Courses() {
   const locale = useLocale() as Locale;
   const [category, setCategory] = useState<'all' | 'grammar' | 'vocabulary'>('all');
   const [search, setSearch] = useState('');
-  const visible = lessons.filter(l => (category === 'all' || l.category === category) && `${l.title[locale]} ${l.description[locale]} ${l.glyph}`.toLocaleLowerCase().includes(search.toLocaleLowerCase()));
-  return <><PageHeading title={t('courseTitle')} subtitle={t('courseSub')}><span className="level-pill"><span/>{t('levelBadge')}</span></PageHeading><div className="curriculum-banner"><span className="stat-icon green"><Sprout size={24}/></span><div><h2>{t('curriculumSummary', {grammar: 20, words: vocabulary.length, questions: 100})}</h2><p>{t('curriculumDetail')}</p></div></div><div className="course-toolbar"><div className="tabs" role="group" aria-label={t('lessons')}>{(['all', 'grammar', 'vocabulary'] as const).map(tab => <button key={tab} onClick={() => setCategory(tab)} className={category === tab ? 'selected' : ''} aria-pressed={category === tab}>{t(tab)}</button>)}</div><label className="search-input"><Search size={17}/><input aria-label={t('search')} placeholder={t('search')} maxLength={100} value={search} onChange={event => setSearch(event.target.value)}/></label></div><div className="course-grid">{visible.map(lesson => <LessonCard key={lesson.id} lesson={lesson}/>)}</div>{visible.length === 0 && <div className="empty-state"><Search size={28}/><p>{t('noResults')}</p></div>}</>;
+  const {progress} = useProgress();
+  const completed = getStats(progress).completed;
+  const nextLesson = lessons.find(lesson => !completed.has(lesson.id));
+  const [level, setLevel] = useState<Level>(nextLesson?.level ?? 'N5');
+  const query = search.trim().toLocaleLowerCase();
+  const inLevel = lessons.filter(l => l.level === level);
+  const visible = inLevel.filter(l => (category === 'all' || l.category === category) && `${l.levelNumber} ${l.title[locale]} ${l.description[locale]} ${l.glyph}`.toLocaleLowerCase().includes(query));
+  const levelDone = inLevel.filter(l => completed.has(l.id)).length;
+  const percent = Math.round(levelDone / Math.max(1, inLevel.length) * 100);
+  const stats = levelStats(level);
+  return <><PageHeading title={t('courseTitle')} subtitle={t('courseSub')}/><div className="level-tabs" role="tablist" aria-label={t('levelLabel')}>{LEVELS.map(item => {const done = lessons.filter(l => l.level === item && completed.has(l.id)).length; const total = lessons.filter(l => l.level === item).length; return <button key={item} role="tab" aria-selected={level === item} className={level === item ? 'selected' : ''} onClick={() => setLevel(item)}><strong>{item}</strong><small>{done}/{total}</small></button>;})}</div><div className="curriculum-banner"><span className="stat-icon green"><Sprout size={24}/></span><div><h2>{t('curriculumSummary', {grammar: stats.grammar, words: stats.words, questions: stats.questions})}</h2><p>{t('curriculumDetail')}</p><div className="course-progress"><div className="course-progress-bar" role="progressbar" aria-valuemin={0} aria-valuemax={inLevel.length} aria-valuenow={levelDone} aria-label={t('lessonsProgress', {done: levelDone, total: inLevel.length})}><span style={{width: `${percent}%`}}/></div><span>{t('lessonsProgress', {done: levelDone, total: inLevel.length})}</span></div></div></div><div className="course-toolbar"><div className="tabs" role="group" aria-label={t('lessons')}>{(['all', 'grammar', 'vocabulary'] as const).map(tab => <button key={tab} onClick={() => setCategory(tab)} className={category === tab ? 'selected' : ''} aria-pressed={category === tab}>{t(tab)}</button>)}</div><label className="search-input"><Search size={17}/><input aria-label={t('search')} placeholder={t('search')} maxLength={100} value={search} onChange={event => setSearch(event.target.value)}/></label></div><div className="course-grid">{visible.map(lesson => <LessonCard key={lesson.id} lesson={lesson} done={completed.has(lesson.id)} next={lesson.id === nextLesson?.id}/>)}</div>{visible.length === 0 && <div className="empty-state"><Search size={28}/><p>{t('noResults')}</p></div>}</>;
 }
 
-export function Practice({lessonId, questions: reviewQuestions}: {lessonId: string; questions?: Question[]}) {
+export function Practice({lessonId, questions, onExit}: {lessonId: string; questions: Question[]; onExit?: () => void}) {
   const t = useTranslations('App');
   const locale = useLocale() as Locale;
   const {saveSession, progress, ready, account} = useProgress();
-  const lesson = getLesson(lessonId);
-  const questions = reviewQuestions ?? lesson?.questions ?? [];
+  const lesson = getLessonMeta(lessonId);
   const [index, setIndex] = useState(0);
   const [selected, setSelected] = useState('');
   const [checked, setChecked] = useState(false);
@@ -62,7 +84,40 @@ export function Practice({lessonId, questions: reviewQuestions}: {lessonId: stri
   const promptRef = useRef<HTMLHeadingElement>(null);
   const submitted = useRef(false);
   const answerLocked = useRef(false);
+  const submitRef = useRef<HTMLButtonElement>(null);
+  const formRef = useRef<HTMLFormElement>(null);
   const question = questions[index];
+
+  // After checking, move focus to the action button so Enter continues and the feedback stays in view.
+  useEffect(() => {if (checked) submitRef.current?.focus();}, [checked]);
+
+  // Keyboard: 1–4 (or A–D) pick an answer; Enter checks / continues even when nothing is focused.
+  useEffect(() => {
+    if (!question || finished) return;
+    const choices = question.type === 'choice' && !checked ? question.choices : [];
+    function onKey(event: KeyboardEvent) {
+      if (event.isComposing || event.ctrlKey || event.metaKey || event.altKey) return;
+      const target = event.target as HTMLElement | null;
+      if (event.key === 'Enter') {
+        if (!target || target === document.body || target.tagName === 'H2') {event.preventDefault(); formRef.current?.requestSubmit();}
+        return;
+      }
+      if (target && (target.tagName === 'INPUT' && (target as HTMLInputElement).type !== 'radio' || target.tagName === 'TEXTAREA' || target.isContentEditable)) return;
+      const key = event.key.toLowerCase();
+      const position = /^[1-9]$/.test(key) ? Number(key) - 1 : 'abcdefgh'.indexOf(key);
+      if (position < 0 || position >= choices.length) return;
+      event.preventDefault();
+      startedAt.current ??= Date.now();
+      setSelected(choices[position]);
+    }
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [question, checked, finished]);
+
+  function restart() {
+    answerLocked.current = false; submitted.current = false; sessionId.current = null; startedAt.current = null;
+    setIndex(0); setSelected(''); setChecked(false); setAnswers([]); setRawAnswers([]); setSaveError(false); setFinished(false);
+  }
 
   function check() {
     if (answerLocked.current || !ready || !question) return;
@@ -91,11 +146,17 @@ export function Practice({lessonId, questions: reviewQuestions}: {lessonId: stri
   const correct = checked && isCorrect(question, selected);
   const recommendation = getRecommendation(progress);
   const reviewNext = recommendation.reason === 'review';
-  if (finished) return <div className="result-card panel"><span className="result-sprout"><Sprout size={38}/></span><span className="eyebrow">{t('levelBadge')}</span><h1>{t(lessonId === 'review' ? 'reviewComplete' : lessonId === 'placement' ? 'placementComplete' : 'lessonComplete')}</h1><p>{t('resultText', {correct: answers.filter(a => a.correct).length, total: answers.length})}</p><div className="result-score">{Math.round(answers.filter(a => a.correct).length / answers.length * 100)}<span>%</span></div><p className="muted">{t('resultSub')}</p><div className="result-next"><span>{t('nextStep')}</span><strong>{reviewNext ? t('reviewReady', {count: recommendation.dueCount}) : recommendation.lesson.title[locale]}</strong><Link className="button primary" href={reviewNext ? '/review' : `/lessons/${recommendation.lesson.id}`}>{t(reviewNext ? 'startReview' : 'begin')}<ArrowRight size={17}/></Link></div><Link className="back-link" href="/">{t('backOverview')}</Link><small className="saved-note"><CheckCircle2 size={14}/>{t(account.user ? 'savedToAccount' : 'savedLocally')}</small></div>;
-  return <div className="practice-container"><Link className="back-link" href={lessonId === 'review' ? '/review' : '/lessons'}><ArrowLeft size={16}/>{t('backLessons')}</Link><div className="practice-title"><div><span className="eyebrow">{t(lesson?.category ?? (lessonId === 'placement' ? 'placementLabel' : 'review'))} · JLPT N5</span><h1>{lesson ? lesson.title[locale] : t(lessonId === 'placement' ? 'placementLabel' : 'review')}</h1></div><span className="question-progress">{t('questionProgress', {current: index + 1, total: questions.length})}</span></div><div className="progress-track"><span style={{width: `${index / questions.length * 100}%`}}/></div><section className="question-card panel"><div className="question-type"><span>{String(index + 1).padStart(2, '0')}</span>{t(question.type === 'fill' ? 'typeAnswer' : 'chooseAnswer')}</div><h2 className="japanese-question" lang="ja" tabIndex={-1} ref={promptRef}>{question.prompt}</h2><p className="question-translation">{question.translation[locale]}</p><form onKeyDown={event => {if (event.key === 'Enter' && event.nativeEvent.isComposing) event.preventDefault();}} onSubmit={event => {event.preventDefault(); if (checked) next(); else check();}}>
+  if (finished) return <div className="result-card panel"><span className="result-sprout"><Sprout size={38}/></span><span className="eyebrow">{lesson ? `JLPT ${lesson.level}` : t(lessonId === 'placement' ? 'placementLabel' : 'review')}</span><h1>{t(lessonId === 'review' ? 'reviewComplete' : lessonId === 'placement' ? 'placementComplete' : 'lessonComplete')}</h1><p>{t('resultText', {correct: answers.filter(a => a.correct).length, total: answers.length})}</p><div className="result-score">{Math.round(answers.filter(a => a.correct).length / answers.length * 100)}<span>%</span></div><p className="muted">{t('resultSub')}</p><div className="result-next"><span>{t('nextStep')}</span><strong>{reviewNext ? t('reviewReady', {count: recommendation.dueCount}) : recommendation.lesson.title[locale]}</strong><Link className="button primary" href={reviewNext ? '/review' : `/lessons/${recommendation.lesson.id}`}>{t(reviewNext ? 'startReview' : 'begin')}<ArrowRight size={17}/></Link></div><div className="result-secondary">{lesson && <button type="button" className="button outline" onClick={restart}><RotateCcw size={16}/>{t('practiceAgain')}</button>}<Link className="back-link" href="/">{t('backOverview')}</Link></div><small className="saved-note"><CheckCircle2 size={14}/>{t(account.user ? 'savedToAccount' : 'savedLocally')}</small></div>;
+  const backLink = onExit
+    ? <button type="button" className="back-link" onClick={onExit}><ArrowLeft size={16}/>{t('backToLesson')}</button>
+    : lessonId === 'review' ? <Link className="back-link" href="/review"><ArrowLeft size={16}/>{t('backReview')}</Link>
+    : lessonId === 'placement' ? <Link className="back-link" href="/"><ArrowLeft size={16}/>{t('backOverview')}</Link>
+    : <Link className="back-link" href="/lessons"><ArrowLeft size={16}/>{t('backLessons')}</Link>;
+  const progressPercent = (index + (checked ? 1 : 0)) / questions.length * 100;
+  return <div className="practice-container">{backLink}<div className="practice-title"><div><span className="eyebrow">{lesson ? `${t(lesson.category)} · JLPT ${lesson.level}` : `${t(lessonId === 'placement' ? 'placementLabel' : 'review')} · JLPT`}</span><h1>{lesson ? lesson.title[locale] : t(lessonId === 'placement' ? 'placementLabel' : 'review')}</h1></div><span className="question-progress">{t('questionProgress', {current: index + 1, total: questions.length})}</span></div><div className="progress-track" role="progressbar" aria-valuemin={0} aria-valuemax={questions.length} aria-valuenow={index + (checked ? 1 : 0)} aria-label={t('questionProgress', {current: index + 1, total: questions.length})}><span style={{width: `${progressPercent}%`}}/></div><section className="question-card panel"><div className="question-type"><span>{String(index + 1).padStart(2, '0')}</span>{t(question.type === 'fill' ? 'typeAnswer' : 'chooseAnswer')}</div><h2 className="japanese-question" lang="ja" tabIndex={-1} ref={promptRef}>{question.prompt}</h2><p className="question-translation">{question.translation[locale]}</p><form ref={formRef} onKeyDown={event => {if (event.key === 'Enter' && event.nativeEvent.isComposing) event.preventDefault();}} onSubmit={event => {event.preventDefault(); if (checked) next(); else check();}}>
     {question.type === 'choice' ? <fieldset className="answer-options" disabled={checked || !ready}><legend className="sr-only">{t('chooseAnswer')}</legend>{question.choices.map((choice, i) => <label key={choice} className={`answer-option ${selected === choice ? 'selected' : ''} ${checked && choice === question.answer ? 'right-answer' : ''} ${checked && selected === choice && !correct ? 'wrong-answer' : ''}`}><input type="radio" name={question.id} value={choice} checked={selected === choice} onChange={() => {startedAt.current ??= Date.now(); setSelected(choice);}}/><span className="answer-letter">{String.fromCharCode(65 + i)}</span><span lang="ja">{choice}</span>{checked && choice === question.answer && <Check size={18}/>}</label>)}</fieldset> : <input className="fill-answer" aria-label={t('answerPlaceholder')} placeholder={t('answerPlaceholder')} value={selected} maxLength={120} disabled={checked || !ready} onChange={event => {startedAt.current ??= Date.now(); setSelected(event.target.value);}} autoComplete="off" lang="ja"/>}
     {checked && <div role="status" className={`answer-feedback ${correct ? 'correct' : 'incorrect'}`}><div className="feedback-heading">{correct ? <CheckCircle2 size={21}/> : <X size={21}/>}<h3>{t(correct ? 'correct' : 'incorrect')}</h3></div>{!correct && <strong>{t('correctAnswer', {answer: question.answer})}</strong>}<p>{question.explanation[locale]}</p><Link href="/tutor">{t('askTutor')}<Sparkles size={14}/></Link></div>}
-    <div className="practice-actions">{saveError && <p className="auth-error" role="alert">{t('saveProgressError')}</p>}<span className="muted"><Clock3 size={14}/>{t('yourPace')}</span><button type="submit" className="button primary" disabled={!selected.trim() || !ready || saving}>{t(saving ? 'savingProgress' : checked ? (index === questions.length - 1 ? 'finishLesson' : 'nextQuestion') : 'checkAnswer')}<ArrowRight size={17}/></button></div></form></section><p className="practice-local"><Sprout size={14}/>{t(account.user ? 'accountPracticeNotice' : 'savedLocally')}</p></div>;
+    <div className="practice-actions">{saveError && <p className="auth-error" role="alert">{t('saveProgressError')}</p>}<span className="muted practice-hint"><Keyboard size={14}/>{t(question.type === 'choice' ? 'keyboardHintChoice' : 'keyboardHintFill')}</span><button ref={submitRef} type="submit" className="button primary" disabled={!selected.trim() || !ready || saving}>{t(saving ? 'savingProgress' : checked ? (index === questions.length - 1 ? 'finishLesson' : 'nextQuestion') : 'checkAnswer')}<ArrowRight size={17}/></button></div></form></section><p className="practice-local"><Sprout size={14}/>{t(account.user ? 'accountPracticeNotice' : 'savedLocally')}</p></div>;
 }
 
 export function EmptyState({title, text, icon = 'sprout', children}: {title: string; text: string; icon?: 'sprout' | 'book' | 'review'; children?: React.ReactNode}) {
@@ -104,12 +165,23 @@ export function EmptyState({title, text, icon = 'sprout', children}: {title: str
   return <div className="empty-state panel"><span className="empty-icon"><Icon size={32} strokeWidth={1.4}/></span><h2>{title}</h2><p>{text}</p>{children ?? <Link href="/lessons" className="button primary">{t('startLearning')}<ArrowRight size={17}/></Link>}</div>;
 }
 
+const REVIEW_SESSION_SIZE = 20;
+
 export function Review() {
   const t = useTranslations('App');
   const {progress} = useProgress();
   const [practice, setPractice] = useState<Question[] | null>(null);
+  const [loading, setLoading] = useState(false);
+  const [loadError, setLoadError] = useState(false);
   const now = useNow({updateInterval: 30000});
-  const questions = dueQuestions(progress, now);
+  const due = dueQuestionIds(progress, now);
+  async function start() {
+    setLoading(true); setLoadError(false);
+    try {
+      const loaded = await loadQuestions(due.slice(0, REVIEW_SESSION_SIZE));
+      if (loaded.length) setPractice(loaded); else setLoadError(true);
+    } catch {setLoadError(true);} finally {setLoading(false);}
+  }
   if (practice) return <Practice lessonId="review" questions={practice}/>;
-  return <><PageHeading title={t('reviewTitle')} subtitle={t('reviewSub')}/><EmptyState icon="review" title={t(questions.length ? 'reviewReady' : progress.reviews.length ? 'reviewSoon' : 'reviewEmpty', {count: questions.length})} text={t(questions.length ? 'reviewSchedule' : progress.reviews.length ? 'reviewSoonText' : 'reviewEmptyText')}>{questions.length > 0 ? <button className="button primary" onClick={() => setPractice(questions)}>{t('startReview')}<ArrowRight size={17}/></button> : undefined}</EmptyState><p className="section-note">{t('reviewSchedule')}</p></>;
+  return <><PageHeading title={t('reviewTitle')} subtitle={t('reviewSub')}/><EmptyState icon="review" title={t(due.length ? 'reviewReady' : progress.reviews.length ? 'reviewSoon' : 'reviewEmpty', {count: due.length})} text={t(due.length ? 'reviewSchedule' : progress.reviews.length ? 'reviewSoonText' : 'reviewEmptyText')}>{due.length > 0 ? <><button className="button primary" onClick={start} disabled={loading}>{t(loading ? 'loading' : 'startReview')}<ArrowRight size={17}/></button>{due.length > REVIEW_SESSION_SIZE && <p className="section-note">{t('reviewBatch', {count: REVIEW_SESSION_SIZE})}</p>}{loadError && <p className="auth-error" role="alert">{t('errorText')}</p>}</> : undefined}</EmptyState><p className="section-note">{t('reviewSchedule')}</p></>;
 }

@@ -254,3 +254,84 @@ body { font-size: 15px; }
 .storage-error { display: flex; align-items: center; justify-content: space-between; gap: 16px; line-height: 1.8; }
 .storage-error .button { font-size: 11px; padding: 8px 12px; min-height: 35px; flex-shrink: 0; }
 @media (max-width: 600px) { .account-panel { margin-top: 5px; } .storage-error { padding: 14px 20px; font-size: 12px; } }
+
+/* ---------- Usability pass: readable sizes, mobile navigation, progress feedback ---------- */
+
+/* Tiny helper text was 7–11px; raise it to a readable minimum. */
+.eyebrow { font-size: 11px; letter-spacing: .6px; }
+.back-link { font-size: 13px; padding: 6px 0; min-height: 32px; }
+button.back-link { cursor: pointer; }
+.question-progress { font-size: 13px; color: #6f7f66; font-variant-numeric: tabular-nums; }
+.answer-letter { font-size: 12px; width: 26px; height: 26px; }
+.practice-actions > .muted { font-size: 12px; color: #7d8a74; }
+.practice-actions .button { font-size: 14px; min-width: 170px; }
+.practice-local { font-size: 12px; }
+.answer-feedback > a { font-size: 12px; }
+.answer-feedback > strong { font-size: 14px; }
+.footer { font-size: 11px; }
+.footer > span:last-child { font-size: 11px; }
+.dashboard-storage { font-size: 12px; }
+.study-action > span { font-size: 13px; }
+.saved-note { font-size: 12px; }
+.progress-track { height: 6px; }
+.progress-track > span { background: var(--green); }
+
+/* Today's goal on the dashboard. */
+.today-goal { display: grid; grid-template-columns: 1fr; gap: 12px; padding: 18px 22px; margin-bottom: 18px; background: #fff; border: 1px solid var(--line); border-radius: 12px; }
+.today-goal-text { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.today-goal-label { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; color: #61735d; font-weight: 550; }
+.today-goal-label > svg { color: #c9a578; }
+.today-goal-text strong { font-size: 15px; font-weight: 600; color: var(--ink); font-variant-numeric: tabular-nums; }
+.today-goal-bar { height: 8px; border-radius: 8px; background: #edf1e8; overflow: hidden; }
+.today-goal-bar > span { display: block; height: 100%; border-radius: 8px; background: linear-gradient(90deg, #8fb07d, var(--green)); transition: width .4s; }
+.today-goal-meta { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-size: 12px; color: #7d8a74; }
+.today-goal-meta > a { color: #6f8c5d; text-decoration: underline; text-underline-offset: 3px; }
+.goal-done { display: inline-flex; align-items: center; gap: 6px; color: var(--green); font-weight: 550; }
+.streak-badge { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 999px; background: #fdf1e3; color: #b0763c; font-weight: 550; }
+
+/* Lesson list: number, completion and next-up state. */
+.simple-lesson-meta { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; font-size: 12px; color: #7d8c73; }
+.lesson-badge { display: inline-flex; align-items: center; gap: 4px; padding: 2px 8px; border-radius: 999px; font-size: 11px; font-weight: 600; line-height: 1.6; }
+.lesson-badge.done { background: #e8f1e2; color: var(--green); }
+.lesson-badge.next { background: var(--green); color: #fff; }
+.lesson-card.simple-lesson.is-done .simple-lesson-glyph { background: #e3eedb; color: var(--green); }
+.lesson-card.simple-lesson.is-next { border-color: #a9c39a; box-shadow: 0 0 0 3px #e7f0e1; }
+.course-progress { display: flex; align-items: center; gap: 14px; margin-top: 14px; font-size: 12px; color: #6f7f66; flex-wrap: wrap; }
+.course-progress-bar { flex: 1; min-width: 160px; max-width: 360px; height: 8px; border-radius: 8px; background: #e6ece0; overflow: hidden; }
+.course-progress-bar > span { display: block; height: 100%; background: var(--green); border-radius: 8px; transition: width .4s; }
+
+/* Result screen: retry next to "back". */
+.result-secondary { display: flex; align-items: center; justify-content: center; gap: 18px; flex-wrap: wrap; margin-top: 22px; }
+.result-secondary .back-link, .result-secondary .button { margin: 0; }
+
+/* Mobile bottom navigation (hidden on desktop where the sidebar is always visible). */
+.bottom-nav { display: none; }
+@media (max-width: 800px) {
+  .bottom-nav { position: fixed; left: 0; right: 0; bottom: 0; z-index: 30; display: grid; grid-template-columns: repeat(5, 1fr); background: #fff; border-top: 1px solid var(--line); padding: 6px 4px calc(6px + env(safe-area-inset-bottom)); box-shadow: 0 -4px 16px #2d49350d; }
+  .bottom-nav > a { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; min-height: 52px; padding: 4px 2px; border-radius: 10px; color: #7f8a81; font-size: 11px; line-height: 1.2; text-align: center; }
+  .bottom-nav > a.active { color: var(--green); font-weight: 600; }
+  .bottom-nav > a.active .bottom-nav-icon { background: #eaf1e7; }
+  .bottom-nav-icon { position: relative; display: flex; align-items: center; justify-content: center; width: 46px; height: 28px; border-radius: 14px; }
+  .bottom-nav-badge { position: absolute; top: -3px; right: 2px; min-width: 18px; height: 18px; padding: 0 5px; border-radius: 9px; background: #c9774a; color: #fff; font-size: 10px; font-weight: 700; line-height: 18px; text-align: center; }
+  .workspace { padding-bottom: calc(70px + env(safe-area-inset-bottom)); }
+}
+@media (max-width: 600px) {
+  .practice-hint { display: none !important; }
+  .practice-actions .button { min-width: 0; }
+  .today-goal { padding: 16px 17px; }
+  .stat-label { font-size: 11px; }
+  .footer { font-size: 11px; }
+  .simple-lesson-meta { font-size: 11px; }
+}
+/* Keyboard hints only make sense with a physical keyboard. */
+@media (hover: none) { .practice-hint { display: none !important; } }
+
+/* JLPT level switcher on the lesson list. */
+.level-tabs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 0 0 24px; }
+.level-tabs > button { display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 12px 8px; border: 1px solid var(--line); border-radius: 11px; background: #fff; color: #6f7f66; }
+.level-tabs > button strong { font-size: 18px; color: var(--ink); letter-spacing: .5px; }
+.level-tabs > button small { font-size: 12px; font-variant-numeric: tabular-nums; }
+.level-tabs > button:hover { border-color: #bdcdae; }
+.level-tabs > button.selected { border-color: var(--green); background: #eef5e9; box-shadow: 0 0 0 3px #e2eedb; }
+.level-tabs > button.selected strong { color: var(--green); }
+.loading-note { max-width: 760px; margin: 40px auto; color: var(--muted); font-size: 14px; }

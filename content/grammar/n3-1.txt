@@ -1,0 +1,305 @@
+# N3 grammar, part 1
+
+@ n3-uchi-ni | うちに: while (still) | うちに: пока ещё | 内
+S: うちに means “while a state lasts”, often suggesting doing something before it changes: 若いうちに旅行したい. 温かいうちに食べてください. ないうちに means “before … happens”: 暗くならないうちに帰ろう.
+S: うちに — «пока длится состояние», часто с идеей успеть до изменения: 若いうちに旅行したい. 温かいうちに食べてください. ないうちに — «пока не…»: 暗くならないうちに帰ろう.
+E: 冷めないうちに、どうぞ召し上がってください。 | Please eat it before it gets cold. | Угощайтесь, пока не остыло.
+Q: 若い（　）、いろいろな国へ行ってみたい。 | While I'm young, I want to visit many countries. | Пока молод, хочу побывать во многих странах. | ほど / *うちに / ところ / までに | Doing something before the state changes: うちに. | Успеть, пока состояние не изменилось, — うちに.
+Q: 雨が降らない（　）、早く帰りましょう。 | Let's go home before it starts to rain. | Давайте вернёмся, пока не пошёл дождь. | までに / *うちに / ために / ばかりに | ないうちに: before something happens. | ないうちに — «пока не случилось».
+Q: 話している（　）、だんだん彼のことが好きになった。 | While talking, I gradually came to like him. | Пока мы разговаривали, он мне постепенно понравился. | *うちに / までに / ために / とたん | A change that happens during a period: うちに. | Изменение в течение периода — うちに.
+
+@ n3-okage-de | おかげで: thanks to | おかげで: благодаря | 陰
+S: Plain form or noun + の + おかげで gives a reason for a good result, with gratitude: 先生のおかげで合格できました. Used sarcastically, it can mean a bad result.
+S: Простая форма или сущ. + の + おかげで — причина хорошего результата, с благодарностью: 先生のおかげで合格できました. С сарказмом может означать плохой результат.
+E: みなさんのおかげで、無事に終わりました。 | Thanks to everyone, it finished safely. | Благодаря всем всё прошло благополучно.
+Q: 先生（　）おかげで、試験に合格できました。 | Thanks to my teacher, I passed the exam. | Благодаря учителю я сдал экзамен. | が / *の / に / で | Noun + のおかげで. | Сущ. + のおかげで.
+Q: 薬を飲んだ（　）、すぐに治りました。 | Thanks to taking the medicine, I got better quickly. | Благодаря лекарству я быстро поправился. | せいで / *おかげで / くせに / わりに | A good result with gratitude: おかげで. | Хороший результат с благодарностью — おかげで.
+Q: 天気がよかった（　）、楽しい旅行になりました。 | Thanks to the good weather, it was a fun trip. | Благодаря хорошей погоде поездка удалась. | *おかげで / せいで / のに / くせに | Positive cause: おかげで. | Положительная причина — おかげで.
+
+@ n3-sei-de | せいで: because of (blame) | せいで: из-за | 所為
+S: Plain form or noun + の + せいで gives a reason for a bad result, often blaming: 雨のせいで、試合が中止になった. せいか means “perhaps because”.
+S: Простая форма или сущ. + の + せいで — причина плохого результата, часто с упрёком: 雨のせいで、試合が中止になった. せいか — «может быть, из-за».
+E: 寝不足のせいで、頭が痛い。 | I have a headache because of lack of sleep. | Из-за недосыпа болит голова.
+Q: 雪（　）せいで、電車が遅れた。 | The train was late because of the snow. | Из-за снега поезд опоздал. | が / *の / な / に | Noun + のせいで. | Сущ. + のせいで.
+Q: 彼が遅刻した（　）、会議が始められなかった。 | Because he was late, we couldn't start the meeting. | Из-за его опоздания совещание не смогли начать. | おかげで / *せいで / くせに / ように | Negative result with blame: せいで. | Плохой результат с упрёком — せいで.
+Q: 年の（　）か、最近疲れやすい。 | Perhaps because of my age, I tire easily these days. | Может, из-за возраста — последнее время быстро устаю. | おかげ / ため / *せい / わけ | せいか: perhaps because of. | せいか — «может, из-за».
+
+@ n3-ni-yotte | によって: by, depending on | によって: в зависимости от; посредством | 依
+S: によって has several uses: “depending on” (人によって考え方が違う), “by” in passives of creation (この寺は300年前に建てられた。…によって建てられた), and “by means of / due to” (地震によって家が壊れた). Before a noun: による.
+S: によって имеет несколько значений: «в зависимости от» (人によって考え方が違う), «кем» в пассиве созидания (…によって建てられた), «посредством / из-за» (地震によって家が壊れた). Перед сущ. — による.
+E: 国によって習慣が違います。 | Customs differ depending on the country. | Обычаи различаются в зависимости от страны.
+Q: 人（　）、好きな食べ物は違います。 | Favorite foods differ from person to person. | У каждого человека свои любимые блюда. | にとって / *によって / について / に対して | Depending on: によって. | В зависимости от — によって.
+Q: この小説は有名な作家（　）書かれました。 | This novel was written by a famous author. | Этот роман написал известный писатель. | で / を / *によって / にとって | Creator in a passive sentence: によって. | Создатель в пассиве — によって.
+Q: 台風（　）被害は大きかった。 | The damage caused by the typhoon was great. | Ущерб от тайфуна был большим. | によって / *による / にとって / にとっての | Before a noun: による. | Перед сущ. — による.
+
+@ n3-ni-yoru-to | によると: according to | によると: согласно | 拠
+S: Noun + によると / によれば gives the source of information, usually followed by そうだ or らしい: 天気予報によると、明日は雨だそうです.
+S: Сущ. + によると / によれば указывает источник информации, обычно далее そうだ или らしい: 天気予報によると、明日は雨だそうです.
+E: ニュースによると、事故で三人がけがをしたそうです。 | According to the news, three people were hurt in the accident. | По новостям, в аварии пострадали трое.
+Q: 天気予報（　）、明日は晴れるそうです。 | According to the forecast, it will be sunny tomorrow. | По прогнозу, завтра будет солнечно. | によって / *によると / について / にとって | Source of information: によると. | Источник информации — によると.
+Q: 田中さんの話によると、山田さんは来月結婚する（　）。 | According to Mr. Tanaka, Ms. Yamada is getting married next month. | По словам Танаки, Ямада выходит замуж в следующем месяце. | つもりです / *そうです / ことです / ようにします | によると…そうだ: reported information. | によると…そうだ — передача сведений.
+Q: 新聞（　）よれば、物価が上がるらしい。 | According to the paper, prices are going to rise. | Судя по газете, цены вырастут. | で / を / *に / が | によれば is a variant of によると. | によれば — вариант によると.
+
+@ n3-ni-tsuite | について・に関して: about | について・に関して: о, относительно | 関
+S: Noun + について means “about, concerning”: 日本の歴史について調べる. に関して is more formal. Before a noun: についての / に関する: 環境に関する問題.
+S: Сущ. + について — «о, относительно»: 日本の歴史について調べる. に関して — формальнее. Перед сущ.: についての / に関する: 環境に関する問題.
+E: 日本の文化についてレポートを書きました。 | I wrote a report about Japanese culture. | Я написал доклад о японской культуре.
+Q: 将来（　）、両親と話しました。 | I talked with my parents about my future. | Я поговорил с родителями о будущем. | にとって / *について / によって / に対して | About: について. | О — について.
+Q: この問題（　）質問がある人はいますか。 | Does anyone have questions about this problem? | Есть вопросы по этой задаче? | に関する / *に関して / に対する / にとって | Before a verb phrase: に関して. | Перед глагольной группой — に関して.
+Q: 環境（　）問題を考えましょう。 | Let's think about environmental problems. | Давайте подумаем об экологических проблемах. | に関して / *に関する / にとって / によって | Before a noun: に関する. | Перед сущ. — に関する.
+
+@ n3-ni-taishite | に対して: toward, in contrast to | に対して: по отношению к; в отличие от | 対
+S: に対して shows the target of an action or attitude: 先生に対して失礼なことを言う. It also contrasts two things: 兄は背が高いのに対して、弟は低い. Before a noun: に対する.
+S: に対して указывает на объект действия или отношения: 先生に対して失礼なことを言う. Также противопоставляет: 兄は背が高いのに対して、弟は低い. Перед сущ. — に対する.
+E: お客様に対して丁寧に話してください。 | Please speak politely to customers. | Говорите с клиентами вежливо.
+Q: 目上の人（　）、敬語を使います。 | We use honorifics toward our superiors. | По отношению к старшим используют кэйго. | にとって / *に対して / によって / について | Target of behavior: に対して. | Объект поведения — に対して.
+Q: 姉は明るい性格なの（　）、妹はおとなしい。 | My older sister is cheerful, whereas the younger is quiet. | Старшая сестра весёлая, а младшая тихая. | にとって / について / *に対して / によって | Contrast: のに対して. | Противопоставление — のに対して.
+Q: 子供（　）愛情が大切です。 | Love toward children is important. | Любовь к детям важна. | に対して / *に対する / にとって / について | Before a noun: に対する. | Перед сущ. — に対する.
+
+@ n3-ni-totte | にとって: for (from the viewpoint of) | にとって: для (с точки зрения) | 取
+S: Noun + にとって means “for, from the viewpoint of”: 私にとって家族が一番大切です. It is followed by an evaluation (大切, 難しい, 問題だ), not by an action.
+S: Сущ. + にとって — «для, с точки зрения»: 私にとって家族が一番大切です. За ним идёт оценка (大切, 難しい, 問題だ), а не действие.
+E: 留学生にとって、漢字は難しい。 | For international students, kanji is difficult. | Для иностранных студентов кандзи трудны.
+Q: 私（　）、この写真は宝物です。 | For me, this photo is a treasure. | Для меня эта фотография — сокровище. | について / *にとって / によって / に対して | Evaluation from a viewpoint: にとって. | Оценка с чьей-то точки зрения — にとって.
+Q: 子供（　）、遊びは大切な勉強だ。 | For children, play is important learning. | Для детей игра — важная учёба. | によって / に対して / *にとって / について | にとって + evaluation. | にとって + оценка.
+Q: 彼にとって、それは大きな問題（　）。 | For him, that's a big problem. | Для него это большая проблема. | をしました / *だった / に行った / を食べた | にとって is followed by an evaluation, not an action. | За にとって следует оценка, а не действие.
+
+@ n3-to-shite | として: as (a role) | として: в качестве | 為
+S: Noun + として means “as, in the role of”: 留学生として日本に来ました. 趣味として絵をかいています. Before a noun: としての.
+S: Сущ. + として — «в качестве, как»: 留学生として日本に来ました. 趣味として絵をかいています. Перед сущ. — としての.
+E: 彼は医者として、多くの人を助けた。 | As a doctor, he helped many people. | Как врач он помог многим людям.
+Q: 私は通訳（　）、会議に出席しました。 | I attended the meeting as an interpreter. | Я присутствовал на совещании в качестве переводчика. | にとって / *として / について / によって | Role: として. | Роль — として.
+Q: 京都は古い町（　）有名です。 | Kyoto is famous as an old city. | Киото знаменит как старинный город. | に / *として / にとって / を | として + 有名: famous as. | として + 有名 — «известен как».
+Q: 親（　）責任を感じています。 | I feel my responsibility as a parent. | Я чувствую свою ответственность как родитель. | として / *としての / にとって / に対する | Before a noun: としての. | Перед сущ. — としての.
+
+@ n3-wake-da | わけだ: no wonder, that's why | わけだ: вот почему | 訳
+S: Plain form + わけだ draws a natural conclusion: 毎日練習しているから、上手なわけだ (No wonder he's good — he practices every day). It also restates: つまり、来ないわけですね.
+S: Простая форма + わけだ — естественный вывод: 毎日練習しているから、上手なわけだ (Неудивительно, что он хорош, — тренируется каждый день). Также пересказ: つまり、来ないわけですね.
+E: 十年も住んでいたのか。日本語が上手なわけだ。 | He lived here ten years? No wonder his Japanese is good. | Он прожил здесь десять лет? Вот почему он так хорошо говорит.
+Q: 窓が開いている。寒い（　）。 | The window is open. No wonder it's cold. | Окно открыто. Вот почему холодно. | つもりだ / *わけだ / ことだ / ものだ | Natural conclusion: わけだ. | Естественный вывод — わけだ.
+Q: 彼はフランスに五年いた。フランス語が上手な（　）だ。 | He was in France five years. No wonder his French is good. | Он пять лет был во Франции. Неудивительно, что хорошо говорит по-французски. | こと / もの / *わけ / ところ | な-adjective + な + わけだ. | な-прилагательное + な + わけだ.
+Q: つまり、明日は休みという（　）ですね。 | So, in other words, tomorrow is a day off. | То есть завтра выходной, так? | ほど / *わけ / ばかり / ため | Restating: というわけだ. | Пересказ — というわけだ.
+
+@ n3-wake-dewa-nai | わけではない: it's not that | わけではない: не то чтобы | 訳
+S: Plain form + わけではない partly denies an assumption: 嫌いなわけではない (It's not that I dislike it). 全部分かったわけではない (I didn't understand all of it).
+S: Простая форма + わけではない частично отрицает предположение: 嫌いなわけではない (Не то чтобы я это не любил). 全部分かったわけではない (Не всё понял).
+E: お金持ちが幸せだというわけではない。 | It's not that rich people are (necessarily) happy. | Не то чтобы богатые были счастливы.
+Q: 肉が嫌いな（　）ではないが、あまり食べない。 | It's not that I dislike meat, but I don't eat much. | Не то чтобы я не любил мясо, но ем мало. | こと / *わけ / はず / もの | Partial denial: わけではない. | Частичное отрицание — わけではない.
+Q: 日本人がみんな寿司が好きな（　）。 | It's not that all Japanese people like sushi. | Не все японцы любят суши. | わけだ / *わけではない / はずだ / ことだ | Denying a generalization: わけではない. | Отрицание обобщения — わけではない.
+Q: 説明を聞いたが、全部分かった（　）。 | I heard the explanation, but it's not that I understood all of it. | Я выслушал объяснение, но понял не всё. | わけがない / *わけではない / わけにはいかない / はずだ | Not all: わけではない. | Не всё — わけではない.
+
+@ n3-wake-ga-nai | わけがない: there's no way | わけがない: не может быть | 訳
+S: Plain form + わけがない strongly denies a possibility: あんなに練習したのだから、負けるわけがない. It is close to はずがない but more emotional.
+S: Простая форма + わけがない решительно отрицает возможность: あんなに練習したのだから、負けるわけがない. Близко к はずがない, но эмоциональнее.
+E: こんな難しい問題、子供に分かるわけがない。 | There's no way a child could understand such a hard problem. | Ребёнок ни за что не поймёт такую трудную задачу.
+Q: 彼は優しい人だから、そんなことを言う（　）。 | He's a kind person, so there's no way he'd say that. | Он добрый человек, он не мог такое сказать. | わけだ / *わけがない / わけではない / ことがある | Strong denial: わけがない. | Решительное отрицание — わけがない.
+Q: 一度も練習していないのだから、上手にできる（　）がない。 | He hasn't practiced once, so there's no way he can do it well. | Он ни разу не тренировался, так что хорошо не получится. | こと / *わけ / もの / ところ | わけがない. | わけがない.
+Q: あの店が休みの（　）。毎日開いているよ。 | There's no way that shop is closed. It's open every day. | Не может быть, чтобы тот магазин был закрыт. Он работает каждый день. | わけだ / わけではない / *わけがない / わけにはいかない | Denying the possibility: わけがない. | Отрицание возможности — わけがない.
+
+@ n3-wake-ni-wa-ikanai | わけにはいかない: can't (for a reason) | わけにはいかない: нельзя (по причине) | 訳
+S: Dictionary form + わけにはいかない means you can't do something because of social or moral reasons: 明日は試験だから、休むわけにはいかない. ないわけにはいかない means “have no choice but to”.
+S: Словарная форма + わけにはいかない — нельзя сделать по социальным или моральным причинам: 明日は試験だから、休むわけにはいかない. ないわけにはいかない — «нельзя не».
+E: 大切な会議なので、遅れるわけにはいかない。 | It's an important meeting, so I can't be late. | Это важное совещание, опаздывать нельзя.
+Q: 約束したから、行かない（　）。 | I promised, so I can't not go. | Я обещал, так что не пойти нельзя. | わけがない / *わけにはいかない / わけではない / わけだ | ないわけにはいかない: have to. | ないわけにはいかない — «нельзя не».
+Q: 車で来たので、お酒を飲む（　）にはいかない。 | I came by car, so I can't drink. | Я на машине, пить нельзя. | こと / *わけ / はず / もの | わけにはいかない. | わけにはいかない.
+Q: 熱があるが、仕事が忙しいので休む（　）。 | I have a fever, but work is busy, so I can't take time off. | У меня жар, но на работе завал — отдыхать нельзя. | わけがない / わけではない / *わけにはいかない / ことはない | Can't for social reasons: わけにはいかない. | Нельзя по социальным причинам — わけにはいかない.
+
+@ n3-koto-wa-nai | ことはない: there's no need | ことはない: нет необходимости | 必
+S: Dictionary form + ことはない means “there's no need to”: 心配することはない. 急ぐことはないよ. It reassures the listener.
+S: Словарная форма + ことはない — «нет нужды»: 心配することはない. 急ぐことはないよ. Успокаивает собеседника.
+E: 大丈夫ですよ。そんなに心配することはありません。 | It's fine. There's no need to worry that much. | Всё в порядке. Не нужно так волноваться.
+Q: 時間は十分あるから、急ぐ（　）よ。 | There's plenty of time, so no need to hurry. | Времени достаточно, спешить незачем. | ことがある / *ことはない / わけだ / ものだ | No need: ことはない. | Нет нужды — ことはない.
+Q: 小さなミスだから、謝る（　）はない。 | It's a small mistake, so there's no need to apologize. | Это мелкая ошибка, извиняться не нужно. | もの / *こと / わけ / ところ | ことはない. | ことはない.
+Q: 電話で済むなら、わざわざ行く（　）。 | If a phone call will do, there's no need to go all the way there. | Если можно по телефону, ехать специально незачем. | *ことはない / はずだ / わけだ / ことにする | No need to make the effort: ことはない. | Незачем стараться — ことはない.
+
+@ n3-beki | べきだ: should | べきだ: следует | 可
+S: Dictionary form + べきだ says what one should do (morally or logically): 約束は守るべきだ. Negative: べきではない. する can be すべき or するべき.
+S: Словарная форма + べきだ — что следует делать (морально или логически): 約束は守るべきだ. Отрицание — べきではない. От する — すべき или するべき.
+E: 学生はもっと本を読むべきだ。 | Students should read more books. | Студентам следует больше читать.
+Q: 人の悪口は言う（　）ではない。 | You shouldn't speak ill of others. | Не следует злословить о людях. | はず / わけ / *べき / こと | Should not: べきではない. | Не следует — べきではない.
+Q: 間違えたら、すぐ謝る（　）だ。 | If you make a mistake, you should apologize right away. | Если ошибся, следует сразу извиниться. | *べき / はず / わけ / よう | Moral obligation: べきだ. | Моральный долг — べきだ.
+Q: この問題について、もっと話し合う（　）。 | We should discuss this problem more. | Этот вопрос следует обсудить подробнее. | はずだ / *べきだ / わけだ / ものか | Should: べきだ. | Следует — べきだ.
+
+@ n3-ni-chigai-nai | に違いない: must be, no doubt | に違いない: наверняка | 違
+S: Plain form + に違いない expresses strong certainty based on the speaker's judgment: 彼は犯人に違いない. Nouns and な-adjectives drop だ: 本当に違いない.
+S: Простая форма + に違いない — сильная уверенность на основе суждения говорящего: 彼は犯人に違いない. У сущ. и な-прилагательных だ опускается: 本当に違いない.
+E: 電気がついている。彼は家にいるに違いない。 | The light is on. He must be home. | Свет горит. Он наверняка дома.
+Q: あんなに練習したのだから、優勝する（　）。 | After practicing that hard, he will surely win. | После таких тренировок он наверняка победит. | かもしれない / *に違いない / わけではない / ことはない | Strong certainty: に違いない. | Сильная уверенность — に違いない.
+Q: この絵は有名な画家のもの（　）違いない。 | This painting must be by a famous painter. | Эта картина наверняка принадлежит известному художнику. | だ / で / *に / の | Noun + に違いない (no だ). | Сущ. + に違いない (без だ).
+Q: 彼女はうれしそうだ。何かいいことがあった（　）。 | She looks happy. Something good must have happened. | Она выглядит счастливой. Наверняка случилось что-то хорошее. | *に違いない / べきだ / ことはない / わけにはいかない | Certain guess: に違いない. | Уверенное предположение — に違いない.
+
+@ n3-kawari-ni | かわりに: instead of; in exchange | かわりに: вместо; взамен | 代
+S: かわりに means “instead of” (母のかわりに私が行く) or “in exchange for” (英語を教えるかわりに、日本語を教えてもらう). With verbs it can also mean “but on the other hand”.
+S: かわりに — «вместо» (母のかわりに私が行く) или «взамен» (英語を教えるかわりに、日本語を教えてもらう). С глаголами также «но зато».
+E: 今日は母のかわりに私が料理を作ります。 | Today I'll cook instead of my mother. | Сегодня я готовлю вместо мамы.
+Q: 部長（　）かわりに、私が会議に出ます。 | I'll attend the meeting instead of the manager. | Я пойду на совещание вместо начальника. | が / *の / に / を | Noun + のかわりに. | Сущ. + のかわりに.
+Q: 手伝ってもらう（　）、昼ご飯をごちそうします。 | In exchange for your help, I'll treat you to lunch. | За помощь угощу тебя обедом. | せいで / ために / *かわりに / うちに | In exchange: かわりに. | Взамен — かわりに.
+Q: 雨なので、テニスの（　）にバドミントンをしよう。 | It's raining, so let's play badminton instead of tennis. | Идёт дождь, давайте сыграем в бадминтон вместо тенниса. | せい / *かわり / ため / おかげ | Instead of: かわりに. | Вместо — かわりに.
+
+@ n3-kuse-ni | くせに: even though (criticism) | くせに: хотя (с упрёком) | 癖
+S: Plain form + くせに criticizes someone for acting inconsistently: 知っているくせに、教えてくれない. Nouns take の: 子供のくせに. It is stronger and more emotional than のに.
+S: Простая форма + くせに осуждает непоследовательное поведение: 知っているくせに、教えてくれない. Сущ. берут の: 子供のくせに. Сильнее и эмоциональнее, чем のに.
+E: 自分ではできないくせに、人に文句ばかり言う。 | He can't do it himself, yet he only complains about others. | Сам не умеет, а только других критикует.
+Q: 知っている（　）、知らないふりをしている。 | He knows, yet he's pretending not to. | Знает, а притворяется, что не знает. | おかげで / *くせに / ために / うちに | Criticism of inconsistency: くせに. | Упрёк в непоследовательности — くせに.
+Q: 子供（　）くせに、生意気なことを言うな。 | You're just a kid — don't talk back! | Ты ещё ребёнок — не дерзи! | が / な / *の / で | Noun + のくせに. | Сущ. + のくせに.
+Q: 下手な（　）、歌いたがる。 | He's bad at it, yet he always wants to sing. | Петь не умеет, а всё рвётся. | ために / おかげで / *くせに / ように | な-adjective + な + くせに. | な-прилагательное + な + くせに.
+
+@ n3-tatoe-temo | たとえ〜ても: even if | たとえ〜ても: даже если | 例
+S: たとえ strengthens a ても clause: たとえ雨が降っても、行きます. It stresses that the result won't change no matter the condition. Nouns: たとえ子供でも.
+S: たとえ усиливает ても: たとえ雨が降っても、行きます. Подчёркивает, что результат не изменится. Сущ.: たとえ子供でも.
+E: たとえ反対されても、留学したい。 | Even if they oppose it, I want to study abroad. | Даже если будут против, хочу учиться за границей.
+Q: たとえ高く（　）、このかばんがほしい。 | Even if it's expensive, I want this bag. | Даже если она дорогая, хочу эту сумку. | ては / *ても / たら / ので | たとえ…ても. | たとえ…ても.
+Q: （　）失敗しても、もう一度挑戦します。 | Even if I fail, I'll try again. | Даже если не получится, попробую ещё раз. | もっと / *たとえ / まさか / きっと | たとえ goes with ても. | たとえ сочетается с ても.
+Q: たとえ親（　）、私の気持ちは分からない。 | Even my parents can't understand my feelings. | Даже родители не понимают моих чувств. | なら / *でも / だけ / しか | Noun + でも with たとえ. | Сущ. + でも с たとえ.
+
+@ n3-to-shite-mo | としても: even if (supposing) | としても: даже если (предположим) | 仮
+S: Plain form + としても means “even supposing that”: 今から行ったとしても、間に合わないだろう. It is used for hypothetical situations.
+S: Простая форма + としても — «даже если предположить»: 今から行ったとしても、間に合わないだろう. Используется для гипотетических ситуаций.
+E: 宝くじが当たったとしても、仕事はやめない。 | Even if I won the lottery, I wouldn't quit my job. | Даже если выиграю в лотерею, работу не брошу.
+Q: 今からタクシーで行った（　）、もう間に合わない。 | Even if I took a taxi now, I wouldn't make it. | Даже если сейчас поехать на такси, не успею. | ように / *としても / ために / ので | Hypothetical “even if”: としても. | Гипотетическое «даже если» — としても.
+Q: 本当だ（　）、信じられない話だ。 | Even if it's true, it's an unbelievable story. | Даже если это правда, верится с трудом. | として / *としても / とか / とは | としても. | としても.
+Q: たとえ時間があった（　）、行かなかったと思う。 | Even if I'd had time, I don't think I would have gone. | Даже будь у меня время, думаю, я бы не пошёл. | *としても / ので / から / のに | たとえ…としても. | たとえ…としても.
+
+@ n3-ni-shite-wa | にしては: for (unexpectedly) | にしては: для (неожиданно) | 割
+S: Noun or plain form + にしては means a result is unexpected given the standard: 初めてにしては上手です (Good for a first time). 子供にしては背が高い.
+S: Сущ. или простая форма + にしては — результат неожиданный по меркам: 初めてにしては上手です (Неплохо для первого раза). 子供にしては背が高い.
+E: 彼は外国人にしては、漢字をよく知っている。 | For a foreigner, he knows kanji well. | Для иностранца он хорошо знает кандзи.
+Q: 初めて作った（　）、おいしいですね。 | For your first time making it, it's delicious. | Для первого раза очень вкусно. | ために / *にしては / として / によって | Unexpected given the standard: にしては. | Неожиданно по меркам — にしては.
+Q: 十月（　）、今日は暑いですね。 | It's hot today for October. | Для октября сегодня жарко. | として / について / *にしては / にとって | にしては + unexpected evaluation. | にしては + неожиданная оценка.
+Q: 一生懸命勉強した（　）、点数が悪かった。 | For someone who studied so hard, the score was bad. | Для того, кто так усердно занимался, результат плохой. | としても / *にしては / ために / くせに | Unexpected result for the effort: にしては. | Неожиданный результат при таких усилиях — にしては.
+
+@ n3-wari-ni | わりに: considering, for | わりに: для, в сравнении с | 割
+S: Plain form or noun + の + わりに means a result is out of proportion: 値段のわりにおいしい (tasty for the price). 年のわりに若く見える. Similar to にしては, but focuses on degree.
+S: Простая форма или сущ. + の + わりに — несоразмерный результат: 値段のわりにおいしい (вкусно для такой цены). 年のわりに若く見える. Похоже на にしては, но акцент на степени.
+E: この店は値段のわりに量が多い。 | This shop gives large portions for the price. | В этом заведении для такой цены большие порции.
+Q: 祖父は年（　）わりに、元気です。 | My grandfather is energetic for his age. | Дедушка бодр для своего возраста. | が / *の / に / で | Noun + のわりに. | Сущ. + のわりに.
+Q: このレストランは高い（　）、おいしくない。 | This restaurant is expensive but not tasty. | Ресторан дорогой, а невкусный. | *わりに / おかげで / ために / うちに | Out of proportion: わりに. | Несоразмерно — わりに.
+Q: 彼はたくさん食べる（　）、太らない。 | He eats a lot but doesn't gain weight. | Он много ест, но не толстеет. | ために / せいで / *わりに / として | わりに: considering. | わりに — «для, при том что».
+
+@ n3-hodo-degree | ほど: to the extent that | ほど: до такой степени | 程
+S: Plain form + ほど shows an extreme degree: 泣きたいほど悲しかった (so sad I wanted to cry). 死ぬほど疲れた. It describes how much.
+S: Простая форма + ほど — крайняя степень: 泣きたいほど悲しかった (так грустно, что хотелось плакать). 死ぬほど疲れた. Описывает «насколько».
+E: 涙が出るほど笑いました。 | I laughed so hard I cried. | Я смеялся до слёз.
+Q: 立てない（　）足が痛い。 | My legs hurt so much I can't stand. | Ноги болят так, что не могу стоять. | まで / *ほど / だけ / しか | Extreme degree: ほど. | Крайняя степень — ほど.
+Q: 今日は死ぬ（　）忙しかった。 | Today I was busy to death. | Сегодня я был занят до смерти. | ばかり / まで / *ほど / ため | 死ぬほど: extremely. | 死ぬほど — «до смерти».
+Q: 信じられない（　）安い値段だった。 | The price was unbelievably cheap. | Цена была невероятно низкой. | *ほど / ばかり / だけ / まま | ほど shows degree before an adjective. | ほど показывает степень перед прилагательным.
+
+@ n3-ba-hodo | ば〜ほど: the more … the more | ば〜ほど: чем … тем | 程
+S: The ば form + the same word + ほど means “the more …, the more …”: 練習すればするほど上手になる. 安ければ安いほどいい. な-adjectives: 静かなら静かなほど.
+S: Форма на ば + то же слово + ほど — «чем больше…, тем…»: 練習すればするほど上手になる. 安ければ安いほどいい. な-прилагательные: 静かなら静かなほど.
+E: 日本語は勉強すればするほど、おもしろくなる。 | The more you study Japanese, the more interesting it gets. | Чем больше учишь японский, тем интереснее.
+Q: 考えれば考える（　）、分からなくなる。 | The more I think, the less I understand. | Чем больше думаю, тем меньше понимаю. | まで / *ほど / だけ / ばかり | ば…ほど. | ば…ほど.
+Q: 部屋は（　）広いほどいい。 | The bigger the room, the better. | Чем просторнее комната, тем лучше. | 広くて / *広ければ / 広いと / 広いなら | い-adjective: 広ければ広いほど. | い-прилагательное: 広ければ広いほど.
+Q: 野菜は新しければ（　）ほどおいしい。 | The fresher the vegetables, the tastier. | Чем свежее овощи, тем вкуснее. | 新しく / *新しい / 新しくて / 新しさ | Repeat the plain form before ほど. | Перед ほど повторяется простая форма.
+
+@ n3-sae | さえ: even | さえ: даже | 迄
+S: Noun + さえ means “even” for an extreme example: 子供でさえ知っている. 名前さえ書けない. With a particle: でさえ, にさえ.
+S: Сущ. + さえ — «даже» для крайнего примера: 子供でさえ知っている. 名前さえ書けない. С частицей: でさえ, にさえ.
+E: 忙しくて、昼ご飯を食べる時間さえない。 | I'm so busy I don't even have time for lunch. | Я так занят, что нет времени даже пообедать.
+Q: そんなことは子供（　）知っている。 | Even a child knows that. | Это даже ребёнок знает. | さえに / *でさえ / だけで / しかで | Even (subject): でさえ. | Даже (подлежащее) — でさえ.
+Q: 疲れて、立つこと（　）できなかった。 | I was so tired I couldn't even stand. | Я так устал, что даже стоять не мог. | しか / だけ / *さえ / ほど | Extreme example: さえ. | Крайний пример — さえ.
+Q: 彼は自分の名前（　）漢字で書けない。 | He can't even write his own name in kanji. | Он даже своё имя не может написать кандзи. | *さえ / だけ / しか / ばかり | さえ + negative: not even. | さえ + отрицание — «даже не».
+
+@ n3-sae-ba | さえ〜ば: as long as | さえ〜ば: стоит лишь | 只
+S: さえ + ば form means “as long as, if only”: お金さえあれば、何でも買える. 薬を飲みさえすれば治る. It says only one condition is needed.
+S: さえ + форма на ば — «стоит лишь, лишь бы»: お金さえあれば、何でも買える. 薬を飲みさえすれば治る. Говорит, что нужно только одно условие.
+E: 時間さえあれば、もっと旅行したい。 | If only I had time, I'd travel more. | Будь у меня только время, путешествовал бы больше.
+Q: この薬を飲み（　）すれば、すぐ治ります。 | As long as you take this medicine, you'll recover quickly. | Стоит только выпить это лекарство, и быстро поправитесь. | だけ / *さえ / しか / ほど | ます stem + さえすれば. | Основа на ます + さえすれば.
+Q: 天気（　）よければ、山に登れる。 | As long as the weather is good, we can climb the mountain. | Лишь бы погода была хорошей — поднимемся на гору. | しか / *さえ / ほど / だけで | Noun + さえ + ば. | Сущ. + さえ + ば.
+Q: あなたさえ（　）、私はそれでいい。 | As long as you're happy, that's enough for me. | Лишь бы ты был счастлив — мне этого достаточно. | 幸せに / *幸せなら / 幸せで / 幸せだ | さえ + なら for な-adjectives and nouns. | さえ + なら для な-прилагательных и сущ.
+
+@ n3-koso | こそ: precisely, indeed | こそ: именно | 正
+S: こそ strongly emphasizes the word before it: 今度こそ合格したい (This time for sure I want to pass). こちらこそ (No, it's me who should…). からこそ means “precisely because”.
+S: こそ сильно выделяет предыдущее слово: 今度こそ合格したい (Уж в этот раз точно хочу сдать). こちらこそ (Это я должен…). からこそ — «именно потому что».
+E: よろしくお願いします。…こちらこそ。 | Nice to meet you. …Likewise. | Рад знакомству. …Взаимно.
+Q: 去年は失敗したが、今年（　）優勝したい。 | I failed last year, but this year for sure I want to win. | В прошлом году не вышло, но в этом точно хочу победить. | さえ / だけ / *こそ / しか | Strong emphasis: こそ. | Сильное выделение — こそ.
+Q: ありがとうございました。…いいえ、こちら（　）。 | Thank you very much. …No, thank *you*. | Большое спасибо. …Нет, это вам спасибо. | も / *こそ / さえ / ばかり | こちらこそ: likewise / the pleasure is mine. | こちらこそ — «взаимно».
+Q: 好きだ（　）こそ、厳しく言うのです。 | It's precisely because I care that I'm strict. | Именно потому что люблю, я строг. | ので / のに / *から / ため | からこそ: precisely because. | からこそ — «именно потому что».
+
+@ n3-nante | なんか・なんて: things like (dismissive) | なんか・なんて: какой-то (пренебрежит.) | 何
+S: なんか and なんて make the noun sound unimportant or show surprise: 私なんかにできない (Someone like me can't do it). 試験なんて大嫌い. なんて can also express surprise: 彼が来るなんて.
+S: なんか и なんて принижают существительное или выражают удивление: 私なんかにできない (Такому, как я, не справиться). 試験なんて大嫌い. なんて — также удивление: 彼が来るなんて.
+E: 宿題なんて、やりたくない。 | Homework? I don't want to do it. | Какая ещё домашка — не хочу делать.
+Q: 私（　）、まだまだです。 | Someone like me still has a long way to go. | Мне ещё далеко. | さえ / こそ / *なんか / ほど | Humble/dismissive: なんか. | Скромно/пренебрежительно — なんか.
+Q: 彼が試験に落ちた（　）、信じられない。 | I can't believe he failed the exam. | Не могу поверить, что он провалил экзамен. | なんか / *なんて / こそ / さえ | Surprise: plain form + なんて. | Удивление: простая форма + なんて.
+Q: ゲーム（　）していないで、勉強しなさい。 | Stop playing games and study! | Хватит играть в игры, учись! | こそ / *なんか / さえ / ほど | Dismissive: なんか. | Пренебрежительно — なんか.
+
+@ n3-mono-da | ものだ: general truth; nostalgia | ものだ: так уж устроено; бывало | 物
+S: Dictionary form + ものだ states a general truth or proper behavior: 人の話はよく聞くものだ. た form + ものだ recalls a past habit: 子供のころ、よくこの川で泳いだものだ.
+S: Словарная форма + ものだ — общая истина или правильное поведение: 人の話はよく聞くものだ. Форма на た + ものだ — воспоминание о привычке: 子供のころ、よくこの川で泳いだものだ.
+E: 時間がたつのは早いものだ。 | Time really does fly. | Время летит так быстро.
+Q: 子供のころ、よく兄とけんかをした（　）。 | As a child I often used to fight with my brother. | В детстве я часто дрался с братом. | ことだ / *ものだ / わけだ / はずだ | Nostalgic past habit: たものだ. | Ностальгия о привычке — たものだ.
+Q: 学生はよく勉強する（　）だ。 | Students are supposed to study hard. | Студентам положено усердно учиться. | こと / *もの / わけ / はず | Proper behavior: ものだ. | Как следует поступать — ものだ.
+Q: 人生は思うようにいかない（　）だ。 | Life doesn't go as you'd like — that's how it is. | В жизни не всё идёт по плану — так уж устроено. | わけ / *もの / ため / ところ | General truth: ものだ. | Общая истина — ものだ.
+
+@ n3-mono-reason | もの・もん: because (excuse) | もの・もん: ведь (оправдание) | 物
+S: Plain form + もの (casual もん) gives a personal reason, often like an excuse, mainly in speech: だって、知らなかったんだもん. It often follows だって.
+S: Простая форма + もの (разг. もん) — личная причина, часто как оправдание, в основном в речи: だって、知らなかったんだもん. Часто после だって.
+E: 行きたくない。だって、寒いんだもん。 | I don't want to go. It's cold, after all. | Не хочу идти. Холодно же.
+Q: どうして食べないの？…だって、まずい（　）。 | Why aren't you eating? …Because it tastes bad. | Почему не ешь? …Да ведь невкусно. | こと / *もん / わけ / はず | Casual excuse: もん. | Разговорное оправдание — もん.
+Q: 遅れてごめん。電車が止まったんだ（　）。 | Sorry I'm late. The train stopped, you see. | Прости за опоздание. Поезд встал, понимаешь. | こと / ため / *もの / ところ | Personal reason: もの. | Личная причина — もの.
+Q: （　）、知らなかったんだもん。 | Well, I didn't know! | Ну я же не знал! | *だって / しかし / それで / すると | だって … もん: a typical excuse pattern. | だって … もん — типичное оправдание.
+
+@ n3-kara-ni-kakete | から〜にかけて: from … through | から〜にかけて: с … по | 掛
+S: A から B にかけて gives a range of time or space without exact limits: 九州から関東にかけて雨が降る. 三月から四月にかけて桜が咲く. It is less precise than から〜まで.
+S: A から B にかけて — промежуток во времени или пространстве без точных границ: 九州から関東にかけて雨が降る. 三月から四月にかけて桜が咲く. Менее точно, чем から〜まで.
+E: 今夜から明日の朝にかけて、雪が降るでしょう。 | Snow is expected from tonight through tomorrow morning. | С вечера до завтрашнего утра ожидается снег.
+Q: 夏から秋（　）、台風が多い。 | There are many typhoons from summer into autumn. | С лета по осень много тайфунов. | までに / *にかけて / について / によって | Approximate range: から〜にかけて. | Приблизительный промежуток — から〜にかけて.
+Q: 東京から大阪（　）大雨が降った。 | Heavy rain fell from Tokyo to Osaka. | Сильный дождь прошёл от Токио до Осаки. | に対して / として / *にかけて / にとって | Area range: にかけて. | Территориальный промежуток — にかけて.
+Q: 年末（　）年始にかけて、店は休みです。 | The shop is closed over the year-end and New Year period. | В конце и начале года магазин закрыт. | まで / *から / で / に | から〜にかけて. | から〜にかけて.
+
+@ n3-wo-chuushin-ni | を中心に: centering on | を中心に: с центром в | 中
+S: Noun + を中心に(して) means “centered on, mainly”: 若者を中心に人気がある. この町は駅を中心に発展した.
+S: Сущ. + を中心に(して) — «с центром в, главным образом»: 若者を中心に人気がある. この町は駅を中心に発展した.
+E: この歌は若い人を中心に人気があります。 | This song is popular, mainly among young people. | Эта песня популярна в основном среди молодёжи.
+Q: 地球は太陽（　）回っている。 | The Earth revolves around the sun. | Земля вращается вокруг Солнца. | によって / *を中心に / にとって / について | Centered on: を中心に. | Вокруг, с центром в — を中心に.
+Q: 会議は新しい計画を中心（　）話し合われた。 | The meeting focused on the new plan. | На совещании обсуждали главным образом новый план. | で / を / *に / が | を中心に. | を中心に.
+Q: このアニメは子供（　）、大人にも人気がある。 | This anime is popular mainly with children, but also with adults. | Это аниме популярно в основном у детей, но и у взрослых тоже. | によって / *を中心に / にとって / に対して | Mainly: を中心に. | Главным образом — を中心に.
+
+@ n3-wo-toshite | を通して: through, throughout | を通して: через; на протяжении | 通
+S: Noun + を通して (を通じて) means “through (a means)”: 友達を通して彼と知り合った. With time it means “throughout”: 一年を通して暖かい.
+S: Сущ. + を通して (を通じて) — «через (средство)»: 友達を通して彼と知り合った. Со временем — «на протяжении»: 一年を通して暖かい.
+E: この島は一年を通して暖かい。 | This island is warm all year round. | На этом острове тепло круглый год.
+Q: 仕事（　）、たくさんの人と知り合いました。 | Through work, I got to know many people. | Через работу я познакомился со многими людьми. | にとって / *を通して / に対して / によると | Means: を通して. | Посредством — を通して.
+Q: 沖縄は一年（　）暖かい。 | Okinawa is warm throughout the year. | На Окинаве тепло круглый год. | にかけて / *を通して / までに / によって | Throughout a period: を通して. | На протяжении — を通して.
+Q: インターネットを（　）、世界中の情報が手に入る。 | Through the internet, you can get information from all over the world. | Через интернет можно получить информацию со всего мира. | 通って / *通じて / 通った / 通る | を通じて = を通して. | を通じて = を通して.
+
+@ n3-ni-kurabete | に比べて: compared to | に比べて: по сравнению с | 比
+S: Noun + に比べて (に比べると) compares two things: 去年に比べて、今年は雪が多い. It is more formal than より.
+S: Сущ. + に比べて (に比べると) сравнивает два предмета: 去年に比べて、今年は雪が多い. Формальнее, чем より.
+E: 東京に比べて、この町は物価が安い。 | Compared to Tokyo, prices in this town are low. | По сравнению с Токио, в этом городе цены ниже.
+Q: 兄（　）比べて、弟はよく勉強する。 | Compared to his older brother, the younger one studies hard. | По сравнению со старшим братом младший прилежно учится. | を / が / *に / で | に比べて. | に比べて.
+Q: 十年前（　）、町はずいぶん変わった。 | Compared to ten years ago, the town has changed a lot. | По сравнению с тем, что было десять лет назад, город сильно изменился. | について / *に比べて / にとって / によって | Comparison: に比べて. | Сравнение — に比べて.
+Q: 昨日に比べる（　）、今日は暖かい。 | Compared to yesterday, today is warm. | По сравнению со вчерашним днём сегодня тепло. | ので / *と / ば / ても | に比べると is a variant. | に比べると — вариант.
+
+@ n3-ni-kuwaete | に加えて: in addition to | に加えて: вдобавок к | 加
+S: Noun + に加えて means “in addition to”: 雨に加えて、風も強くなった. It adds one more thing of the same kind, often in formal writing.
+S: Сущ. + に加えて — «вдобавок к»: 雨に加えて、風も強くなった. Добавляет ещё одно однородное, часто в формальном стиле.
+E: 彼は英語に加えて、中国語も話せる。 | In addition to English, he can speak Chinese. | Помимо английского, он говорит по-китайски.
+Q: 大雨（　）、強い風も吹いている。 | In addition to heavy rain, a strong wind is blowing. | Вдобавок к ливню дует сильный ветер. | によって / *に加えて / に比べて / に対して | Adding: に加えて. | Добавление — に加えて.
+Q: 給料が安いの（　）加えて、休みも少ない。 | On top of low pay, there are few days off. | Мало того что зарплата низкая, так ещё и выходных мало. | を / が / *に / で | に加えて. | に加えて.
+Q: 筆記試験に加えて、面接（　）あります。 | In addition to the written exam, there is also an interview. | Помимо письменного экзамена, есть ещё собеседование. | しか / *も / だけ / さえ | Added item takes も. | Добавленный элемент — с も.
+
+@ n3-ni-tsurete | につれて: as (gradually) | につれて: по мере того как | 連
+S: Dictionary form or noun + につれて means “as A changes, B changes too”: 年をとるにつれて、体が弱くなる. 時間がたつにつれて、悲しみが消えた.
+S: Словарная форма или сущ. + につれて — «по мере изменения A меняется и B»: 年をとるにつれて、体が弱くなる. 時間がたつにつれて、悲しみが消えた.
+E: 日本語が上手になるにつれて、日本の生活が楽しくなった。 | As my Japanese improved, life in Japan became more fun. | По мере того как японский улучшался, жизнь в Японии становилась веселее.
+Q: 冬が近づく（　）、寒くなってきた。 | As winter approaches, it's getting colder. | По мере приближения зимы холодает. | ために / *につれて / までに / ばかりに | Gradual parallel change: につれて. | Постепенное параллельное изменение — につれて.
+Q: 年を（　）につれて、物忘れがひどくなる。 | As you get older, you become more forgetful. | С возрастом забывчивость усиливается. | とった / *とる / とって / とり | Dictionary form + につれて. | Словарная форма + につれて.
+Q: 町の発展（　）つれて、人口も増えた。 | As the town developed, the population grew too. | По мере развития города росло и население. | を / が / *に / で | Noun + につれて. | Сущ. + につれて.
+
+@ n3-ni-shitagatte | にしたがって: as; following | にしたがって: по мере; следуя | 従
+S: にしたがって means “as A changes, B changes” (like につれて), or “following (rules, instructions)”: 先生の指示にしたがって行動してください.
+S: にしたがって — «по мере изменения A меняется B» (как につれて) или «следуя (правилам, указаниям)»: 先生の指示にしたがって行動してください.
+E: 説明書にしたがって組み立ててください。 | Please assemble it following the instructions. | Соберите, следуя инструкции.
+Q: 地図（　）したがって歩くと、駅に着いた。 | Following the map, I reached the station. | Следуя карте, я дошёл до станции. | を / が / *に / で | にしたがって. | にしたがって.
+Q: 高く登る（　）、空気が薄くなる。 | The higher you climb, the thinner the air. | Чем выше поднимаешься, тем разреженнее воздух. | までに / *にしたがって / として / によると | Parallel change: にしたがって. | Параллельное изменение — にしたがって.
+Q: 係の人の指示に（　）、避難してください。 | Please evacuate following the staff's instructions. | Эвакуируйтесь, следуя указаниям персонала. | 対して / *したがって / とって / ついて | Following instructions: にしたがって. | Следуя указаниям — にしたがって.
+
+@ n3-to-tomo-ni | とともに: together with; as | とともに: вместе с; по мере | 共
+S: Noun + とともに means “together with” (formal for と一緒に): 家族とともに暮らす. It also means “as” or “at the same time as”: 経済の発展とともに、生活が変わった.
+S: Сущ. + とともに — «вместе с» (формально вместо と一緒に): 家族とともに暮らす. Также «по мере / одновременно с»: 経済の発展とともに、生活が変わった.
+E: 時代とともに、人々の考え方も変わる。 | People's thinking changes with the times. | Со временем меняется и образ мыслей людей.
+Q: 仲間（　）、困難を乗り越えた。 | Together with my friends, I overcame the difficulties. | Вместе с друзьями я преодолел трудности. | *とともに / にとって / によって / に対して | Together with: とともに. | Вместе с — とともに.
+Q: 年をとる（　）、体力が落ちてきた。 | As I age, my stamina has declined. | С возрастом выносливость снизилась. | ために / *とともに / までに / として | As (parallel change): とともに. | По мере — とともに.
+Q: 春の訪れ（　）、花が咲き始めた。 | With the arrival of spring, flowers started to bloom. | С приходом весны начали распускаться цветы. | にとって / *とともに / について / によると | At the same time as: とともに. | Одновременно с — とともに.

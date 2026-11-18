@@ -40,7 +40,7 @@ beforeAll(async () => {
     grant usage on schema auth to anon, authenticated;
     grant execute on function auth.uid() to anon, authenticated;
   `);
-  for (const file of ['202611170001_initial_schema.sql', '202611170002_learning_functions.sql', '202611170003_question_bank.sql']) {
+  for (const file of ['202611170001_initial_schema.sql', '202611170002_learning_functions.sql', '202611170003_question_bank.sql', '202611180001_curriculum_n5_n3.sql']) {
     await db.exec(await readFile(new URL(`../supabase/migrations/${file}`, import.meta.url), 'utf8'));
   }
 }, 30000);
