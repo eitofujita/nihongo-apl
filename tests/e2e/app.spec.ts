@@ -220,3 +220,15 @@ test('older progress remains available and a mistake becomes a due review', asyn
   await page.goto('/en/review');
   await expect(page.getByText("You're all caught up for now.")).toBeVisible();
 });
+
+test('furigana can be switched on and stays on across questions', async ({page}) => {
+  await page.goto('/en/lessons/n5-wa-desu');
+  await page.getByRole('button', {name: 'Start practice'}).click();
+  await expect(page.locator('.japanese-question rt')).toHaveCount(0);
+  await page.getByRole('button', {name: 'Furigana'}).click();
+  await expect(page.locator('.japanese-question rt')).toHaveText(['がくせい']);
+  await page.locator('input[value="は"]').check();
+  await page.getByRole('button', {name: 'Next question'}).click();
+  await expect(page.getByRole('button', {name: 'Furigana'})).toHaveAttribute('aria-pressed', 'true');
+  await expect(page.locator('.japanese-question rt').first()).toHaveText('たなか');
+});

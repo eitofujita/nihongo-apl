@@ -336,3 +336,13 @@ button.back-link { cursor: pointer; }
 .level-tabs > button.selected strong { color: var(--green); }
 .loading-note { max-width: 760px; margin: 40px auto; color: var(--muted); font-size: 14px; }
 
+
+/* Furigana */
+.practice-meta { display: flex; align-items: center; gap: 12px; }
+.section-title-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.furigana-toggle { display: inline-flex; align-items: center; gap: 7px; min-height: 34px; padding: 4px 12px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); color: var(--muted); font-size: 12px; }
+.furigana-toggle:hover { color: var(--green); border-color: #cfdccb; }
+.furigana-toggle.selected { background: #eaf1e7; color: var(--green); border-color: #bcd1b8; font-weight: 600; }
+.furigana-toggle ruby { font-size: 15px; line-height: 1; }
+.furigana-toggle rt { font-size: 8px; }
+.japanese-question ruby rt, .answer-option rt, .study-example rt { font-size: .45em; color: var(--muted); letter-spacing: 0; }

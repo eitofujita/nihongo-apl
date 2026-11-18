@@ -3,6 +3,7 @@
 import {readFileSync, writeFileSync, mkdirSync, readdirSync, existsSync} from 'node:fs';
 import {fileURLToPath} from 'node:url';
 import {z} from 'zod';
+import {align, createAnnotator} from './furigana.mts';
 import {lessonSchema, questionSchema, type Lesson, type Question, type Word} from '../src/content/schemas.ts';
 
 const root = fileURLToPath(new URL('..', import.meta.url));
@@ -247,6 +248,23 @@ const placement = legacy.placementQuestionIds.map(id => byId.get(id)!);
 if (errors.length) {
   console.error(`Content has ${errors.length} problem(s):\n` + errors.slice(0, 80).join('\n'));
   process.exit(1);
+}
+
+// ---------- Furigana (build time only) ----------
+const annotateText = await createAnnotator(path('content/furigana-overrides.json'));
+// A choice that is exactly a vocabulary word uses the word list's reading (more reliable than the tokenizer).
+const wordReadings = new Map(all.flatMap(l => l.words.map(w => [w.japanese, w.reading] as const)));
+const annotate = (text: string) => {
+  const reading = wordReadings.get(text);
+  return reading && /[\u3400-\u9fff々]/.test(text) && /^[\u3040-\u309fー]+$/.test(reading) ? align(text, reading) : annotateText(text);
+};
+// Mutates in place so the placement list (built from the same objects) is annotated too.
+for (const lesson of all) {
+  for (const example of lesson.examples) {const ruby = annotate(example.japanese); if (ruby !== example.japanese) example.ruby = ruby;}
+  for (const question of lesson.questions) {
+    const prompt = annotate(question.prompt); const choices = question.choices.map(annotate);
+    if (prompt !== question.prompt || choices.some((c, i) => c !== question.choices[i])) question.ruby = {prompt, choices};
+  }
 }
 
 // ---------- Write outputs ----------
