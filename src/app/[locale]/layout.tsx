@@ -10,6 +10,7 @@ import '@fontsource-variable/dm-sans';
 import '@fontsource/noto-sans-jp/400.css';
 import '@fontsource/noto-sans-jp/500.css';
 import '../globals.css';
+import '../aero.css';
 
 export default async function LocaleLayout({children, params}: {children: ReactNode; params: Promise<{locale: string}>}) {
   const {locale} = await params;

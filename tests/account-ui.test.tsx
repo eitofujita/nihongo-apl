@@ -126,7 +126,6 @@ describe('Cloud progress, retry and account isolation', () => {
     render(wrap(<><Practice lessonId="n5-wa-desu" questions={getLesson("n5-wa-desu")!.questions}/><Snapshot/></>, accountA));
     for (const answer of ['は', 'です']) {
       fireEvent.click(screen.getAllByRole('radio').find(input => (input as HTMLInputElement).value === answer)!);
-      fireEvent.click(screen.getByRole('button', {name: 'Check answer'}));
       fireEvent.click(screen.getByRole('button', {name: 'Next question'}));
     }
     fireEvent.change(screen.getByRole('textbox'), {target: {value: 'は'}});

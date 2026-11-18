@@ -281,6 +281,8 @@
     "practiceAgain": "Пройти ещё раз",
     "backToLesson": "Вернуться к уроку",
     "backReview": "Вернуться к повторению",
+    "soundOn": "Включить звук",
+    "soundOff": "Выключить звук",
     "keyboardHintChoice": "Нажмите 1–4 для выбора, Enter — чтобы продолжить",
     "keyboardHintFill": "Введите ответ и нажмите Enter",
     "levelLabel": "Уровень JLPT",

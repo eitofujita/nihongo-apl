@@ -2,7 +2,7 @@
 
 import {useEffect, useRef, useState} from 'react';
 import {useLocale, useNow, useTranslations} from 'next-intl';
-import {ArrowLeft, ArrowRight, BookOpen, Check, CheckCircle2, Keyboard, RotateCcw, Search, Sparkles, Sprout, X} from 'lucide-react';
+import {ArrowLeft, ArrowRight, BookOpen, Check, CheckCircle2, Keyboard, RotateCcw, Search, Sparkles, Sprout, Volume2, VolumeX, X} from 'lucide-react';
 import {Link} from '@/i18n/navigation';
 import {getLessonMeta, isCorrect, LEVELS, lessons, levelStats, placementQuestions, type Level} from '@/content/catalog';
 import {loadLesson, loadQuestions, type FullLesson} from '@/content/load';
@@ -12,6 +12,7 @@ import type {SubmittedAnswer} from '@/lib/auth-schemas';
 import {answerInputSchema, dueQuestionIds, getRecommendation, getStats, type PracticeAnswer} from '@/lib/progress';
 import {LessonCard, PageHeading} from './dashboard';
 import {useProgress} from './progress-provider';
+import {isSoundEnabled, playSound, setSoundEnabled} from '@/lib/sound';
 
 export function LessonDetail({lessonId}: {lessonId: string}) {
   const t = useTranslations('App');
@@ -79,6 +80,8 @@ export function Practice({lessonId, questions, onExit}: {lessonId: string; quest
   const [saving, setSaving] = useState(false);
   const [saveError, setSaveError] = useState(false);
   const [finished, setFinished] = useState(false);
+  const [sound, setSound] = useState(true);
+  useEffect(() => {setSound(isSoundEnabled());}, []);
   const sessionId = useRef<string | null>(null);
   const startedAt = useRef<number | null>(null);
   const promptRef = useRef<HTMLHeadingElement>(null);
@@ -107,8 +110,7 @@ export function Practice({lessonId, questions, onExit}: {lessonId: string; quest
       const position = /^[1-9]$/.test(key) ? Number(key) - 1 : 'abcdefgh'.indexOf(key);
       if (position < 0 || position >= choices.length) return;
       event.preventDefault();
-      startedAt.current ??= Date.now();
-      setSelected(choices[position]);
+      choose(choices[position]);
     }
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
@@ -119,14 +121,24 @@ export function Practice({lessonId, questions, onExit}: {lessonId: string; quest
     setIndex(0); setSelected(''); setChecked(false); setAnswers([]); setRawAnswers([]); setSaveError(false); setFinished(false);
   }
 
-  function check() {
+  // Multiple choice: one click (or key) selects and checks at once.
+  function choose(choice: string) {
+    if (answerLocked.current || !ready) return;
+    startedAt.current ??= Date.now();
+    setSelected(choice);
+    check(choice);
+  }
+
+  function check(answer = selected) {
     if (answerLocked.current || !ready || !question) return;
-    const input = answerInputSchema.safeParse({questionId: question.id, answer: selected});
+    const input = answerInputSchema.safeParse({questionId: question.id, answer});
     if (!input.success) return;
     answerLocked.current = true;
     startedAt.current ??= Date.now();
     setRawAnswers(current => [...current, input.data]);
-    setChecked(true); setAnswers(current => [...current, {questionId: question.id, correct: isCorrect(question, input.data.answer)}]);
+    const right = isCorrect(question, input.data.answer);
+    playSound(right ? 'correct' : 'wrong');
+    setChecked(true); setAnswers(current => [...current, {questionId: question.id, correct: right}]);
   }
   async function next() {
     if (!checked) return;
@@ -138,6 +150,7 @@ export function Practice({lessonId, questions, onExit}: {lessonId: string; quest
     try {
       await saveSession({id: sessionId.current, lessonId, at: new Date().toISOString(), durationSeconds: Math.min(3600, Math.max(0, Math.floor((Date.now() - (startedAt.current ?? Date.now())) / 1000))), answers}, rawAnswers);
       setFinished(true);
+      playSound('complete');
     } catch {submitted.current = false; setSaveError(true);}
     finally {setSaving(false);}
   }
@@ -153,8 +166,8 @@ export function Practice({lessonId, questions, onExit}: {lessonId: string; quest
     : lessonId === 'placement' ? <Link className="back-link" href="/"><ArrowLeft size={16}/>{t('backOverview')}</Link>
     : <Link className="back-link" href="/lessons"><ArrowLeft size={16}/>{t('backLessons')}</Link>;
   const progressPercent = (index + (checked ? 1 : 0)) / questions.length * 100;
-  return <div className="practice-container">{backLink}<div className="practice-title"><div><span className="eyebrow">{lesson ? `${t(lesson.category)} · JLPT ${lesson.level}` : `${t(lessonId === 'placement' ? 'placementLabel' : 'review')} · JLPT`}</span><h1>{lesson ? lesson.title[locale] : t(lessonId === 'placement' ? 'placementLabel' : 'review')}</h1></div><span className="question-progress">{t('questionProgress', {current: index + 1, total: questions.length})}</span></div><div className="progress-track" role="progressbar" aria-valuemin={0} aria-valuemax={questions.length} aria-valuenow={index + (checked ? 1 : 0)} aria-label={t('questionProgress', {current: index + 1, total: questions.length})}><span style={{width: `${progressPercent}%`}}/></div><section className="question-card panel"><div className="question-type"><span>{String(index + 1).padStart(2, '0')}</span>{t(question.type === 'fill' ? 'typeAnswer' : 'chooseAnswer')}</div><h2 className="japanese-question" lang="ja" tabIndex={-1} ref={promptRef}>{question.prompt}</h2><p className="question-translation">{question.translation[locale]}</p><form ref={formRef} onKeyDown={event => {if (event.key === 'Enter' && event.nativeEvent.isComposing) event.preventDefault();}} onSubmit={event => {event.preventDefault(); if (checked) next(); else check();}}>
-    {question.type === 'choice' ? <fieldset className="answer-options" disabled={checked || !ready}><legend className="sr-only">{t('chooseAnswer')}</legend>{question.choices.map((choice, i) => <label key={choice} className={`answer-option ${selected === choice ? 'selected' : ''} ${checked && choice === question.answer ? 'right-answer' : ''} ${checked && selected === choice && !correct ? 'wrong-answer' : ''}`}><input type="radio" name={question.id} value={choice} checked={selected === choice} onChange={() => {startedAt.current ??= Date.now(); setSelected(choice);}}/><span className="answer-letter">{String.fromCharCode(65 + i)}</span><span lang="ja">{choice}</span>{checked && choice === question.answer && <Check size={18}/>}</label>)}</fieldset> : <input className="fill-answer" aria-label={t('answerPlaceholder')} placeholder={t('answerPlaceholder')} value={selected} maxLength={120} disabled={checked || !ready} onChange={event => {startedAt.current ??= Date.now(); setSelected(event.target.value);}} autoComplete="off" lang="ja"/>}
+  return <div className="practice-container">{backLink}<div className="practice-title"><div><span className="eyebrow">{lesson ? `${t(lesson.category)} · JLPT ${lesson.level}` : `${t(lessonId === 'placement' ? 'placementLabel' : 'review')} · JLPT`}</span><h1>{lesson ? lesson.title[locale] : t(lessonId === 'placement' ? 'placementLabel' : 'review')}</h1></div><div className="practice-meta"><button type="button" className="sound-toggle" aria-pressed={sound} aria-label={t(sound ? 'soundOff' : 'soundOn')} title={t(sound ? 'soundOff' : 'soundOn')} onClick={() => {const on = !sound; setSound(on); setSoundEnabled(on); if (on) playSound('tap');}}>{sound ? <Volume2 size={18}/> : <VolumeX size={18}/>}</button><span className="question-progress">{t('questionProgress', {current: index + 1, total: questions.length})}</span></div></div><div className="progress-track" role="progressbar" aria-valuemin={0} aria-valuemax={questions.length} aria-valuenow={index + (checked ? 1 : 0)} aria-label={t('questionProgress', {current: index + 1, total: questions.length})}><span style={{width: `${progressPercent}%`}}/></div><section className="question-card panel"><div className="question-type"><span>{String(index + 1).padStart(2, '0')}</span>{t(question.type === 'fill' ? 'typeAnswer' : 'chooseAnswer')}</div><h2 className="japanese-question" lang="ja" tabIndex={-1} ref={promptRef}>{question.prompt}</h2><p className="question-translation">{question.translation[locale]}</p><form ref={formRef} onKeyDown={event => {if (event.key === 'Enter' && event.nativeEvent.isComposing) event.preventDefault();}} onSubmit={event => {event.preventDefault(); if (checked) next(); else check();}}>
+    {question.type === 'choice' ? <fieldset className="answer-options" disabled={checked || !ready}><legend className="sr-only">{t('chooseAnswer')}</legend>{question.choices.map((choice, i) => <label key={choice} className={`answer-option ${selected === choice ? 'selected' : ''} ${checked && choice === question.answer ? 'right-answer' : ''} ${checked && selected === choice && !correct ? 'wrong-answer' : ''}`}><input type="radio" name={question.id} value={choice} checked={selected === choice} onChange={() => choose(choice)}/><span className="answer-letter">{String.fromCharCode(65 + i)}</span><span lang="ja">{choice}</span>{checked && choice === question.answer && <Check size={18}/>}</label>)}</fieldset> : <input className="fill-answer" aria-label={t('answerPlaceholder')} placeholder={t('answerPlaceholder')} value={selected} maxLength={120} disabled={checked || !ready} onChange={event => {startedAt.current ??= Date.now(); setSelected(event.target.value);}} autoComplete="off" lang="ja"/>}
     {checked && <div role="status" className={`answer-feedback ${correct ? 'correct' : 'incorrect'}`}><div className="feedback-heading">{correct ? <CheckCircle2 size={21}/> : <X size={21}/>}<h3>{t(correct ? 'correct' : 'incorrect')}</h3></div>{!correct && <strong>{t('correctAnswer', {answer: question.answer})}</strong>}<p>{question.explanation[locale]}</p><Link href="/tutor">{t('askTutor')}<Sparkles size={14}/></Link></div>}
     <div className="practice-actions">{saveError && <p className="auth-error" role="alert">{t('saveProgressError')}</p>}<span className="muted practice-hint"><Keyboard size={14}/>{t(question.type === 'choice' ? 'keyboardHintChoice' : 'keyboardHintFill')}</span><button ref={submitRef} type="submit" className="button primary" disabled={!selected.trim() || !ready || saving}>{t(saving ? 'savingProgress' : checked ? (index === questions.length - 1 ? 'finishLesson' : 'nextQuestion') : 'checkAnswer')}<ArrowRight size={17}/></button></div></form></section><p className="practice-local"><Sprout size={14}/>{t(account.user ? 'accountPracticeNotice' : 'savedLocally')}</p></div>;
 }

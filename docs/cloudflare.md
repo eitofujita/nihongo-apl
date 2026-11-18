@@ -1,6 +1,6 @@
 # Cloudflare Workersへの公開準備
 
-2026-11-18、公開先としてCloudflareを選択しました。ユーザーはアカウント登録とWrangler認証を完了し、**「Cloudflareは無料枠のみ、勝手に課金しない」**と明示しました。有料プラン変更・支払方法登録・有料サービス追加は行いません。無料枠で動かせない場合は停止して結果を報告します。外部へのデプロイはまだ行っていません。
+2026-11-18、公開先としてCloudflareを選択しました。ユーザーはアカウント登録とWrangler認証を完了し、**「Cloudflareは無料枠のみ、勝手に課金しない」**と明示しました。有料プラン変更・支払方法登録・有料サービス追加は行いません。無料枠で動かせない場合は停止して結果を報告します。2026-11-18に本人のターミナルから初回公開しました（下の「現在の状況」を参照）。
 
 初回の認証権限ではWorker一覧の取得は成功しましたが、公開用サブドメインの取得は権限不足でした。`workers_scripts:write`と`workers_routes:write`を指定した追加認証を開始しています。契約情報を読むBilling権限は今回のWrangler認証に含められないため、Workers Free（$0）の表示確認は本人へ依頼中です。`default_usage_model=standard`というAPI応答はプランが無料かどうかの判定には使いません。無料プラン確認と必要な認証が完了するまで公開を実行しません。
 
@@ -48,6 +48,19 @@ npm run test:e2e:cloudflare
 6. `npm run deploy:cloudflare`を実行します。localhostや未設定URLではビルド・公開を開始せずに停止します。公開用URLで再ビルドし、同じURLをWorkerの環境変数にも設定します。Dashboardで管理する他の変数は`--keep-vars`で保持します。
 
 公開前に既存の同名Workerがあれば内容を確認してください。アカウント登録完了・CLI認証待ちの現段階では、こちらから作成・上書きは行っていません。
+
+## 現在の状況（2026-11-19）
+
+- **公開先**: https://nihongo-ai.fifatvgame.workers.dev（Version 479e9baa-920e-468b、Workers Free）。初回は「No access to the specified resource」で失敗し、`npx wrangler logout` → `npx wrangler login --device --browser=false` で再認証して成功しました。
+- **未解決の不具合**: SSRページはステータス200とヘッダーを返しますが、本文が約19〜20KBで途切れ（例：`…/_next/static/chunks/2mk`）、接続が閉じません。`/api/auth/status`は正常（約0.28秒）で、`/`は307でリダイレクトします。
+- **推定原因**: Workers Freeの1リクエストあたりCPU上限（10ms）またはメモリ上限の超過。workerdのローカルプレビューには制限がないため再現しません。
+- **調査の制約**: WSLからは`wrangler tail`が「fetch failed」になり、GraphQL Analyticsにも接続できません。ダッシュボードの「Workers & Pages → nihongo-ai → Metrics」で、エラー種別（Exceeded CPU / Memory）とCPU時間を確認してください。
+- **無料のまま試す修正案**:
+  1. ログイン不要の画面を事前に生成し、静的アセットまたはOpenNextの静的キャッシュから返す
+  2. 教材データ（`src/content/generated`、約3.4MB）がSSRで丸ごと読み込まれないよう、レベル・レッスン単位に分ける
+  3. `src/proxy.ts`の`refreshAuth`を、認証が必要なパスやCookieがあるリクエストに限定する
+- **公開待ちの変更**: 選択問題の1クリック判定、Web Audioによる効果音（[src/lib/sound.ts](../src/lib/sound.ts)）、エアロ風テーマ（[src/app/aero.css](../src/app/aero.css)）。コミット済みで、まだデプロイしていません。
+- **デプロイの方法**: 本人のターミナルで `npm run deploy:cloudflare` を実行します。Claudeは実行しません。
 
 ## 確認済みの範囲と残作業
 
