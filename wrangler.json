@@ -1,0 +1,18 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "nihongo-ai",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2026-11-17",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "assets": {"directory": ".open-next/assets", "binding": "ASSETS"},
+  "services": [{"binding": "WORKER_SELF_REFERENCE", "service": "nihongo-ai"}],
+  "vars": {"NIHONGO_HOSTING": "cloudflare", "BILLING_ENABLED": "false"},
+  "keep_vars": true,
+  "observability": {"enabled": false},
+  "ratelimits": [
+    {"name": "NIHONGO_AUTH_SENSITIVE", "namespace_id": "51001", "simple": {"limit": 3, "period": 60}},
+    {"name": "NIHONGO_AUTH_STANDARD", "namespace_id": "51002", "simple": {"limit": 15, "period": 60}},
+    {"name": "NIHONGO_AUTH_STATUS", "namespace_id": "51003", "simple": {"limit": 60, "period": 60}},
+    {"name": "NIHONGO_PROGRESS", "namespace_id": "51004", "simple": {"limit": 120, "period": 60}}
+  ]
+}

@@ -7,6 +7,7 @@ import en from '../messages/en.json';
 import {AccountPanel} from '@/components/account-panel';
 import {ProgressProvider, useProgress} from '@/components/progress-provider';
 import {Practice} from '@/components/learning';
+import {getLesson} from '@/content/lessons';
 import {initialProgress, STORAGE_KEY, type Progress} from '@/lib/progress';
 import type {AccountState} from '@/lib/auth-state';
 
@@ -122,10 +123,9 @@ describe('Cloud progress, retry and account isolation', () => {
   });
   it('does not report saved on failure, and retries the same id with raw answers', async () => {
     network.mockResolvedValueOnce(Response.json({error: 'storage_unavailable'}, {status: 503}));
-    render(wrap(<><Practice lessonId="n5-wa-desu"/><Snapshot/></>, accountA));
+    render(wrap(<><Practice lessonId="n5-wa-desu" questions={getLesson("n5-wa-desu")!.questions}/><Snapshot/></>, accountA));
     for (const answer of ['は', 'です']) {
       fireEvent.click(screen.getAllByRole('radio').find(input => (input as HTMLInputElement).value === answer)!);
-      fireEvent.click(screen.getByRole('button', {name: 'Check answer'}));
       fireEvent.click(screen.getByRole('button', {name: 'Next question'}));
     }
     fireEvent.change(screen.getByRole('textbox'), {target: {value: 'は'}});
@@ -144,7 +144,7 @@ describe('Cloud progress, retry and account isolation', () => {
     expect(localStorage.getItem(STORAGE_KEY)).toBeNull();
   });
   it('disables learning when the account database failed to load', () => {
-    render(wrap(<><Practice lessonId="n5-wa-desu"/><Snapshot/></>, {...accountA, progress: null, loadError: true}));
+    render(wrap(<><Practice lessonId="n5-wa-desu" questions={getLesson("n5-wa-desu")!.questions}/><Snapshot/></>, {...accountA, progress: null, loadError: true}));
     expect(screen.getByTestId('snapshot').textContent).toContain('"ready":false');
     expect((screen.getByRole('button', {name: 'Check answer'}) as HTMLButtonElement).disabled).toBe(true);
     expect(network).not.toHaveBeenCalled();

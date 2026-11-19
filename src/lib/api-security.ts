@@ -1,4 +1,5 @@
 import {createHash} from 'node:crypto';
+import {isIP} from 'node:net';
 import {NextResponse} from 'next/server';
 import {getAppUrl} from './config';
 
@@ -64,6 +65,40 @@ export const authLimiter = new RateLimiter();
 export const progressLimiter = new RateLimiter();
 export function authRateKey(request: Request, action: string) {
   // Forwarded IPs are trusted only behind the selected hosting platform.
-  const ip = process.env.VERCEL === '1' ? request.headers.get('x-vercel-forwarded-for') ?? 'unknown' : 'local';
+  let ip = process.env.VERCEL === '1' ? request.headers.get('x-vercel-forwarded-for') ?? 'unknown' : 'local';
+  if (process.env.NIHONGO_HOSTING === 'cloudflare') {
+    const connectingIp = request.headers.get('cf-connecting-ip');
+    if (!connectingIp || !isIP(connectingIp)) throw new ApiError(503, 'unavailable');
+    ip = connectingIp;
+  }
   return createHash('sha256').update(`${action}:${ip}`).digest('hex');
+}
+
+type BindingName = 'NIHONGO_AUTH_SENSITIVE' | 'NIHONGO_AUTH_STANDARD' | 'NIHONGO_AUTH_STATUS' | 'NIHONGO_PROGRESS';
+async function consumeCloudflareLimit(name: BindingName, key: string) {
+  const {getCloudflareContext} = await import('@opennextjs/cloudflare');
+  const {env} = getCloudflareContext();
+  const binding = env[name];
+  // Missing bindings or platform errors fail closed, never fall back to a
+  // per-isolate counter which could be bypassed by scaling the Worker.
+  if (!binding || typeof binding.limit !== 'function') throw new ApiError(503, 'unavailable');
+  const {success} = await binding.limit({key});
+  // The platform exposes no exact reset timestamp; 60s is a conservative retry.
+  if (!success) throw new ApiError(429, 'rate_limit', 60);
+}
+export async function limitAuthRequest(request: Request, action: string) {
+  const key = authRateKey(request, action);
+  const sensitive = action === 'register' || action === 'recover';
+  if (process.env.NIHONGO_HOSTING === 'cloudflare') {
+    await consumeCloudflareLimit(action === 'status' ? 'NIHONGO_AUTH_STATUS' : sensitive ? 'NIHONGO_AUTH_SENSITIVE' : 'NIHONGO_AUTH_STANDARD', key);
+    return;
+  }
+  authLimiter.consume(key, action === 'status' ? 60 : sensitive ? 3 : 15, 60000);
+}
+export async function limitProgressRequest(userId: string) {
+  if (process.env.NIHONGO_HOSTING === 'cloudflare') {
+    await consumeCloudflareLimit('NIHONGO_PROGRESS', createHash('sha256').update(`progress:${userId}`).digest('hex'));
+    return;
+  }
+  progressLimiter.consume(userId, 120, 60000);
 }

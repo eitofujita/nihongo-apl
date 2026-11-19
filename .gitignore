@@ -8,5 +8,11 @@ test-results/
 !.env.example
 *.tsbuildinfo
 .vercel/
+.open-next/
+.wrangler/
+.cloudflare/
+.dev.vars*
+!.dev.vars.example
+!.env.cloudflare.example
 *.log
 .DS_Store

@@ -1,5 +1,7 @@
 import {expect, test} from '@playwright/test';
 import {placementQuestions} from '../../src/content/lessons';
+import catalogData from '../../src/content/generated/catalog.json';
+const catalog = catalogData.lessons;
 
 test('English and Russian pages render with localized metadata and no horizontal overflow', async ({page}) => {
   for (const locale of ['en', 'ru']) {
@@ -29,11 +31,9 @@ test('a real practice result survives a locale switch and page reload', async ({
   await page.goto('/en/lessons/n5-wa-desu');
   await page.getByRole('button', {name: 'Start practice'}).click();
   await page.locator('input[value="は"]').check();
-  await page.getByRole('button', {name: 'Check answer'}).click();
   await expect(page.getByRole('status')).toContainText("That's right");
   await page.getByRole('button', {name: 'Next question'}).click();
   await page.locator('input[value="です"]').check();
-  await page.getByRole('button', {name: 'Check answer'}).click();
   await page.getByRole('button', {name: 'Next question'}).click();
   await page.getByRole('textbox').fill('は');
   await page.getByRole('button', {name: 'Check answer'}).click();
@@ -52,7 +52,7 @@ test('a real practice result survives a locale switch and page reload', async ({
 test('lesson filters, empty search, daily goals, and reset confirmation work', async ({page}) => {
   await page.goto('/en/lessons');
   await page.getByRole('button', {name: 'Vocabulary', exact: true}).click();
-  await expect(page.locator('.course-grid .lesson-card')).toHaveCount(10);
+  await expect(page.locator('.course-grid .lesson-card')).toHaveCount(catalog.filter(l => l.level === 'N5' && l.category === 'vocabulary').length);
   await page.getByRole('textbox', {name: 'Find a lesson…'}).fill('nonexistent');
   await expect(page.locator('.course-grid .lesson-card')).toHaveCount(0);
   await expect(page.getByText('No lessons found. Try another search.')).toBeVisible();
@@ -90,7 +90,7 @@ test('mobile navigation opens, closes, and routes to lessons', async ({page, isM
   test.skip(!isMobile, 'Mobile navigation only');
   await page.goto('/en');
   await page.getByRole('button', {name: 'Open navigation'}).click();
-  await page.getByRole('link', {name: 'My learning', exact: true}).click();
+  await page.getByRole('complementary').getByRole('link', {name: 'My learning', exact: true}).click();
   await expect(page).toHaveURL(/\/en\/lessons/);
   await expect(page.getByRole('button', {name: 'Open navigation'})).toHaveAttribute('aria-expanded', 'false');
 });
@@ -166,8 +166,10 @@ test('the diagnostic records a starting point without completing lessons', async
   for (const question of placementQuestions) {
     const answer = question.id === 'aru-1' ? 'います' : question.answer;
     if (question.type === 'choice') await page.locator(`input[value="${answer}"]`).check();
-    else await page.getByRole('textbox').fill(answer);
-    await page.getByRole('button', {name: 'Check answer'}).click();
+    else {
+      await page.getByRole('textbox').fill(answer);
+      await page.getByRole('button', {name: 'Check answer'}).click();
+    }
     await page.getByRole('button', {name: question.id === placementQuestions.at(-1)?.id ? 'Finish lesson' : 'Next question'}).click();
   }
   await expect(page.getByRole('heading', {level: 1})).toHaveText('Your starting point is ready.');
@@ -189,7 +191,6 @@ test('a lesson result leads to due review rather than opening another lesson', a
   await page.getByRole('button', {name: 'Start practice'}).click();
   for (const answer of ['は', 'です']) {
     await page.locator(`input[value="${answer}"]`).check();
-    await page.getByRole('button', {name: 'Check answer'}).click();
     await page.getByRole('button', {name: 'Next question'}).click();
   }
   await page.getByRole('textbox').fill('は');
@@ -213,10 +214,21 @@ test('older progress remains available and a mistake becomes a due review', asyn
   await page.clock.fastForward(601000);
   await page.getByRole('button', {name: 'Start your review'}).click();
   await page.locator('input[value="は"]').check();
-  await page.getByRole('button', {name: 'Check answer'}).click();
   await page.getByRole('button', {name: 'Finish lesson'}).click();
   await page.goto('/en/history');
   await expect(page.locator('.weak-topics')).toHaveCount(0);
   await page.goto('/en/review');
   await expect(page.getByText("You're all caught up for now.")).toBeVisible();
+});
+
+test('furigana can be switched on and stays on across questions', async ({page}) => {
+  await page.goto('/en/lessons/n5-wa-desu');
+  await page.getByRole('button', {name: 'Start practice'}).click();
+  await expect(page.locator('.japanese-question rt')).toHaveCount(0);
+  await page.getByRole('button', {name: 'Furigana'}).click();
+  await expect(page.locator('.japanese-question rt')).toHaveText(['がくせい']);
+  await page.locator('input[value="は"]').check();
+  await page.getByRole('button', {name: 'Next question'}).click();
+  await expect(page.getByRole('button', {name: 'Furigana'})).toHaveAttribute('aria-pressed', 'true');
+  await expect(page.locator('.japanese-question rt').first()).toHaveText('たなか');
 });

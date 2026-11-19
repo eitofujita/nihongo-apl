@@ -9,7 +9,9 @@ export type Word = z.infer<typeof wordSchema>;
 export const questionSchema = z.object({
   id: z.string().min(1), prompt: z.string().min(1), translation: localizedText,
   type: z.enum(['choice', 'fill']), choices: z.array(z.string().min(1)).length(4),
-  answer: z.string().min(1), explanation: localizedText, wordId: z.string().optional()
+  answer: z.string().min(1), explanation: localizedText, wordId: z.string().optional(),
+  // Furigana notation 漢字{かんじ}, generated at build time; plain fields stay the source of truth.
+  ruby: z.object({prompt: z.string(), choices: z.array(z.string())}).optional()
 }).superRefine((question, context) => {
   if (!question.choices.includes(question.answer)) context.addIssue({code: 'custom', message: 'Answer must be among choices'});
   if (new Set(question.choices).size !== 4) context.addIssue({code: 'custom', message: 'Choices must be distinct'});
@@ -20,7 +22,7 @@ export const lessonSchema = z.object({
   category: z.enum(['grammar', 'vocabulary']), title: localizedText, description: localizedText,
   glyph: z.string(), color: z.enum(['green', 'peach', 'purple']),
   study: localizedText,
-  examples: z.array(z.object({japanese: z.string().min(1), translations: localizedText})).min(1),
+  examples: z.array(z.object({japanese: z.string().min(1), translations: localizedText, ruby: z.string().optional()})).min(1),
   words: z.array(wordSchema).default([]), questions: z.array(questionSchema).min(1)
 });
 export type Lesson = z.infer<typeof lessonSchema>;

@@ -1,0 +1,621 @@
+# N5 vocabulary: expression|reading|Russian[|English override]
+ああ|ああ|ах!, ох!|ah!, oh!
+会う|あう|встречаться|to meet, to see
+青|あお|синий цвет|blue (color)
+青い|あおい|синий|blue
+赤|あか|красный цвет|red (color)
+赤い|あかい|красный|red
+明るい|あかるい|светлый, яркий; жизнерадостный|bright, cheerful
+秋|あき|осень|autumn, fall
+開く|あく|открываться|to open (by itself)
+開ける|あける|открывать|to open (something)
+上げる|あげる|поднимать; давать|to raise, to lift; to give
+朝御飯|あさごはん|завтрак|breakfast
+明後日|あさって|послезавтра|day after tomorrow
+足; 脚|あし|нога; ступня|foot, leg
+あそこ|あそこ|вон там|over there
+遊ぶ|あそぶ|играть, развлекаться|to play, to have fun
+暖かい|あたたかい|тёплый|warm
+頭|あたま|голова|head
+あちら|あちら|туда, вон там (вежл.)|that way, over there (polite)
+熱い|あつい|горячий|hot (to the touch)
+厚い|あつい|толстый (о предмете)|thick
+あっち|あっち|вон туда|over there
+後|あと|после, потом; остальное|after, later; the rest
+あなた|あなた|вы, ты|you
+アパート|アパート|многоквартирный дом, квартира|apartment
+あの|あの|тот (вон там)|that (over there)
+浴びる|あびる|обливаться, принимать (душ)|to bathe in, to take (a shower)
+危ない|あぶない|опасный|dangerous
+甘い|あまい|сладкий|sweet
+余り|あまり|не очень (с отрицанием)|not very (with negative)
+飴|あめ|леденец, конфета|candy
+洗う|あらう|мыть, стирать|to wash
+在る|ある|находиться, иметься (о предметах)|to be, to exist (things)
+有る|ある|иметь, иметься|to have, there is
+歩く|あるく|ходить пешком|to walk
+あれ|あれ|то (вон там)|that one (over there)
+いい; よい|いい; よい|хороший|good
+いいえ|いいえ|нет|no
+言う|いう|говорить, сказать|to say
+いかが|いかが|как (вежл.)|how (polite)
+いくつ|いくつ|сколько (штук); сколько лет|how many, how old
+いくら|いくら|сколько (стоит)|how much
+池|いけ|пруд|pond
+医者|いしゃ|врач|doctor
+痛い|いたい|больно; болезненный|painful, sore
+一日|いちにち|один день, весь день|one day (duration)
+一番|いちばん|самый; первый, номер один|best, number one
+いつ|いつ|когда|when
+五日|いつか|пять дней; пятое число|five days; 5th day of the month
+一緒|いっしょ|вместе|together
+五つ|いつつ|пять (штук)|five (things)
+いつも|いつも|всегда, обычно|always, usually
+意味|いみ|значение, смысл|meaning
+嫌|いや|неприятный, нежелательный|unpleasant, disliked
+入口|いりぐち|вход|entrance
+居る|いる|быть, находиться (о живых)|to be, to exist (people, animals)
+要る|いる|быть нужным|to need
+入れる|いれる|класть внутрь, вставлять|to put in
+色|いろ|цвет|color
+色々|いろいろ|разный, всевозможный|various
+上|うえ|верх; над, на|above, on top
+後ろ|うしろ|сзади, позади|back, behind
+薄い|うすい|тонкий; бледный, слабый|thin, weak, pale
+歌|うた|песня|song
+歌う|うたう|петь|to sing
+うち|うち|дом, свой дом|home, house
+生まれる|うまれる|родиться|to be born
+売る|うる|продавать|to sell
+うるさい|うるさい|шумный; надоедливый|noisy, annoying
+上着|うわぎ|пиджак, куртка|jacket, coat
+絵|え|картина, рисунок|picture, painting
+映画|えいが|фильм, кино|movie, film
+映画館|えいがかん|кинотеатр|movie theater
+英語|えいご|английский язык|English (language)
+ええ|ええ|да|yes
+エレベーター|エレベーター|лифт|elevator
+～円|～えん|иена (счётный суффикс)|yen
+鉛筆|えんぴつ|карандаш|pencil
+お～|お～|вежливая приставка о-|honorific prefix o-
+美味しい|おいしい|вкусный|delicious
+多い|おおい|многочисленный, много|many, a lot
+大きな|おおきな|большой|big
+大勢|おおぜい|много людей, толпа|large crowd of people
+お母さん|おかあさん|мама, мать|mother
+お菓子|おかし|сладости|sweets, snacks
+お金|おかね|деньги|money
+起きる|おきる|вставать, просыпаться; случаться|to get up; to happen
+置く|おく|класть, ставить|to put, to place
+奥さん|おくさん|жена (чужая, вежл.)|(someone's) wife
+お酒|おさけ|сакэ; алкоголь|sake, alcohol
+お皿|おさら|тарелка, блюдо|plate, dish
+伯父; 叔父さん|おじさん|дядя; мужчина средних лет|uncle; middle-aged man
+おじいさん|おじいさん|дедушка; пожилой мужчина|grandfather; old man
+教える|おしえる|учить, преподавать; сообщать|to teach, to tell
+押す|おす|толкать, нажимать|to push, to press
+遅い|おそい|медленный; поздний|slow; late
+お手洗い|おてあらい|туалет|restroom, toilet
+お父さん|おとうさん|папа, отец|father
+男|おとこ|мужчина|man, male
+男の子|おとこのこ|мальчик|boy
+一昨日|おととい|позавчера|day before yesterday
+おととし|おととし|позапрошлый год|year before last
+大人|おとな|взрослый|adult
+お腹|おなか|живот|stomach, belly
+同じ|おなじ|одинаковый, тот же|same
+お兄さん|おにいさん|старший брат (вежл.)|older brother (polite)
+お姉さん|おねえさん|старшая сестра (вежл.)|older sister (polite)
+伯母さん; 叔母さん|おばさん|тётя; женщина средних лет|aunt; middle-aged woman
+おばあさん|おばあさん|бабушка; пожилая женщина|grandmother; old woman
+お風呂|おふろ|ванна, баня|bath
+お弁当|おべんとう|обед в коробочке, бэнто|boxed lunch, bento
+覚える|おぼえる|запоминать|to memorize, to remember
+おまわりさん|おまわりさん|полицейский (разг.)|police officer (friendly)
+重い|おもい|тяжёлый; серьёзный|heavy; serious
+面白い|おもしろい|интересный, забавный|interesting, funny
+泳ぐ|およぐ|плавать|to swim
+降りる|おりる|выходить (из транспорта), спускаться|to get off, to go down
+終る|おわる|заканчиваться|to end, to finish
+音楽|おんがく|музыка|music
+女|おんな|женщина|woman, female
+女の子|おんなのこ|девочка|girl
+～回|～かい|раз (счётный суффикс)|counter for times
+～階|～かい|этаж (счётный суффикс)|counter for floors
+外国|がいこく|заграница, иностранное государство|foreign country
+外国人|がいこくじん|иностранец|foreigner
+階段|かいだん|лестница|stairs
+買い物|かいもの|покупки, шопинг|shopping
+買う|かう|покупать|to buy
+返す|かえす|возвращать (что-то)|to return (something)
+顔|かお|лицо|face
+かかる|かかる|занимать (время), стоить (денег)|to take (time, money)
+鍵|かぎ|ключ; замок|key, lock
+～か月|～かげつ|месяц (счёт длительности)|counter for months
+掛ける|かける|вешать; надевать (очки)|to hang; to put on (glasses)
+かける|かける|звонить (по телефону)|to make (a phone call)
+傘|かさ|зонт|umbrella
+貸す|かす|давать взаймы|to lend
+風邪|かぜ|простуда|cold (illness)
+方|かた|человек (вежл.); способ|person (polite); way of doing
+家族|かぞく|семья|family
+片仮名|かたかな|катакана|katakana
+～月|～がつ|месяц (название месяца)|month (of the year)
+カップ|カップ|чашка|cup
+家庭|かてい|семья, домашний очаг|home, household
+角|かど|угол|corner
+花瓶|かびん|ваза|vase
+かぶる|かぶる|надевать (на голову)|to put on (a hat)
+紙|かみ|бумага|paper
+カメラ|カメラ|фотоаппарат|camera
+火曜日|かようび|вторник|Tuesday
+辛い|からい|острый; солёный|spicy, salty
+体|からだ|тело; здоровье|body; health
+借りる|かりる|брать взаймы|to borrow
+～がる|～がる|проявлять (чувство), -ся|to show signs of (feeling)
+軽い|かるい|лёгкий|light (weight)
+カレー|カレー|карри|curry
+カレンダー|カレンダー|календарь|calendar
+川; 河|かわ|река|river
+～側|～がわ|сторона|side
+可愛い|かわいい|милый, симпатичный|cute
+漢字|かんじ|кандзи, иероглиф|kanji, Chinese character
+黄色|きいろ|жёлтый цвет|yellow (color)
+黄色い|きいろい|жёлтый|yellow
+消える|きえる|исчезать; гаснуть|to disappear; to go out (light)
+北|きた|север|north
+ギター|ギター|гитара|guitar
+汚い|きたない|грязный|dirty
+喫茶店|きっさてん|кафе, кофейня|café, coffee shop
+切手|きって|почтовая марка|postage stamp
+牛肉|ぎゅうにく|говядина|beef
+教室|きょうしつ|класс, аудитория|classroom
+兄弟|きょうだい|братья и сёстры|siblings
+去年|きょねん|прошлый год|last year
+嫌い|きらい|нелюбимый, неприятный|disliked
+切る|きる|резать; класть трубку|to cut; to hang up
+着る|きる|надевать (одежду на верх тела)|to wear, to put on (clothes)
+綺麗|きれい|красивый; чистый|pretty; clean
+キロ; キログラム|キロ; キログラム|килограмм|kilogram
+キロ; キロメートル|キロ; キロメートル|километр|kilometer
+金曜日|きんようび|пятница|Friday
+薬|くすり|лекарство|medicine
+下さい|ください|пожалуйста (дайте, сделайте)|please (give me / do)
+口|くち|рот|mouth
+靴|くつ|обувь|shoes
+靴下|くつした|носки|socks
+国|くに|страна; родина|country; home country
+曇り|くもり|облачность, пасмурно|cloudy weather
+曇る|くもる|затягиваться облаками|to become cloudy
+暗い|くらい|тёмный; мрачный|dark, gloomy
+～くらい; ぐらい|～くらい; ぐらい|примерно, около|about, approximately
+クラス|クラス|класс, группа|class
+グラム|グラム|грамм|gram
+黒|くろ|чёрный цвет|black (color)
+黒い|くろい|чёрный|black, dark
+警官|けいかん|полицейский|police officer
+今朝|けさ|сегодня утром|this morning
+消す|けす|стирать; выключать; гасить|to erase; to turn off
+結構|けっこう|прекрасный; достаточно|fine; that's enough
+結婚|けっこん (する)|брак, жениться / выйти замуж|marriage, to get married
+月曜日|げつようび|понедельник|Monday
+玄関|げんかん|прихожая, вход в дом|entrance hall
+元気|げんき|здоровый, бодрый|healthy, energetic
+～個|～こ|штука (счётный суффикс)|counter for small items
+～語|～ご|язык (суффикс)|language (suffix)
+交差点|こうさてん|перекрёсток|intersection
+紅茶|こうちゃ|чёрный чай|black tea
+交番|こうばん|полицейская будка|police box
+声|こえ|голос|voice
+コート|コート|пальто; корт|coat; court
+ここ|ここ|здесь|here
+午後|ごご|после полудня|afternoon, p.m.
+九日|ここのか|девять дней; девятое число|nine days; 9th day of the month
+九つ|ここのつ|девять (штук)|nine (things)
+午前|ごぜん|до полудня|morning, a.m.
+答える|こたえる|отвечать|to answer
+こちら|こちら|сюда; этот человек (вежл.)|this way; this person (polite)
+こっち|こっち|сюда, эта сторона|this way, this side
+コップ|コップ|стакан|glass, tumbler
+今年|ことし|этот год|this year
+言葉|ことば|слово; язык|word; language
+子供|こども|ребёнок, дети|child, children
+この|この|этот|this
+御飯|ごはん|варёный рис; еда|cooked rice; meal
+コピーする|コピーする|копировать|to copy
+困る|こまる|затрудняться, быть в беде|to be in trouble
+これ|これ|это|this one
+～ころ; ～ごろ|～ころ; ～ごろ|около (о времени)|around (time)
+今月|こんげつ|этот месяц|this month
+今週|こんしゅう|эта неделя|this week
+こんな|こんな|такой (как этот)|like this, such
+今晩|こんばん|сегодня вечером|this evening, tonight
+さあ|さあ|ну, давай|well, come on
+～歳|～さい|лет (о возрасте)|years old
+財布|さいふ|кошелёк|wallet
+先|さき|впереди; кончик; раньше|ahead; tip; earlier
+咲く|さく|цвести|to bloom
+作文|さくぶん|сочинение|composition, essay
+差す|さす|раскрывать (зонт)|to open (an umbrella)
+～冊|～さつ|книга, том (счётный суффикс)|counter for books
+雑誌|ざっし|журнал|magazine
+砂糖|さとう|сахар|sugar
+さ来年|さらいねん|через два года|year after next
+～さん|～さん|господин, госпожа (суффикс)|Mr., Ms.
+散歩|さんぽ (する)|прогулка, гулять|walk, to take a walk
+～時|～じ|час (о времени)|o'clock
+塩|しお|соль|salt
+しかし|しかし|однако|however
+～時間|～じかん|час (длительность)|hours (duration)
+仕事|しごと|работа|work, job
+辞書|じしょ|словарь|dictionary
+静か|しずか|тихий, спокойный|quiet
+下|した|низ; под|below, under
+質問|しつもん|вопрос|question
+自動車|じどうしゃ|автомобиль|automobile, car
+死ぬ|しぬ|умирать|to die
+字引|じびき|словарь (устар.)|dictionary (old-fashioned)
+自分|じぶん|сам, себя|oneself
+閉まる|しまる|закрываться|to close (by itself)
+閉める|しめる|закрывать|to close (something)
+締める|しめる|завязывать, затягивать|to tie, to fasten
+じゃ; じゃあ|じゃ; じゃあ|ну, тогда|well then
+写真|しゃしん|фотография|photograph
+シャツ|シャツ|рубашка|shirt
+シャワー|シャワー|душ|shower
+～中|～じゅう|в течение всего, по всему|throughout
+～週間|～しゅうかん|неделя (длительность)|weeks (duration)
+授業|じゅぎょう|урок, занятие|class, lesson
+宿題|しゅくだい|домашнее задание|homework
+上手|じょうず|умелый, хорошо умеющий|skillful, good at
+丈夫|じょうぶ|прочный; крепкий|sturdy; healthy
+醤油|しょうゆ|соевый соус|soy sauce
+食堂|しょくどう|столовая|cafeteria, dining hall
+知る|しる|знать, узнать|to know
+白|しろ|белый цвет|white (color)
+白い|しろい|белый|white
+～人|～じん|-ец (национальность)|person from (nationality)
+新聞|しんぶん|газета|newspaper
+水曜日|すいようび|среда|Wednesday
+吸う|すう|вдыхать; курить|to inhale; to smoke
+スカート|スカート|юбка|skirt
+好き|すき|любимый, нравящийся|liked, favorite
+～すぎ|～すぎ|после; слишком|past; too much
+少ない|すくない|немногочисленный, мало|few, little
+すぐに|すぐに|сразу, немедленно|immediately
+少し|すこし|немного|a little
+涼しい|すずしい|прохладный|cool
+～ずつ|～ずつ|по (столько-то) за раз|at a time, each
+ストーブ|ストーブ|обогреватель|heater
+スプーン|スプーン|ложка|spoon
+スポーツ|スポーツ|спорт|sports
+ズボン|ズボン|брюки|trousers
+住む|すむ|жить, проживать|to live, to reside
+する|する|делать|to do
+座る|すわる|садиться|to sit
+背|せい|рост|height, stature
+生徒|せいと|ученик|pupil
+セーター|セーター|свитер|sweater
+石鹸|せっけん|мыло|soap
+背広|せびろ|мужской костюм|business suit
+狭い|せまい|узкий, тесный|narrow, cramped
+ゼロ|ゼロ|ноль|zero
+千|せん|тысяча|thousand
+先月|せんげつ|прошлый месяц|last month
+先週|せんしゅう|прошлая неделя|last week
+洗濯|せんたく|стирка|laundry
+全部|ぜんぶ|всё, целиком|all, everything
+そう; そうです|そう; そうです|да, так|yes, that's right
+掃除|そうじ (する)|уборка, убирать|cleaning, to clean
+そうして; そして|そうして; そして|и, а затем|and then
+そこ|そこ|там (у собеседника)|there (near you)
+そちら|そちら|туда; вы (вежл.)|that way; you (polite)
+そっち|そっち|туда, та сторона|that way
+外|そと|снаружи, улица|outside
+その|その|тот (у собеседника)|that (near you)
+そば|そば|рядом, возле|near, beside
+それ|それ|то (у собеседника)|that one (near you)
+それから|それから|а потом, после этого|and then, after that
+それでは|それでは|ну что ж, тогда|well then
+～台|～だい|машина, устройство (счётный суффикс)|counter for machines
+大学|だいがく|университет|university
+大使館|たいしかん|посольство|embassy
+大丈夫|だいじょうぶ|всё в порядке|all right, OK
+大好き|だいすき|очень любимый|really liked, favorite
+大切|たいせつ|важный, ценный|important, precious
+台所|だいどころ|кухня|kitchen
+大変|たいへん|очень; тяжёлый, трудный|very; tough
+～だけ|～だけ|только|only
+沢山|たくさん|много|many, a lot
+タクシー|タクシー|такси|taxi
+出す|だす|вынимать; сдавать, отправлять|to take out; to hand in
+～たち|～たち|суффикс множественного числа|plural suffix
+立つ|たつ|вставать, стоять|to stand
+たて|たて|длина, высота, вертикаль|length, height
+建物|たてもの|здание|building
+楽しい|たのしい|весёлый, приятный|fun, enjoyable
+頼む|たのむ|просить|to ask, to request
+たばこ|たばこ|сигареты, табак|cigarettes, tobacco
+多分|たぶん|наверное|probably
+食べ物|たべもの|еда|food
+誰|だれ|кто|who
+誰か|だれか|кто-нибудь|someone
+誕生日|たんじょうび|день рождения|birthday
+段々|だんだん|постепенно|gradually
+小さな|ちいさな|маленький|small
+近い|ちかい|близкий|near, close
+違う|ちがう|отличаться; быть неправильным|to differ; to be wrong
+近く|ちかく|поблизости|nearby
+地下鉄|ちかてつ|метро|subway
+茶色|ちゃいろ|коричневый цвет|brown
+茶碗|ちゃわん|чашка для риса|rice bowl
+～中|～ちゅう|во время, в процессе|during, in the middle of
+丁度|ちょうど|как раз, ровно|exactly, just
+ちょっと|ちょっと|немного; минутку|a little; just a moment
+一日|ついたち|первое число (месяца)|1st day of the month
+使う|つかう|использовать|to use
+疲れる|つかれる|уставать|to get tired
+次|つぎ|следующий|next
+着く|つく|прибывать|to arrive
+作る|つくる|делать, создавать; готовить|to make; to cook
+つける|つける|включать (свет)|to turn on (a light)
+勤める|つとめる|работать (в компании)|to work for (a company)
+つまらない|つまらない|скучный|boring
+冷たい|つめたい|холодный (на ощупь); холодный (о человеке)|cold (to the touch)
+強い|つよい|сильный|strong
+手|て|рука, кисть|hand
+テープ|テープ|лента, плёнка|tape
+テープレコーダー|テープレコーダー|магнитофон|tape recorder
+テーブル|テーブル|стол|table
+出かける|でかける|выходить (из дома), уходить|to go out
+手紙|てがみ|письмо|letter
+できる|できる|мочь, уметь; быть готовым|can, to be able to
+出口|でぐち|выход|exit
+テスト|テスト|тест, контрольная|test
+では|では|ну, тогда|well then
+デパート|デパート|универмаг|department store
+でも|でも|но, однако|but
+出る|でる|выходить; появляться|to go out; to appear
+テレビ|テレビ|телевизор|television
+電気|でんき|электричество; свет|electricity; light
+戸|と|дверь (японская)|door (Japanese style)
+～度|～ど|раз; градус|times; degrees
+ドア|ドア|дверь|door
+トイレ|トイレ|туалет|toilet
+どう|どう|как|how
+どうして|どうして|почему|why
+どうぞ|どうぞ|пожалуйста (прошу)|please, go ahead
+動物|どうぶつ|животное|animal
+どうも|どうも|спасибо; как-то|thanks; somehow
+遠い|とおい|далёкий|far
+十日|とおか|десять дней; десятое число|ten days; 10th day of the month
+～時|～とき|когда, в то время как|when, at the time of
+時々|ときどき|иногда|sometimes
+どこ|どこ|где|where
+所|ところ|место|place
+年|とし|год; возраст|year; age
+どちら|どちら|который (из двух); где (вежл.)|which (of two); where (polite)
+どっち|どっち|который, куда|which one, which way
+とても|とても|очень|very
+どなた|どなた|кто (вежл.)|who (polite)
+隣|となり|соседний, рядом|next to, next door
+どの|どの|который|which
+飛ぶ|とぶ|летать; прыгать|to fly; to jump
+止まる|とまる|останавливаться|to stop
+土曜日|どようび|суббота|Saturday
+鳥|とり|птица|bird
+鶏肉|とりにく|курятина|chicken (meat)
+取る|とる|брать|to take
+撮る|とる|снимать (фото, фильм)|to take (a photo)
+どれ|どれ|который (из многих)|which one
+どんな|どんな|какой|what kind of
+ない|ない|нет, не иметься|there is not
+ナイフ|ナイフ|нож|knife
+中|なか|внутри, середина|inside, middle
+長い|ながい|длинный|long
+鳴く|なく|кричать, петь (о животных)|to cry (animal)
+無くす|なくす|терять|to lose
+なぜ|なぜ|почему|why
+夏|なつ|лето|summer
+夏休み|なつやすみ|летние каникулы|summer vacation
+～など|～など|и так далее|and so on
+七つ|ななつ|семь (штук)|seven (things)
+何|なん; なに|что|what
+七日|なのか|семь дней; седьмое число|seven days; 7th day of the month
+名前|なまえ|имя|name
+習う|ならう|учиться (у кого-то)|to learn
+並ぶ|ならぶ|выстраиваться в ряд|to line up
+並べる|ならべる|расставлять в ряд|to arrange in a row
+なる|なる|становиться|to become
+何～|なん～|сколько, какой (приставка)|how many, what (prefix)
+にぎやか|にぎやか|оживлённый|lively, busy
+西|にし|запад|west
+～日|～にち|день, число|day, day of the month
+日曜日|にちようび|воскресенье|Sunday
+荷物|にもつ|багаж, вещи|luggage
+ニュース|ニュース|новости|news
+庭|にわ|сад, двор|garden, yard
+～人|～にん|человек (счётный суффикс)|counter for people
+脱ぐ|ぬぐ|снимать (одежду, обувь)|to take off (clothes)
+温い|ぬるい|тепловатый|lukewarm
+ネクタイ|ネクタイ|галстук|necktie
+寝る|ねる|спать, ложиться спать|to sleep, to go to bed
+～年|～ねん|год (счёт)|year (counter)
+ノート|ノート|тетрадь|notebook
+登る|のぼる|подниматься, взбираться|to climb
+飲み物|のみもの|напиток|drink
+乗る|のる|садиться (в транспорт), ехать|to ride, to get on
+歯|は|зуб|tooth
+パーティー|パーティー|вечеринка|party
+はい|はい|да|yes
+～杯|～はい|чашка, стакан (счётный суффикс)|counter for cupfuls
+灰皿|はいざら|пепельница|ashtray
+入る|はいる|входить|to enter
+葉書|はがき|открытка|postcard
+はく|はく|надевать (обувь, брюки)|to put on (shoes, trousers)
+箱|はこ|коробка|box
+橋|はし|мост|bridge
+箸|はし|палочки для еды|chopsticks
+始まる|はじまる|начинаться|to begin
+初め; 始め|はじめ|начало|beginning
+初めて|はじめて|впервые|for the first time
+走る|はしる|бегать|to run
+バター|バター|сливочное масло|butter
+二十歳|はたち|двадцать лет (возраст)|20 years old
+働く|はたらく|работать|to work
+二十日|はつか|двадцать дней; двадцатое число|twenty days; 20th day of the month
+鼻|はな|нос|nose
+話|はなし|разговор; рассказ|talk; story
+早い|はやい|ранний|early
+速い|はやい|быстрый|fast
+春|はる|весна|spring
+貼る|はる|приклеивать|to stick, to paste
+晴れ|はれ|ясная погода|sunny weather
+晴れる|はれる|проясняться|to clear up
+半|はん|половина (полчаса)|half (past)
+晩|ばん|вечер|evening
+～番|～ばん|номер (порядковый)|number (in order)
+ハンカチ|ハンカチ|носовой платок|handkerchief
+番号|ばんごう|номер|number
+晩御飯|ばんごはん|ужин|dinner
+半分|はんぶん|половина|half
+東|ひがし|восток|east
+～匹|～ひき|счётный суффикс для мелких животных|counter for small animals
+引く|ひく|тянуть; вычитать|to pull; to subtract
+弾く|ひく|играть (на струнных, фортепиано)|to play (piano, guitar)
+低い|ひくい|низкий|low, short
+一つ|ひとつ|одна (штука)|one (thing)
+一月|ひとつき|один месяц|one month
+一人|ひとり|один человек|one person
+暇|ひま|свободное время|free time
+百|ひゃく|сто|hundred
+病気|びょうき|болезнь|illness
+平仮名|ひらがな|хирагана|hiragana
+昼御飯|ひるごはん|обед|lunch
+広い|ひろい|просторный, широкий|spacious, wide
+フィルム|フィルム|плёнка (фото)|film (roll)
+封筒|ふうとう|конверт|envelope
+プール|プール|бассейн|swimming pool
+フォーク|フォーク|вилка|fork
+吹く|ふく|дуть|to blow
+服|ふく|одежда|clothes
+二つ|ふたつ|две (штуки)|two (things)
+豚肉|ぶたにく|свинина|pork
+二人|ふたり|два человека|two people
+二日|ふつか|два дня; второе число|two days; 2nd day of the month
+太い|ふとい|толстый|thick, fat
+冬|ふゆ|зима|winter
+降る|ふる|идти (о дожде, снеге)|to fall (rain, snow)
+～分|～ふん|минута|minutes
+文章|ぶんしょう|текст, предложение|text, writing
+ページ|ページ|страница|page
+下手|へた|неумелый|unskillful, bad at
+ベッド|ベッド|кровать|bed
+ペット|ペット|домашнее животное|pet
+辺|へん|окрестности, район|area, vicinity
+ペン|ペン|ручка|pen
+勉強|べんきょう (する)|учёба, учиться|study, to study
+便利|べんり|удобный|convenient
+帽子|ぼうし|шляпа, шапка|hat, cap
+ボールペン|ボールペン|шариковая ручка|ballpoint pen
+外|ほか|другой, кроме|other, besides
+ポケット|ポケット|карман|pocket
+欲しい|ほしい|желанный, хотеть (иметь)|wanted, desired
+ポスト|ポスト|почтовый ящик|mailbox
+細い|ほそい|тонкий, узкий|thin, slender
+ボタン|ボタン|пуговица; кнопка|button
+ホテル|ホテル|гостиница|hotel
+～本|～ほん|счётный суффикс для длинных предметов|counter for long objects
+本棚|ほんだな|книжная полка|bookshelf
+本当|ほんとう|правда, настоящий|truth, real
+～枚|～まい|лист (счётный суффикс для плоских)|counter for flat objects
+毎朝|まいあさ|каждое утро|every morning
+毎月|まいげつ; まいつき|каждый месяц|every month
+毎週|まいしゅう|каждую неделю|every week
+毎年|まいねん; まいとし|каждый год|every year
+毎晩|まいばん|каждый вечер|every night
+前|まえ|перед, впереди; раньше|front; before
+～前|～まえ|до, назад (о времени)|before, ago
+曲る|まがる|поворачивать|to turn
+まずい|まずい|невкусный|bad-tasting
+また|また|снова; также|again; also
+まだ|まだ|ещё; пока ещё не|still; not yet
+町|まち|город, квартал|town
+待つ|まつ|ждать|to wait
+まっすぐ|まっすぐ|прямо|straight
+マッチ|マッチ|спичка|match
+窓|まど|окно|window
+丸い; 円い|まるい|круглый|round
+万|まん|десять тысяч|ten thousand
+万年筆|まんねんひつ|перьевая ручка|fountain pen
+磨く|みがく|чистить (зубы); полировать|to brush (teeth); to polish
+短い|みじかい|короткий|short
+見せる|みせる|показывать|to show
+三日|みっか|три дня; третье число|three days; 3rd day of the month
+三つ|みっつ|три (штуки)|three (things)
+緑|みどり|зелёный цвет|green
+皆さん|みなさん|все (вежл.), дамы и господа|everyone (polite)
+南|みなみ|юг|south
+耳|みみ|ухо|ear
+みんな|みんな|все|everyone
+六日|むいか|шесть дней; шестое число|six days; 6th day of the month
+向こう|むこう|та сторона, напротив|over there, the other side
+難しい|むずかしい|трудный|difficult
+六つ|むっつ|шесть (штук)|six (things)
+村|むら|деревня|village
+目|め|глаз|eye
+メートル|メートル|метр|meter
+眼鏡|めがね|очки|glasses
+もう|もう|уже; ещё (один)|already; another
+木曜日|もくようび|четверг|Thursday
+もしもし|もしもし|алло|hello (on the phone)
+持つ|もつ|держать, нести; иметь|to hold, to carry; to have
+もっと|もっと|больше, ещё|more
+物|もの|вещь|thing
+門|もん|ворота|gate
+問題|もんだい|задача, проблема|problem, question
+～屋|～や|магазин, лавка (суффикс)|shop (suffix)
+八百屋|やおや|овощная лавка|greengrocer
+易しい|やさしい|лёгкий, простой|easy
+休み|やすみ|выходной, отдых; каникулы|holiday, day off
+休む|やすむ|отдыхать; пропускать|to rest; to take time off
+八つ|やっつ|восемь (штук)|eight (things)
+やる|やる|делать; давать (младшим)|to do; to give
+夕方|ゆうがた|вечер (до заката)|early evening
+夕飯|ゆうはん|ужин|supper
+昨夜|ゆうべ|вчера вечером|last night
+有名|ゆうめい|известный|famous
+ゆっくりと|ゆっくりと|медленно, не спеша|slowly
+八日|ようか|восемь дней; восьмое число|eight days; 8th day of the month
+洋服|ようふく|западная одежда|Western clothes
+よく|よく|часто; хорошо|often; well
+横|よこ|сбоку; ширина|side; width
+四日|よっか|четыре дня; четвёртое число|four days; 4th day of the month
+四つ|よっつ|четыре (штуки)|four (things)
+呼ぶ|よぶ|звать; приглашать|to call; to invite
+弱い|よわい|слабый|weak
+来月|らいげつ|следующий месяц|next month
+来週|らいしゅう|следующая неделя|next week
+来年|らいねん|следующий год|next year
+ラジオ|ラジオ|радио|radio
+ラジオカセ|ラジオカセ|магнитола|radio cassette player
+りっぱ|りっぱ|великолепный|splendid
+留学生|りゅうがくせい|иностранный студент|international student
+両親|りょうしん|родители|parents
+料理|りょうり|кулинария, блюдо|cooking, dish
+旅行|りょこう|путешествие|travel, trip
+零|れい|ноль|zero
+冷蔵庫|れいぞうこ|холодильник|refrigerator
+レコード|レコード|пластинка|record
+レストラン|レストラン|ресторан|restaurant
+練習|れんしゅう (する)|практика, тренироваться|practice, to practice
+廊下|ろうか|коридор|corridor
+ワイシャツ|ワイシャツ|сорочка, рубашка|dress shirt
+若い|わかい|молодой|young
+分かる|わかる|понимать|to understand
+忘れる|わすれる|забывать|to forget
+私|わたし|я|I
+私|わたくし|я (вежл.)|I (formal)
+渡す|わたす|передавать, вручать|to hand over
+渡る|わたる|переходить, пересекать|to cross
+悪い|わるい|плохой|bad

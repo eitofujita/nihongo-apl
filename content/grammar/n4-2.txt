@@ -1,0 +1,361 @@
+# N4 grammar, part 2
+
+@ n4-giving | あげる・くれる・もらう | Давать и получать | 贈
+S: あげる: I (or someone) give to another person. くれる: someone gives to me or my group. もらう: I receive from someone (from = に or から). 私は友達に本をあげました / 友達が私に本をくれました / 私は友達に本をもらいました.
+S: あげる: я (или кто-то) даю другому. くれる: кто-то даёт мне или моим. もらう: я получаю от кого-то (от = に или から). 私は友達に本をあげました / 友達が私に本をくれました / 私は友達に本をもらいました.
+E: 誕生日に母が時計をくれました。 | My mother gave me a watch for my birthday. | На день рождения мама подарила мне часы.
+Q: 私は妹にお菓子を（　）。 | I gave my little sister some sweets. | Я дал младшей сестре сладости. | くれました / *あげました / もらいました / いただきました | I give to someone else: あげる. | Я даю другому — あげる.
+Q: 友達が私に花を（　）。 | My friend gave me flowers. | Друг подарил мне цветы. | あげました / *くれました / もらいました / さしあげました | Someone gives to me: くれる. | Кто-то даёт мне — くれる.
+Q: 私は先輩（　）辞書をもらいました。 | I received a dictionary from my senior. | Я получил словарь от старшего товарища. | を / が / *に / で | もらう: the giver is marked with に (or から). | もらう: дающий отмечается に (или から).
+
+@ n4-te-ageru | てあげる・てくれる・てもらう | Делать для кого-то | 援
+S: The giving verbs after the て form express favors. てあげる: do for someone. てくれる: someone does for me. てもらう: I have someone do for me. 友達が駅まで送ってくれました. 先生に作文を直してもらいました.
+S: Глаголы дарения после формы на て выражают услугу. てあげる: сделать для кого-то. てくれる: кто-то делает для меня. てもらう: мне кто-то делает. 友達が駅まで送ってくれました. 先生に作文を直してもらいました.
+E: 兄が宿題を手伝ってくれました。 | My older brother helped me with my homework. | Старший брат помог мне с уроками.
+Q: 田中さんが傘を貸して（　）。 | Mr. Tanaka lent me an umbrella. | Танака одолжил мне зонт. | あげました / *くれました / もらいました / おきました | Someone does a favor for me: てくれる. | Кто-то делает мне услугу — てくれる.
+Q: 私は友達に写真をとって（　）。 | I had my friend take a photo (for me). | Друг сфотографировал меня (по моей просьбе). | くれました / あげました / *もらいました / しまいました | I receive a favor from someone: てもらう. | Я получаю услугу — てもらう.
+Q: 弟に本を読んで（　）。 | I read a book to my little brother. | Я почитал книгу младшему брату. | くれました / *あげました / もらいました / いただきました | I do a favor for someone: てあげる. | Я делаю услугу — てあげる.
+
+@ n4-causative | Causative: make / let | Каузатив: заставлять / позволять | 使
+S: The causative means making or letting someone do something. Ru-verbs: させる (食べさせる). U-verbs: u → a + せる (行かせる). する→させる, 来る→来させる. The person made to act takes に (or を with intransitive verbs).
+S: Каузатив — заставить или позволить кому-то что-то сделать. Ру-глаголы: させる (食べさせる). У-глаголы: «у» → «а» + せる (行かせる). する→させる, 来る→来させる. Тот, кого заставляют, отмечается に (или を с непереходными глаголами).
+E: 母は子供に野菜を食べさせました。 | The mother made her child eat vegetables. | Мать заставила ребёнка съесть овощи.
+Q: 先生は学生に作文を（　）。 | The teacher made the students write an essay. | Учитель заставил студентов написать сочинение. | 書かれました / *書かせました / 書かさせました / 書けました | 書く → 書かせる. | 書く → 書かせる.
+Q: 父は私に車を運転（　）くれました。 | My father let me drive the car. | Отец разрешил мне повести машину. | されて / *させて / できて / して | する → させる; させてくれる = let me. | する → させる; させてくれる — «позволил мне».
+Q: 部長は田中さん（　）出張に行かせました。 | The manager sent Mr. Tanaka on a business trip. | Начальник отправил Танаку в командировку. | で / が / *を / へ | With intransitive verbs like 行く, the person can take を. | С непереходными глаголами вроде 行く лицо может быть с を.
+
+@ n4-sasete-kudasai | させてください: let me | させてください: позвольте мне | 許
+S: Causative て form + ください politely asks permission to do something yourself: 少し考えさせてください (Please let me think a little). 今日は早く帰らせてください.
+S: Каузатив в форме на て + ください — вежливая просьба разрешить сделать самому: 少し考えさせてください (Позвольте немного подумать). 今日は早く帰らせてください.
+E: その仕事は私にやらせてください。 | Please let me do that job. | Позвольте мне сделать эту работу.
+Q: 熱があるので、今日は（　）ください。 | I have a fever, so please let me rest today. | У меня жар, позвольте сегодня отдохнуть. | 休んで / *休ませて / 休まれて / 休めて | Let me rest: 休ませてください. | Позвольте отдохнуть — 休ませてください.
+Q: すみません、ちょっと電話を使わ（　）ください。 | Excuse me, may I use the phone? | Извините, можно воспользоваться телефоном? | れて / *せて / して / って | 使う → 使わせて. | 使う → 使わせて.
+Q: 次は私に説明（　）ください。 | Please let me explain next. | В следующий раз позвольте объяснить мне. | して / *させて / されて / できて | する → させてください. | する → させてください.
+
+@ n4-passive | Passive form | Страдательный залог | 受
+S: The passive: ru-verbs られる (食べられる), u-verbs u → a + れる (書かれる), される, 来られる. The doer takes に. Japanese also uses the passive for being troubled by something: 雨に降られた (I got rained on).
+S: Страдательный залог: ру-глаголы られる (食べられる), у-глаголы «у» → «а» + れる (書かれる), される, 来られる. Деятель отмечается に. Японский также использует пассив для неприятностей: 雨に降られた (попал под дождь).
+E: 私は先生にほめられました。 | I was praised by the teacher. | Учитель меня похвалил.
+Q: 私は母に（　）。 | I was scolded by my mother. | Меня отругала мама. | しからせました / *しかられました / しかりました / しかれました | しかる → しかられる. | しかる → しかられる.
+Q: 電車で足を（　）。 | Someone stepped on my foot on the train. | В поезде мне наступили на ногу. | 踏みました / 踏ませました / *踏まれました / 踏めました | Being affected: passive 踏まれる. | Пострадал от действия — 踏まれる.
+Q: この本は多くの人（　）読まれています。 | This book is read by many people. | Эту книгу читают многие. | を / が / *に / で | The doer in a passive sentence takes に. | Деятель в пассиве — с に.
+
+@ n4-causative-passive | Causative-passive: be made to | Каузатив-пассив: быть вынужденным | 強
+S: The causative-passive means being made to do something unwillingly: ru-verbs させられる (食べさせられる), u-verbs u → a + される (飲まされる), させられる, 来させられる. The person who forces takes に.
+S: Каузатив-пассив — быть вынужденным что-то сделать: ру-глаголы させられる (食べさせられる), у-глаголы «у» → «а» + される (飲まされる), させられる, 来させられる. Тот, кто заставляет, отмечается に.
+E: 子供のころ、母に野菜を食べさせられました。 | As a child I was made to eat vegetables by my mother. | В детстве мама заставляла меня есть овощи.
+Q: 部長にお酒を（　）。 | I was made to drink alcohol by my manager. | Начальник заставил меня пить. | 飲まれました / *飲まされました / 飲ませました / 飲めました | 飲む → 飲まされる (be made to drink). | 飲む → 飲まされる (быть вынужденным пить).
+Q: 先生に一時間も（　）。 | I was made to wait a whole hour by the teacher. | Учитель заставил меня ждать целый час. | 待たれました / 待たせました / *待たされました / 待てました | 待つ → 待たされる. | 待つ → 待たされる.
+Q: 毎日、部屋の掃除を（　）。 | I'm made to clean my room every day. | Меня каждый день заставляют убирать комнату. | されます / *させられます / させます / できます | する → させられる. | する → させられる.
+
+@ n4-honorific-verbs | Honorific verbs | Почтительные глаголы | 尊
+S: Honorific verbs raise the other person: いらっしゃる (行く・来る・いる), おっしゃる (言う), 召し上がる (食べる・飲む), ご覧になる (見る), なさる (する), くださる (くれる). Use them about customers, teachers and superiors.
+S: Почтительные глаголы возвышают собеседника: いらっしゃる (行く・来る・いる), おっしゃる (言う), 召し上がる (食べる・飲む), ご覧になる (見る), なさる (する), くださる (くれる). Используются о клиентах, учителях и начальстве.
+E: 社長は今、会議室にいらっしゃいます。 | The president is in the conference room now. | Президент сейчас в переговорной.
+Q: 先生は何と（　）か。 | What did the teacher say? | Что сказал учитель? | 申しました / *おっしゃいました / いたしました / 参りました | Honorific of 言う: おっしゃる. | Почтительное от 言う — おっしゃる.
+Q: どうぞ、たくさん（　）ください。 | Please, have plenty (to eat). | Пожалуйста, угощайтесь. | いただいて / *召し上がって / 参って / 拝見して | Honorific of 食べる: 召し上がる. | Почтительное от 食べる — 召し上がる.
+Q: 部長は明日、大阪へ（　）。 | The manager is going to Osaka tomorrow. | Завтра начальник едет в Осаку. | 参ります / 伺います / *いらっしゃいます / おります | Honorific of 行く: いらっしゃる. | Почтительное от 行く — いらっしゃる.
+
+@ n4-o-ni-naru | お〜になる: honorific pattern | お〜になる: почтительная форма | 敬
+S: お + ます stem + になる is the regular honorific form: お帰りになる, お待ちになる. For する-nouns: ご + noun + になる (ご利用になる). Verbs with special forms (見る, 言う) use those instead.
+S: お + основа на ます + になる — регулярная почтительная форма: お帰りになる, お待ちになる. Для сущ. с する: ご + сущ. + になる (ご利用になる). Глаголы со специальными формами (見る, 言う) используют их.
+E: 先生はもうお帰りになりました。 | The teacher has already gone home. | Учитель уже ушёл домой.
+Q: 社長は何時ごろお（　）になりますか。 | Around what time will the president return? | Во сколько примерно вернётся президент? | 帰る / *帰り / 帰って / 帰った | お + ます stem + になる. | お + основа на ます + になる.
+Q: このカードはどの店でもご利用（　）なれます。 | You can use this card at any store. | Этой картой можно пользоваться в любом магазине. | を / が / *に / で | ご + noun + になる. | ご + существительное + になる.
+Q: 先生はこの本をもうお（　）になりましたか。 | Has the teacher already read this book? | Учитель уже прочитал эту книгу? | 読む / *読み / 読んで / 読ま | お読みになる. | お読みになる.
+
+@ n4-humble-verbs | Humble verbs | Скромные глаголы | 謙
+S: Humble verbs lower the speaker: 参る (行く・来る), 申す (言う), いただく (食べる・飲む・もらう), 拝見する (見る), いたす (する), おる (いる), 伺う (訪ねる・聞く), 差し上げる (あげる).
+S: Скромные глаголы принижают говорящего: 参る (行く・来る), 申す (言う), いただく (食べる・飲む・もらう), 拝見する (見る), いたす (する), おる (いる), 伺う (訪ねる・聞く), 差し上げる (あげる).
+E: 私は田中と申します。 | My name is Tanaka. | Меня зовут Танака.
+Q: 明日、三時にそちらへ（　）。 | I'll come to your place at three tomorrow. | Завтра в три я к вам приду. | いらっしゃいます / *参ります / おいでになります / 召し上がります | Humble of 来る/行く: 参る. | Скромное от 来る/行く — 参る.
+Q: お手紙を（　）。 | I have read your letter. | Я прочитал ваше письмо. | ご覧になりました / *拝見しました / 見られました / 召し上がりました | Humble of 見る: 拝見する. | Скромное от 見る — 拝見する.
+Q: 母は今、家に（　）。 | My mother is at home now. | Мама сейчас дома. | いらっしゃいます / *おります / ございます / なさいます | Speaking of your own family: humble おる. | О своей семье — скромное おる.
+
+@ n4-o-suru | お〜する: humble pattern | お〜する: скромная форма | 謙
+S: お + ます stem + する (or いたす) is the regular humble form for actions done for the other person: 荷物をお持ちします. する-nouns: ご + noun + する (ご案内します).
+S: お + основа на ます + する (или いたす) — регулярная скромная форма для действий ради собеседника: 荷物をお持ちします. Сущ. с する: ご + сущ. + する (ご案内します).
+E: 駅までお送りします。 | I'll see you to the station. | Я провожу вас до станции.
+Q: 重そうですね。お（　）しましょうか。 | That looks heavy. Shall I carry it for you? | Тяжело, наверное. Давайте я понесу? | 持つ / *持ち / 持って / 持た | お + ます stem + する. | お + основа на ます + する.
+Q: 会議室までご案内（　）。 | I'll show you to the conference room. | Я провожу вас в переговорную. | なります / *します / なさいます / いらっしゃいます | Humble: ご + noun + する. | Скромно: ご + существительное + する.
+Q: 後でこちらからお電話（　）。 | I'll call you later. | Я перезвоню вам позже. | になります / なさいます / *いたします / いらっしゃいます | お + noun + いたす is extra humble. | お + сущ. + いたす — особенно скромно.
+
+@ n4-imperative | Imperative and な prohibition | Повелительное наклонение и な | 命
+S: The plain imperative is blunt: u-verbs u → e (行け, 書け), ru-verbs ろ (食べろ), しろ, 来い. Dictionary form + な forbids: 入るな. These appear on signs, in sports, or in rough speech; なさい is a softer command: 早く寝なさい.
+S: Простой императив звучит резко: у-глаголы «у» → «э» (行け, 書け), ру-глаголы ろ (食べろ), しろ, 来い. Словарная форма + な — запрет: 入るな. Встречается на табличках, в спорте, в грубой речи; なさい — мягче: 早く寝なさい.
+E: 危ないから、ここで遊ぶな。 | It's dangerous — don't play here! | Опасно — здесь не играть!
+Q: がんばれ！もっと（　）！ | Come on! Run faster! | Давай! Беги быстрее! | 走る / *走れ / 走ろ / 走るな | 走る → 走れ (imperative). | 走る → 走れ (императив).
+Q: ここに車を止める（　）。 | Don't park here! | Здесь не парковаться! | *な / ね / よ / か | Dictionary form + な = don't. | Словарная форма + な — запрет.
+Q: もう九時ですよ。早く（　）。 | It's already nine. Go to bed now. | Уже девять. Ложись спать. | 寝ろな / *寝なさい / 寝ない / 寝るな | A parent's softer command: なさい. | Мягкий приказ родителя — なさい.
+
+@ n4-ka-douka | かどうか: whether or not | かどうか: ли | 否
+S: Plain form + かどうか embeds a yes/no question: 明日来るかどうか分かりません (I don't know whether he will come). With question words, use just か: いつ来るか分かりません.
+S: Простая форма + かどうか встраивает вопрос «да/нет»: 明日来るかどうか分かりません (Не знаю, придёт ли он завтра). С вопросительными словами — просто か: いつ来るか分かりません.
+E: この答えが正しいかどうか、確かめてください。 | Please check whether this answer is correct. | Проверьте, правильный ли это ответ.
+Q: 田中さんがパーティーに来る（　）、わかりません。 | I don't know whether Mr. Tanaka will come to the party. | Не знаю, придёт ли Танака на вечеринку. | か何か / *かどうか / のに / ように | Yes/no question inside a sentence: かどうか. | Встроенный вопрос «да/нет» — かどうか.
+Q: 会議が何時に始まる（　）、教えてください。 | Please tell me what time the meeting starts. | Скажите, во сколько начинается совещание. | かどうか / *か / のか何 / と | With a question word, use か. | С вопросительным словом — か.
+Q: おいしい（　）、食べてみなければわかりません。 | You can't know whether it's tasty without trying it. | Вкусно ли, не узнаешь, пока не попробуешь. | *かどうか / ので / のに / から | Whether or not: かどうか. | «Ли» — かどうか.
+
+@ n4-no-wa | の: turning verbs into nouns | の: номинализация | 事
+S: Plain form + の turns a clause into a noun: 本を読むのが好きです. 窓を開けるのを忘れました. 見る・聞こえる take の, not こと: 彼が歌うのを聞きました.
+S: Простая форма + の превращает предложение в существительное: 本を読むのが好きです. 窓を開けるのを忘れました. 見る・聞こえる требуют の, а не こと: 彼が歌うのを聞きました.
+E: 私は料理をするのが好きです。 | I like cooking. | Я люблю готовить.
+Q: 絵をかく（　）が好きです。 | I like drawing pictures. | Я люблю рисовать. | ため / *の / もの / ところ | Verb + のが好き. | Глагол + のが好き.
+Q: 鍵をかける（　）忘れました。 | I forgot to lock the door. | Я забыл запереть дверь. | のが / *のを / のに / のは | 忘れる takes the object marker: のを. | 忘れる требует объекта: のを.
+Q: 子供たちが遊んでいる（　）見ました。 | I saw the children playing. | Я видел, как играют дети. | ことを / *のを / ものを / ところに | Perception verbs take の, not こと. | Глаголы восприятия требуют の, а не こと.
+
+@ n4-koto-ni-suru | ことにする: decide to | ことにする: решить | 決
+S: Dictionary form (or ない form) + ことにする means you decide to do something: 来年留学することにしました. ことにしている describes a personal rule: 毎朝走ることにしています.
+S: Словарная форма (или форма на ない) + ことにする — решить что-то сделать: 来年留学することにしました. ことにしている — личное правило: 毎朝走ることにしています.
+E: 健康のために、たばこをやめることにしました。 | I decided to quit smoking for my health. | Ради здоровья я решил бросить курить.
+Q: 夏休みは国へ帰る（　）しました。 | I decided to go home for summer vacation. | Я решил поехать домой на летние каникулы. | ように / *ことに / ために / ばかりに | Own decision: ことにする. | Собственное решение — ことにする.
+Q: もう甘い物は食べない（　）しました。 | I decided not to eat sweets anymore. | Я решил больше не есть сладкого. | ように / ために / *ことに / そうに | ない form + ことにする. | Форма на ない + ことにする.
+Q: 毎晩、日記を書くことに（　）。 | I make it a rule to write a diary every night. | Я взял за правило каждый вечер писать дневник. | なっています / *しています / あります / いました | Personal rule: ことにしている. | Личное правило — ことにしている.
+
+@ n4-koto-ni-naru | ことになる: it has been decided | ことになる: решено | 定
+S: Dictionary form + ことになる means something was decided, not by you alone: 来月大阪に転勤することになりました. ことになっている describes a rule: ここでは靴を脱ぐことになっています.
+S: Словарная форма + ことになる — что-то решено (не только вами): 来月大阪に転勤することになりました. ことになっている — правило: ここでは靴を脱ぐことになっています.
+E: 来年、結婚することになりました。 | It's been decided that we'll marry next year. | Решено, что мы поженимся в следующем году.
+Q: 会社の命令で、来月アメリカに行く（　）なりました。 | By company order, I'm to go to America next month. | По распоряжению компании я еду в Америку в следующем месяце. | ことを / *ことに / ように / ために | A decision made by others or by circumstance: ことになる. | Решение, принятое другими или обстоятельствами, — ことになる.
+Q: この寮では十時までに帰ることに（　）。 | In this dorm, the rule is to be back by ten. | В этом общежитии положено возвращаться до десяти. | しています / *なっています / あります / みます | Rule: ことになっている. | Правило — ことになっている.
+Q: 話し合って、来週もう一度会う（　）になりました。 | After talking it over, it was decided that we'd meet again next week. | Обсудив, решили встретиться ещё раз на следующей неделе. | よう / *こと / ため / はず | ことになる: a decision was reached. | ことになる — решение принято.
+
+@ n4-tokoro | ところだ: about to / in the middle / just did | ところだ: как раз | 処
+S: ところ marks a point in an action: dictionary form + ところ (about to: 出かけるところです), ているところ (in the middle: 食べているところです), たところ (just finished: 今帰ったところです).
+S: ところ обозначает момент действия: словарная форма + ところ (собираюсь: 出かけるところです), ているところ (в процессе: 食べているところです), たところ (только что: 今帰ったところです).
+E: 今、家を出るところです。 | I'm just about to leave home. | Я как раз выхожу из дома.
+Q: もしもし、今どこ？…ちょうど駅に（　）ところ。 | Hello, where are you? …I've just arrived at the station. | Алло, ты где? …Только что пришёл на станцию. | 着く / *着いた / 着いて / 着き | Just finished: たところ. | Только что — たところ.
+Q: 今、晩ご飯を作って（　）ところです。 | I'm in the middle of making dinner. | Я как раз готовлю ужин. | *いる / ある / おく / しまう | In progress: ているところ. | В процессе — ているところ.
+Q: これから出かける（　）です。 | I'm about to go out now. | Я как раз собираюсь выходить. | ばかり / *ところ / はず / つもり | About to: dictionary form + ところ. | Вот-вот: словарная форма + ところ.
+
+@ n4-ta-bakari | たばかり: just did | たばかり: только что | 新
+S: た form + ばかり means something happened only a short time ago, from the speaker's feeling: 日本に来たばかりです (I only just came to Japan — maybe a month ago). It is more subjective than たところ.
+S: Форма на た + ばかり — что-то произошло недавно (по ощущению говорящего): 日本に来たばかりです (Я только приехал в Японию — может, месяц назад). Субъективнее, чем たところ.
+E: このパソコンは先週買ったばかりです。 | I only bought this computer last week. | Я купил этот компьютер только на прошлой неделе.
+Q: 日本語の勉強を始めた（　）です。 | I've only just started studying Japanese. | Я только начал учить японский. | つもり / *ばかり / はず / まま | Recent from the speaker's feeling: たばかり. | Недавно, по ощущению говорящего — たばかり.
+Q: さっき食べた（　）なのに、もうおなかがすいた。 | I just ate a while ago, but I'm already hungry. | Только что ел, а уже голоден. | *ばかり / つもり / ように / ことに | たばかり + なのに: just did, yet… | たばかり + なのに — «только что, а уже…».
+Q: この本は昨日（　）ばかりです。 | This book only came out yesterday. | Эта книга вышла только вчера. | 出る / *出た / 出て / 出ない | たばかり needs the た form. | たばかり требует формы на た.
+
+@ n4-made-ni | までに: by (a deadline) | までに: к (сроку) | 迄
+S: まで means “until” (continuous action), までに means “by” (a deadline): 五時まで働きます / 五時までに帰ります. Use までに when an action must be done before a point.
+S: まで — «до» (длящееся действие), までに — «к» (срок): 五時まで働きます / 五時までに帰ります. までに — когда действие нужно выполнить к определённому моменту.
+E: 金曜日までにレポートを出してください。 | Please hand in the report by Friday. | Сдайте доклад к пятнице.
+Q: この本は来週の月曜日（　）返してください。 | Please return this book by next Monday. | Верните эту книгу к следующему понедельнику. | まで / *までに / から / ごろ | Deadline: までに. | Срок — までに.
+Q: 昨日は夜十時（　）図書館で勉強しました。 | Yesterday I studied at the library until 10 p.m. | Вчера я занимался в библиотеке до десяти вечера. | までに / *まで / からに / ごろに | Continuous action until a point: まで. | Длящееся действие до момента — まで.
+Q: 八時（　）学校に来なければなりません。 | You must come to school by eight. | Нужно прийти в школу к восьми. | まで / ごろ / *までに / から | Arriving before a time: までに. | Прийти к сроку — までに.
+
+@ n4-aida | 間・間に: while, during | 間・間に: пока, во время | 間
+S: ～間 means “for the whole time”: 夏休みの間、ずっと国にいました. ～間に means “at some point during”: 留守の間に、泥棒が入りました.
+S: ～間 — «всё время, пока»: 夏休みの間、ずっと国にいました. ～間に — «в какой-то момент, пока»: 留守の間に、泥棒が入りました.
+E: 母が買い物をしている間、私は車で待っていました。 | While my mother was shopping, I waited in the car. | Пока мама делала покупки, я ждал в машине.
+Q: 子供が寝ている（　）に、掃除をしました。 | I cleaned while the child was asleep. | Пока ребёнок спал, я убрался. | まで / *間 / ほど / ため | At some point during: 間に. | В какой-то момент, пока — 間に.
+Q: 夏休みの（　）、ずっとアルバイトをしていました。 | I worked part-time throughout the summer vacation. | Все летние каникулы я подрабатывал. | 間に / *間 / 前に / ところ | Throughout the period: 間 (no に). | В течение всего периода — 間 (без に).
+Q: 私が出かけている間（　）、友達が来たそうです。 | I hear a friend came while I was out. | Говорят, пока меня не было, приходил друг. | で / を / *に / が | One event during the time: 間に. | Одно событие в течение — 間に.
+
+@ n4-naide | ないで: without doing | ないで: не делая | 無
+S: ない form + で means “without doing” or “instead of doing”: 朝ご飯を食べないで学校へ行きました. 電車に乗らないで、歩いて行きました.
+S: Форма на ない + で — «не сделав» или «вместо того чтобы»: 朝ご飯を食べないで学校へ行きました. 電車に乗らないで、歩いて行きました.
+E: 辞書を使わないで読んでください。 | Please read without using a dictionary. | Читайте без словаря.
+Q: 傘を（　）出かけて、ぬれてしまいました。 | I went out without an umbrella and got wet. | Я вышел без зонта и промок. | 持たなくて / *持たないで / 持たずで / 持たなければ | Without doing: ないで. | «Не делая» — ないで.
+Q: 昨日は寝（　）勉強しました。 | Yesterday I studied without sleeping. | Вчера я занимался, не ложась спать. | なくて / *ないで / なかって / ずで | 寝ない + で. | 寝ない + で.
+Q: エレベーターを使わないで、階段（　）上ります。 | I take the stairs instead of the elevator. | Я поднимаюсь по лестнице, а не на лифте. | に / が / *を / で | 階段を上る: climb the stairs. | 階段を上る — подниматься по лестнице.
+
+@ n4-zu-ni | ずに: without (written style) | ずに: не делая (книжн.) | 不
+S: ない stem + ずに means the same as ないで but is more formal: 何も言わずに帰りました. する becomes せずに (not しずに).
+S: Основа на ない + ずに означает то же, что ないで, но формальнее: 何も言わずに帰りました. する превращается в せずに (не しずに).
+E: 彼は何も言わずに部屋を出ていきました。 | He left the room without saying anything. | Он вышел из комнаты, ничего не сказав.
+Q: 朝ご飯を（　）、出かけました。 | I went out without eating breakfast. | Я ушёл, не позавтракав. | 食べずで / *食べずに / 食べないずに / 食べなくに | ない stem + ずに. | Основа на ない + ずに.
+Q: 予約を（　）、レストランに行きました。 | I went to the restaurant without a reservation. | Я пошёл в ресторан без брони. | しずに / *せずに / さずに / すずに | する → せずに. | する → せずに.
+Q: 辞書を見（　）、新聞が読めるようになりたい。 | I want to be able to read the newspaper without a dictionary. | Хочу научиться читать газету без словаря. | なくに / *ずに / ないに / ずで | 見る → 見ずに. | 見る → 見ずに.
+
+@ n4-nakute | なくて: because not | なくて: так как не | 因
+S: ない form minus い + くて gives a reason: 意味が分からなくて、困りました (I didn't understand the meaning, so I was stuck). The second part is usually a feeling or state, not a request.
+S: Форма на ない без い + くて — причина: 意味が分からなくて、困りました (Не понял смысла и растерялся). Вторая часть — обычно чувство или состояние, а не просьба.
+E: 子供が帰ってこなくて、心配しました。 | My child didn't come home, so I was worried. | Ребёнок не возвращался, и я волновался.
+Q: バスが（　）、遅刻しました。 | The bus didn't come, so I was late. | Автобус не пришёл, и я опоздал. | 来ないで / *来なくて / 来なければ / 来ずで | Reason in the negative: なくて. | Причина в отрицании — なくて.
+Q: 宿題が終わら（　）、困っています。 | My homework isn't finished, so I'm in trouble. | Домашнее задание не готово, и я в затруднении. | ないで / *なくて / なければ / なくても | 終わらない → 終わらなくて. | 終わらない → 終わらなくて.
+Q: 友達に会え（　）、残念でした。 | It was a pity I couldn't meet my friend. | Жаль, что не удалось встретиться с другом. | ないで / ずに / *なくて / なくても | Feeling as a result: なくて. | Чувство как следствие — なくて.
+
+@ n4-hodo-nai | ほど〜ない: not as … as | ほど〜ない: не так, как | 程
+S: A は B ほど～ない means “A is not as ~ as B”: 今年の夏は去年ほど暑くない. It always takes a negative.
+S: A は B ほど～ない — «A не так ~, как B»: 今年の夏は去年ほど暑くない. Всегда с отрицанием.
+E: 東京は大阪ほど暑くないです。 | Tokyo isn't as hot as Osaka. | В Токио не так жарко, как в Осаке.
+Q: 私の部屋はあなたの部屋（　）広くありません。 | My room isn't as big as yours. | Моя комната не такая большая, как ваша. | しか / *ほど / まで / だけ | Not as … as: ほど + negative. | «Не так, как» — ほど + отрицание.
+Q: 今日は昨日ほど（　）。 | Today isn't as cold as yesterday. | Сегодня не так холодно, как вчера. | 寒いです / *寒くないです / 寒かったです / 寒くなりました | ほど needs a negative. | ほど требует отрицания.
+Q: 日本語は思った（　）難しくなかった。 | Japanese wasn't as difficult as I thought. | Японский оказался не таким трудным, как я думал. | だけ / *ほど / より / ばかり | 思ったほど～ない: not as much as expected. | 思ったほど～ない — «не так, как думал».
+
+@ n4-shika | しか〜ない: only, nothing but | しか〜ない: только | 只
+S: しか + negative means “only (and that's not much)”: 百円しかありません. Compare だけ, which is neutral and takes an affirmative verb: 百円だけあります.
+S: しか + отрицание — «только (и этого мало)»: 百円しかありません. Ср. だけ — нейтрально, с утвердительным глаголом: 百円だけあります.
+E: 財布に千円しかありません。 | I only have 1,000 yen in my wallet. | В кошельке всего тысяча иен.
+Q: 昨日は三時間（　）寝ませんでした。 | I slept only three hours last night. | Вчера я спал всего три часа. | だけ / *しか / ばかり / ほど | しか + negative verb. | しか + отрицательный глагол.
+Q: クラスに学生が五人しか（　）。 | There are only five students in the class. | В классе всего пять студентов. | います / *いません / あります / ありません | しか requires a negative; people use いる. | しか требует отрицания; для людей — いる.
+Q: 私は日本語（　）話せません。 | I can only speak Japanese. | Я могу говорить только по-японски. | まで / ばかり / *しか / でも | Verb is negative, so use しか. | Глагол отрицательный, значит しか.
+
+@ n4-demo | でも: or something; even | でも: что-нибудь; даже | 例
+S: Noun + でも softens a suggestion: お茶でも飲みませんか (Shall we have tea or something?). It can also mean “even”: 子供でも分かります. Question word + でも = any: いつでも, 何でも.
+S: Существительное + でも смягчает предложение: お茶でも飲みませんか (Может, выпьем чаю?). Также «даже»: 子供でも分かります. Вопросительное слово + でも — «любой»: いつでも, 何でも.
+E: 映画でも見に行きませんか。 | Shall we go see a movie or something? | Может, сходим в кино?
+Q: ちょっと休みましょう。コーヒー（　）飲みませんか。 | Let's take a break. Shall we have coffee or something? | Давайте отдохнём. Может, выпьем кофе? | しか / *でも / だけ / まで | Soft suggestion: noun + でも. | Мягкое предложение: сущ. + でも.
+Q: この問題は簡単だから、子供（　）できます。 | This problem is easy, so even a child can do it. | Эта задача простая, даже ребёнок справится. | しか / だけ / *でも / ばかり | “Even”: でも. | «Даже» — でも.
+Q: 困ったときは、いつ（　）電話してください。 | When in trouble, call me anytime. | Если будут проблемы, звоните в любое время. | も / か / *でも / しか | いつでも: anytime. | いつでも — в любое время.
+
+@ n4-mo-emphasis | Number + も: as many as | Число + も: целых | 多
+S: Number + も stresses that an amount is large: 三時間も待ちました (I waited a whole three hours). With a negative, 一人も / 一度も means “not even one”: 一度も行ったことがない.
+S: Число + も подчёркивает, что количество велико: 三時間も待ちました (Ждал целых три часа). С отрицанием 一人も / 一度も — «ни одного»: 一度も行ったことがない.
+E: ケーキを五つも食べました。 | I ate as many as five pieces of cake. | Я съел целых пять пирожных.
+Q: 駅で一時間（　）待ちました。 | I waited a whole hour at the station. | Я ждал на станции целый час. | しか / だけ / *も / ほど | Emphasizing a large amount: も. | Подчёркивание большого количества — も.
+Q: 教室には学生が一人（　）いません。 | There isn't a single student in the classroom. | В классе нет ни одного студента. | しか / *も / だけ / でも | 一人も + negative: not even one. | 一人も + отрицание — «ни одного».
+Q: あの映画は三回（　）見ました。 | I've seen that movie as many as three times. | Я смотрел этот фильм целых три раза. | *も / しか / だけ / ずつ | も stresses three times is a lot. | も подчёркивает, что три раза — много.
+
+@ n4-hou-ga-ii | ほうがいい: had better | ほうがいい: лучше | 方
+S: た form + ほうがいい gives strong advice: 早く寝たほうがいいですよ. Negative advice uses the ない form: 無理しないほうがいい.
+S: Форма на た + ほうがいい — настойчивый совет: 早く寝たほうがいいですよ. Отрицательный совет — с формой на ない: 無理しないほうがいい.
+E: 熱があるなら、病院へ行ったほうがいいですよ。 | If you have a fever, you'd better go to the hospital. | Если у вас жар, лучше сходите в больницу.
+Q: かぜをひいているなら、今日は（　）ほうがいいです。 | If you have a cold, you'd better rest today. | Если простудились, лучше сегодня отдохнуть. | 休もう / *休んだ / 休んで / 休み | Advice: た form + ほうがいい. | Совет: форма на た + ほうがいい.
+Q: 夜遅くお酒を飲まない（　）いいですよ。 | You'd better not drink late at night. | Лучше не пить поздно вечером. | ことが / *ほうが / ようが / ばかり | ない form + ほうがいい. | Форма на ない + ほうがいい.
+Q: 危ないから、一人で（　）ほうがいい。 | It's dangerous, so you'd better not go alone. | Опасно, лучше не ходить одному. | 行った / *行かない / 行って / 行けば | Negative advice: ない form + ほうがいい. | Отрицательный совет: форма на ない + ほうがいい.
+
+@ n4-tara-dou | たらどうですか: why don't you | たらどうですか: почему бы не | 提
+S: た form + らどうですか gives a suggestion: 先生に聞いたらどうですか (Why don't you ask the teacher?). It is softer than ほうがいい.
+S: Форма на た + らどうですか — предложение: 先生に聞いたらどうですか (Почему бы не спросить учителя?). Мягче, чем ほうがいい.
+E: 少し休んだらどうですか。 | Why don't you rest a bit? | Может, немного отдохнёте?
+Q: 分からないなら、辞書で（　）どうですか。 | If you don't understand, why not look it up in a dictionary? | Если не понятно, почему бы не посмотреть в словаре? | 調べると / *調べたら / 調べても / 調べれ | Suggestion: たらどうですか. | Предложение — たらどうですか.
+Q: 疲れているなら、早く寝たら（　）。 | If you're tired, why not go to bed early? | Если устали, может, ляжете пораньше? | どうしますか / *どうですか / いけません / なりません | The fixed phrase is たらどうですか. | Устойчивое выражение — たらどうですか.
+Q: そんなに好きなら、彼女に気持ちを（　）どう？ | If you like her that much, why not tell her how you feel? | Раз она тебе так нравится, почему бы не признаться? | 伝えると / 伝えても / *伝えたら / 伝えれば | Casual: たらどう？ | Разг.: たらどう？
+
+@ n4-nakucha | なくちゃ・なきゃ: gotta | なくちゃ・なきゃ: надо (разг.) | 必
+S: In casual speech, なければならない shortens to なきゃ or なくちゃ: もう帰らなきゃ (I've got to go home now). The ending いけない / ならない is often dropped.
+S: В разговорной речи なければならない сокращается до なきゃ или なくちゃ: もう帰らなきゃ (Мне пора домой). Окончание いけない / ならない часто опускается.
+E: 明日はテストだから、勉強しなきゃ。 | There's a test tomorrow, so I've gotta study. | Завтра контрольная, надо заниматься.
+Q: もう十時だ。早く（　）。 | It's already ten. I've gotta go to bed. | Уже десять. Надо ложиться. | 寝なくて / *寝なきゃ / 寝なければいい / 寝ないで | Casual “must”: なきゃ. | Разговорное «надо» — なきゃ.
+Q: 宿題をやら（　）。 | I've got to do my homework. | Надо сделать домашку. | なくても / *なくちゃ / ないで / なかった | なくちゃ = なくては(いけない). | なくちゃ = なくては(いけない).
+Q: 電車に遅れる！急が（　）！ | I'll miss the train! Gotta hurry! | Опоздаю на поезд! Надо спешить! | *なきゃ / ないで / なくて / なくても | 急がなければ → 急がなきゃ. | 急がなければ → 急がなきゃ.
+
+@ n4-te-mo-kamawanai | てもかまわない: don't mind | てもかまわない: можно, не против | 構
+S: て form + もかまいません means “it's fine if”, a slightly more formal てもいい: ここでたばこを吸ってもかまいませんか. Negative form: なくてもかまいません (no need).
+S: Форма на て + もかまいません — «можно, ничего страшного», чуть формальнее てもいい: ここでたばこを吸ってもかまいませんか. Отрицание: なくてもかまいません (не обязательно).
+E: 明日は来なくてもかまいません。 | It's fine if you don't come tomorrow. | Завтра можно не приходить.
+Q: 窓を開けて（　）かまいませんか。 | Would you mind if I opened the window? | Не возражаете, если я открою окно? | は / *も / が / を | てもかまわない. | てもかまわない.
+Q: 鉛筆で書いても（　）。 | It's fine to write in pencil. | Можно писать карандашом. | いけません / *かまいません / なりません / だめです | Permission: てもかまいません. | Разрешение — てもかまいません.
+Q: 全部食べなくても（　）よ。 | You don't have to eat it all. | Можно не доедать всё. | *かまいません / いけません / なりません / しかたありません | なくてもかまわない: no need. | なくてもかまわない — «не обязательно».
+
+@ n4-tte | って: casual quote and topic | って: разговорное цитирование | 云
+S: In casual speech って replaces と (quotes) and という: 田中さん、来ないって (Tanaka says he's not coming). It also marks a topic: 日本語って難しいね (Japanese is hard, isn't it?).
+S: В разговоре って заменяет と (цитата) и という: 田中さん、来ないって (Танака говорит, что не придёт). Также обозначает тему: 日本語って難しいね (Японский — сложный, да?).
+E: 明日は雨だって。 | They say it'll rain tomorrow. | Говорят, завтра дождь.
+Q: 山田さん、今日は休む（　）。 | Ms. Yamada says she's taking today off. | Ямада говорит, что сегодня не придёт. | から / *って / ね / ので | Casual quote: って. | Разговорная цитата — って.
+Q: 「すし」（　）、どんな食べ物？ | What kind of food is “sushi”? | «Суши» — это что за еда? | に / を / *って / で | って marks the topic being asked about. | って обозначает тему вопроса.
+Q: 先生、何（　）言ってた？ | What did the teacher say? | Что сказал учитель? | を / *って / が / で | 何って = 何と (casual). | 何って = 何と (разг.).
+
+@ n4-ga-suru | がする: sensing a smell, sound, taste | がする: ощущаться | 感
+S: Noun + がする describes something you sense: いいにおいがする (it smells good), 音がする (there's a sound), 変な味がする. 気がする means “have a feeling”: 誰かいる気がする.
+S: Существительное + がする — что-то ощущается: いいにおいがする (приятно пахнет), 音がする (слышен звук), 変な味がする. 気がする — «есть ощущение»: 誰かいる気がする.
+E: 台所からいいにおいがします。 | There's a nice smell coming from the kitchen. | Из кухни приятно пахнет.
+Q: 外で変な音（　）します。 | I hear a strange noise outside. | Снаружи странный звук. | を / *が / に / で | Sensation + がする. | Ощущение + がする.
+Q: このスープは不思議な味が（　）。 | This soup has a strange taste. | У этого супа странный вкус. | あります / *します / なります / います | 味がする: to taste (of). | 味がする — «иметь вкус».
+Q: 前にどこかで会ったような気が（　）。 | I feel like we've met somewhere before. | Кажется, мы где-то уже встречались. | あります / なります / *します / います | 気がする: to have a feeling. | 気がする — «казаться».
+
+@ n4-ni-suru | にする: decide on | にする: выбрать | 選
+S: Noun + にする means choosing something: 私はコーヒーにします (I'll have coffee). It is common when ordering or deciding: 会議は月曜日にしましょう.
+S: Существительное + にする — выбрать что-то: 私はコーヒーにします (Я буду кофе). Часто при заказе или решении: 会議は月曜日にしましょう.
+E: 飲み物は何にしますか。 | What will you have to drink? | Что будете пить?
+Q: 私はカレー（　）します。 | I'll have curry. | Я возьму карри. | が / を / *に / で | Choosing: noun + にする. | Выбор: сущ. + にする.
+Q: 旅行はいつ（　）しましょうか。 | When shall we make the trip? | Когда устроим поездку? | が / *に / を / で | Deciding a time: いつにする. | Выбор времени — いつにする.
+Q: プレゼントは時計に（　）。 | I've decided on a watch as a present. | В подарок я выбрал часы. | なりました / *しました / ありました / いました | Your own choice: にする. | Собственный выбор — にする.
+
+@ n4-ku-suru | 〜くする・〜にする: make something | 〜くする・〜にする: делать каким-то | 化
+S: い-adjective く + する and な-adjective / noun + に + する mean making something change: 音を小さくしてください. 部屋をきれいにします. Compare なる (it becomes) with する (someone makes it).
+S: い-прилагательное く + する и な-прилагательное / сущ. + に + する — изменить что-то: 音を小さくしてください. 部屋をきれいにします. Сравните なる (становится) и する (кто-то делает).
+E: テレビの音を小さくしてください。 | Please turn down the TV. | Сделайте, пожалуйста, телевизор потише.
+Q: 暑いので、部屋を（　）しました。 | It was hot, so I cooled the room. | Было жарко, и я охладил комнату. | 涼しいに / *涼しく / 涼しくて / 涼しいく | い-adjective → く + する. | い-прилагательное → く + する.
+Q: 来週お客さんが来るので、部屋をきれい（　）します。 | Guests are coming next week, so I'll tidy the room. | На следующей неделе придут гости, приберусь. | く / *に / で / な | な-adjective → に + する. | な-прилагательное → に + する.
+Q: スープが薄いので、もう少し（　）してください。 | The soup is thin, so please make it a bit stronger. | Суп пресный, сделайте его чуть насыщеннее. | 濃い / *濃く / 濃いに / 濃くて | い-adjective → く + する: 濃くする. | い-прилагательное → く + する: 濃くする.
+
+@ n4-baai | 場合は: in case of | 場合は: в случае | 場
+S: Plain form or noun + の + 場合(は) means “in case of, if”: 雨の場合は中止します. 分からない場合は、聞いてください. It sounds more formal than たら.
+S: Простая форма или сущ. + の + 場合(は) — «в случае»: 雨の場合は中止します. 分からない場合は、聞いてください. Звучит формальнее, чем たら.
+E: 火事の場合は、エレベーターを使わないでください。 | In case of fire, do not use the elevator. | В случае пожара не пользуйтесь лифтом.
+Q: 雨（　）場合は、試合は中止です。 | In case of rain, the match is canceled. | В случае дождя матч отменяется. | が / *の / な / に | Noun + の + 場合. | Сущ. + の + 場合.
+Q: 遅れる（　）は、電話してください。 | In case you'll be late, please call. | Если опаздываете, позвоните. | ばかり / *場合 / ところ / ため | Formal “in case”: 場合は. | Формальное «в случае» — 場合は.
+Q: 熱が下がらない場合（　）、もう一度来てください。 | If your fever doesn't go down, please come again. | Если температура не спадёт, приходите снова. | を / *は / が / で | 場合は sets the condition. | 場合は задаёт условие.
+
+@ n4-oki-ni | おきに: every other | おきに: через каждые | 置
+S: Number + おきに means “at intervals of”: 一日おきに (every other day), 五分おきに (every five minutes). With days it skips one; with small time units it means “every”.
+S: Число + おきに — «через каждые»: 一日おきに (через день), 五分おきに (каждые пять минут). С днями — через один; с мелкими единицами времени — «каждые».
+E: バスは十分おきに来ます。 | The bus comes every ten minutes. | Автобус ходит каждые десять минут.
+Q: 一日（　）プールで泳いでいます。 | I swim at the pool every other day. | Я плаваю в бассейне через день. | ずつ / *おきに / だけ / までに | Every other day: 一日おきに. | Через день — 一日おきに.
+Q: 電車は五分おき（　）来ます。 | The train comes every five minutes. | Поезд ходит каждые пять минут. | で / を / *に / が | おきに. | おきに.
+Q: この薬は六時間（　）飲んでください。 | Please take this medicine every six hours. | Принимайте это лекарство каждые шесть часов. | ずつ / までに / *おきに / しか | Regular intervals: おきに. | Регулярные интервалы — おきに.
+
+@ n4-nakanaka | なかなか〜ない: not easily | なかなか〜ない: никак не | 中
+S: なかなか + negative means something doesn't happen easily or quickly: バスがなかなか来ません. With an affirmative, なかなか means “quite”: なかなかおいしい.
+S: なかなか + отрицание — что-то никак не происходит: バスがなかなか来ません. С утверждением なかなか — «довольно»: なかなかおいしい.
+E: かぜがなかなか治りません。 | My cold just won't go away. | Простуда никак не проходит.
+Q: 漢字が（　）覚えられません。 | I just can't seem to memorize kanji. | Кандзи никак не запоминаются. | ぜひ / *なかなか / かならず / きっと | Not easily: なかなか + negative. | Никак не — なかなか + отрицание.
+Q: 彼女はなかなか（　）。 | She just won't come. | Она всё никак не приходит. | 来ます / *来ません / 来ました / 来るでしょう | なかなか takes a negative here. | Здесь なかなか с отрицанием.
+Q: この料理は（　）おいしいですね。 | This dish is quite tasty. | Это блюдо довольно вкусное. | *なかなか / ぜんぜん / あまり / めったに | Affirmative なかなか = quite. | なかなか с утверждением — «довольно».
+
+@ n4-sa | さ: turning adjectives into nouns | さ: существительные от прилагательных | 度
+S: Adjective stem + さ makes a noun of degree: 高い → 高さ (height), 大切 → 大切さ (importance), 重い → 重さ (weight). It is used to talk about how much.
+S: Основа прилагательного + さ образует существительное со значением степени: 高い → 高さ (высота), 大切 → 大切さ (важность), 重い → 重さ (вес). Используется, когда говорят «насколько».
+E: この山の高さは三千メートルです。 | This mountain's height is 3,000 meters. | Высота этой горы — три тысячи метров.
+Q: この荷物の（　）はどのくらいですか。 | How heavy is this luggage? | Сколько весит этот багаж? | 重い / *重さ / 重く / 重くて | Noun of degree: 重さ. | Существительное степени — 重さ.
+Q: 健康の大切（　）が分かりました。 | I came to understand the importance of health. | Я понял, как важно здоровье. | み / *さ / く / な | な-adjective stem + さ. | Основа な-прилагательного + さ.
+Q: この川の（　）は百キロです。 | This river is 100 km long. | Длина этой реки — сто километров. | 長い / 長く / *長さ / 長くて | 長い → 長さ (length). | 長い → 長さ (длина).
+
+@ n4-te-hoshii | てほしい: want someone to | てほしい: хотеть, чтобы | 望
+S: Person + に + て form + ほしい means “I want (someone) to do”: 友達にもっと連絡してほしい. Negative wish: ないでほしい.
+S: Лицо + に + форма на て + ほしい — «хочу, чтобы (кто-то) сделал»: 友達にもっと連絡してほしい. Отрицательное желание: ないでほしい.
+E: 母に元気でいてほしいです。 | I want my mother to stay healthy. | Я хочу, чтобы мама была здорова.
+Q: 子供にもっと本を（　）ほしいです。 | I want my children to read more books. | Хочу, чтобы дети больше читали. | 読む / 読み / *読んで / 読んだ | て form + ほしい. | Форма на て + ほしい.
+Q: 彼（　）早く帰ってきてほしい。 | I want him to come home soon. | Хочу, чтобы он скорее вернулся. | が / を / *に / で | The person you want to act takes に. | Тот, от кого ждут действия, — に.
+Q: このことは誰にも言わない（　）ほしい。 | I don't want you to tell anyone about this. | Не хочу, чтобы ты кому-то об этом говорил. | て / *で / に / が | Negative wish: ないでほしい. | Отрицательное желание — ないでほしい.
+
+@ n4-garu | がる・たがる: shows signs of | がる・たがる: проявлять (чувство) | 状
+S: Adjective stem + がる describes another person's feelings as seen from outside: 寒がる, 怖がる, 欲しがる. ます stem + たがる means “(someone else) wants to”: 弟は外で遊びたがっています.
+S: Основа прилагательного + がる — чувства другого человека, видимые со стороны: 寒がる, 怖がる, 欲しがる. Основа на ます + たがる — «(кто-то другой) хочет»: 弟は外で遊びたがっています.
+E: 妹は犬を怖がっています。 | My little sister is scared of dogs. | Младшая сестра боится собак.
+Q: 子供が新しいおもちゃを（　）います。 | The child wants a new toy. | Ребёнок хочет новую игрушку. | 欲しい / 欲しくて / *欲しがって / 欲しそう | Someone else's want: 欲しがる. | Желание другого — 欲しがる.
+Q: 弟はゲームをし（　）います。 | My little brother wants to play games. | Младший брат хочет поиграть в игры. | たくて / *たがって / たいで / たそうで | ます stem + たがる for others. | Основа на ます + たがる — о других.
+Q: 猫は寒（　）、ストーブの前から動かない。 | The cat feels cold and won't move from the heater. | Кошке холодно, она не отходит от обогревателя. | くて / *がって / そうで / さで | 寒い → 寒がる → 寒がって. | 寒い → 寒がる → 寒がって.
+
+@ n4-itadakemasen-ka | ていただけませんか: could you please | ていただけませんか: не могли бы вы | 頼
+S: て form + いただけませんか is a very polite request: 写真をとっていただけませんか. Less formal: てもらえませんか, てくれませんか.
+S: Форма на て + いただけませんか — очень вежливая просьба: 写真をとっていただけませんか. Менее формально: てもらえませんか, てくれませんか.
+E: もう少しゆっくり話していただけませんか。 | Could you please speak a little more slowly? | Не могли бы вы говорить чуть медленнее?
+Q: すみませんが、駅までの道を教えて（　）。 | Excuse me, could you tell me the way to the station? | Простите, не подскажете дорогу до станции? | いただきませんか / *いただけませんか / いただけましたか / いただきましょう | Polite request: ていただけませんか. | Вежливая просьба — ていただけませんか.
+Q: この荷物を持って（　）か。（友達に） | Could you hold this bag for me? (to a friend) | Можешь подержать эту сумку? (другу) | いただきません / *もらえません / あげません / さしあげません | With friends: てもらえませんか. | С друзьями — てもらえませんか.
+Q: ちょっと手伝って（　）ませんか。 | Could you help me a little? | Не поможешь немного? | あげ / *くれ / やり / おき | てくれませんか: casual polite request. | てくれませんか — просьба попроще.
+
+@ n4-n-desu | んです: explaining | んです: объяснение | 説
+S: Plain form + んです (のです) explains or asks for an explanation: どうしたんですか。…頭が痛いんです. Nouns and な-adjectives take な: 休みなんです. Overusing it can sound pushy.
+S: Простая форма + んです (のです) объясняет или просит объяснения: どうしたんですか。…頭が痛いんです. Существительные и な-прилагательные берут な: 休みなんです. Злоупотребление звучит навязчиво.
+E: 遅れてすみません。電車が止まったんです。 | Sorry I'm late. The train stopped. | Простите за опоздание. Поезд остановился.
+Q: どうした（　）か。…財布をなくしたんです。 | What happened? …I lost my wallet. | Что случилось? …Я потерял кошелёк. | のに / *んです / のだ / です | Asking for an explanation: んですか. | Просьба объяснить — んですか.
+Q: 今日は早く帰ります。子供が病気（　）んです。 | I'm going home early today. My child is sick. | Сегодня уйду пораньше. Ребёнок заболел. | だ / *な / の / で | Noun + な + んです. | Сущ. + な + んです.
+Q: 日本語が上手ですね。…日本に五年住んでいた（　）。 | Your Japanese is good. …That's because I lived in Japan for five years. | Вы хорошо говорите по-японски. …Я пять лет жил в Японии. | です / *んです / ますか / でした | Giving the background: んです. | Объяснение причины — んです.
+
+@ n4-mama | まま: as it is, unchanged | まま: оставаясь как есть | 儘
+S: た form, ない form, or noun + の + まま means a state continues unchanged: 窓を開けたまま寝てしまいました. 靴のまま入らないでください.
+S: Форма на た, форма на ない или сущ. + の + まま — состояние не меняется: 窓を開けたまま寝てしまいました (Уснул с открытым окном). 靴のまま入らないでください.
+E: テレビをつけたまま寝てしまった。 | I fell asleep with the TV on. | Я уснул с включённым телевизором.
+Q: 靴を（　）まま、部屋に入らないでください。 | Please don't enter the room with your shoes on. | Не входите в комнату в обуви. | はく / *はいた / はいて / はかない | た form + まま: in that state. | Форма на た + まま — в этом состоянии.
+Q: 電気をつけた（　）出かけてしまった。 | I went out leaving the light on. | Я ушёл, оставив свет включённым. | ばかり / *まま / ところ / ように | Unchanged state: まま. | Неизменное состояние — まま.
+Q: 野菜は生（　）まま食べられます。 | You can eat the vegetables raw. | Эти овощи можно есть сырыми. | な / *の / が / で | Noun + のまま. | Сущ. + のまま.
+
+@ n4-you-ni-iu | ように言う: tell someone to | ように言う: сказать, чтобы | 伝
+S: Dictionary form or ない form + ように + 言う / 頼む / 注意する reports a request or instruction: 先生は学生に静かにするように言いました. 遅れないように注意されました.
+S: Словарная форма или форма на ない + ように + 言う / 頼む / 注意する передаёт просьбу или указание: 先生は学生に静かにするように言いました. 遅れないように注意されました.
+E: 医者にたばこをやめるように言われました。 | The doctor told me to quit smoking. | Врач сказал мне бросить курить.
+Q: 母は私に早く寝る（　）言いました。 | My mother told me to go to bed early. | Мама велела мне ложиться пораньше. | ために / *ように / ことに / そうに | Reported instruction: ように言う. | Переданное указание — ように言う.
+Q: 先生に宿題を忘れない（　）注意されました。 | The teacher warned me not to forget homework. | Учитель сделал мне замечание, чтобы я не забывал домашку. | ために / ことに / *ように / ばかりに | ない form + ように + 注意する. | Форма на ない + ように + 注意する.
+Q: 田中さんに、あとで電話をくれる（　）伝えてください。 | Please tell Mr. Tanaka to call me later. | Передайте Танаке, чтобы он мне позже позвонил. | *ように / ために / ことを / とおりに | ように伝える: pass on a request. | ように伝える — передать просьбу.
+
+@ n4-toka | とか: things like (casual) | とか: например (разг.) | 等
+S: とか lists examples in casual speech, like や: りんごとかバナナとか. It can follow verbs too: 本を読むとか、音楽を聞くとか.
+S: とか приводит примеры в разговорной речи, как や: りんごとかバナナとか. Может следовать и за глаголами: 本を読むとか、音楽を聞くとか.
+E: 休みの日は映画とか買い物とかに行きます。 | On days off I go to movies, shopping and so on. | В выходные хожу в кино, по магазинам и т. п.
+Q: 果物はりんご（　）みかんとかが好きです。 | I like fruit such as apples and mandarins. | Из фруктов люблю яблоки, мандарины и т. п. | だけ / *とか / しか / まで | Casual example list: とか. | Разговорный перечень примеров — とか.
+Q: ストレスがあるときは、歌う（　）、走るとかします。 | When stressed, I do things like singing or running. | При стрессе я, например, пою или бегаю. | ので / のに / *とか / まで | とか can follow verbs. | とか может стоять после глаголов.
+Q: 週末は掃除とか洗濯（　）をします。 | On weekends I do cleaning, laundry and such. | По выходным занимаюсь уборкой, стиркой и т. п. | だけ / *とか / しか / なら | The last item also takes とか. | Последний элемент тоже с とか.

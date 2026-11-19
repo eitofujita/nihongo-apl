@@ -1,20 +1,20 @@
 import {z} from 'zod';
-import {allQuestions, getLesson, lessons} from '@/content/lessons';
+import {getLessonMeta, isKnownQuestion, isVocabularyQuestion, lessons} from '@/content/catalog';
 
 export const STORAGE_KEY = 'nihongo-ai:progress:v1';
 export const answerInputSchema = z.object({questionId: z.string().max(100), answer: z.string().trim().min(1).max(120)});
-const knownQuestion = z.string().refine(id => allQuestions.some(q => q.id === id));
+const knownQuestion = z.string().refine(isKnownQuestion);
 const recordSchema = z.object({questionId: knownQuestion, correct: z.boolean()});
 const sessionSchema = z.object({
-  id: z.string().min(1).max(100), lessonId: z.string().refine(id => id === 'review' || id === 'placement' || Boolean(getLesson(id))),
+  id: z.string().min(1).max(100), lessonId: z.string().refine(id => id === 'review' || id === 'placement' || Boolean(getLessonMeta(id))),
   at: z.iso.datetime(), durationSeconds: z.number().int().min(0).max(3600),
   answers: z.array(recordSchema).min(1).max(100)
 }).superRefine((session, context) => {
   if (new Set(session.answers.map(a => a.questionId)).size !== session.answers.length) {
     context.addIssue({code: 'custom', message: 'A session cannot contain the same question twice'});
   }
-  const lesson = getLesson(session.lessonId);
-  if (lesson && session.answers.some(a => !lesson.questions.some(q => q.id === a.questionId))) {
+  const lesson = getLessonMeta(session.lessonId);
+  if (lesson && session.answers.some(a => !lesson.questionIds.includes(a.questionId))) {
     context.addIssue({code: 'custom', message: 'Question does not belong to this lesson'});
   }
 });
@@ -56,20 +56,20 @@ export function localDay(date: Date): string {
 export function getStats(progress: Progress, now = new Date()) {
   const answers = progress.sessions.flatMap(session => session.answers);
   const correct = answers.filter(answer => answer.correct).length;
-  const completed = new Set(progress.sessions.filter(s => Boolean(getLesson(s.lessonId))).map(s => s.lessonId));
-  const vocabularyIds = new Map(allQuestions.filter(q => q.wordId).map(q => [q.id, q.wordId]));
-  const words = new Set(answers.filter(a => vocabularyIds.has(a.questionId)).map(a => vocabularyIds.get(a.questionId))).size;
+  const completed = new Set(progress.sessions.filter(s => Boolean(getLessonMeta(s.lessonId))).map(s => s.lessonId));
+  const words = new Set(answers.filter(a => isVocabularyQuestion(a.questionId)).map(a => a.questionId)).size;
   const activeDays = new Set(progress.sessions.map(s => localDay(new Date(s.at))));
   let streak = 0;
   const day = new Date(now);
   if (!activeDays.has(localDay(day))) day.setDate(day.getDate() - 1);
   while (activeDays.has(localDay(day))) {streak++; day.setDate(day.getDate() - 1);}
   const todaySeconds = progress.sessions.filter(s => localDay(new Date(s.at)) === localDay(now)).reduce((sum, s) => sum + s.durationSeconds, 0);
-  return {completed, words, correct, total: answers.length, accuracy: answers.length ? Math.round(correct / answers.length * 100) : null, streak, todayMinutes: Math.floor(todaySeconds / 60), activeDays};
+  return {completed, words, correct, total: answers.length, accuracy: answers.length ? Math.round(correct / answers.length * 100) : null, streak, todayMinutes: Math.floor(todaySeconds / 60), todaySeconds, activeDays};
 }
 
-export function dueQuestions(progress: Progress, now = new Date()) {
-  return progress.reviews.filter(review => Date.parse(review.due) <= now.getTime()).flatMap(review => allQuestions.filter(q => q.id === review.questionId));
+/** Ids of review questions that are due; load their content with loadQuestions(). */
+export function dueQuestionIds(progress: Progress, now = new Date()): string[] {
+  return progress.reviews.filter(review => Date.parse(review.due) <= now.getTime() && isKnownQuestion(review.questionId)).map(review => review.questionId);
 }
 
 /** Most recent answer per question wins, so a corrected mistake can recover. */
@@ -79,21 +79,21 @@ export function getWeakTopics(progress: Progress) {
     session.answers.forEach(answer => latest.set(answer.questionId, answer.correct));
   });
   return lessons.flatMap(lesson => {
-    const answered = lesson.questions.filter(q => latest.has(q.id));
-    const mistakes = answered.filter(q => latest.get(q.id) === false).length;
+    const answered = lesson.questionIds.filter(id => latest.has(id));
+    const mistakes = answered.filter(id => latest.get(id) === false).length;
     return mistakes ? [{lesson, mistakes, attempted: answered.length, accuracy: Math.round((answered.length - mistakes) / answered.length * 100)}] : [];
   }).sort((a, b) => a.accuracy - b.accuracy || b.mistakes - a.mistakes || a.lesson.number - b.lesson.number);
 }
 
 export function getRecommendation(progress: Progress, now = new Date()) {
-  const due = dueQuestions(progress, now);
+  const due = dueQuestionIds(progress, now);
   const weak = getWeakTopics(progress)[0];
   const completed = getStats(progress, now).completed;
   if (due.length) return {lesson: weak?.lesson ?? lessons[0], reason: 'review' as const, dueCount: due.length};
   if (weak) return {lesson: weak.lesson, reason: 'weak' as const, dueCount: 0};
   const diagnostic = [...progress.sessions].reverse().find(session => session.lessonId === 'placement');
   if (completed.size === 0 && diagnostic && diagnostic.answers.length === 10 && diagnostic.answers.every(answer => answer.correct)) {
-    return {lesson: getLesson('n5-invitations') ?? lessons[0], reason: 'next' as const, dueCount: 0};
+    return {lesson: getLessonMeta('n5-invitations') ?? lessons[0], reason: 'next' as const, dueCount: 0};
   }
   const next = lessons.find(lesson => !completed.has(lesson.id));
   return {lesson: next ?? lessons[0], reason: next ? 'next' as const : 'complete' as const, dueCount: 0};

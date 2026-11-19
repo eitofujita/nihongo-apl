@@ -1,0 +1,3896 @@
+{
+ "lessons": [
+  {
+   "id": "n5-wa-desu",
+   "number": 1,
+   "category": "grammar",
+   "title": {
+    "en": "Meet は and です",
+    "ru": "Знакомьтесь: は и です"
+   },
+   "description": {
+    "en": "Your first Japanese sentence starts here.",
+    "ru": "Ваше первое предложение начинается здесь."
+   },
+   "glyph": "は",
+   "color": "green",
+   "study": {
+    "en": "Put は after the topic, then use a noun followed by です for a polite statement. は is pronounced “wa” as a particle. The subject may be omitted when clear from context.",
+    "ru": "После темы поставьте は, затем существительное и です для вежливого утверждения. Частица は читается «ва». Если подлежащее понятно из контекста, его можно опустить."
+   },
+   "examples": [
+    {
+     "japanese": "わたしは学生です。",
+     "translations": {
+      "en": "I am a student.",
+      "ru": "Я студент."
+     }
+    }
+   ],
+   "words": [],
+   "questions": [
+    {
+     "id": "wa-1",
+     "prompt": "わたし（　）学生です。",
+     "translation": {
+      "en": "I am a student.",
+      "ru": "Я студент."
+     },
+     "type": "choice",
+     "choices": [
+      "は",
+      "を",
+      "に",
+      "で"
+     ],
+     "answer": "は",
+     "explanation": {
+      "en": "は marks the topic: わたし (I). It is pronounced “wa” when used as a particle. です makes the sentence polite.",
+      "ru": "は обозначает тему — わたし (я). Как частица она читается «ва». です придаёт предложению вежливую форму."
+     }
+    },
+    {
+     "id": "wa-2",
+     "prompt": "田中さんは先生（　）。",
+     "translation": {
+      "en": "Mr./Ms. Tanaka is a teacher.",
+      "ru": "Танака — преподаватель."
+     },
+     "type": "choice",
+     "choices": [
+      "です",
+      "ます",
+      "を",
+      "に"
+     ],
+     "answer": "です",
+     "explanation": {
+      "en": "After a noun such as 先生 (teacher), です forms a polite statement. ます is used with verb stems, not directly with this noun.",
+      "ru": "После существительного 先生 (преподаватель) です образует вежливое утверждение. ます используется с основами глаголов, а не с этим существительным."
+     }
+    },
+    {
+     "id": "wa-3",
+     "prompt": "わたし（　）マリアです。",
+     "translation": {
+      "en": "I am Maria.",
+      "ru": "Я Мария."
+     },
+     "type": "fill",
+     "choices": [
+      "は",
+      "を",
+      "で",
+      "に"
+     ],
+     "answer": "は",
+     "explanation": {
+      "en": "Use は to introduce わたし as the topic. The pattern is A は B です: “A is B”.",
+      "ru": "Частица は вводит わたし как тему. Шаблон A は B です означает «A — это B»."
+     }
+    }
+   ]
+  },
+  {
+   "id": "n5-everyday",
+   "number": 2,
+   "category": "vocabulary",
+   "title": {
+    "en": "Everyday little words",
+    "ru": "Простые слова на каждый день"
+   },
+   "description": {
+    "en": "Get to know the words around you.",
+    "ru": "Узнайте, как назвать то, что вокруг."
+   },
+   "glyph": "本",
+   "color": "peach",
+   "study": {
+    "en": "Read each word and its kana reading before practicing. Small っ marks a pause before the next consonant. The meanings below are shown in your display language.",
+    "ru": "Перед практикой прочитайте слово и его чтение каной. Маленькая っ обозначает паузу перед следующим согласным. Значения показаны на языке интерфейса."
+   },
+   "examples": [
+    {
+     "japanese": "本",
+     "translations": {
+      "en": "book",
+      "ru": "книга"
+     }
+    }
+   ],
+   "words": [
+    {
+     "id": "n5-everyday-w1",
+     "japanese": "本",
+     "reading": "ほん",
+     "meanings": {
+      "en": "book",
+      "ru": "книга"
+     }
+    },
+    {
+     "id": "n5-everyday-w2",
+     "japanese": "水",
+     "reading": "みず",
+     "meanings": {
+      "en": "water",
+      "ru": "вода"
+     }
+    },
+    {
+     "id": "n5-everyday-w3",
+     "japanese": "学校",
+     "reading": "がっこう",
+     "meanings": {
+      "en": "school",
+      "ru": "школа"
+     }
+    },
+    {
+     "id": "n5-everyday-w4",
+     "japanese": "猫",
+     "reading": "ねこ",
+     "meanings": {
+      "en": "cat",
+      "ru": "кошка"
+     }
+    },
+    {
+     "id": "n5-everyday-w5",
+     "japanese": "犬",
+     "reading": "いぬ",
+     "meanings": {
+      "en": "dog",
+      "ru": "собака"
+     }
+    },
+    {
+     "id": "n5-everyday-w6",
+     "japanese": "机",
+     "reading": "つくえ",
+     "meanings": {
+      "en": "desk",
+      "ru": "письменный стол"
+     }
+    },
+    {
+     "id": "n5-everyday-w7",
+     "japanese": "椅子",
+     "reading": "いす",
+     "meanings": {
+      "en": "chair",
+      "ru": "стул"
+     }
+    },
+    {
+     "id": "n5-everyday-w8",
+     "japanese": "時計",
+     "reading": "とけい",
+     "meanings": {
+      "en": "clock; watch",
+      "ru": "часы"
+     }
+    },
+    {
+     "id": "n5-everyday-w9",
+     "japanese": "電話",
+     "reading": "でんわ",
+     "meanings": {
+      "en": "telephone",
+      "ru": "телефон"
+     }
+    },
+    {
+     "id": "n5-everyday-w10",
+     "japanese": "かばん",
+     "reading": "かばん",
+     "meanings": {
+      "en": "bag",
+      "ru": "сумка"
+     }
+    }
+   ],
+   "questions": [
+    {
+     "id": "word-1",
+     "prompt": "（　）を読みます。",
+     "translation": {
+      "en": "Choose “book”: I read a book.",
+      "ru": "Выберите «книга»: Я читаю книгу."
+     },
+     "type": "choice",
+     "choices": [
+      "本",
+      "水",
+      "学校",
+      "猫"
+     ],
+     "answer": "本",
+     "explanation": {
+      "en": "本 (ほん, hon) means “book”. A useful example is 本を読みます: “I read a book”.",
+      "ru": "本 (ほん, хон) означает «книга». Пример: 本を読みます — «Я читаю книгу»."
+     },
+     "wordId": "n5-everyday-w1"
+    },
+    {
+     "id": "word-2",
+     "prompt": "（　）を飲みます。",
+     "translation": {
+      "en": "Choose “water”: I drink water.",
+      "ru": "Выберите «вода»: Я пью воду."
+     },
+     "type": "choice",
+     "choices": [
+      "学校",
+      "水",
+      "本",
+      "犬"
+     ],
+     "answer": "水",
+     "explanation": {
+      "en": "水 (みず, mizu) means “water”. 水を飲みます means “I drink water”.",
+      "ru": "水 (みず, мидзу) означает «вода». 水を飲みます — «Я пью воду»."
+     },
+     "wordId": "n5-everyday-w2"
+    },
+    {
+     "id": "word-3",
+     "prompt": "（　）に行きます。",
+     "translation": {
+      "en": "Choose “school”: I go to school.",
+      "ru": "Выберите «школа»: Я иду в школу."
+     },
+     "type": "choice",
+     "choices": [
+      "先生",
+      "猫",
+      "学校",
+      "水"
+     ],
+     "answer": "学校",
+     "explanation": {
+      "en": "学校 (がっこう, gakkō) means “school”. The small っ creates a short pause before こ.",
+      "ru": "学校 (がっこう, гакко:) означает «школа». Маленькая っ обозначает краткую паузу перед こ."
+     },
+     "wordId": "n5-everyday-w3"
+    },
+    {
+     "id": "word-4",
+     "prompt": "ことばを えらびましょう。",
+     "translation": {
+      "en": "Which word means “cat”?",
+      "ru": "Какое слово означает «кошка»?"
+     },
+     "type": "choice",
+     "choices": [
+      "椅子",
+      "猫",
+      "犬",
+      "机"
+     ],
+     "answer": "猫",
+     "explanation": {
+      "en": "猫 is read ねこ and means “cat”. Review its kana reading together with its meaning.",
+      "ru": "猫 читается ねこ и означает «кошка». Повторяйте чтение вместе со значением."
+     },
+     "wordId": "n5-everyday-w4"
+    }
+   ]
+  },
+  {
+   "id": "n5-ka",
+   "number": 3,
+   "category": "grammar",
+   "title": {
+    "en": "Make it a question",
+    "ru": "Превращаем фразу в вопрос"
+   },
+   "description": {
+    "en": "Open a conversation with か.",
+    "ru": "Начните разговор с помощью か."
+   },
+   "glyph": "か",
+   "color": "purple",
+   "study": {
+    "en": "Add か after a polite statement to ask a yes/no question. For example, change 学生です to 学生ですか. The subject is often left out when the context is clear.",
+    "ru": "Добавьте か после вежливого утверждения, чтобы задать вопрос. Например, 学生です превращается в 学生ですか. Подлежащее часто опускается, если оно понятно из контекста."
+   },
+   "examples": [
+    {
+     "japanese": "学生ですか。",
+     "translations": {
+      "en": "Are you a student?",
+      "ru": "Вы студент?"
+     }
+    }
+   ],
+   "words": [],
+   "questions": [
+    {
+     "id": "ka-1",
+     "prompt": "学生です（　）。",
+     "translation": {
+      "en": "Are you a student?",
+      "ru": "Вы студент?"
+     },
+     "type": "choice",
+     "choices": [
+      "か",
+      "を",
+      "で",
+      "の"
+     ],
+     "answer": "か",
+     "explanation": {
+      "en": "Put か at the end of a polite statement to make it a question. The subject can be omitted when clear from context.",
+      "ru": "Добавьте か в конце вежливого утверждения, чтобы задать вопрос. Подлежащее можно опустить, если оно понятно из контекста."
+     }
+    },
+    {
+     "id": "ka-2",
+     "prompt": "これは本です（　）。",
+     "translation": {
+      "en": "Is this a book?",
+      "ru": "Это книга?"
+     },
+     "type": "choice",
+     "choices": [
+      "に",
+      "は",
+      "か",
+      "を"
+     ],
+     "answer": "か",
+     "explanation": {
+      "en": "か turns これは本です (“This is a book”) into a yes/no question.",
+      "ru": "か превращает これは本です («Это книга») в вопрос, на который можно ответить «да» или «нет»."
+     }
+    },
+    {
+     "id": "ka-3",
+     "prompt": "田中さんは先生です（　）。",
+     "translation": {
+      "en": "Is Mr./Ms. Tanaka a teacher?",
+      "ru": "Танака — преподаватель?"
+     },
+     "type": "fill",
+     "choices": [
+      "か",
+      "を",
+      "に",
+      "で"
+     ],
+     "answer": "か",
+     "explanation": {
+      "en": "The question particle か comes after です in this basic polite question.",
+      "ru": "В этом простом вежливом вопросе вопросительная частица か ставится после です."
+     }
+    }
+   ]
+  },
+  {
+   "id": "n5-kore",
+   "number": 4,
+   "category": "grammar",
+   "title": {
+    "en": "The things around you",
+    "ru": "Вещи вокруг нас"
+   },
+   "description": {
+    "en": "This, that, and the world around you.",
+    "ru": "Это, то и мир вокруг вас."
+   },
+   "glyph": "これ",
+   "color": "green",
+   "study": {
+    "en": "これ refers to a thing near the speaker, それ near the listener, and あれ far from both. These stand alone: これは本です. Before a noun, use この, その or あの instead.",
+    "ru": "これ обозначает предмет рядом с говорящим, それ — с собеседником, あれ — далеко от обоих. Они употребляются самостоятельно: これは本です. Перед существительным нужны この, その или あの."
+   },
+   "examples": [
+    {
+     "japanese": "これは本です。",
+     "translations": {
+      "en": "This is a book.",
+      "ru": "Это книга."
+     }
+    }
+   ],
+   "words": [],
+   "questions": [
+    {
+     "id": "kore-1",
+     "prompt": "（　）は本です。",
+     "translation": {
+      "en": "This (near me) is a book.",
+      "ru": "Это (рядом со мной) — книга."
+     },
+     "type": "choice",
+     "choices": [
+      "これ",
+      "それ",
+      "あれ",
+      "どれ"
+     ],
+     "answer": "これ",
+     "explanation": {
+      "en": "これ refers to a thing near the speaker. It stands on its own as a noun.",
+      "ru": "これ обозначает предмет рядом с говорящим. Это самостоятельное местоимение."
+     }
+    },
+    {
+     "id": "kore-2",
+     "prompt": "（　）はかばんです。",
+     "translation": {
+      "en": "That (near you) is a bag.",
+      "ru": "То (рядом с вами) — сумка."
+     },
+     "type": "choice",
+     "choices": [
+      "これ",
+      "それ",
+      "あれ",
+      "どれ"
+     ],
+     "answer": "それ",
+     "explanation": {
+      "en": "それ refers to a thing near the listener in this physical context.",
+      "ru": "В данном пространственном контексте それ обозначает предмет рядом с собеседником."
+     }
+    },
+    {
+     "id": "kore-3",
+     "prompt": "（　）は学校です。",
+     "translation": {
+      "en": "That (far from both of us) is a school.",
+      "ru": "То (далеко от нас обоих) — школа."
+     },
+     "type": "choice",
+     "choices": [
+      "これ",
+      "それ",
+      "あれ",
+      "どれ"
+     ],
+     "answer": "あれ",
+     "explanation": {
+      "en": "あれ points to something far from both the speaker and the listener.",
+      "ru": "あれ указывает на предмет, удалённый и от говорящего, и от собеседника."
+     }
+    }
+   ]
+  },
+  {
+   "id": "n5-no",
+   "number": 5,
+   "category": "grammar",
+   "title": {
+    "en": "People & connections",
+    "ru": "Люди и связи"
+   },
+   "description": {
+    "en": "Say who things belong to with の.",
+    "ru": "Узнайте, кому что принадлежит, с の."
+   },
+   "glyph": "の",
+   "color": "purple",
+   "study": {
+    "en": "の connects two nouns. Owner + の + item expresses possession: わたしの本. It can also describe a relationship, as in 日本語の先生. Read the whole phrase for context.",
+    "ru": "の связывает два существительных. Владелец + の + предмет обозначает принадлежность: わたしの本. Она также выражает связь, как в 日本語の先生. Значение зависит от всего выражения."
+   },
+   "examples": [
+    {
+     "japanese": "わたしの本です。",
+     "translations": {
+      "en": "It is my book.",
+      "ru": "Это моя книга."
+     }
+    }
+   ],
+   "words": [],
+   "questions": [
+    {
+     "id": "no-1",
+     "prompt": "わたし（　）本です。",
+     "translation": {
+      "en": "It is my book.",
+      "ru": "Это моя книга."
+     },
+     "type": "choice",
+     "choices": [
+      "の",
+      "を",
+      "に",
+      "で"
+     ],
+     "answer": "の",
+     "explanation": {
+      "en": "の connects the owner わたし to 本: わたしの本 means “my book”.",
+      "ru": "の связывает владельца わたし с 本: わたしの本 означает «моя книга»."
+     }
+    },
+    {
+     "id": "no-2",
+     "prompt": "日本語（　）先生です。",
+     "translation": {
+      "en": "A Japanese-language teacher.",
+      "ru": "Преподаватель японского языка."
+     },
+     "type": "choice",
+     "choices": [
+      "を",
+      "か",
+      "の",
+      "に"
+     ],
+     "answer": "の",
+     "explanation": {
+      "en": "の connects 日本語 (Japanese language) and 先生 (teacher). It shows a relationship, not just possession.",
+      "ru": "の связывает 日本語 (японский язык) и 先生 (преподаватель). Она обозначает связь, а не только принадлежность."
+     }
+    },
+    {
+     "id": "no-3",
+     "prompt": "田中さん（　）かばんです。",
+     "translation": {
+      "en": "It is Mr./Ms. Tanaka’s bag.",
+      "ru": "Это сумка Танаки."
+     },
+     "type": "fill",
+     "choices": [
+      "の",
+      "を",
+      "に",
+      "で"
+     ],
+     "answer": "の",
+     "explanation": {
+      "en": "The pattern owner + の + item expresses possession: 田中さんのかばん.",
+      "ru": "Принадлежность выражается так: владелец + の + предмет — 田中さんのかばん."
+     }
+    }
+   ]
+  },
+  {
+   "id": "n5-food",
+   "number": 6,
+   "category": "vocabulary",
+   "title": {
+    "en": "A taste of Japan",
+    "ru": "Япония на вкус"
+   },
+   "description": {
+    "en": "A few delicious words to remember.",
+    "ru": "Несколько вкусных слов для памяти."
+   },
+   "glyph": "食",
+   "color": "peach",
+   "study": {
+    "en": "Learn the word, its reading, and its meaning together. パン and コーヒー are written in katakana. ご飯 can mean cooked rice or a meal, depending on context.",
+    "ru": "Учите слово, чтение и значение вместе. パン и コーヒー записываются катаканой. ご飯 означает варёный рис или еду в зависимости от контекста."
+   },
+   "examples": [
+    {
+     "japanese": "お茶",
+     "translations": {
+      "en": "tea",
+      "ru": "чай"
+     }
+    }
+   ],
+   "words": [
+    {
+     "id": "n5-food-w1",
+     "japanese": "お茶",
+     "reading": "おちゃ",
+     "meanings": {
+      "en": "tea",
+      "ru": "чай"
+     }
+    },
+    {
+     "id": "n5-food-w2",
+     "japanese": "魚",
+     "reading": "さかな",
+     "meanings": {
+      "en": "fish",
+      "ru": "рыба"
+     }
+    },
+    {
+     "id": "n5-food-w3",
+     "japanese": "パン",
+     "reading": "パン",
+     "meanings": {
+      "en": "bread",
+      "ru": "хлеб"
+     }
+    },
+    {
+     "id": "n5-food-w4",
+     "japanese": "ご飯",
+     "reading": "ごはん",
+     "meanings": {
+      "en": "cooked rice; meal",
+      "ru": "варёный рис; еда"
+     }
+    },
+    {
+     "id": "n5-food-w5",
+     "japanese": "肉",
+     "reading": "にく",
+     "meanings": {
+      "en": "meat",
+      "ru": "мясо"
+     }
+    },
+    {
+     "id": "n5-food-w6",
+     "japanese": "卵",
+     "reading": "たまご",
+     "meanings": {
+      "en": "egg",
+      "ru": "яйцо"
+     }
+    },
+    {
+     "id": "n5-food-w7",
+     "japanese": "牛乳",
+     "reading": "ぎゅうにゅう",
+     "meanings": {
+      "en": "milk",
+      "ru": "молоко"
+     }
+    },
+    {
+     "id": "n5-food-w8",
+     "japanese": "野菜",
+     "reading": "やさい",
+     "meanings": {
+      "en": "vegetables",
+      "ru": "овощи"
+     }
+    },
+    {
+     "id": "n5-food-w9",
+     "japanese": "果物",
+     "reading": "くだもの",
+     "meanings": {
+      "en": "fruit",
+      "ru": "фрукты"
+     }
+    },
+    {
+     "id": "n5-food-w10",
+     "japanese": "コーヒー",
+     "reading": "コーヒー",
+     "meanings": {
+      "en": "coffee",
+      "ru": "кофе"
+     }
+    }
+   ],
+   "questions": [
+    {
+     "id": "food-1",
+     "prompt": "（　）を飲みます。",
+     "translation": {
+      "en": "Choose “tea”: I drink tea.",
+      "ru": "Выберите «чай»: Я пью чай."
+     },
+     "type": "choice",
+     "choices": [
+      "お茶",
+      "ご飯",
+      "パン",
+      "魚"
+     ],
+     "answer": "お茶",
+     "explanation": {
+      "en": "お茶 (おちゃ, ocha) means “tea”. The prefix お adds politeness.",
+      "ru": "お茶 (おちゃ, отя) означает «чай». Приставка お добавляет вежливость."
+     },
+     "wordId": "n5-food-w1"
+    },
+    {
+     "id": "food-2",
+     "prompt": "（　）を食べます。",
+     "translation": {
+      "en": "Choose “fish”: I eat fish.",
+      "ru": "Выберите «рыба»: Я ем рыбу."
+     },
+     "type": "choice",
+     "choices": [
+      "パン",
+      "魚",
+      "お茶",
+      "ご飯"
+     ],
+     "answer": "魚",
+     "explanation": {
+      "en": "魚 (さかな, sakana) means “fish”. 魚を食べます means “I eat fish”.",
+      "ru": "魚 (さかな, сакана) означает «рыба». 魚を食べます — «Я ем рыбу»."
+     },
+     "wordId": "n5-food-w2"
+    },
+    {
+     "id": "food-3",
+     "prompt": "（　）を食べます。",
+     "translation": {
+      "en": "Choose “bread”: I eat bread.",
+      "ru": "Выберите «хлеб»: Я ем хлеб."
+     },
+     "type": "choice",
+     "choices": [
+      "魚",
+      "お茶",
+      "パン",
+      "水"
+     ],
+     "answer": "パン",
+     "explanation": {
+      "en": "パン (pan) means “bread”. It is written in katakana because it is a loanword, originally from Portuguese.",
+      "ru": "パン (пан) означает «хлеб». Это заимствование из португальского, поэтому слово записывается катаканой."
+     },
+     "wordId": "n5-food-w3"
+    },
+    {
+     "id": "food-4",
+     "prompt": "ことばを えらびましょう。",
+     "translation": {
+      "en": "Which word means “cooked rice; meal”?",
+      "ru": "Какое слово означает «варёный рис; еда»?"
+     },
+     "type": "choice",
+     "choices": [
+      "牛乳",
+      "ご飯",
+      "肉",
+      "卵"
+     ],
+     "answer": "ご飯",
+     "explanation": {
+      "en": "ご飯 is read ごはん and means “cooked rice; meal”. Review its kana reading together with its meaning.",
+      "ru": "ご飯 читается ごはん и означает «варёный рис; еда». Повторяйте чтение вместе со значением."
+     },
+     "wordId": "n5-food-w4"
+    }
+   ]
+  },
+  {
+   "id": "n5-negative",
+   "number": 7,
+   "category": "grammar",
+   "title": {
+    "en": "Saying “is not”",
+    "ru": "Как сказать «не является»"
+   },
+   "description": {
+    "en": "I am not a doctor.",
+    "ru": "Я не врач."
+   },
+   "glyph": "では",
+   "color": "green",
+   "study": {
+    "en": "After a noun, use ではありません for a polite negative statement. じゃありません and じゃないです are common alternatives. These forms negate a noun statement; verbs have their own negative forms.",
+    "ru": "После существительного ではありません образует вежливое отрицание. Часто также используются じゃありません и じゃないです. Глаголы образуют отрицание иначе."
+   },
+   "examples": [
+    {
+     "japanese": "わたしは医者ではありません。",
+     "translations": {
+      "en": "I am not a doctor.",
+      "ru": "Я не врач."
+     }
+    }
+   ],
+   "words": [],
+   "questions": [
+    {
+     "id": "negative-1",
+     "prompt": "わたしは医者（　）。",
+     "translation": {
+      "en": "I am not a doctor.",
+      "ru": "Я не врач."
+     },
+     "type": "choice",
+     "choices": [
+      "です",
+      "ではありません",
+      "でした",
+      "ですか"
+     ],
+     "answer": "ではありません",
+     "explanation": {
+      "en": "ではありません negates the noun 医者 (doctor) politely in the present.",
+      "ru": "ではありません образует вежливое отрицание существительного 医者 (врач) в настоящем времени."
+     }
+    },
+    {
+     "id": "negative-2",
+     "prompt": "これは新聞（　）。",
+     "translation": {
+      "en": "This is not a newspaper.",
+      "ru": "Это не газета."
+     },
+     "type": "choice",
+     "choices": [
+      "です",
+      "でした",
+      "じゃありません",
+      "ですか"
+     ],
+     "answer": "じゃありません",
+     "explanation": {
+      "en": "じゃありません is a common polite negative form after a noun, equivalent here to ではありません.",
+      "ru": "じゃありません — распространённая вежливая отрицательная форма после существительного, здесь равнозначная ではありません."
+     }
+    },
+    {
+     "id": "negative-3",
+     "prompt": "今日は休み（　）。",
+     "translation": {
+      "en": "Today is not a day off.",
+      "ru": "Сегодня не выходной."
+     },
+     "type": "fill",
+     "choices": [
+      "です",
+      "でした",
+      "ですか",
+      "ではありません"
+     ],
+     "answer": "ではありません",
+     "explanation": {
+      "en": "休み is used as a noun here. Add ではありません to say it is not a day off.",
+      "ru": "休み здесь используется как существительное. ではありません означает, что сегодня не выходной."
+     }
+    }
+   ]
+  },
+  {
+   "id": "n5-mo",
+   "number": 8,
+   "category": "grammar",
+   "title": {
+    "en": "Saying “also”",
+    "ru": "Как сказать «тоже»"
+   },
+   "description": {
+    "en": "Anna is also a student.",
+    "ru": "Анна тоже студентка."
+   },
+   "glyph": "も",
+   "color": "green",
+   "study": {
+    "en": "も adds the meaning “also” or “too”. When a second person shares a description, use も instead of は: A は学生です。B も学生です。",
+    "ru": "も добавляет значение «тоже». Если то же описание относится и ко второму человеку, も заменяет は: A は学生です。B も学生です。"
+   },
+   "examples": [
+    {
+     "japanese": "アンナさんも学生です。",
+     "translations": {
+      "en": "Anna is also a student.",
+      "ru": "Анна тоже студентка."
+     }
+    }
+   ],
+   "words": [],
+   "questions": [
+    {
+     "id": "mo-1",
+     "prompt": "アンナさん（　）学生です。",
+     "translation": {
+      "en": "Anna is also a student.",
+      "ru": "Анна тоже студентка."
+     },
+     "type": "choice",
+     "choices": [
+      "を",
+      "も",
+      "に",
+      "で"
+     ],
+     "answer": "も",
+     "explanation": {
+      "en": "も means “also”, adding Anna to the people who are students.",
+      "ru": "も означает «тоже»: Анна также входит в число студентов."
+     }
+    },
+    {
+     "id": "mo-2",
+     "prompt": "わたし（　）ロシア人です。",
+     "translation": {
+      "en": "I am Russian too.",
+      "ru": "Я тоже из России."
+     },
+     "type": "choice",
+     "choices": [
+      "も",
+      "を",
+      "へ",
+      "で"
+     ],
+     "answer": "も",
+     "explanation": {
+      "en": "Use も for “too”. Here it replaces the topic particle は.",
+      "ru": "Для значения «тоже» используйте も. Здесь она заменяет частицу темы は."
+     }
+    },
+    {
+     "id": "mo-3",
+     "prompt": "これ（　）本です。",
+     "translation": {
+      "en": "This is a book too.",
+      "ru": "Это тоже книга."
+     },
+     "type": "fill",
+     "choices": [
+      "に",
+      "で",
+      "も",
+      "を"
+     ],
+     "answer": "も",
+     "explanation": {
+      "en": "これも means “this too”. The shared description is 本です.",
+      "ru": "これも означает «это тоже». Общее описание — 本です («книга»)."
+     }
+    }
+   ]
+  },
+  {
+   "id": "n5-wo",
+   "number": 9,
+   "category": "grammar",
+   "title": {
+    "en": "The object particle を",
+    "ru": "Частица объекта を"
+   },
+   "description": {
+    "en": "I write a letter.",
+    "ru": "Я пишу письмо."
+   },
+   "glyph": "を",
+   "color": "green",
+   "study": {
+    "en": "を marks the direct object of an action, such as what you eat, drink, read or write. As a particle, を is pronounced “o”. Pattern: object + を + verb.",
+    "ru": "を обозначает прямой объект действия: что едят, пьют, читают или пишут. Как частица を читается «о». Шаблон: объект + を + глагол."
+   },
+   "examples": [
+    {
+     "japanese": "手紙を書きます。",
+     "translations": {
+      "en": "I write a letter.",
+      "ru": "Я пишу письмо."
+     }
+    }
+   ],
+   "words": [],
+   "questions": [
+    {
+     "id": "wo-1",
+     "prompt": "手紙（　）書きます。",
+     "translation": {
+      "en": "I write a letter.",
+      "ru": "Я пишу письмо."
+     },
+     "type": "choice",
+     "choices": [
+      "に",
+      "で",
+      "を",
+      "へ"
+     ],
+     "answer": "を",
+     "explanation": {
+      "en": "手紙 is the thing being written, so it is marked with を.",
+      "ru": "手紙 — то, что пишут, поэтому оно обозначается частицей を."
+     }
+    },
+    {
+     "id": "wo-2",
+     "prompt": "牛乳（　）飲みます。",
+     "translation": {
+      "en": "I drink milk.",
+      "ru": "Я пью молоко."
+     },
+     "type": "choice",
+     "choices": [
+      "を",
+      "に",
+      "へ",
+      "で"
+     ],
+     "answer": "を",
+     "explanation": {
+      "en": "牛乳 is the direct object of 飲みます: what you drink.",
+      "ru": "牛乳 — прямой объект глагола 飲みます: то, что пьют."
+     }
+    },
+    {
+     "id": "wo-3",
+     "prompt": "新聞（　）読みます。",
+     "translation": {
+      "en": "I read a newspaper.",
+      "ru": "Я читаю газету."
+     },
+     "type": "fill",
+     "choices": [
+      "で",
+      "へ",
+      "に",
+      "を"
+     ],
+     "answer": "を",
+     "explanation": {
+      "en": "Use を for the thing you read. 新聞 means “newspaper”.",
+      "ru": "を обозначает то, что читают. 新聞 означает «газета»."
+     }
+    }
+   ]
+  },
+  {
+   "id": "n5-de",
+   "number": 10,
+   "category": "grammar",
+   "title": {
+    "en": "Where an action happens",
+    "ru": "Где происходит действие"
+   },
+   "description": {
+    "en": "I study at the library.",
+    "ru": "Я занимаюсь в библиотеке."
+   },
+   "glyph": "で",
+   "color": "green",
+   "study": {
+    "en": "Use place + で for the location of an action: studying, eating, working, and so on. For the location where something exists with あります or います, use に instead.",
+    "ru": "Место + で указывает, где происходит действие: учёба, еда, работа и т. д. Для места существования с あります или います используется に."
+   },
+   "examples": [
+    {
+     "japanese": "図書館で勉強します。",
+     "translations": {
+      "en": "I study at the library.",
+      "ru": "Я занимаюсь в библиотеке."
+     }
+    }
+   ],
+   "words": [],
+   "questions": [
+    {
+     "id": "de-1",
+     "prompt": "図書館（　）勉強します。",
+     "translation": {
+      "en": "I study at the library.",
+      "ru": "Я занимаюсь в библиотеке."
+     },
+     "type": "choice",
+     "choices": [
+      "を",
+      "に",
+      "へ",
+      "で"
+     ],
+     "answer": "で",
+     "explanation": {
+      "en": "で marks the library as the location where studying takes place.",
+      "ru": "で обозначает библиотеку как место, где занимаются."
+     }
+    },
+    {
+     "id": "de-2",
+     "prompt": "家（　）テレビを見ます。",
+     "translation": {
+      "en": "I watch television at home.",
+      "ru": "Я смотрю телевизор дома."
+     },
+     "type": "choice",
+     "choices": [
+      "に",
+      "で",
+      "を",
+      "へ"
+     ],
+     "answer": "で",
+     "explanation": {
+      "en": "Watching television is an action. 家で means “at home” as its location.",
+      "ru": "Просмотр телевизора — действие. 家で обозначает место этого действия: дома."
+     }
+    },
+    {
+     "id": "de-3",
+     "prompt": "学校（　）日本語を話します。",
+     "translation": {
+      "en": "I speak Japanese at school.",
+      "ru": "Я говорю по-японски в школе."
+     },
+     "type": "fill",
+     "choices": [
+      "で",
+      "を",
+      "に",
+      "へ"
+     ],
+     "answer": "で",
+     "explanation": {
+      "en": "The school is where the speaking happens, so use で.",
+      "ru": "Школа — место, где происходит разговор, поэтому используется で."
+     }
+    }
+   ]
+  },
+  {
+   "id": "n5-time-ni",
+   "number": 11,
+   "category": "grammar",
+   "title": {
+    "en": "At a specific time",
+    "ru": "В определённое время"
+   },
+   "description": {
+    "en": "I get up at seven.",
+    "ru": "Я встаю в семь часов."
+   },
+   "glyph": "に",
+   "color": "green",
+   "study": {
+    "en": "Use に after a specific clock time, such as 七時に (at seven). Relative time words such as 今日, 明日 and 毎日 usually do not take に.",
+    "ru": "После конкретного времени ставится に, например 七時に — «в семь часов». Относительные обозначения 今日, 明日 и 毎日 обычно употребляются без に."
+   },
+   "examples": [
+    {
+     "japanese": "七時に起きます。",
+     "translations": {
+      "en": "I get up at seven.",
+      "ru": "Я встаю в семь часов."
+     }
+    }
+   ],
+   "words": [],
+   "questions": [
+    {
+     "id": "time-ni-1",
+     "prompt": "七時（　）起きます。",
+     "translation": {
+      "en": "I get up at seven.",
+      "ru": "Я встаю в семь часов."
+     },
+     "type": "choice",
+     "choices": [
+      "に",
+      "を",
+      "へ",
+      "で"
+     ],
+     "answer": "に",
+     "explanation": {
+      "en": "七時 is a specific clock time. に marks when the action happens.",
+      "ru": "七時 — конкретное время. に обозначает время действия."
+     }
+    },
+    {
+     "id": "time-ni-2",
+     "prompt": "九時（　）寝ます。",
+     "translation": {
+      "en": "I go to bed at nine.",
+      "ru": "Я ложусь спать в девять часов."
+     },
+     "type": "choice",
+     "choices": [
+      "を",
+      "に",
+      "で",
+      "へ"
+     ],
+     "answer": "に",
+     "explanation": {
+      "en": "Add に to the clock time 九時 to say “at nine”.",
+      "ru": "К конкретному времени 九時 добавляется に: «в девять часов»."
+     }
+    },
+    {
+     "id": "time-ni-3",
+     "prompt": "六時（　）帰ります。",
+     "translation": {
+      "en": "I return home at six.",
+      "ru": "Я возвращаюсь домой в шесть часов."
+     },
+     "type": "fill",
+     "choices": [
+      "で",
+      "へ",
+      "に",
+      "を"
+     ],
+     "answer": "に",
+     "explanation": {
+      "en": "に follows 六時 to identify the time of returning home.",
+      "ru": "に после 六時 обозначает время возвращения домой."
+     }
+    }
+   ]
+  },
+  {
+   "id": "n5-direction",
+   "number": 12,
+   "category": "grammar",
+   "title": {
+    "en": "Going somewhere",
+    "ru": "Куда мы идём"
+   },
+   "description": {
+    "en": "I go to the station.",
+    "ru": "Я иду на станцию."
+   },
+   "glyph": "へ",
+   "color": "green",
+   "study": {
+    "en": "Place + へ + 行きます expresses movement toward a destination. The particle へ is pronounced “e”. に can also mark a destination; the choices in these exercises include only one of these alternatives.",
+    "ru": "Место + へ + 行きます выражает движение к цели. Частица へ читается «э». に тоже может обозначать цель движения; в этих упражнениях среди вариантов есть только одна из этих частиц."
+   },
+   "examples": [
+    {
+     "japanese": "駅へ行きます。",
+     "translations": {
+      "en": "I go to the station.",
+      "ru": "Я иду на станцию."
+     }
+    }
+   ],
+   "words": [],
+   "questions": [
+    {
+     "id": "direction-1",
+     "prompt": "駅（　）行きます。",
+     "translation": {
+      "en": "I go to the station.",
+      "ru": "Я иду на станцию."
+     },
+     "type": "choice",
+     "choices": [
+      "を",
+      "で",
+      "へ",
+      "が"
+     ],
+     "answer": "へ",
+     "explanation": {
+      "en": "へ marks the destination of 行きます. に would also be possible, but it is not among these choices.",
+      "ru": "へ обозначает цель движения с 行きます. に тоже возможно, но её нет среди предложенных вариантов."
+     }
+    },
+    {
+     "id": "direction-2",
+     "prompt": "日本（　）来ました。",
+     "translation": {
+      "en": "I came to Japan.",
+      "ru": "Я приехал(а) в Японию."
+     },
+     "type": "choice",
+     "choices": [
+      "へ",
+      "で",
+      "が",
+      "を"
+     ],
+     "answer": "へ",
+     "explanation": {
+      "en": "Use へ for movement toward Japan. As a particle it is pronounced “e”.",
+      "ru": "へ обозначает движение в Японию. В роли частицы она произносится «э»."
+     }
+    },
+    {
+     "id": "direction-3",
+     "prompt": "家（　）帰ります。",
+     "translation": {
+      "en": "I return home.",
+      "ru": "Я возвращаюсь домой."
+     },
+     "type": "fill",
+     "choices": [
+      "で",
+      "を",
+      "へ",
+      "が"
+     ],
+     "answer": "へ",
+     "explanation": {
+      "en": "家へ is the destination phrase: “toward home”. に is another valid destination particle outside this option set.",
+      "ru": "家へ обозначает цель: домой. Вне этого набора вариантов также допустима частица に."
+     }
+    }
+   ]
+  },
+  {
+   "id": "n5-arimasu",
+   "number": 13,
+   "category": "grammar",
+   "title": {
+    "en": "Things that exist",
+    "ru": "Наличие предметов"
+   },
+   "description": {
+    "en": "There is a book on the desk.",
+    "ru": "На столе есть книга."
+   },
+   "glyph": "ある",
+   "color": "green",
+   "study": {
+    "en": "Use あります to say that an inanimate thing exists. Pattern: place に thing が あります. Use ありません for the polite negative. People and animals normally use います instead.",
+    "ru": "あります обозначает наличие неодушевлённого предмета. Шаблон: место に предмет が あります. Вежливое отрицание — ありません. Для людей и животных обычно используется います."
+   },
+   "examples": [
+    {
+     "japanese": "机の上に本があります。",
+     "translations": {
+      "en": "There is a book on the desk.",
+      "ru": "На столе есть книга."
+     }
+    }
+   ],
+   "words": [],
+   "questions": [
+    {
+     "id": "aru-1",
+     "prompt": "机の上に本が（　）。",
+     "translation": {
+      "en": "There is a book on the desk.",
+      "ru": "На столе есть книга."
+     },
+     "type": "choice",
+     "choices": [
+      "います",
+      "あります",
+      "いきます",
+      "きます"
+     ],
+     "answer": "あります",
+     "explanation": {
+      "en": "A book is an inanimate thing, so its existence is expressed with あります.",
+      "ru": "Книга — неодушевлённый предмет, поэтому для её наличия используется あります."
+     }
+    },
+    {
+     "id": "aru-2",
+     "prompt": "部屋（　）机があります。",
+     "translation": {
+      "en": "There is a desk in the room.",
+      "ru": "В комнате есть письменный стол."
+     },
+     "type": "choice",
+     "choices": [
+      "で",
+      "を",
+      "に",
+      "へ"
+     ],
+     "answer": "に",
+     "explanation": {
+      "en": "With あります, the location where the thing exists is marked by に, not action-location で.",
+      "ru": "С あります место существования обозначается に, а не частицей места действия で."
+     }
+    },
+    {
+     "id": "aru-3",
+     "prompt": "ここに銀行が（　）。",
+     "translation": {
+      "en": "There is no bank here.",
+      "ru": "Здесь нет банка."
+     },
+     "type": "fill",
+     "choices": [
+      "あります",
+      "います",
+      "ありません",
+      "いきます"
+     ],
+     "answer": "ありません",
+     "explanation": {
+      "en": "ありません is the polite negative of あります: the bank does not exist here.",
+      "ru": "ありません — вежливое отрицание あります: банка здесь нет."
+     }
+    }
+   ]
+  },
+  {
+   "id": "n5-imasu",
+   "number": 14,
+   "category": "grammar",
+   "title": {
+    "en": "People and animals",
+    "ru": "Люди и животные"
+   },
+   "description": {
+    "en": "There is a dog in the garden.",
+    "ru": "В саду есть собака."
+   },
+   "glyph": "いる",
+   "color": "green",
+   "study": {
+    "en": "Use います for people and animals. Pattern: place に person/animal が います. The polite negative is いません. Use あります for inanimate things.",
+    "ru": "います употребляется для людей и животных. Шаблон: место に человек/животное が います. Вежливое отрицание — いません. Для неодушевлённых предметов используется あります."
+   },
+   "examples": [
+    {
+     "japanese": "庭に犬がいます。",
+     "translations": {
+      "en": "There is a dog in the garden.",
+      "ru": "В саду есть собака."
+     }
+    }
+   ],
+   "words": [],
+   "questions": [
+    {
+     "id": "iru-1",
+     "prompt": "庭に犬が（　）。",
+     "translation": {
+      "en": "There is a dog in the garden.",
+      "ru": "В саду есть собака."
+     },
+     "type": "choice",
+     "choices": [
+      "あります",
+      "いきます",
+      "きます",
+      "います"
+     ],
+     "answer": "います",
+     "explanation": {
+      "en": "A dog is an animal. Use います to describe its presence.",
+      "ru": "Собака — животное. Для её наличия используется います."
+     }
+    },
+    {
+     "id": "iru-2",
+     "prompt": "先生（　）教室にいます。",
+     "translation": {
+      "en": "There is a teacher in the classroom. Use the subject marker.",
+      "ru": "В классе есть преподаватель. Выберите частицу подлежащего."
+     },
+     "type": "choice",
+     "choices": [
+      "を",
+      "が",
+      "へ",
+      "で"
+     ],
+     "answer": "が",
+     "explanation": {
+      "en": "が marks the person whose presence is being described: the teacher.",
+      "ru": "が обозначает человека, о присутствии которого идёт речь: преподавателя."
+     }
+    },
+    {
+     "id": "iru-3",
+     "prompt": "ここに猫は（　）。",
+     "translation": {
+      "en": "There are no cats here.",
+      "ru": "Здесь нет кошек."
+     },
+     "type": "fill",
+     "choices": [
+      "あります",
+      "います",
+      "いません",
+      "いきます"
+     ],
+     "answer": "いません",
+     "explanation": {
+      "en": "いません is the polite negative of います, used here for cats.",
+      "ru": "いません — вежливое отрицание います, здесь употреблённое для кошек."
+     }
+    }
+   ]
+  },
+  {
+   "id": "n5-verbs",
+   "number": 15,
+   "category": "grammar",
+   "title": {
+    "en": "Polite everyday verbs",
+    "ru": "Вежливые формы глаголов"
+   },
+   "description": {
+    "en": "I eat bread every day.",
+    "ru": "Я каждый день ем хлеб."
+   },
+   "glyph": "ます",
+   "color": "green",
+   "study": {
+    "en": "The ます form is a polite verb form used for habits and future actions. Its negative is ません. Learn the complete forms, such as 食べます／食べません and 飲みます／飲みません.",
+    "ru": "Форма на ます — вежливая форма глагола для привычных и будущих действий. Отрицание — ません. Учите полные формы, например 食べます／食べません и 飲みます／飲みません."
+   },
+   "examples": [
+    {
+     "japanese": "毎日パンを食べます。",
+     "translations": {
+      "en": "I eat bread every day.",
+      "ru": "Я каждый день ем хлеб."
+     }
+    }
+   ],
+   "words": [],
+   "questions": [
+    {
+     "id": "verb-1",
+     "prompt": "毎日パンを食べ（　）。",
+     "translation": {
+      "en": "I eat bread every day.",
+      "ru": "Я каждый день ем хлеб."
+     },
+     "type": "choice",
+     "choices": [
+      "ません",
+      "ました",
+      "ます",
+      "ませんでした"
+     ],
+     "answer": "ます",
+     "explanation": {
+      "en": "The habit is affirmative and non-past, so 食べます is the appropriate form.",
+      "ru": "Речь об обычном действии в утвердительной непрошедшей форме, поэтому используется 食べます."
+     }
+    },
+    {
+     "id": "verb-2",
+     "prompt": "コーヒーを飲み（　）。",
+     "translation": {
+      "en": "I do not drink coffee.",
+      "ru": "Я не пью кофе."
+     },
+     "type": "choice",
+     "choices": [
+      "ます",
+      "ません",
+      "ました",
+      "ましょう"
+     ],
+     "answer": "ません",
+     "explanation": {
+      "en": "飲みません is the polite non-past negative: “do not drink”.",
+      "ru": "飲みません — вежливая отрицательная непрошедшая форма: «не пью»."
+     }
+    },
+    {
+     "id": "verb-3",
+     "prompt": "毎日日本語を勉強し（　）。",
+     "translation": {
+      "en": "I study Japanese every day.",
+      "ru": "Я каждый день изучаю японский."
+     },
+     "type": "fill",
+     "choices": [
+      "ます",
+      "ました",
+      "ません",
+      "ませんでした"
+     ],
+     "answer": "ます",
+     "explanation": {
+      "en": "勉強します expresses an affirmative habit in polite speech.",
+      "ru": "勉強します выражает привычное действие в утвердительной вежливой форме."
+     }
+    }
+   ]
+  },
+  {
+   "id": "n5-past",
+   "number": 16,
+   "category": "grammar",
+   "title": {
+    "en": "Talking about yesterday",
+    "ru": "Говорим о вчерашнем дне"
+   },
+   "description": {
+    "en": "I watched a film yesterday.",
+    "ru": "Вчера я посмотрел(а) фильм."
+   },
+   "glyph": "ました",
+   "color": "green",
+   "study": {
+    "en": "For polite past actions, change ます to ました. For an action that did not happen, change ません to ませんでした. A past-time word gives context, but the verb form still carries past tense.",
+    "ru": "Для вежливого прошедшего времени ます заменяется на ました. Если действие не произошло, ません заменяется на ませんでした. Сам глагол также должен стоять в прошедшем времени."
+   },
+   "examples": [
+    {
+     "japanese": "昨日映画を見ました。",
+     "translations": {
+      "en": "I watched a film yesterday.",
+      "ru": "Вчера я посмотрел(а) фильм."
+     }
+    }
+   ],
+   "words": [],
+   "questions": [
+    {
+     "id": "past-1",
+     "prompt": "昨日映画を見（　）。",
+     "translation": {
+      "en": "I watched a film yesterday.",
+      "ru": "Вчера я посмотрел(а) фильм."
+     },
+     "type": "choice",
+     "choices": [
+      "ます",
+      "ません",
+      "ました",
+      "ましょう"
+     ],
+     "answer": "ました",
+     "explanation": {
+      "en": "見ました is the polite affirmative past form of 見ます.",
+      "ru": "見ました — утвердительная вежливая форма прошедшего времени глагола 見ます."
+     }
+    },
+    {
+     "id": "past-2",
+     "prompt": "昨日学校へ行き（　）。",
+     "translation": {
+      "en": "I did not go to school yesterday.",
+      "ru": "Вчера я не ходил(а) в школу."
+     },
+     "type": "choice",
+     "choices": [
+      "ました",
+      "ます",
+      "ましょう",
+      "ませんでした"
+     ],
+     "answer": "ませんでした",
+     "explanation": {
+      "en": "行きませんでした is both negative and past, matching “did not go”.",
+      "ru": "行きませんでした — отрицательная форма прошедшего времени: «не ходил(а)»."
+     }
+    },
+    {
+     "id": "past-3",
+     "prompt": "昨日手紙を書き（　）。",
+     "translation": {
+      "en": "I wrote a letter yesterday.",
+      "ru": "Вчера я написал(а) письмо."
+     },
+     "type": "fill",
+     "choices": [
+      "ました",
+      "ます",
+      "ません",
+      "ましょう"
+     ],
+     "answer": "ました",
+     "explanation": {
+      "en": "書きました is the polite past form: the writing happened yesterday.",
+      "ru": "書きました — вежливая форма прошедшего времени: письмо написали вчера."
+     }
+    }
+   ]
+  },
+  {
+   "id": "n5-i-adjectives",
+   "number": 17,
+   "category": "grammar",
+   "title": {
+    "en": "Describing with い-adjectives",
+    "ru": "Прилагательные на い"
+   },
+   "description": {
+    "en": "This book is new.",
+    "ru": "Эта книга новая."
+   },
+   "glyph": "い",
+   "color": "green",
+   "study": {
+    "en": "An い-adjective can come directly before a noun: 新しい本. In a polite statement, add です. To make its non-past negative, replace the final い with くない: 高い → 高くないです.",
+    "ru": "Прилагательное на い ставится перед существительным без связки: 新しい本. В вежливом утверждении добавляется です. Для непрошедшего отрицания конечная い заменяется на くない: 高い → 高くないです."
+   },
+   "examples": [
+    {
+     "japanese": "この本は新しいです。",
+     "translations": {
+      "en": "This book is new.",
+      "ru": "Эта книга новая."
+     }
+    }
+   ],
+   "words": [],
+   "questions": [
+    {
+     "id": "iadj-1",
+     "prompt": "この本は（　）です。",
+     "translation": {
+      "en": "This book is new.",
+      "ru": "Эта книга новая."
+     },
+     "type": "choice",
+     "choices": [
+      "新しい",
+      "新しくない",
+      "新しかった",
+      "新しくなかった"
+     ],
+     "answer": "新しい",
+     "explanation": {
+      "en": "新しい is the affirmative non-past form: “new”. The other choices are negative or past.",
+      "ru": "新しい — утвердительная непрошедшая форма: «новый». Остальные варианты отрицательные или прошедшие."
+     }
+    },
+    {
+     "id": "iadj-2",
+     "prompt": "この時計は（　）です。",
+     "translation": {
+      "en": "This watch is not expensive.",
+      "ru": "Эти часы недорогие."
+     },
+     "type": "choice",
+     "choices": [
+      "高い",
+      "高かった",
+      "高くない",
+      "高くなかった"
+     ],
+     "answer": "高くない",
+     "explanation": {
+      "en": "Remove the final い from 高い and add くない to make the non-past negative.",
+      "ru": "Для непрошедшего отрицания в 高い конечная い заменяется на くない."
+     }
+    },
+    {
+     "id": "iadj-3",
+     "prompt": "（　）家です。",
+     "translation": {
+      "en": "It is a big house.",
+      "ru": "Это большой дом."
+     },
+     "type": "fill",
+     "choices": [
+      "大きい",
+      "大きかった",
+      "大きくない",
+      "大きくなかった"
+     ],
+     "answer": "大きい",
+     "explanation": {
+      "en": "大きい directly modifies 家 without adding な.",
+      "ru": "大きい непосредственно определяет 家 без добавления な."
+     }
+    }
+   ]
+  },
+  {
+   "id": "n5-na-adjectives",
+   "number": 18,
+   "category": "grammar",
+   "title": {
+    "en": "Describing with な-adjectives",
+    "ru": "Прилагательные на な"
+   },
+   "description": {
+    "en": "It is a quiet room.",
+    "ru": "Это тихая комната."
+   },
+   "glyph": "な",
+   "color": "green",
+   "study": {
+    "en": "A な-adjective uses な before a noun: 静かな部屋. In a statement, use 静かです without な. Some な-adjectives end in い, such as きれい; learn their adjective type with the word.",
+    "ru": "Перед существительным прилагательное этого типа принимает な: 静かな部屋. В утверждении используется 静かです, без な. Некоторые такие прилагательные оканчиваются на い, например きれい; учите тип вместе со словом."
+   },
+   "examples": [
+    {
+     "japanese": "静かな部屋です。",
+     "translations": {
+      "en": "It is a quiet room.",
+      "ru": "Это тихая комната."
+     }
+    }
+   ],
+   "words": [],
+   "questions": [
+    {
+     "id": "naadj-1",
+     "prompt": "（　）部屋です。",
+     "translation": {
+      "en": "It is a quiet room.",
+      "ru": "Это тихая комната."
+     },
+     "type": "choice",
+     "choices": [
+      "静かに",
+      "静かだ",
+      "静か",
+      "静かな"
+     ],
+     "answer": "静かな",
+     "explanation": {
+      "en": "Before the noun 部屋, 静か takes な: 静かな部屋.",
+      "ru": "Перед существительным 部屋 к 静か добавляется な: 静かな部屋."
+     }
+    },
+    {
+     "id": "naadj-2",
+     "prompt": "きれい（　）花です。",
+     "translation": {
+      "en": "It is a beautiful flower.",
+      "ru": "Это красивый цветок."
+     },
+     "type": "choice",
+     "choices": [
+      "に",
+      "な",
+      "の",
+      "を"
+     ],
+     "answer": "な",
+     "explanation": {
+      "en": "きれい is a な-adjective even though it ends in い. Use きれいな花.",
+      "ru": "きれい относится к прилагательным на な, хотя оканчивается на い. Правильно: きれいな花."
+     }
+    },
+    {
+     "id": "naadj-3",
+     "prompt": "便利（　）店です。",
+     "translation": {
+      "en": "It is a convenient shop.",
+      "ru": "Это удобный магазин."
+     },
+     "type": "fill",
+     "choices": [
+      "な",
+      "に",
+      "を",
+      "で"
+     ],
+     "answer": "な",
+     "explanation": {
+      "en": "便利 is a な-adjective. Use な when it modifies the noun 店.",
+      "ru": "便利 — прилагательное на な. Для определения существительного 店 используется な."
+     }
+    }
+   ]
+  },
+  {
+   "id": "n5-kono",
+   "number": 19,
+   "category": "grammar",
+   "title": {
+    "en": "This book, that book",
+    "ru": "Эта книга, та книга"
+   },
+   "description": {
+    "en": "This book is interesting.",
+    "ru": "Эта книга интересная."
+   },
+   "glyph": "この",
+   "color": "green",
+   "study": {
+    "en": "この, その and あの must be followed by a noun. この is near the speaker, その near the listener, and あの far from both. Compare この本 (“this book”) with これ (“this thing”).",
+    "ru": "После この, その и あの обязательно ставится существительное. この — рядом с говорящим, その — с собеседником, あの — далеко от обоих. Сравните この本 («эта книга») и これ («это»)."
+   },
+   "examples": [
+    {
+     "japanese": "この本はおもしろいです。",
+     "translations": {
+      "en": "This book is interesting.",
+      "ru": "Эта книга интересная."
+     }
+    }
+   ],
+   "words": [],
+   "questions": [
+    {
+     "id": "kono-1",
+     "prompt": "（　）本はおもしろいです。",
+     "translation": {
+      "en": "This book (near me) is interesting.",
+      "ru": "Эта книга (рядом со мной) интересная."
+     },
+     "type": "choice",
+     "choices": [
+      "これ",
+      "その",
+      "この",
+      "あの"
+     ],
+     "answer": "この",
+     "explanation": {
+      "en": "この must be followed by a noun and refers to something near the speaker.",
+      "ru": "После この ставится существительное; речь о предмете рядом с говорящим."
+     }
+    },
+    {
+     "id": "kono-2",
+     "prompt": "（　）かばんは新しいです。",
+     "translation": {
+      "en": "That bag (near you) is new.",
+      "ru": "Та сумка (рядом с вами) новая."
+     },
+     "type": "choice",
+     "choices": [
+      "それ",
+      "この",
+      "あの",
+      "その"
+     ],
+     "answer": "その",
+     "explanation": {
+      "en": "その modifies かばん and points to the bag near the listener.",
+      "ru": "その определяет かばん и указывает на сумку рядом с собеседником."
+     }
+    },
+    {
+     "id": "kono-3",
+     "prompt": "（　）山は高いです。",
+     "translation": {
+      "en": "That mountain (far from us both) is high.",
+      "ru": "Та гора (далеко от нас обоих) высокая."
+     },
+     "type": "fill",
+     "choices": [
+      "あの",
+      "あれ",
+      "この",
+      "その"
+     ],
+     "answer": "あの",
+     "explanation": {
+      "en": "あの comes before 山 to describe a mountain far from both people.",
+      "ru": "あの ставится перед 山 и указывает на гору, удалённую от обоих собеседников."
+     }
+    }
+   ]
+  },
+  {
+   "id": "n5-suki",
+   "number": 20,
+   "category": "grammar",
+   "title": {
+    "en": "Talking about likes",
+    "ru": "Говорим о предпочтениях"
+   },
+   "description": {
+    "en": "I like music.",
+    "ru": "Мне нравится музыка."
+   },
+   "glyph": "好き",
+   "color": "green",
+   "study": {
+    "en": "Use noun + が好きです for something you like. 好き is a な-adjective, not a verb. To say you do not like something, use 好きではありません or 好きじゃないです.",
+    "ru": "Для того, что вам нравится, используется существительное + が好きです. 好き — прилагательное на な, а не глагол. Отрицание: 好きではありません или 好きじゃないです."
+   },
+   "examples": [
+    {
+     "japanese": "わたしは音楽が好きです。",
+     "translations": {
+      "en": "I like music.",
+      "ru": "Мне нравится музыка."
+     }
+    }
+   ],
+   "words": [],
+   "questions": [
+    {
+     "id": "suki-1",
+     "prompt": "わたしは音楽（　）好きです。",
+     "translation": {
+      "en": "I like music.",
+      "ru": "Мне нравится музыка."
+     },
+     "type": "choice",
+     "choices": [
+      "を",
+      "で",
+      "に",
+      "が"
+     ],
+     "answer": "が",
+     "explanation": {
+      "en": "が marks the thing you like in this basic 好きです pattern.",
+      "ru": "В базовом шаблоне 好きです частица が обозначает то, что нравится."
+     }
+    },
+    {
+     "id": "suki-2",
+     "prompt": "わたしは猫が（　）。",
+     "translation": {
+      "en": "I like cats.",
+      "ru": "Мне нравятся кошки."
+     },
+     "type": "choice",
+     "choices": [
+      "好きます",
+      "好きです",
+      "好きな",
+      "好きに"
+     ],
+     "answer": "好きです",
+     "explanation": {
+      "en": "好き behaves as a な-adjective; use です, not the verb ending ます.",
+      "ru": "好き ведёт себя как прилагательное на な: используется です, а не глагольное окончание ます."
+     }
+    },
+    {
+     "id": "suki-3",
+     "prompt": "わたしは魚が好き（　）。",
+     "translation": {
+      "en": "I do not like fish.",
+      "ru": "Мне не нравится рыба."
+     },
+     "type": "fill",
+     "choices": [
+      "です",
+      "でした",
+      "ではありません",
+      "ですか"
+     ],
+     "answer": "ではありません",
+     "explanation": {
+      "en": "好きではありません politely negates liking something.",
+      "ru": "好きではありません вежливо выражает, что что-то не нравится."
+     }
+    }
+   ]
+  },
+  {
+   "id": "n5-te-kudasai",
+   "number": 21,
+   "category": "grammar",
+   "title": {
+    "en": "Making a request",
+    "ru": "Выражаем просьбу"
+   },
+   "description": {
+    "en": "Please write your name.",
+    "ru": "Пожалуйста, напишите своё имя."
+   },
+   "glyph": "て",
+   "color": "green",
+   "study": {
+    "en": "A verb in its て-form followed by ください makes a polite request. The て-form changes with the verb: 読む → 読んで, 書く → 書いて, 見る → 見て. Learn these forms with examples.",
+    "ru": "て-форма глагола + ください выражает вежливую просьбу. Форма зависит от глагола: 読む → 読んで, 書く → 書いて, 見る → 見て. Учите формы на примерах."
+   },
+   "examples": [
+    {
+     "japanese": "名前を書いてください。",
+     "translations": {
+      "en": "Please write your name.",
+      "ru": "Пожалуйста, напишите своё имя."
+     }
+    }
+   ],
+   "words": [],
+   "questions": [
+    {
+     "id": "te-1",
+     "prompt": "名前を書いて（　）。",
+     "translation": {
+      "en": "Please write your name.",
+      "ru": "Пожалуйста, напишите своё имя."
+     },
+     "type": "choice",
+     "choices": [
+      "ください",
+      "ます",
+      "です",
+      "ました"
+     ],
+     "answer": "ください",
+     "explanation": {
+      "en": "書いて is the て-form of 書く. Add ください to make a request.",
+      "ru": "書いて — て-форма 書く. Добавьте ください, чтобы выразить просьбу."
+     }
+    },
+    {
+     "id": "te-2",
+     "prompt": "この本を（　）ください。",
+     "translation": {
+      "en": "Please read this book.",
+      "ru": "Пожалуйста, прочитайте эту книгу."
+     },
+     "type": "choice",
+     "choices": [
+      "読みます",
+      "読む",
+      "読んで",
+      "読んだ"
+     ],
+     "answer": "読んで",
+     "explanation": {
+      "en": "読む changes to 読んで in the て-form, which is required before ください.",
+      "ru": "て-форма глагола 読む — 読んで. Именно она используется перед ください."
+     }
+    },
+    {
+     "id": "te-3",
+     "prompt": "写真を見て（　）。",
+     "translation": {
+      "en": "Please look at the photograph.",
+      "ru": "Пожалуйста, посмотрите на фотографию."
+     },
+     "type": "fill",
+     "choices": [
+      "です",
+      "ください",
+      "ます",
+      "でした"
+     ],
+     "answer": "ください",
+     "explanation": {
+      "en": "見て is the て-form of 見る. 見てください means “please look”.",
+      "ru": "見て — て-форма 見る. 見てください означает «пожалуйста, посмотрите»."
+     }
+    }
+   ]
+  },
+  {
+   "id": "n5-invitations",
+   "number": 22,
+   "category": "grammar",
+   "title": {
+    "en": "Inviting someone",
+    "ru": "Приглашаем собеседника"
+   },
+   "description": {
+    "en": "Let’s study together.",
+    "ru": "Давайте заниматься вместе."
+   },
+   "glyph": "ましょう",
+   "color": "green",
+   "study": {
+    "en": "Replace ます with ましょう to suggest doing something together: 行きましょう (“Let’s go”). ませんか is a polite invitation: 一緒に食べませんか (“Would you like to eat together?”).",
+    "ru": "Замените ます на ましょう, чтобы предложить совместное действие: 行きましょう («Пойдёмте»). ませんか выражает вежливое приглашение: 一緒に食べませんか («Не хотите поесть вместе?»)."
+   },
+   "examples": [
+    {
+     "japanese": "一緒に勉強しましょう。",
+     "translations": {
+      "en": "Let’s study together.",
+      "ru": "Давайте заниматься вместе."
+     }
+    }
+   ],
+   "words": [],
+   "questions": [
+    {
+     "id": "invite-1",
+     "prompt": "一緒に勉強し（　）。",
+     "translation": {
+      "en": "Let’s study together.",
+      "ru": "Давайте заниматься вместе."
+     },
+     "type": "choice",
+     "choices": [
+      "ます",
+      "ました",
+      "ましょう",
+      "ません"
+     ],
+     "answer": "ましょう",
+     "explanation": {
+      "en": "ましょう makes a suggestion to do the action together.",
+      "ru": "ましょう выражает предложение выполнить действие вместе."
+     }
+    },
+    {
+     "id": "invite-2",
+     "prompt": "一緒にお茶を飲み（　）。",
+     "translation": {
+      "en": "Would you like to have tea together?",
+      "ru": "Не хотите выпить чаю вместе?"
+     },
+     "type": "choice",
+     "choices": [
+      "ました",
+      "ませんか",
+      "ませんでした",
+      "ます"
+     ],
+     "answer": "ませんか",
+     "explanation": {
+      "en": "ませんか makes a polite invitation; it is not a simple negative statement here.",
+      "ru": "ませんか здесь выражает вежливое приглашение, а не простое отрицание."
+     }
+    },
+    {
+     "id": "invite-3",
+     "prompt": "公園へ行き（　）。",
+     "translation": {
+      "en": "Let’s go to the park.",
+      "ru": "Пойдёмте в парк."
+     },
+     "type": "fill",
+     "choices": [
+      "ましょう",
+      "ます",
+      "ました",
+      "ません"
+     ],
+     "answer": "ましょう",
+     "explanation": {
+      "en": "行きましょう is a suggestion: “Let’s go”.",
+      "ru": "行きましょう — предложение совместного действия: «Пойдёмте»."
+     }
+    }
+   ]
+  },
+  {
+   "id": "n5-people",
+   "number": 23,
+   "category": "vocabulary",
+   "title": {
+    "en": "People & family",
+    "ru": "Люди и семья"
+   },
+   "description": {
+    "en": "Ten useful words, with kana readings.",
+    "ru": "Десять полезных слов с чтением каной."
+   },
+   "glyph": "人",
+   "color": "peach",
+   "study": {
+    "en": "Read the ten words below, then practice four of them. Some words have more than one reading or meaning; context determines which to use.",
+    "ru": "Прочитайте десять слов, затем потренируйтесь на четырёх из них. У некоторых слов несколько чтений или значений; выбор зависит от контекста."
+   },
+   "examples": [
+    {
+     "japanese": "人",
+     "translations": {
+      "en": "person",
+      "ru": "человек"
+     }
+    }
+   ],
+   "words": [
+    {
+     "id": "n5-people-w1",
+     "japanese": "人",
+     "reading": "ひと",
+     "meanings": {
+      "en": "person",
+      "ru": "человек"
+     }
+    },
+    {
+     "id": "n5-people-w2",
+     "japanese": "友達",
+     "reading": "ともだち",
+     "meanings": {
+      "en": "friend",
+      "ru": "друг"
+     }
+    },
+    {
+     "id": "n5-people-w3",
+     "japanese": "先生",
+     "reading": "せんせい",
+     "meanings": {
+      "en": "teacher",
+      "ru": "преподаватель"
+     }
+    },
+    {
+     "id": "n5-people-w4",
+     "japanese": "学生",
+     "reading": "がくせい",
+     "meanings": {
+      "en": "student",
+      "ru": "студент"
+     }
+    },
+    {
+     "id": "n5-people-w5",
+     "japanese": "父",
+     "reading": "ちち",
+     "meanings": {
+      "en": "my father",
+      "ru": "мой отец"
+     }
+    },
+    {
+     "id": "n5-people-w6",
+     "japanese": "母",
+     "reading": "はは",
+     "meanings": {
+      "en": "my mother",
+      "ru": "моя мать"
+     }
+    },
+    {
+     "id": "n5-people-w7",
+     "japanese": "兄",
+     "reading": "あに",
+     "meanings": {
+      "en": "my older brother",
+      "ru": "мой старший брат"
+     }
+    },
+    {
+     "id": "n5-people-w8",
+     "japanese": "姉",
+     "reading": "あね",
+     "meanings": {
+      "en": "my older sister",
+      "ru": "моя старшая сестра"
+     }
+    },
+    {
+     "id": "n5-people-w9",
+     "japanese": "弟",
+     "reading": "おとうと",
+     "meanings": {
+      "en": "younger brother",
+      "ru": "младший брат"
+     }
+    },
+    {
+     "id": "n5-people-w10",
+     "japanese": "妹",
+     "reading": "いもうと",
+     "meanings": {
+      "en": "younger sister",
+      "ru": "младшая сестра"
+     }
+    }
+   ],
+   "questions": [
+    {
+     "id": "n5-people-q1",
+     "prompt": "ことばを えらびましょう。",
+     "translation": {
+      "en": "Which word means “person”?",
+      "ru": "Какое слово означает «человек»?"
+     },
+     "type": "choice",
+     "choices": [
+      "人",
+      "友達",
+      "先生",
+      "学生"
+     ],
+     "answer": "人",
+     "explanation": {
+      "en": "人 is read ひと and means “person”. Review its kana reading together with its meaning.",
+      "ru": "人 читается ひと и означает «человек». Повторяйте чтение вместе со значением."
+     },
+     "wordId": "n5-people-w1"
+    },
+    {
+     "id": "n5-people-q2",
+     "prompt": "ことばを えらびましょう。",
+     "translation": {
+      "en": "Which word means “friend”?",
+      "ru": "Какое слово означает «друг»?"
+     },
+     "type": "choice",
+     "choices": [
+      "先生",
+      "学生",
+      "父",
+      "友達"
+     ],
+     "answer": "友達",
+     "explanation": {
+      "en": "友達 is read ともだち and means “friend”. Review its kana reading together with its meaning.",
+      "ru": "友達 читается ともだち и означает «друг». Повторяйте чтение вместе со значением."
+     },
+     "wordId": "n5-people-w2"
+    },
+    {
+     "id": "n5-people-q3",
+     "prompt": "ことばを えらびましょう。",
+     "translation": {
+      "en": "Which word means “teacher”?",
+      "ru": "Какое слово означает «преподаватель»?"
+     },
+     "type": "choice",
+     "choices": [
+      "父",
+      "母",
+      "先生",
+      "学生"
+     ],
+     "answer": "先生",
+     "explanation": {
+      "en": "先生 is read せんせい and means “teacher”. Review its kana reading together with its meaning.",
+      "ru": "先生 читается せんせい и означает «преподаватель». Повторяйте чтение вместе со значением."
+     },
+     "wordId": "n5-people-w3"
+    },
+    {
+     "id": "n5-people-q4",
+     "prompt": "ことばを えらびましょう。",
+     "translation": {
+      "en": "Which word means “student”?",
+      "ru": "Какое слово означает «студент»?"
+     },
+     "type": "choice",
+     "choices": [
+      "兄",
+      "学生",
+      "父",
+      "母"
+     ],
+     "answer": "学生",
+     "explanation": {
+      "en": "学生 is read がくせい and means “student”. Review its kana reading together with its meaning.",
+      "ru": "学生 читается がくせい и означает «студент». Повторяйте чтение вместе со значением."
+     },
+     "wordId": "n5-people-w4"
+    }
+   ]
+  },
+  {
+   "id": "n5-time-words",
+   "number": 24,
+   "category": "vocabulary",
+   "title": {
+    "en": "Time & routines",
+    "ru": "Время и распорядок"
+   },
+   "description": {
+    "en": "Ten useful words, with kana readings.",
+    "ru": "Десять полезных слов с чтением каной."
+   },
+   "glyph": "時",
+   "color": "peach",
+   "study": {
+    "en": "Read the ten words below, then practice four of them. Some words have more than one reading or meaning; context determines which to use.",
+    "ru": "Прочитайте десять слов, затем потренируйтесь на четырёх из них. У некоторых слов несколько чтений или значений; выбор зависит от контекста."
+   },
+   "examples": [
+    {
+     "japanese": "今日",
+     "translations": {
+      "en": "today",
+      "ru": "сегодня"
+     }
+    }
+   ],
+   "words": [
+    {
+     "id": "n5-time-words-w1",
+     "japanese": "今日",
+     "reading": "きょう",
+     "meanings": {
+      "en": "today",
+      "ru": "сегодня"
+     }
+    },
+    {
+     "id": "n5-time-words-w2",
+     "japanese": "明日",
+     "reading": "あした",
+     "meanings": {
+      "en": "tomorrow",
+      "ru": "завтра"
+     }
+    },
+    {
+     "id": "n5-time-words-w3",
+     "japanese": "昨日",
+     "reading": "きのう",
+     "meanings": {
+      "en": "yesterday",
+      "ru": "вчера"
+     }
+    },
+    {
+     "id": "n5-time-words-w4",
+     "japanese": "朝",
+     "reading": "あさ",
+     "meanings": {
+      "en": "morning",
+      "ru": "утро"
+     }
+    },
+    {
+     "id": "n5-time-words-w5",
+     "japanese": "昼",
+     "reading": "ひる",
+     "meanings": {
+      "en": "daytime; noon",
+      "ru": "день; полдень"
+     }
+    },
+    {
+     "id": "n5-time-words-w6",
+     "japanese": "夜",
+     "reading": "よる",
+     "meanings": {
+      "en": "night",
+      "ru": "ночь"
+     }
+    },
+    {
+     "id": "n5-time-words-w7",
+     "japanese": "毎日",
+     "reading": "まいにち",
+     "meanings": {
+      "en": "every day",
+      "ru": "каждый день"
+     }
+    },
+    {
+     "id": "n5-time-words-w8",
+     "japanese": "今",
+     "reading": "いま",
+     "meanings": {
+      "en": "now",
+      "ru": "сейчас"
+     }
+    },
+    {
+     "id": "n5-time-words-w9",
+     "japanese": "時間",
+     "reading": "じかん",
+     "meanings": {
+      "en": "time; hours",
+      "ru": "время; часы (длительность)"
+     }
+    },
+    {
+     "id": "n5-time-words-w10",
+     "japanese": "週",
+     "reading": "しゅう",
+     "meanings": {
+      "en": "week",
+      "ru": "неделя"
+     }
+    }
+   ],
+   "questions": [
+    {
+     "id": "n5-time-words-q1",
+     "prompt": "ことばを えらびましょう。",
+     "translation": {
+      "en": "Which word means “today”?",
+      "ru": "Какое слово означает «сегодня»?"
+     },
+     "type": "choice",
+     "choices": [
+      "今日",
+      "明日",
+      "昨日",
+      "朝"
+     ],
+     "answer": "今日",
+     "explanation": {
+      "en": "今日 is read きょう and means “today”. Review its kana reading together with its meaning.",
+      "ru": "今日 читается きょう и означает «сегодня». Повторяйте чтение вместе со значением."
+     },
+     "wordId": "n5-time-words-w1"
+    },
+    {
+     "id": "n5-time-words-q2",
+     "prompt": "ことばを えらびましょう。",
+     "translation": {
+      "en": "Which word means “tomorrow”?",
+      "ru": "Какое слово означает «завтра»?"
+     },
+     "type": "choice",
+     "choices": [
+      "昨日",
+      "朝",
+      "昼",
+      "明日"
+     ],
+     "answer": "明日",
+     "explanation": {
+      "en": "明日 is read あした and means “tomorrow”. Review its kana reading together with its meaning.",
+      "ru": "明日 читается あした и означает «завтра». Повторяйте чтение вместе со значением."
+     },
+     "wordId": "n5-time-words-w2"
+    },
+    {
+     "id": "n5-time-words-q3",
+     "prompt": "ことばを えらびましょう。",
+     "translation": {
+      "en": "Which word means “yesterday”?",
+      "ru": "Какое слово означает «вчера»?"
+     },
+     "type": "choice",
+     "choices": [
+      "昼",
+      "夜",
+      "昨日",
+      "朝"
+     ],
+     "answer": "昨日",
+     "explanation": {
+      "en": "昨日 is read きのう and means “yesterday”. Review its kana reading together with its meaning.",
+      "ru": "昨日 читается きのう и означает «вчера». Повторяйте чтение вместе со значением."
+     },
+     "wordId": "n5-time-words-w3"
+    },
+    {
+     "id": "n5-time-words-q4",
+     "prompt": "ことばを えらびましょう。",
+     "translation": {
+      "en": "Which word means “morning”?",
+      "ru": "Какое слово означает «утро»?"
+     },
+     "type": "choice",
+     "choices": [
+      "毎日",
+      "朝",
+      "昼",
+      "夜"
+     ],
+     "answer": "朝",
+     "explanation": {
+      "en": "朝 is read あさ and means “morning”. Review its kana reading together with its meaning.",
+      "ru": "朝 читается あさ и означает «утро». Повторяйте чтение вместе со значением."
+     },
+     "wordId": "n5-time-words-w4"
+    }
+   ]
+  },
+  {
+   "id": "n5-places",
+   "number": 25,
+   "category": "vocabulary",
+   "title": {
+    "en": "Places in town",
+    "ru": "Места в городе"
+   },
+   "description": {
+    "en": "Ten useful words, with kana readings.",
+    "ru": "Десять полезных слов с чтением каной."
+   },
+   "glyph": "町",
+   "color": "peach",
+   "study": {
+    "en": "Read the ten words below, then practice four of them. Some words have more than one reading or meaning; context determines which to use.",
+    "ru": "Прочитайте десять слов, затем потренируйтесь на четырёх из них. У некоторых слов несколько чтений или значений; выбор зависит от контекста."
+   },
+   "examples": [
+    {
+     "japanese": "駅",
+     "translations": {
+      "en": "station",
+      "ru": "станция"
+     }
+    }
+   ],
+   "words": [
+    {
+     "id": "n5-places-w1",
+     "japanese": "駅",
+     "reading": "えき",
+     "meanings": {
+      "en": "station",
+      "ru": "станция"
+     }
+    },
+    {
+     "id": "n5-places-w2",
+     "japanese": "病院",
+     "reading": "びょういん",
+     "meanings": {
+      "en": "hospital",
+      "ru": "больница"
+     }
+    },
+    {
+     "id": "n5-places-w3",
+     "japanese": "銀行",
+     "reading": "ぎんこう",
+     "meanings": {
+      "en": "bank",
+      "ru": "банк"
+     }
+    },
+    {
+     "id": "n5-places-w4",
+     "japanese": "郵便局",
+     "reading": "ゆうびんきょく",
+     "meanings": {
+      "en": "post office",
+      "ru": "почта"
+     }
+    },
+    {
+     "id": "n5-places-w5",
+     "japanese": "店",
+     "reading": "みせ",
+     "meanings": {
+      "en": "shop",
+      "ru": "магазин"
+     }
+    },
+    {
+     "id": "n5-places-w6",
+     "japanese": "公園",
+     "reading": "こうえん",
+     "meanings": {
+      "en": "park",
+      "ru": "парк"
+     }
+    },
+    {
+     "id": "n5-places-w7",
+     "japanese": "図書館",
+     "reading": "としょかん",
+     "meanings": {
+      "en": "library",
+      "ru": "библиотека"
+     }
+    },
+    {
+     "id": "n5-places-w8",
+     "japanese": "家",
+     "reading": "いえ",
+     "meanings": {
+      "en": "house; home",
+      "ru": "дом"
+     }
+    },
+    {
+     "id": "n5-places-w9",
+     "japanese": "部屋",
+     "reading": "へや",
+     "meanings": {
+      "en": "room",
+      "ru": "комната"
+     }
+    },
+    {
+     "id": "n5-places-w10",
+     "japanese": "会社",
+     "reading": "かいしゃ",
+     "meanings": {
+      "en": "company",
+      "ru": "компания"
+     }
+    }
+   ],
+   "questions": [
+    {
+     "id": "n5-places-q1",
+     "prompt": "ことばを えらびましょう。",
+     "translation": {
+      "en": "Which word means “station”?",
+      "ru": "Какое слово означает «станция»?"
+     },
+     "type": "choice",
+     "choices": [
+      "駅",
+      "病院",
+      "銀行",
+      "郵便局"
+     ],
+     "answer": "駅",
+     "explanation": {
+      "en": "駅 is read えき and means “station”. Review its kana reading together with its meaning.",
+      "ru": "駅 читается えき и означает «станция». Повторяйте чтение вместе со значением."
+     },
+     "wordId": "n5-places-w1"
+    },
+    {
+     "id": "n5-places-q2",
+     "prompt": "ことばを えらびましょう。",
+     "translation": {
+      "en": "Which word means “hospital”?",
+      "ru": "Какое слово означает «больница»?"
+     },
+     "type": "choice",
+     "choices": [
+      "銀行",
+      "郵便局",
+      "店",
+      "病院"
+     ],
+     "answer": "病院",
+     "explanation": {
+      "en": "病院 is read びょういん and means “hospital”. Review its kana reading together with its meaning.",
+      "ru": "病院 читается びょういん и означает «больница». Повторяйте чтение вместе со значением."
+     },
+     "wordId": "n5-places-w2"
+    },
+    {
+     "id": "n5-places-q3",
+     "prompt": "ことばを えらびましょう。",
+     "translation": {
+      "en": "Which word means “bank”?",
+      "ru": "Какое слово означает «банк»?"
+     },
+     "type": "choice",
+     "choices": [
+      "店",
+      "公園",
+      "銀行",
+      "郵便局"
+     ],
+     "answer": "銀行",
+     "explanation": {
+      "en": "銀行 is read ぎんこう and means “bank”. Review its kana reading together with its meaning.",
+      "ru": "銀行 читается ぎんこう и означает «банк». Повторяйте чтение вместе со значением."
+     },
+     "wordId": "n5-places-w3"
+    },
+    {
+     "id": "n5-places-q4",
+     "prompt": "ことばを えらびましょう。",
+     "translation": {
+      "en": "Which word means “post office”?",
+      "ru": "Какое слово означает «почта»?"
+     },
+     "type": "choice",
+     "choices": [
+      "図書館",
+      "郵便局",
+      "店",
+      "公園"
+     ],
+     "answer": "郵便局",
+     "explanation": {
+      "en": "郵便局 is read ゆうびんきょく and means “post office”. Review its kana reading together with its meaning.",
+      "ru": "郵便局 читается ゆうびんきょく и означает «почта». Повторяйте чтение вместе со значением."
+     },
+     "wordId": "n5-places-w4"
+    }
+   ]
+  },
+  {
+   "id": "n5-actions",
+   "number": 26,
+   "category": "vocabulary",
+   "title": {
+    "en": "Everyday actions",
+    "ru": "Повседневные действия"
+   },
+   "description": {
+    "en": "Ten useful words, with kana readings.",
+    "ru": "Десять полезных слов с чтением каной."
+   },
+   "glyph": "行",
+   "color": "peach",
+   "study": {
+    "en": "Read the ten words below, then practice four of them. Some words have more than one reading or meaning; context determines which to use.",
+    "ru": "Прочитайте десять слов, затем потренируйтесь на четырёх из них. У некоторых слов несколько чтений или значений; выбор зависит от контекста."
+   },
+   "examples": [
+    {
+     "japanese": "行く",
+     "translations": {
+      "en": "to go",
+      "ru": "идти; ехать"
+     }
+    }
+   ],
+   "words": [
+    {
+     "id": "n5-actions-w1",
+     "japanese": "行く",
+     "reading": "いく",
+     "meanings": {
+      "en": "to go",
+      "ru": "идти; ехать"
+     }
+    },
+    {
+     "id": "n5-actions-w2",
+     "japanese": "来る",
+     "reading": "くる",
+     "meanings": {
+      "en": "to come",
+      "ru": "приходить"
+     }
+    },
+    {
+     "id": "n5-actions-w3",
+     "japanese": "帰る",
+     "reading": "かえる",
+     "meanings": {
+      "en": "to return home",
+      "ru": "возвращаться домой"
+     }
+    },
+    {
+     "id": "n5-actions-w4",
+     "japanese": "食べる",
+     "reading": "たべる",
+     "meanings": {
+      "en": "to eat",
+      "ru": "есть"
+     }
+    },
+    {
+     "id": "n5-actions-w5",
+     "japanese": "飲む",
+     "reading": "のむ",
+     "meanings": {
+      "en": "to drink",
+      "ru": "пить"
+     }
+    },
+    {
+     "id": "n5-actions-w6",
+     "japanese": "見る",
+     "reading": "みる",
+     "meanings": {
+      "en": "to see; watch",
+      "ru": "смотреть"
+     }
+    },
+    {
+     "id": "n5-actions-w7",
+     "japanese": "聞く",
+     "reading": "きく",
+     "meanings": {
+      "en": "to listen; ask",
+      "ru": "слушать; спрашивать"
+     }
+    },
+    {
+     "id": "n5-actions-w8",
+     "japanese": "読む",
+     "reading": "よむ",
+     "meanings": {
+      "en": "to read",
+      "ru": "читать"
+     }
+    },
+    {
+     "id": "n5-actions-w9",
+     "japanese": "書く",
+     "reading": "かく",
+     "meanings": {
+      "en": "to write",
+      "ru": "писать"
+     }
+    },
+    {
+     "id": "n5-actions-w10",
+     "japanese": "話す",
+     "reading": "はなす",
+     "meanings": {
+      "en": "to speak",
+      "ru": "говорить"
+     }
+    }
+   ],
+   "questions": [
+    {
+     "id": "n5-actions-q1",
+     "prompt": "ことばを えらびましょう。",
+     "translation": {
+      "en": "Which word means “to go”?",
+      "ru": "Какое слово означает «идти; ехать»?"
+     },
+     "type": "choice",
+     "choices": [
+      "行く",
+      "来る",
+      "帰る",
+      "食べる"
+     ],
+     "answer": "行く",
+     "explanation": {
+      "en": "行く is read いく and means “to go”. Review its kana reading together with its meaning.",
+      "ru": "行く читается いく и означает «идти; ехать». Повторяйте чтение вместе со значением."
+     },
+     "wordId": "n5-actions-w1"
+    },
+    {
+     "id": "n5-actions-q2",
+     "prompt": "ことばを えらびましょう。",
+     "translation": {
+      "en": "Which word means “to come”?",
+      "ru": "Какое слово означает «приходить»?"
+     },
+     "type": "choice",
+     "choices": [
+      "帰る",
+      "食べる",
+      "飲む",
+      "来る"
+     ],
+     "answer": "来る",
+     "explanation": {
+      "en": "来る is read くる and means “to come”. Review its kana reading together with its meaning.",
+      "ru": "来る читается くる и означает «приходить». Повторяйте чтение вместе со значением."
+     },
+     "wordId": "n5-actions-w2"
+    },
+    {
+     "id": "n5-actions-q3",
+     "prompt": "ことばを えらびましょう。",
+     "translation": {
+      "en": "Which word means “to return home”?",
+      "ru": "Какое слово означает «возвращаться домой»?"
+     },
+     "type": "choice",
+     "choices": [
+      "飲む",
+      "見る",
+      "帰る",
+      "食べる"
+     ],
+     "answer": "帰る",
+     "explanation": {
+      "en": "帰る is read かえる and means “to return home”. Review its kana reading together with its meaning.",
+      "ru": "帰る читается かえる и означает «возвращаться домой». Повторяйте чтение вместе со значением."
+     },
+     "wordId": "n5-actions-w3"
+    },
+    {
+     "id": "n5-actions-q4",
+     "prompt": "ことばを えらびましょう。",
+     "translation": {
+      "en": "Which word means “to eat”?",
+      "ru": "Какое слово означает «есть»?"
+     },
+     "type": "choice",
+     "choices": [
+      "聞く",
+      "食べる",
+      "飲む",
+      "見る"
+     ],
+     "answer": "食べる",
+     "explanation": {
+      "en": "食べる is read たべる and means “to eat”. Review its kana reading together with its meaning.",
+      "ru": "食べる читается たべる и означает «есть». Повторяйте чтение вместе со значением."
+     },
+     "wordId": "n5-actions-w4"
+    }
+   ]
+  },
+  {
+   "id": "n5-describing",
+   "number": 27,
+   "category": "vocabulary",
+   "title": {
+    "en": "Describing things",
+    "ru": "Описываем предметы"
+   },
+   "description": {
+    "en": "Ten useful words, with kana readings.",
+    "ru": "Десять полезных слов с чтением каной."
+   },
+   "glyph": "大",
+   "color": "peach",
+   "study": {
+    "en": "Read the ten words below, then practice four of them. Some words have more than one reading or meaning; context determines which to use.",
+    "ru": "Прочитайте десять слов, затем потренируйтесь на четырёх из них. У некоторых слов несколько чтений или значений; выбор зависит от контекста."
+   },
+   "examples": [
+    {
+     "japanese": "大きい",
+     "translations": {
+      "en": "big",
+      "ru": "большой"
+     }
+    }
+   ],
+   "words": [
+    {
+     "id": "n5-describing-w1",
+     "japanese": "大きい",
+     "reading": "おおきい",
+     "meanings": {
+      "en": "big",
+      "ru": "большой"
+     }
+    },
+    {
+     "id": "n5-describing-w2",
+     "japanese": "小さい",
+     "reading": "ちいさい",
+     "meanings": {
+      "en": "small",
+      "ru": "маленький"
+     }
+    },
+    {
+     "id": "n5-describing-w3",
+     "japanese": "新しい",
+     "reading": "あたらしい",
+     "meanings": {
+      "en": "new",
+      "ru": "новый"
+     }
+    },
+    {
+     "id": "n5-describing-w4",
+     "japanese": "古い",
+     "reading": "ふるい",
+     "meanings": {
+      "en": "old (things)",
+      "ru": "старый (о предметах)"
+     }
+    },
+    {
+     "id": "n5-describing-w5",
+     "japanese": "高い",
+     "reading": "たかい",
+     "meanings": {
+      "en": "expensive; high",
+      "ru": "дорогой; высокий"
+     }
+    },
+    {
+     "id": "n5-describing-w6",
+     "japanese": "安い",
+     "reading": "やすい",
+     "meanings": {
+      "en": "inexpensive",
+      "ru": "недорогой"
+     }
+    },
+    {
+     "id": "n5-describing-w7",
+     "japanese": "暑い",
+     "reading": "あつい",
+     "meanings": {
+      "en": "hot (weather)",
+      "ru": "жаркий (о погоде)"
+     }
+    },
+    {
+     "id": "n5-describing-w8",
+     "japanese": "寒い",
+     "reading": "さむい",
+     "meanings": {
+      "en": "cold (weather)",
+      "ru": "холодный (о погоде)"
+     }
+    },
+    {
+     "id": "n5-describing-w9",
+     "japanese": "おいしい",
+     "reading": "おいしい",
+     "meanings": {
+      "en": "delicious",
+      "ru": "вкусный"
+     }
+    },
+    {
+     "id": "n5-describing-w10",
+     "japanese": "忙しい",
+     "reading": "いそがしい",
+     "meanings": {
+      "en": "busy",
+      "ru": "занятой"
+     }
+    }
+   ],
+   "questions": [
+    {
+     "id": "n5-describing-q1",
+     "prompt": "ことばを えらびましょう。",
+     "translation": {
+      "en": "Which word means “big”?",
+      "ru": "Какое слово означает «большой»?"
+     },
+     "type": "choice",
+     "choices": [
+      "大きい",
+      "小さい",
+      "新しい",
+      "古い"
+     ],
+     "answer": "大きい",
+     "explanation": {
+      "en": "大きい is read おおきい and means “big”. Review its kana reading together with its meaning.",
+      "ru": "大きい читается おおきい и означает «большой». Повторяйте чтение вместе со значением."
+     },
+     "wordId": "n5-describing-w1"
+    },
+    {
+     "id": "n5-describing-q2",
+     "prompt": "ことばを えらびましょう。",
+     "translation": {
+      "en": "Which word means “small”?",
+      "ru": "Какое слово означает «маленький»?"
+     },
+     "type": "choice",
+     "choices": [
+      "新しい",
+      "古い",
+      "高い",
+      "小さい"
+     ],
+     "answer": "小さい",
+     "explanation": {
+      "en": "小さい is read ちいさい and means “small”. Review its kana reading together with its meaning.",
+      "ru": "小さい читается ちいさい и означает «маленький». Повторяйте чтение вместе со значением."
+     },
+     "wordId": "n5-describing-w2"
+    },
+    {
+     "id": "n5-describing-q3",
+     "prompt": "ことばを えらびましょう。",
+     "translation": {
+      "en": "Which word means “new”?",
+      "ru": "Какое слово означает «новый»?"
+     },
+     "type": "choice",
+     "choices": [
+      "高い",
+      "安い",
+      "新しい",
+      "古い"
+     ],
+     "answer": "新しい",
+     "explanation": {
+      "en": "新しい is read あたらしい and means “new”. Review its kana reading together with its meaning.",
+      "ru": "新しい читается あたらしい и означает «новый». Повторяйте чтение вместе со значением."
+     },
+     "wordId": "n5-describing-w3"
+    },
+    {
+     "id": "n5-describing-q4",
+     "prompt": "ことばを えらびましょう。",
+     "translation": {
+      "en": "Which word means “old (things)”?",
+      "ru": "Какое слово означает «старый (о предметах)»?"
+     },
+     "type": "choice",
+     "choices": [
+      "暑い",
+      "古い",
+      "高い",
+      "安い"
+     ],
+     "answer": "古い",
+     "explanation": {
+      "en": "古い is read ふるい and means “old (things)”. Review its kana reading together with its meaning.",
+      "ru": "古い читается ふるい и означает «старый (о предметах)». Повторяйте чтение вместе со значением."
+     },
+     "wordId": "n5-describing-w4"
+    }
+   ]
+  },
+  {
+   "id": "n5-travel",
+   "number": 28,
+   "category": "vocabulary",
+   "title": {
+    "en": "Getting around",
+    "ru": "Передвижение"
+   },
+   "description": {
+    "en": "Ten useful words, with kana readings.",
+    "ru": "Десять полезных слов с чтением каной."
+   },
+   "glyph": "車",
+   "color": "peach",
+   "study": {
+    "en": "Read the ten words below, then practice four of them. Some words have more than one reading or meaning; context determines which to use.",
+    "ru": "Прочитайте десять слов, затем потренируйтесь на четырёх из них. У некоторых слов несколько чтений или значений; выбор зависит от контекста."
+   },
+   "examples": [
+    {
+     "japanese": "車",
+     "translations": {
+      "en": "car",
+      "ru": "автомобиль"
+     }
+    }
+   ],
+   "words": [
+    {
+     "id": "n5-travel-w1",
+     "japanese": "車",
+     "reading": "くるま",
+     "meanings": {
+      "en": "car",
+      "ru": "автомобиль"
+     }
+    },
+    {
+     "id": "n5-travel-w2",
+     "japanese": "電車",
+     "reading": "でんしゃ",
+     "meanings": {
+      "en": "train",
+      "ru": "поезд"
+     }
+    },
+    {
+     "id": "n5-travel-w3",
+     "japanese": "自転車",
+     "reading": "じてんしゃ",
+     "meanings": {
+      "en": "bicycle",
+      "ru": "велосипед"
+     }
+    },
+    {
+     "id": "n5-travel-w4",
+     "japanese": "バス",
+     "reading": "バス",
+     "meanings": {
+      "en": "bus",
+      "ru": "автобус"
+     }
+    },
+    {
+     "id": "n5-travel-w5",
+     "japanese": "飛行機",
+     "reading": "ひこうき",
+     "meanings": {
+      "en": "airplane",
+      "ru": "самолёт"
+     }
+    },
+    {
+     "id": "n5-travel-w6",
+     "japanese": "切符",
+     "reading": "きっぷ",
+     "meanings": {
+      "en": "ticket",
+      "ru": "билет"
+     }
+    },
+    {
+     "id": "n5-travel-w7",
+     "japanese": "道",
+     "reading": "みち",
+     "meanings": {
+      "en": "road; way",
+      "ru": "дорога; путь"
+     }
+    },
+    {
+     "id": "n5-travel-w8",
+     "japanese": "右",
+     "reading": "みぎ",
+     "meanings": {
+      "en": "right (direction)",
+      "ru": "право"
+     }
+    },
+    {
+     "id": "n5-travel-w9",
+     "japanese": "左",
+     "reading": "ひだり",
+     "meanings": {
+      "en": "left (direction)",
+      "ru": "лево"
+     }
+    },
+    {
+     "id": "n5-travel-w10",
+     "japanese": "地図",
+     "reading": "ちず",
+     "meanings": {
+      "en": "map",
+      "ru": "карта"
+     }
+    }
+   ],
+   "questions": [
+    {
+     "id": "n5-travel-q1",
+     "prompt": "ことばを えらびましょう。",
+     "translation": {
+      "en": "Which word means “car”?",
+      "ru": "Какое слово означает «автомобиль»?"
+     },
+     "type": "choice",
+     "choices": [
+      "車",
+      "電車",
+      "自転車",
+      "バス"
+     ],
+     "answer": "車",
+     "explanation": {
+      "en": "車 is read くるま and means “car”. Review its kana reading together with its meaning.",
+      "ru": "車 читается くるま и означает «автомобиль». Повторяйте чтение вместе со значением."
+     },
+     "wordId": "n5-travel-w1"
+    },
+    {
+     "id": "n5-travel-q2",
+     "prompt": "ことばを えらびましょう。",
+     "translation": {
+      "en": "Which word means “train”?",
+      "ru": "Какое слово означает «поезд»?"
+     },
+     "type": "choice",
+     "choices": [
+      "自転車",
+      "バス",
+      "飛行機",
+      "電車"
+     ],
+     "answer": "電車",
+     "explanation": {
+      "en": "電車 is read でんしゃ and means “train”. Review its kana reading together with its meaning.",
+      "ru": "電車 читается でんしゃ и означает «поезд». Повторяйте чтение вместе со значением."
+     },
+     "wordId": "n5-travel-w2"
+    },
+    {
+     "id": "n5-travel-q3",
+     "prompt": "ことばを えらびましょう。",
+     "translation": {
+      "en": "Which word means “bicycle”?",
+      "ru": "Какое слово означает «велосипед»?"
+     },
+     "type": "choice",
+     "choices": [
+      "飛行機",
+      "切符",
+      "自転車",
+      "バス"
+     ],
+     "answer": "自転車",
+     "explanation": {
+      "en": "自転車 is read じてんしゃ and means “bicycle”. Review its kana reading together with its meaning.",
+      "ru": "自転車 читается じてんしゃ и означает «велосипед». Повторяйте чтение вместе со значением."
+     },
+     "wordId": "n5-travel-w3"
+    },
+    {
+     "id": "n5-travel-q4",
+     "prompt": "ことばを えらびましょう。",
+     "translation": {
+      "en": "Which word means “bus”?",
+      "ru": "Какое слово означает «автобус»?"
+     },
+     "type": "choice",
+     "choices": [
+      "道",
+      "バス",
+      "飛行機",
+      "切符"
+     ],
+     "answer": "バス",
+     "explanation": {
+      "en": "バス is read バス and means “bus”. Review its kana reading together with its meaning.",
+      "ru": "バス читается バス и означает «автобус». Повторяйте чтение вместе со значением."
+     },
+     "wordId": "n5-travel-w4"
+    }
+   ]
+  },
+  {
+   "id": "n5-nature",
+   "number": 29,
+   "category": "vocabulary",
+   "title": {
+    "en": "Nature & weather",
+    "ru": "Природа и погода"
+   },
+   "description": {
+    "en": "Ten useful words, with kana readings.",
+    "ru": "Десять полезных слов с чтением каной."
+   },
+   "glyph": "山",
+   "color": "peach",
+   "study": {
+    "en": "Read the ten words below, then practice four of them. Some words have more than one reading or meaning; context determines which to use.",
+    "ru": "Прочитайте десять слов, затем потренируйтесь на четырёх из них. У некоторых слов несколько чтений или значений; выбор зависит от контекста."
+   },
+   "examples": [
+    {
+     "japanese": "山",
+     "translations": {
+      "en": "mountain",
+      "ru": "гора"
+     }
+    }
+   ],
+   "words": [
+    {
+     "id": "n5-nature-w1",
+     "japanese": "山",
+     "reading": "やま",
+     "meanings": {
+      "en": "mountain",
+      "ru": "гора"
+     }
+    },
+    {
+     "id": "n5-nature-w2",
+     "japanese": "川",
+     "reading": "かわ",
+     "meanings": {
+      "en": "river",
+      "ru": "река"
+     }
+    },
+    {
+     "id": "n5-nature-w3",
+     "japanese": "海",
+     "reading": "うみ",
+     "meanings": {
+      "en": "sea",
+      "ru": "море"
+     }
+    },
+    {
+     "id": "n5-nature-w4",
+     "japanese": "空",
+     "reading": "そら",
+     "meanings": {
+      "en": "sky",
+      "ru": "небо"
+     }
+    },
+    {
+     "id": "n5-nature-w5",
+     "japanese": "雨",
+     "reading": "あめ",
+     "meanings": {
+      "en": "rain",
+      "ru": "дождь"
+     }
+    },
+    {
+     "id": "n5-nature-w6",
+     "japanese": "雪",
+     "reading": "ゆき",
+     "meanings": {
+      "en": "snow",
+      "ru": "снег"
+     }
+    },
+    {
+     "id": "n5-nature-w7",
+     "japanese": "花",
+     "reading": "はな",
+     "meanings": {
+      "en": "flower",
+      "ru": "цветок"
+     }
+    },
+    {
+     "id": "n5-nature-w8",
+     "japanese": "木",
+     "reading": "き",
+     "meanings": {
+      "en": "tree",
+      "ru": "дерево"
+     }
+    },
+    {
+     "id": "n5-nature-w9",
+     "japanese": "天気",
+     "reading": "てんき",
+     "meanings": {
+      "en": "weather",
+      "ru": "погода"
+     }
+    },
+    {
+     "id": "n5-nature-w10",
+     "japanese": "風",
+     "reading": "かぜ",
+     "meanings": {
+      "en": "wind",
+      "ru": "ветер"
+     }
+    }
+   ],
+   "questions": [
+    {
+     "id": "n5-nature-q1",
+     "prompt": "ことばを えらびましょう。",
+     "translation": {
+      "en": "Which word means “mountain”?",
+      "ru": "Какое слово означает «гора»?"
+     },
+     "type": "choice",
+     "choices": [
+      "山",
+      "川",
+      "海",
+      "空"
+     ],
+     "answer": "山",
+     "explanation": {
+      "en": "山 is read やま and means “mountain”. Review its kana reading together with its meaning.",
+      "ru": "山 читается やま и означает «гора». Повторяйте чтение вместе со значением."
+     },
+     "wordId": "n5-nature-w1"
+    },
+    {
+     "id": "n5-nature-q2",
+     "prompt": "ことばを えらびましょう。",
+     "translation": {
+      "en": "Which word means “river”?",
+      "ru": "Какое слово означает «река»?"
+     },
+     "type": "choice",
+     "choices": [
+      "海",
+      "空",
+      "雨",
+      "川"
+     ],
+     "answer": "川",
+     "explanation": {
+      "en": "川 is read かわ and means “river”. Review its kana reading together with its meaning.",
+      "ru": "川 читается かわ и означает «река». Повторяйте чтение вместе со значением."
+     },
+     "wordId": "n5-nature-w2"
+    },
+    {
+     "id": "n5-nature-q3",
+     "prompt": "ことばを えらびましょう。",
+     "translation": {
+      "en": "Which word means “sea”?",
+      "ru": "Какое слово означает «море»?"
+     },
+     "type": "choice",
+     "choices": [
+      "雨",
+      "雪",
+      "海",
+      "空"
+     ],
+     "answer": "海",
+     "explanation": {
+      "en": "海 is read うみ and means “sea”. Review its kana reading together with its meaning.",
+      "ru": "海 читается うみ и означает «море». Повторяйте чтение вместе со значением."
+     },
+     "wordId": "n5-nature-w3"
+    },
+    {
+     "id": "n5-nature-q4",
+     "prompt": "ことばを えらびましょう。",
+     "translation": {
+      "en": "Which word means “sky”?",
+      "ru": "Какое слово означает «небо»?"
+     },
+     "type": "choice",
+     "choices": [
+      "花",
+      "空",
+      "雨",
+      "雪"
+     ],
+     "answer": "空",
+     "explanation": {
+      "en": "空 is read そら and means “sky”. Review its kana reading together with its meaning.",
+      "ru": "空 читается そら и означает «небо». Повторяйте чтение вместе со значением."
+     },
+     "wordId": "n5-nature-w4"
+    }
+   ]
+  },
+  {
+   "id": "n5-numbers",
+   "number": 30,
+   "category": "vocabulary",
+   "title": {
+    "en": "Numbers one to ten",
+    "ru": "Числа от одного до десяти"
+   },
+   "description": {
+    "en": "Ten useful words, with kana readings.",
+    "ru": "Десять полезных слов с чтением каной."
+   },
+   "glyph": "一",
+   "color": "peach",
+   "study": {
+    "en": "Read the ten words below, then practice four of them. Some words have more than one reading or meaning; context determines which to use.",
+    "ru": "Прочитайте десять слов, затем потренируйтесь на четырёх из них. У некоторых слов несколько чтений или значений; выбор зависит от контекста."
+   },
+   "examples": [
+    {
+     "japanese": "一",
+     "translations": {
+      "en": "one",
+      "ru": "один"
+     }
+    }
+   ],
+   "words": [
+    {
+     "id": "n5-numbers-w1",
+     "japanese": "一",
+     "reading": "いち",
+     "meanings": {
+      "en": "one",
+      "ru": "один"
+     }
+    },
+    {
+     "id": "n5-numbers-w2",
+     "japanese": "二",
+     "reading": "に",
+     "meanings": {
+      "en": "two",
+      "ru": "два"
+     }
+    },
+    {
+     "id": "n5-numbers-w3",
+     "japanese": "三",
+     "reading": "さん",
+     "meanings": {
+      "en": "three",
+      "ru": "три"
+     }
+    },
+    {
+     "id": "n5-numbers-w4",
+     "japanese": "四",
+     "reading": "よん／し",
+     "meanings": {
+      "en": "four",
+      "ru": "четыре"
+     }
+    },
+    {
+     "id": "n5-numbers-w5",
+     "japanese": "五",
+     "reading": "ご",
+     "meanings": {
+      "en": "five",
+      "ru": "пять"
+     }
+    },
+    {
+     "id": "n5-numbers-w6",
+     "japanese": "六",
+     "reading": "ろく",
+     "meanings": {
+      "en": "six",
+      "ru": "шесть"
+     }
+    },
+    {
+     "id": "n5-numbers-w7",
+     "japanese": "七",
+     "reading": "なな／しち",
+     "meanings": {
+      "en": "seven",
+      "ru": "семь"
+     }
+    },
+    {
+     "id": "n5-numbers-w8",
+     "japanese": "八",
+     "reading": "はち",
+     "meanings": {
+      "en": "eight",
+      "ru": "восемь"
+     }
+    },
+    {
+     "id": "n5-numbers-w9",
+     "japanese": "九",
+     "reading": "きゅう／く",
+     "meanings": {
+      "en": "nine",
+      "ru": "девять"
+     }
+    },
+    {
+     "id": "n5-numbers-w10",
+     "japanese": "十",
+     "reading": "じゅう",
+     "meanings": {
+      "en": "ten",
+      "ru": "десять"
+     }
+    }
+   ],
+   "questions": [
+    {
+     "id": "n5-numbers-q1",
+     "prompt": "ことばを えらびましょう。",
+     "translation": {
+      "en": "Which word means “one”?",
+      "ru": "Какое слово означает «один»?"
+     },
+     "type": "choice",
+     "choices": [
+      "一",
+      "二",
+      "三",
+      "四"
+     ],
+     "answer": "一",
+     "explanation": {
+      "en": "一 is read いち and means “one”. Review its kana reading together with its meaning.",
+      "ru": "一 читается いち и означает «один». Повторяйте чтение вместе со значением."
+     },
+     "wordId": "n5-numbers-w1"
+    },
+    {
+     "id": "n5-numbers-q2",
+     "prompt": "ことばを えらびましょう。",
+     "translation": {
+      "en": "Which word means “two”?",
+      "ru": "Какое слово означает «два»?"
+     },
+     "type": "choice",
+     "choices": [
+      "三",
+      "四",
+      "五",
+      "二"
+     ],
+     "answer": "二",
+     "explanation": {
+      "en": "二 is read に and means “two”. Review its kana reading together with its meaning.",
+      "ru": "二 читается に и означает «два». Повторяйте чтение вместе со значением."
+     },
+     "wordId": "n5-numbers-w2"
+    },
+    {
+     "id": "n5-numbers-q3",
+     "prompt": "ことばを えらびましょう。",
+     "translation": {
+      "en": "Which word means “three”?",
+      "ru": "Какое слово означает «три»?"
+     },
+     "type": "choice",
+     "choices": [
+      "五",
+      "六",
+      "三",
+      "四"
+     ],
+     "answer": "三",
+     "explanation": {
+      "en": "三 is read さん and means “three”. Review its kana reading together with its meaning.",
+      "ru": "三 читается さん и означает «три». Повторяйте чтение вместе со значением."
+     },
+     "wordId": "n5-numbers-w3"
+    },
+    {
+     "id": "n5-numbers-q4",
+     "prompt": "ことばを えらびましょう。",
+     "translation": {
+      "en": "Which word means “four”?",
+      "ru": "Какое слово означает «четыре»?"
+     },
+     "type": "choice",
+     "choices": [
+      "七",
+      "四",
+      "五",
+      "六"
+     ],
+     "answer": "四",
+     "explanation": {
+      "en": "四 is read よん／し and means “four”. Review its kana reading together with its meaning.",
+      "ru": "四 читается よん／し и означает «четыре». Повторяйте чтение вместе со значением."
+     },
+     "wordId": "n5-numbers-w4"
+    }
+   ]
+  }
+ ],
+ "placementQuestionIds": [
+  "wa-1",
+  "ka-1",
+  "no-1",
+  "wo-1",
+  "de-1",
+  "aru-1",
+  "verb-2",
+  "past-1",
+  "iadj-2",
+  "te-2"
+ ]
+}

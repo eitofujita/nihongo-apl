@@ -254,3 +254,158 @@ body { font-size: 15px; }
 .storage-error { display: flex; align-items: center; justify-content: space-between; gap: 16px; line-height: 1.8; }
 .storage-error .button { font-size: 11px; padding: 8px 12px; min-height: 35px; flex-shrink: 0; }
 @media (max-width: 600px) { .account-panel { margin-top: 5px; } .storage-error { padding: 14px 20px; font-size: 12px; } }
+
+/* ---------- Usability pass: readable sizes, mobile navigation, progress feedback ---------- */
+
+/* Tiny helper text was 7–11px; raise it to a readable minimum. */
+.eyebrow { font-size: 11px; letter-spacing: .6px; }
+.back-link { font-size: 13px; padding: 6px 0; min-height: 32px; }
+button.back-link { cursor: pointer; }
+.question-progress { font-size: 13px; color: #6f7f66; font-variant-numeric: tabular-nums; }
+.answer-letter { font-size: 12px; width: 26px; height: 26px; }
+.practice-actions > .muted { font-size: 12px; color: #7d8a74; }
+.practice-actions .button { font-size: 14px; min-width: 170px; }
+.practice-local { font-size: 12px; }
+.answer-feedback > a { font-size: 12px; }
+.answer-feedback > strong { font-size: 14px; }
+.footer { font-size: 11px; }
+.footer > span:last-child { font-size: 11px; }
+.dashboard-storage { font-size: 12px; }
+.study-action > span { font-size: 13px; }
+.saved-note { font-size: 12px; }
+.progress-track { height: 6px; }
+.progress-track > span { background: var(--green); }
+
+/* Today's goal on the dashboard. */
+.today-goal { display: grid; grid-template-columns: 1fr; gap: 12px; padding: 18px 22px; margin-bottom: 18px; background: #fff; border: 1px solid var(--line); border-radius: 12px; }
+.today-goal-text { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.today-goal-label { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; color: #61735d; font-weight: 550; }
+.today-goal-label > svg { color: #c9a578; }
+.today-goal-text strong { font-size: 15px; font-weight: 600; color: var(--ink); font-variant-numeric: tabular-nums; }
+.today-goal-bar { height: 8px; border-radius: 8px; background: #edf1e8; overflow: hidden; }
+.today-goal-bar > span { display: block; height: 100%; border-radius: 8px; background: linear-gradient(90deg, #8fb07d, var(--green)); transition: width .4s; }
+.today-goal-meta { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-size: 12px; color: #7d8a74; }
+.today-goal-meta > a { color: #6f8c5d; text-decoration: underline; text-underline-offset: 3px; }
+.goal-done { display: inline-flex; align-items: center; gap: 6px; color: var(--green); font-weight: 550; }
+.streak-badge { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 999px; background: #fdf1e3; color: #b0763c; font-weight: 550; }
+
+/* Lesson list: number, completion and next-up state. */
+.simple-lesson-meta { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; font-size: 12px; color: #7d8c73; }
+.lesson-badge { display: inline-flex; align-items: center; gap: 4px; padding: 2px 8px; border-radius: 999px; font-size: 11px; font-weight: 600; line-height: 1.6; }
+.lesson-badge.done { background: #e8f1e2; color: var(--green); }
+.lesson-badge.next { background: var(--green); color: #fff; }
+.lesson-card.simple-lesson.is-done .simple-lesson-glyph { background: #e3eedb; color: var(--green); }
+.lesson-card.simple-lesson.is-next { border-color: #a9c39a; box-shadow: 0 0 0 3px #e7f0e1; }
+.course-progress { display: flex; align-items: center; gap: 14px; margin-top: 14px; font-size: 12px; color: #6f7f66; flex-wrap: wrap; }
+.course-progress-bar { flex: 1; min-width: 160px; max-width: 360px; height: 8px; border-radius: 8px; background: #e6ece0; overflow: hidden; }
+.course-progress-bar > span { display: block; height: 100%; background: var(--green); border-radius: 8px; transition: width .4s; }
+
+/* Result screen: retry next to "back". */
+.result-secondary { display: flex; align-items: center; justify-content: center; gap: 18px; flex-wrap: wrap; margin-top: 22px; }
+.result-secondary .back-link, .result-secondary .button { margin: 0; }
+
+/* Mobile bottom navigation (hidden on desktop where the sidebar is always visible). */
+.bottom-nav { display: none; }
+@media (max-width: 800px) {
+  .bottom-nav { position: fixed; left: 0; right: 0; bottom: 0; z-index: 30; display: grid; grid-template-columns: repeat(5, 1fr); background: #fff; border-top: 1px solid var(--line); padding: 6px 4px calc(6px + env(safe-area-inset-bottom)); box-shadow: 0 -4px 16px #2d49350d; }
+  .bottom-nav > a { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; min-height: 52px; padding: 4px 2px; border-radius: 10px; color: #7f8a81; font-size: 11px; line-height: 1.2; text-align: center; }
+  .bottom-nav > a.active { color: var(--green); font-weight: 600; }
+  .bottom-nav > a.active .bottom-nav-icon { background: #eaf1e7; }
+  .bottom-nav-icon { position: relative; display: flex; align-items: center; justify-content: center; width: 46px; height: 28px; border-radius: 14px; }
+  .bottom-nav-badge { position: absolute; top: -3px; right: 2px; min-width: 18px; height: 18px; padding: 0 5px; border-radius: 9px; background: #c9774a; color: #fff; font-size: 10px; font-weight: 700; line-height: 18px; text-align: center; }
+  .workspace { padding-bottom: calc(70px + env(safe-area-inset-bottom)); }
+}
+@media (max-width: 600px) {
+  .practice-hint { display: none !important; }
+  .practice-actions .button { min-width: 0; }
+  .today-goal { padding: 16px 17px; }
+  .stat-label { font-size: 11px; }
+  .footer { font-size: 11px; }
+  .simple-lesson-meta { font-size: 11px; }
+}
+/* Keyboard hints only make sense with a physical keyboard. */
+@media (hover: none) { .practice-hint { display: none !important; } }
+
+/* JLPT level switcher on the lesson list. */
+.level-tabs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 0 0 24px; }
+.level-tabs > button { display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 12px 8px; border: 1px solid var(--line); border-radius: 11px; background: #fff; color: #6f7f66; }
+.level-tabs > button strong { font-size: 18px; color: var(--ink); letter-spacing: .5px; }
+.level-tabs > button small { font-size: 12px; font-variant-numeric: tabular-nums; }
+.level-tabs > button:hover { border-color: #bdcdae; }
+.level-tabs > button.selected { border-color: var(--green); background: #eef5e9; box-shadow: 0 0 0 3px #e2eedb; }
+.level-tabs > button.selected strong { color: var(--green); }
+.loading-note { max-width: 760px; margin: 40px auto; color: var(--muted); font-size: 14px; }
+
+
+/* Furigana */
+.practice-meta { display: flex; align-items: center; gap: 12px; }
+.section-title-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.furigana-toggle { display: inline-flex; align-items: center; gap: 7px; min-height: 34px; padding: 4px 12px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); color: var(--muted); font-size: 12px; }
+.furigana-toggle:hover { color: var(--green); border-color: #cfdccb; }
+.furigana-toggle.selected { background: #eaf1e7; color: var(--green); border-color: #bcd1b8; font-weight: 600; }
+.furigana-toggle ruby { font-size: 15px; line-height: 1; }
+.furigana-toggle rt { font-size: 8px; }
+.japanese-question ruby rt, .answer-option rt, .study-example rt { font-size: .45em; color: var(--muted); letter-spacing: 0; }
+
+/* Kanji handwriting practice */
+.kanji-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(104px, 1fr)); gap: 10px; list-style: none; padding: 0; margin: 0 0 24px; }
+.kanji-tile { display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 14px 8px 11px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); text-align: center; transition: border-color .15s, transform .15s; }
+.kanji-tile:hover { border-color: #bdcdae; transform: translateY(-1px); }
+.kanji-tile-char { font-family: 'Noto Sans JP', sans-serif; font-size: 38px; line-height: 1.2; color: var(--ink); }
+.kanji-tile-meaning { font-size: 12px; color: var(--text); max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.kanji-tile-status { font-size: 10.5px; color: var(--muted); }
+.kanji-tile.passed-trace { background: #f6f9f3; }
+.kanji-tile.passed-guide { background: #eef5e9; border-color: #d6e4cf; }
+.kanji-tile.passed-recall { background: #e3efdc; border-color: #b9d1ad; }
+.kanji-tile.passed-recall .kanji-tile-status { color: var(--green); font-weight: 600; }
+.kanji-footnote { font-size: 12px; color: var(--muted); line-height: 1.7; }
+.kanji-footnote a { color: var(--green); text-decoration: underline; }
+
+.kanji-practice { max-width: 920px; margin: 0 auto; }
+.kanji-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr); gap: 32px; align-items: start; margin-bottom: 24px; }
+.kanji-big { font-family: 'Noto Sans JP', sans-serif; font-size: 88px; line-height: 1.15; color: var(--ink); }
+.kanji-big.is-hidden { color: #c4cfbf; }
+.kanji-info h1 { font-size: 24px; font-weight: 600; margin: 4px 0 16px; }
+.kanji-readings { display: grid; grid-template-columns: auto 1fr; gap: 8px 16px; margin: 0 0 22px; font-size: 14px; }
+.kanji-readings dt { color: var(--muted); }
+.kanji-readings dd { margin: 0; color: var(--text); font-size: 16px; }
+.kanji-okurigana { color: var(--muted); }
+.kanji-okurigana::before { content: '・'; }
+.kanji-modes { margin-bottom: 10px; }
+.kanji-modes button { flex: 1; font-size: 13px; }
+.kanji-mode-hint { font-size: 13px; line-height: 1.7; color: #738074; }
+
+.kanji-board { display: flex; flex-direction: column; align-items: center; gap: 14px; }
+.kanji-pad { width: 100%; max-width: 420px; aspect-ratio: 1; background: var(--surface); border: 1px solid #d5e0d4; border-radius: 16px; touch-action: none; user-select: none; -webkit-user-select: none; cursor: crosshair; }
+.kanji-pad.is-finished { cursor: default; border-color: #b9d1ad; }
+.kanji-pad path, .kanji-pad polyline { fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.kanji-guides line { stroke: #e3e9e0; stroke-width: .5; stroke-dasharray: 2 2; }
+.kanji-ghost path { stroke: #dfe6dc; stroke-width: 5; }
+.kanji-ink path { stroke: var(--ink); stroke-width: 4.5; }
+.kanji-live { stroke: #3f6d58; stroke-width: 4.5; }
+.kanji-demo path { stroke: #e9a27d; stroke-width: 4.5; stroke-dasharray: 1; stroke-dashoffset: 1; animation: kanji-draw .5s ease-out forwards; }
+.kanji-hint { stroke: #e9a27d; stroke-width: 5; stroke-dasharray: 1; stroke-dashoffset: 1; opacity: .8; animation: kanji-draw .9s ease-out .1s forwards; }
+@keyframes kanji-draw { to { stroke-dashoffset: 0; } }
+@media (prefers-reduced-motion: reduce) { .kanji-demo path, .kanji-hint { animation: none; stroke-dashoffset: 0; } }
+.kanji-status { min-height: 24px; font-size: 14px; color: var(--text); text-align: center; }
+.kanji-status.is-miss { color: #b4572f; }
+.kanji-status.is-done { color: var(--green); font-weight: 600; }
+.kanji-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+.kanji-actions .button { gap: 8px; }
+
+@media (max-width: 800px) {
+  .kanji-practice .back-link { margin-bottom: 12px; }
+  .kanji-layout { grid-template-columns: 1fr; gap: 14px; }
+  .kanji-info { display: grid; grid-template-columns: auto 1fr; column-gap: 14px; align-items: center; }
+  .kanji-big { font-size: 46px; grid-row: span 2; }
+  .kanji-info h1 { margin: 0; font-size: 18px; }
+  .kanji-readings { display: flex; flex-wrap: wrap; gap: 0 6px; margin: 2px 0 0; font-size: 12px; align-items: baseline; }
+  .kanji-readings dd { font-size: 14px; margin-right: 8px; }
+  .kanji-modes { grid-column: 1 / -1; margin: 12px 0 0; }
+  .kanji-modes button { padding: 8px 6px; font-size: 12px; }
+  .kanji-board { gap: 10px; }
+  .kanji-pad { max-width: min(100%, calc(100dvh - 330px)); min-width: 240px; }
+  .kanji-mode-hint { text-align: center; font-size: 12px; }
+  .kanji-grid { grid-template-columns: repeat(auto-fill, minmax(84px, 1fr)); gap: 8px; }
+  .kanji-tile-char { font-size: 32px; }
+}

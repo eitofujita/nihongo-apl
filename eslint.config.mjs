@@ -6,5 +6,5 @@ export default defineConfig([
   ...nextVitals,
   ...nextTs,
   {rules: {'@typescript-eslint/no-explicit-any': 'error'}},
-  globalIgnores(['.next/**', 'out/**', 'next-env.d.ts', 'playwright-report/**', 'test-results/**'])
+  globalIgnores(['.next/**', '.open-next/**', '.wrangler/**', '.cloudflare/**', 'out/**', 'next-env.d.ts', 'playwright-report/**', 'test-results/**'])
 ]);

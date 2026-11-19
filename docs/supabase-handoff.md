@@ -31,6 +31,12 @@
 
 ## 次に行うこと
 
+**無料枠限定の再指定：Cloudflare登録・Wrangler承認後、本人が「無料の枠で、勝手に課金しない」と明示。契約変更・支払登録・有料サービス追加は行わず、制限を超えたら停止して報告する。アカウント`89d8924fdac542787ddbb9325c5b7c9b`への接続と空のWorker一覧は確認済み。初回スコープ`workers:write`ではサブドメイン取得が403のため、`workers_scripts:write`と`workers_routes:write`でデバイス認証をやり直している。契約情報のAPIはBilling Readが必要で403。WranglerではBillingスコープが付与不可なので、Workers Free（$0）の画面表示確認を本人へ非同期質問中。`default_usage_model=standard`は無料/有料判定ではない。必要な認証とFree確認が揃うまで外部デプロイは実行しない。認証情報は標準Wrangler設定に保管され、内容は出力しない。**
+
+**公開先の更新（2026-11-18）：ユーザーはCloudflareを選択。無料アカウントは未作成。OpenNext 1.20.17 / Wrangler 4.164.0でWorkers向けの設定・ビルド・dry-run・ローカルworkerd実行を追加。型チェック・Lint・通常テスト98件、Workers上のブラウザ43件成功（PCで不要の1件除外）、非変更型の実接続16件成功。認証・進捗APIはWorkersのネイティブRate Limiting bindingを使用し、拠点ごとの概算制限であることを文書化。実Supabaseのデータ・スキーマ・秘密情報・`.env.local`は変更していない。外部公開はまだ。次は無料アカウントの作成・CLI認証、公開先URLの確定、Supabaseの戻り先設定と試験公開。手順は`docs/cloudflare.md`。無料枠のCPU制限は本番実測が必要で、課金を自動で有効化しない。**
+
+**費用制約（2026-11-18）：ユーザーは初期のサーバー・DB・メール・AI合計を「まずは0円で検証したい」と指定した。有料Vercel/Supabaseへの変更や有料AIの有効化は進めない。Vercel Hobbyは個人・非商用向け、Proは月額20米ドル＋利用量等であり、商用SaaSを無料Hobbyで公開する前提にしない。ローカル＋Supabase Free＋AI固定解説で検証を継続。必要なら無料の一時URLを具体化するが、トンネルやデプロイはまだ開始していない。詳細は`docs/cost-plan.md`。**
+
 1. 登録・メール確認・ログイン・レッスン結果表示・再ログイン後の履歴保持は本人の報告と画像で確認済み。繰り返し同じ確認を求めない。
 2. 別ブラウザまたはプライベートウィンドウでの同期も本人報告で確認済み。繰り返し確認を求めない。
 3. verify.sqlをSupabase SQL Editorで実行した結果と、パスワード再設定の結果を確認する。実SQLのロール再現テストと、実JWTを使った2アカウントのAPI検証は区別する。確認範囲と手順は`docs/live-verification.md`を参照する。

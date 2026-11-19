@@ -1,7 +1,8 @@
 import {describe, expect, it} from 'vitest';
 import {allQuestions, isCorrect, lessons, lessonSchema, placementQuestions, questionSchema, vocabulary} from '@/content/lessons';
-import {addSession, answerInputSchema, dueQuestions, getRecommendation, getStats, getWeakTopics, initialProgress, parseProgress, progressSchema, type Session} from '@/lib/progress';
+import {addSession, answerInputSchema, dueQuestionIds, getRecommendation, getStats, getWeakTopics, initialProgress, parseProgress, progressSchema, type Session} from '@/lib/progress';
 import {getPlusPrice} from '@/lib/config';
+import {lessons as catalog} from '@/content/catalog';
 
 const now = new Date('2026-11-17T10:00:00Z');
 const makeSession = (changes: Partial<Session> = {}): Session => ({
@@ -10,24 +11,26 @@ const makeSession = (changes: Partial<Session> = {}): Session => ({
   ...changes
 });
 
-describe('N5 curriculum validation', () => {
-  it('validates 20 grammar topics, 100 words and 100 questions', () => {
-    expect(lessons).toHaveLength(30);
-    expect(lessons.filter(l => l.category === 'grammar')).toHaveLength(20);
-    expect(vocabulary).toHaveLength(100);
-    expect(allQuestions).toHaveLength(100);
-    expect(new Set(allQuestions.map(q => q.id)).size).toBe(100);
-    expect(new Set(lessons.map(l => l.id)).size).toBe(30);
-    expect(new Set(vocabulary.map(w => w.id)).size).toBe(100);
-    expect(new Set(vocabulary.map(w => w.japanese)).size).toBe(100);
-    lessons.forEach(lesson => expect(lessonSchema.safeParse(lesson).success).toBe(true));
+describe('Curriculum validation', () => {
+  it('keeps the original N5 starter lessons and validates every lesson', () => {
+    expect(lessons.slice(0, 30).map(l => l.number)).toEqual(Array.from({length: 30}, (_, i) => i + 1));
+    expect(lessons.filter(l => l.level === 'N5' && l.category === 'grammar').length).toBeGreaterThanOrEqual(20);
+    expect(new Set(allQuestions.map(q => q.id)).size).toBe(allQuestions.length);
+    expect(new Set(lessons.map(l => l.id)).size).toBe(lessons.length);
+    expect(new Set(vocabulary.map(w => w.id)).size).toBe(vocabulary.length);
+    lessons.forEach(lesson => expect(lessonSchema.safeParse(lesson).success, lesson.id).toBe(true));
+    allQuestions.forEach(question => expect(questionSchema.safeParse(question).success, question.id).toBe(true));
+  });
+  it('matches the lightweight catalog used by the browser', () => {
+    expect(catalog.map(l => l.id)).toEqual(lessons.map(l => l.id));
+    lessons.forEach((lesson, i) => expect(catalog[i].questionIds).toEqual(lesson.questions.map(q => q.id)));
   });
   it('provides study material, examples, readings and bilingual meanings before practice', () => {
     for (const lesson of lessons) {
       expect(lesson.study.en.length).toBeGreaterThan(50);
       expect(lesson.study.ru.length).toBeGreaterThan(50);
       expect(lesson.examples.length).toBeGreaterThan(0);
-      if (lesson.category === 'vocabulary') expect(lesson.words).toHaveLength(10);
+      if (lesson.category === 'vocabulary') {expect(lesson.words.length).toBeGreaterThan(0); expect(lesson.words.length).toBeLessThanOrEqual(10);}
     }
     for (const word of vocabulary) {
       expect(word.reading).not.toBe('');
@@ -37,10 +40,10 @@ describe('N5 curriculum validation', () => {
   });
   it('has distinct exercises and valid vocabulary question references', () => {
     const signatures = allQuestions.map(q => JSON.stringify([q.prompt, q.translation.en, [...q.choices].sort()]));
-    expect(new Set(signatures).size).toBe(100);
+    expect(new Set(signatures).size).toBe(allQuestions.length);
     for (const question of allQuestions.filter(q => q.wordId)) {
       const word = vocabulary.find(w => w.id === question.wordId);
-      expect(word?.japanese).toBe(question.answer);
+      expect(word?.japanese.split(';')[0].trim()).toBe(question.answer);
     }
   });
   it('provides explanations in both languages for every question', () => {
@@ -116,9 +119,9 @@ describe('Local learning progress', () => {
   });
   it('schedules missed questions after 10 minutes, then correct reviews after 1 and 3 days', () => {
     let progress = addSession(initialProgress, makeSession());
-    expect(dueQuestions(progress, now)).toHaveLength(0);
+    expect(dueQuestionIds(progress, now)).toHaveLength(0);
     const reviewAt = new Date(now.getTime() + 600000);
-    expect(dueQuestions(progress, reviewAt).map(q => q.id)).toEqual(['wa-2']);
+    expect(dueQuestionIds(progress, reviewAt)).toEqual(['wa-2']);
     progress = addSession(progress, makeSession({id: 'review-1', lessonId: 'review', at: reviewAt.toISOString(), answers: [{questionId: 'wa-2', correct: true}]}));
     expect(progress.reviews[0].step).toBe(1);
     expect(Date.parse(progress.reviews[0].due) - reviewAt.getTime()).toBe(86400000);
