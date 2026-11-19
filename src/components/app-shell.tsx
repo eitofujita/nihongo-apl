@@ -2,7 +2,7 @@
 
 import {useState, type ReactNode} from 'react';
 import {useLocale, useTranslations} from 'next-intl';
-import {BookOpen, ChartNoAxesCombined, ChevronDown, ChevronRight, House, Menu, RotateCcw, Settings, Sparkles, Sprout, X} from 'lucide-react';
+import {BookOpen, ChartNoAxesCombined, ChevronDown, ChevronRight, House, Menu, PenLine, RotateCcw, Settings, Sparkles, Sprout, X} from 'lucide-react';
 import {Link, usePathname, useRouter} from '@/i18n/navigation';
 import {useProgress} from './progress-provider';
 import type {Locale} from '@/i18n/routing';
@@ -38,13 +38,14 @@ export function AppShell({children}: {children: ReactNode}) {
   const nav = [
     {href: '/', label: 'dashboard', icon: House},
     {href: '/lessons', label: 'lessons', icon: BookOpen},
+    {href: '/kanji', label: 'kanji', icon: PenLine},
     {href: '/review', label: 'review', icon: RotateCcw},
     {href: '/history', label: 'history', icon: ChartNoAxesCombined},
     {href: '/tutor', label: 'tutor', icon: Sparkles}
   ] as const;
   const isActive = (href: string) => href === '/' ? pathname === '/' : pathname === href || pathname.startsWith(`${href}/`);
   const currentLabel = breadcrumbLabel(pathname);
-  const bottomNav = [nav[0], nav[1], nav[2], nav[3], {href: '/settings', label: 'settings', icon: Settings}] as const;
+  const bottomNav = [nav[0], nav[1], nav[3], nav[4], {href: '/settings', label: 'settings', icon: Settings}] as const;
   return <div className="app-shell">
     {menuOpen && <button className="sidebar-backdrop" aria-label={t('close')} onClick={() => setMenuOpen(false)}/>}
     <aside className={`sidebar ${menuOpen ? 'is-open' : ''}`} aria-label={t('menu')}>
@@ -71,12 +72,13 @@ export function AppShell({children}: {children: ReactNode}) {
   </div>;
 }
 
-type NavLabel = 'dashboard' | 'lessons' | 'review' | 'history' | 'tutor' | 'settings' | 'pricing' | 'login' | 'placementLabel' | 'accountLabel';
+type NavLabel = 'dashboard' | 'lessons' | 'kanji' | 'review' | 'history' | 'tutor' | 'settings' | 'pricing' | 'login' | 'placementLabel' | 'accountLabel';
 function breadcrumbLabel(pathname: string): NavLabel {
   if (pathname === '/') return 'dashboard';
   const section = pathname.split('/')[1];
   switch (section) {
     case 'lessons': return 'lessons';
+    case 'kanji': return 'kanji';
     case 'review': return 'review';
     case 'history': return 'history';
     case 'tutor': return 'tutor';

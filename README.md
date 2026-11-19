@@ -26,6 +26,7 @@
 - 間違えた問題の復習キュー：10分後、正解後は1日・3日・7日後
 - 言語に依存しない教材ID・進捗保存、日次目標設定、確認ダイアログ付きリセット
 - AIチューターの説明サンプル、料金案内（支払いは無効）
+- N5漢字103字の書き取り練習（試作）：なぞる→グリッドのみ→意味と読みだけの3段階。書き順・位置・向きをブラウザ内で判定し、進捗は端末内のみ保存（[詳細](docs/curriculum.md#漢字の書き取り試作n5のみ)）
 - PC・スマートフォン向けUI、キーボード操作、フォントのローカル配信
 - Zodによる教材・入力・保存データの検証、破損データのフォールバック
 - VitestとPlaywrightのテスト
@@ -76,6 +77,7 @@ npm run build:cloudflare # Workers用ビルド（ローカル検証時はURLを8
 npm run check:cloudflare # アップロードしない設定・容量検査
 npm run preview:cloudflare # ビルド済みWorkerをローカルで起動
 npm run test:e2e:cloudflare # Workers上のPC・モバイルテスト
+npm run kanji -- <KanjiVGのkanji/> # 漢字索引と書き順データを再生成
 
 npx playwright install chromium
 npm run test:e2e   # ChromiumでPC・モバイルを確認
@@ -154,6 +156,8 @@ Cloudflare対応では、型チェック・Lint・通常テスト98件、Workers
 ## 構成
 
 ```text
+content/kanji/n5.txt      N5漢字の読み・意味（npm run kanji の入力）
+public/kanji/             KanjiVG由来の書き順データ（CC BY-SA 3.0）
 messages/                 英語・ロシア語のUI翻訳（同一キー）
 src/
   app/
@@ -168,13 +172,16 @@ src/
     catalog.ts             全ページで使う軽量な教材索引
     load.ts                レベル別の教材本文を必要時に読み込み
     lessons.ts             全教材（テスト用）
-    generated/             npm run content の生成物（手で編集しない）
+    generated/             npm run content / npm run kanji の生成物（手で編集しない）
+    kanji.ts               漢字索引の読み込み
     grammar.ts             追加の文法レッスン・固定問題
     vocabulary.ts          共通の日本語100語・読み・英露の意味
   i18n/                   next-intlのルーティング・リクエスト設定
   lib/
     config.ts             設定値の検証
     progress.ts           進捗・苦手分析・学習推薦・復習間隔
+    kanji-stroke.ts       手書きの画の判定（ブラウザ内）
+    kanji-progress.ts     漢字の進捗（localStorage）
   proxy.ts                言語判定、認証Cookie更新とキャッシュ抑止
 tests/
   learning.test.ts        データ・回答・進捗・復習のテスト

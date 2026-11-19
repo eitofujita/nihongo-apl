@@ -6,6 +6,8 @@ import {Dashboard} from '@/components/dashboard';
 import {Courses, LessonDetail, Review} from '@/components/learning';
 import {History, Placement, Pricing, Settings, Tutor, Welcome} from '@/components/secondary-pages';
 import {AccountPanel} from '@/components/account-panel';
+import {KanjiList, KanjiPractice} from '@/components/kanji';
+import {getKanji} from '@/content/kanji';
 import {EmailVerification} from '@/components/email-verification';
 import {getLessonMeta} from '@/content/catalog';
 import {getAppUrl, getPlusPrice} from '@/lib/config';
@@ -18,7 +20,7 @@ export async function generateMetadata({params}: Props): Promise<Metadata> {
   if (!hasLocale(routing.locales, locale)) return {};
   const t = await getTranslations({locale, namespace: 'App'});
   const path = view.length ? `/${view.join('/')}` : '';
-  const publicPage = path === '/welcome' || path === '/pricing' || path === '/lessons';
+  const publicPage = path === '/welcome' || path === '/pricing' || path === '/lessons' || path === '/kanji';
   return {
     metadataBase: getAppUrl(),
     title: t('seoTitle'), description: t('seoDescription'),
@@ -40,10 +42,15 @@ export default async function Page({params, searchParams}: Props) {
     if (!getLessonMeta(view[1])) notFound();
     return <LessonDetail key={view[1]} lessonId={view[1]}/>;
   }
+  if (view[0] === 'kanji' && view.length === 2) {
+    if (!getKanji(view[1])) notFound();
+    return <KanjiPractice key={view[1]} id={view[1]}/>;
+  }
   if (view.length !== 1) notFound();
   switch (view[0]) {
     case 'lessons': return <Courses/>;
     case 'review': return <Review/>;
+    case 'kanji': return <KanjiList/>;
     case 'history': return <History/>;
     case 'tutor': return <Tutor/>;
     case 'pricing': return <Pricing price={getPlusPrice()}/>;
