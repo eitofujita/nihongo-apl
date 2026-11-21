@@ -37,9 +37,39 @@ function LessonBody({lesson}: {lesson: FullLesson}) {
     <Link className="back-link" href="/lessons"><ArrowLeft size={16}/>{t('backLessons')}</Link>
     <PageHeading title={lesson.title[locale]} subtitle={`JLPT ${lesson.level} · ${t('lessonNumber', {number: lesson.levelNumber})} · ${t(lesson.category)}`}/>
     <section className="study-section"><h2>{t('studyTitle')}</h2><p>{lesson.study[locale]}</p></section>
-    {lesson.words.length > 0 ? <section className="study-section"><h2>{t('wordList')}</h2><div className="word-table"><table><thead><tr><th>{t('japaneseLabel')}</th><th>{t('readingLabel')}</th><th>{t('meaningLabel')}</th></tr></thead><tbody>{lesson.words.map(word => <tr key={word.id}><td lang="ja">{word.japanese}</td><td lang="ja">{word.reading}</td><td>{word.meanings[locale]}</td></tr>)}</tbody></table></div></section> : <section className="study-section"><div className="section-title-row"><h2>{t('examplesTitle')}</h2><FuriganaToggle label={t('furigana')}/></div>{lesson.examples.map(example => <div className="study-example" key={example.japanese}><p lang="ja"><Ruby text={example.japanese} ruby={example.ruby}/></p><p>{example.translations[locale]}</p></div>)}</section>}
+    {lesson.forms && <section className="study-section"><h2>{t('formsTitle')}</h2><ul className="grammar-forms">{lesson.forms[locale].map(form => <li key={form} lang="ja"><GrammarForm form={form}/></li>)}</ul></section>}
+    {lesson.words.length > 0 ? <section className="study-section"><h2>{t('wordList')}</h2><div className="word-table"><table><thead><tr><th>{t('japaneseLabel')}</th><th>{t('readingLabel')}</th><th>{t('meaningLabel')}</th></tr></thead><tbody>{lesson.words.map(word => <tr key={word.id}><td lang="ja">{word.japanese}</td><td lang="ja">{word.reading}</td><td>{word.meanings[locale]}</td></tr>)}</tbody></table></div></section> : <section className="study-section"><div className="section-title-row"><h2>{t('examplesTitle')}</h2><FuriganaToggle label={t('furigana')}/></div>
+      {lesson.examples.map(example => <div className="study-example" key={example.japanese}><p lang="ja"><Ruby text={example.japanese} ruby={example.ruby}/></p><p>{example.translations[locale]}</p></div>)}
+      {questionExamples(lesson).map(example => <div className="study-example is-more" key={example.id}><p lang="ja"><Ruby text={example.before} ruby={example.rubyBefore}/><mark>{example.answer}</mark><Ruby text={example.after} ruby={example.rubyAfter}/></p><p>{example.translation[locale]}</p></div>)}
+    </section>}
     <div className="study-action"><span>{t('questions', {count: lesson.questions.length})}</span><button className="button primary" onClick={() => {setPracticing(true); window.scrollTo({top: 0});}}>{t('startPractice')}<ArrowRight size={17}/></button></div>
   </article>;
+}
+
+/** A form line such as "[verb (dictionary form)] + つもりです": bracketed parts are slots, the rest is Japanese. */
+function GrammarForm({form}: {form: string}) {
+  return <>{form.split(/(\[[^\]]+\])/).filter(Boolean).map((part, i) => part.startsWith('[')
+    ? <span key={i} className="form-slot" lang="und">{part.slice(1, -1)}</span>
+    : <span key={i}>{part}</span>)}</>;
+}
+
+// Practice sentences double as worked examples: the blank is filled with the answer (highlighted) and
+// hints in full-width parentheses such as （ふつう） are dropped. Plain-text questions only.
+const BLANK = '（　）';
+const stripHints = (text: string) => text.replace(/（[^　）]*）/g, '').trim();
+function questionExamples(lesson: FullLesson) {
+  const seen = new Set(lesson.examples.map(example => example.japanese));
+  return lesson.questions.flatMap(question => {
+    const [before, after, ...rest] = question.prompt.split(BLANK);
+    if (after === undefined || rest.length) return [];
+    const japanese = stripHints(before + question.answer + after);
+    if (seen.has(japanese)) return [];
+    seen.add(japanese);
+    const ruby = question.ruby?.prompt.split(BLANK);
+    const rubyOk = ruby?.length === 2;
+    return [{id: question.id, before: stripHints(before), after: stripHints(after), answer: question.answer, translation: question.translation,
+      rubyBefore: rubyOk ? stripHints(ruby[0]) : undefined, rubyAfter: rubyOk ? stripHints(ruby[1]) : undefined}];
+  });
 }
 
 export function PlacementTest() {

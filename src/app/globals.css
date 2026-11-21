@@ -517,3 +517,12 @@ button.back-link { cursor: pointer; }
 /* While a kanji writing pad is shown, a drag must not scroll, refresh or pull down the page
    (in-app browsers such as Telegram treat a downward drag at the top as "close/move the page"). */
 html.has-writing-pad, html.has-writing-pad body { overscroll-behavior: none; }
+
+/* Grammar lesson: how the form is built, and extra examples taken from the practice questions. */
+.grammar-forms { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+.grammar-forms li { padding: 14px 16px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); font-family: 'Noto Sans JP', sans-serif; font-size: 18px; line-height: 1.9; color: var(--ink); }
+.form-slot { display: inline-block; margin: 0 2px; padding: 0 8px; border-radius: 6px; background: #eaf1e7; color: var(--green); font-family: var(--font-sans); font-size: 13px; font-weight: 600; line-height: 1.9; vertical-align: 2px; }
+.study-example + .study-example { margin-top: 12px; }
+.study-example mark { background: #fdf1d6; color: inherit; padding: 0 2px; border-radius: 3px; font-weight: 600; }
+.study-example.is-more p[lang] { font-size: 21px; }
+@media (max-width: 600px) { .grammar-forms li { font-size: 16px; } .study-example.is-more p[lang] { font-size: 18px; } }

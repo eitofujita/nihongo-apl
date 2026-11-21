@@ -35,7 +35,7 @@ n5-ikura | {N}はいくらですか ; {N}はいくつありますか
 n5-doushite | どうして・なぜ + {S}か ; {S}から [(answer)~(ответ)]
 n5-ne-yo | {S} + ね ; {S} + よ
 n5-counters-tsu | ひとつ…とお ; {N}を + {num} + {V}
-n5-counters | {num} + 人・枚・本・冊・台・匹 ; {N}を + {num} + {V}
+n5-counters | [number~число] + 人・枚・本・冊・台・匹 ; {N}を + {num} + {V}
 n5-plain-da | {N}・{A-na} + だ ; {N}・{A-na} + だった ; {N}・{A-na} + じゃない
 n5-dictionary-form | 食べます → 食べる ; 書きます → 書く ; します → する ; 来ます → 来る
 n5-nai-form | 食べる → 食べない ; 書く → 書かない ; 会う → 会わない ; する → しない ; 来る → 来ない ; ある → ない

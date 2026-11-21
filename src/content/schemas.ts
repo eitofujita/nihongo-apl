@@ -23,7 +23,9 @@ export const lessonSchema = z.object({
   glyph: z.string(), color: z.enum(['green', 'peach', 'purple']),
   study: localizedText,
   examples: z.array(z.object({japanese: z.string().min(1), translations: localizedText, ruby: z.string().optional()})).min(1),
-  words: z.array(wordSchema).default([]), questions: z.array(questionSchema).min(1)
+  words: z.array(wordSchema).default([]), questions: z.array(questionSchema).min(1),
+  // How a grammar point is built ("V-dict + つもりです"), one line per form, in each display language.
+  forms: z.object({en: z.array(z.string().min(1)).min(1), ru: z.array(z.string().min(1)).min(1)}).optional()
 });
 export type Lesson = z.infer<typeof lessonSchema>;
 

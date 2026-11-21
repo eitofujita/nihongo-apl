@@ -220,6 +220,46 @@ function interleave<T>(grammar: T[], vocab: T[]): T[] {
 // ---------- Assemble ----------
 const legacy = JSON.parse(readFileSync(path('content/legacy.json'), 'utf8')) as {lessons: Lesson[]; placementQuestionIds: string[]};
 const legacyWords = new Set(legacy.lessons.flatMap(l => l.words.map(w => w.japanese)));
+// ---------- Grammar forms (content/grammar/patterns.txt) ----------
+const TOKENS: Record<string, [string, string]> = {
+  'N': ['noun', 'сущ.'], 'V': ['verb', 'глагол'],
+  'V-dict': ['verb (dictionary form)', 'глагол (словарная форма)'],
+  'V-masu': ['verb stem (ます form without ます)', 'основа глагола (форма на ます без ます)'],
+  'V-te': ['verb (て form)', 'глагол (форма на て)'], 'V-ta': ['verb (た form)', 'глагол (форма на た)'],
+  'V-nai': ['verb (ない form)', 'глагол (форма на ない)'],
+  'V-nai-stem': ['ない stem (書か, 食べ)', 'основа на ない (書か, 食べ)'],
+  'V-ba': ['verb (ば form)', 'глагол (форма на ば)'], 'V-vol': ['verb (volitional form)', 'глагол (волевая форма)'],
+  'V-pot': ['verb (potential form)', 'глагол (потенциальная форма)'], 'V-plain': ['verb (plain form)', 'глагол (простая форма)'],
+  'V-caus': ['verb (causative form)', 'глагол (каузатив)'], 'V-caus-te': ['causative て form', 'каузатив в форме на て'],
+  'V-pass': ['verb (passive form)', 'глагол (пассив)'],
+  'A-i': ['い-adjective', 'い-прилагательное'], 'A-i-stem': ['い-adjective without い', 'い-прилагательное без い'],
+  'A-na': ['な-adjective', 'な-прилагательное'], 'plain': ['plain form', 'простая форма'],
+  'Q': ['question word', 'вопросительное слово'], 'S': ['sentence', 'предложение'],
+  'num': ['number + counter', 'число + счётный суффикс'], 'person': ['person', 'человек'],
+  'place': ['place', 'место'], 'time': ['time', 'время'], 'neg': ['negative form', 'отрицание']
+};
+function localizeForm(form: string, lang: 0 | 1, where: string): string {
+  return form
+    .replace(/\{([A-Za-z-]+)\}/g, (_, token: string) => {
+      const label = TOKENS[token];
+      if (!label) {fail(where, `unknown token {${token}}`); return token;}
+      return `[${label[lang]}]`;
+    })
+    .replace(/\[([^\]~]+)~([^\]]+)\]/g, (_, en: string, ru: string) => (lang === 0 ? en : ru).trim());
+}
+const forms = new Map<string, {en: string[]; ru: string[]}>();
+readFileSync(path('content/grammar/patterns.txt'), 'utf8').split('\n').forEach((raw, i) => {
+  const line = raw.trim();
+  if (!line || line.startsWith('#')) return;
+  const where = `patterns.txt:${i + 1}`;
+  const split = line.indexOf('|');
+  const id = line.slice(0, split).trim();
+  const list = line.slice(split + 1).split(' ; ').map(f => f.trim()).filter(Boolean);
+  if (split < 0 || !id || !list.length) {fail(where, 'expected id | form ; form'); return;}
+  if (forms.has(id)) fail(where, `duplicate ${id}`);
+  forms.set(id, {en: list.map(f => localizeForm(f, 0, where)), ru: list.map(f => localizeForm(f, 1, where))});
+});
+
 type Full = Lesson & {level: Level; levelNumber: number};
 const all: Full[] = [];
 let number = 0;
@@ -230,7 +270,9 @@ for (const level of LEVELS) {
   const ordered: Draft[] = [...(level === 'N5' ? legacy.lessons.map(l => ({...l, level})) : []), ...interleave<Draft>(grammar, vocab)];
   ordered.forEach((lesson, i) => {
     number++;
-    const full: Full = {...lesson, number, levelNumber: i + 1, color: lesson.color ?? COLORS[number % 3], words: lesson.words ?? []};
+    const form = lesson.category === 'grammar' ? forms.get(lesson.id) : undefined;
+    if (lesson.category === 'grammar' && !form) fail(lesson.id, 'no form in content/grammar/patterns.txt');
+    const full: Full = {...lesson, number, levelNumber: i + 1, color: lesson.color ?? COLORS[number % 3], words: lesson.words ?? [], ...(form ? {forms: form} : {})};
     const parsed = lessonSchema.safeParse(full);
     if (!parsed.success) fail(full.id, parsed.error.issues.map(i => `${i.path.join('.')}: ${i.message}`).join('; '));
     all.push(full);
@@ -238,6 +280,7 @@ for (const level of LEVELS) {
 }
 
 const lessonIds = new Set<string>(); const questionIds = new Set<string>();
+for (const id of forms.keys()) if (!all.some(lesson => lesson.id === id && lesson.category === 'grammar')) fail('patterns.txt', `no grammar lesson ${id}`);
 for (const lesson of all) {
   if (lessonIds.has(lesson.id)) fail(lesson.id, 'duplicate lesson id');
   lessonIds.add(lesson.id);
