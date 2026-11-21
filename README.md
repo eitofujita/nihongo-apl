@@ -187,7 +187,7 @@ src/
     progress.ts           進捗・苦手分析・学習推薦・復習間隔
     kanji-stroke.ts       手書きの画の判定（ブラウザ内）
     kanji-progress.ts     漢字の進捗（localStorage）
-  proxy.ts                言語判定、認証Cookie更新とキャッシュ抑止
+  middleware.ts           言語判定、認証Cookie更新とキャッシュ抑止（OpenNextが正式対応するEdge実行のため旧名を使用）
 tests/
   learning.test.ts        データ・回答・進捗・復習のテスト
   translations.test.ts    翻訳キー・ICUパラメータの一致確認

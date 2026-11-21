@@ -4,7 +4,7 @@ import type {NextRequest} from 'next/server';
 import {refreshAuth} from './lib/supabase/proxy';
 
 const localize = createMiddleware(routing);
-export default async function proxy(request: NextRequest) {
+export default async function middleware(request: NextRequest) {
   const authResponse = await refreshAuth(request);
   if (request.nextUrl.pathname.startsWith('/api/') || request.nextUrl.pathname.startsWith('/auth/')) return authResponse;
   const response = localize(request);
