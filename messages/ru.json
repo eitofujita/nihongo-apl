@@ -382,6 +382,7 @@
     "sentenceAgain": "Ещё {count} предложений",
     "sentenceChangeLevel": "Сменить уровень",
     "sentenceReviewTitle": "Предложения для повторения",
-    "sentenceYours": "Ваш вариант:"
+    "sentenceYours": "Ваш вариант:",
+    "kanjiTestBackToTest": "Вернуться к тесту"
   }
 }

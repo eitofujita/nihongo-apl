@@ -214,7 +214,8 @@ function KanjiPad({strokes, done, ghost, demo, hint, revealed = false, onStart, 
   </svg>;
 }
 
-function PracticeBoard({kanji, detail}: {kanji: KanjiInfo; detail: KanjiDetail}) {
+/** onBack is set when practising from inside a test: the board then returns to the test instead of leaving the page. */
+function PracticeBoard({kanji, detail, onBack}: {kanji: KanjiInfo; detail: KanjiDetail; onBack?: () => void}) {
   const t = useTranslations('App');
   const locale = useLocale() as Locale;
   const store = useKanjiProgress();
@@ -254,7 +255,8 @@ function PracticeBoard({kanji, detail}: {kanji: KanjiInfo; detail: KanjiDetail})
   const nextMode = KANJI_MODES[KANJI_MODES.indexOf(mode) + 1];
 
   return <article className="kanji-practice">
-    <Link className="back-link" href="/kanji"><ArrowLeft size={16}/>{t('kanjiBack')}</Link>
+    {onBack ? <button type="button" className="back-link" onClick={onBack}><ArrowLeft size={16}/>{t('kanjiTestBackToTest')}</button>
+      : <Link className="back-link" href="/kanji"><ArrowLeft size={16}/>{t('kanjiBack')}</Link>}
     <div className="kanji-layout">
       <section className="kanji-info" aria-label={t('kanjiAbout')}>
         <p className={`kanji-big ${hidden ? 'is-hidden' : ''}`} lang="ja" aria-hidden={hidden}>{hidden ? '?' : kanji.char}</p>
@@ -272,6 +274,7 @@ function PracticeBoard({kanji, detail}: {kanji: KanjiInfo; detail: KanjiDetail})
           {finished ? <>
             <button className="button outline" onClick={() => reset()}><RotateCcw size={16}/>{t('kanjiAgain')}</button>
             {nextMode ? <button className="button primary" onClick={() => reset(nextMode)}>{t('kanjiNextMode', {mode: t(`kanjiMode_${nextMode}`)})}<ArrowRight size={16}/></button>
+              : onBack ? <button className="button primary" onClick={onBack}>{t('kanjiTestBackToTest')}<ArrowRight size={16}/></button>
               : <Link className="button primary" href={`/kanji/${nextKanji.id}`}>{t('kanjiNext')}<ArrowRight size={16}/></Link>}
           </> : <>
             <button className="button outline" onClick={() => setDemo(value => value + 1)}><Eye size={16}/>{t('kanjiShowOrder')}</button>
@@ -375,10 +378,14 @@ function TestQuestion({kanji, number, total, nextId, onDone, onQuit}: {
   const [feedback, setFeedback] = useState<StrokeResult | null>(null);
   const [answer, setAnswer] = useState<TestResult | null>(null);
   const [saved, setSaved] = useState(true);
+  // Practising a missed kanji happens in place, so this question (and the whole test) stays intact.
+  const [practicing, setPracticing] = useState(false);
   const expected = useMemo(() => detail?.strokes.map(pathToPoints) ?? [], [detail]);
   const headingRef = useRef<HTMLHeadingElement>(null);
   // Each question replaces the last one; move focus so keyboard and screen-reader users start at the new prompt.
-  useEffect(() => {headingRef.current?.focus();}, []);
+  // Coming back from practice also lands here.
+  useEffect(() => {if (!practicing) headingRef.current?.focus();}, [practicing]);
+  const togglePractice = (on: boolean) => {setPracticing(on); window.scrollTo({top: 0});};
 
   // Fetch the next kanji while this one is being written, so the next question opens at once.
   useEffect(() => {if (nextId) loadKanjiDetail(nextId).catch(() => {});}, [nextId]);
@@ -402,6 +409,7 @@ function TestQuestion({kanji, number, total, nextId, onDone, onQuit}: {
   }
 
   if (failed) return <EmptyState title={t('errorTitle')} text={t('errorText')}/>;
+  if (practicing && detail) return <PracticeBoard kanji={kanji} detail={detail} onBack={() => togglePractice(false)}/>;
   const status = !detail ? t('loading')
     : answer?.gaveUp ? t('kanjiTestAnswer', {kanji: kanji.char})
     : answer ? (answer.ok ? t('kanjiTestCorrect', {count: answer.mistakes}) : t('kanjiTestTooMany', {count: answer.mistakes}))
@@ -428,7 +436,7 @@ function TestQuestion({kanji, number, total, nextId, onDone, onQuit}: {
         {!saved && answer && <p className="section-note">{t('storageError')}</p>}
         <div className="kanji-actions">
           {answer ? <>
-            {!answer.ok && <Link className="button outline" href={`/kanji/${kanji.id}`}><PenLine size={16}/>{t('kanjiTestPractice')}</Link>}
+            {!answer.ok && <button type="button" className="button outline" onClick={() => togglePractice(true)}><PenLine size={16}/>{t('kanjiTestPractice')}</button>}
             <button className="button primary" onClick={() => onDone(answer)} autoFocus>{last ? t('kanjiTestFinish') : t('kanjiTestNextQuestion')}<ArrowRight size={16}/></button>
           </> : <button className="button outline" onClick={() => finish({id: kanji.id, ok: false, mistakes, gaveUp: true})} disabled={!detail}>{t('kanjiTestGiveUp')}</button>}
         </div>

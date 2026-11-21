@@ -79,6 +79,25 @@ test('a self-chosen kanji test grades each answer and lets you retest misses', a
   await expect(page.getByRole('link', {name: /^一/})).toContainText('From memory');
 });
 
+test('practising a missed kanji returns to the same test and lets you continue', async ({page}) => {
+  await page.goto('/en/kanji/test');
+  await page.getByRole('button', {name: /^一/}).click();
+  await page.getByRole('button', {name: /^二/}).click();
+  await page.getByRole('button', {name: /^Start test/}).click();
+  await expect(page.getByText('Question 1 of 2')).toBeVisible();
+  await page.getByRole('button', {name: 'I don’t know'}).click();
+  const answer = await page.getByRole('status').textContent();
+
+  // Practice happens in place; the test is not lost.
+  await page.getByRole('button', {name: 'Practice this kanji'}).click();
+  await expect(page.getByRole('button', {name: 'Show stroke order'})).toBeVisible();
+  await page.getByRole('button', {name: 'Back to the test'}).first().click();
+  await expect(page.getByText('Question 1 of 2')).toBeVisible();
+  await expect(page.getByRole('status')).toHaveText(answer!);
+  await page.getByRole('button', {name: 'Next question'}).click();
+  await expect(page.getByText('Question 2 of 2')).toBeVisible();
+});
+
 test('kanji can be searched by meaning, reading or romaji, also when choosing a test', async ({page}) => {
   await page.goto('/en/kanji');
   const search = page.getByRole('searchbox', {name: 'Search kanji'});
