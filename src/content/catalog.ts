@@ -1,5 +1,5 @@
 // Lightweight curriculum index that is safe to ship to every page.
-// Full lesson bodies live in per-level chunks (see load.ts / lessons.ts).
+// Full lesson bodies are static files in public/content (see load.ts / lessons.ts).
 import data from './generated/catalog.json';
 import type {Question} from './schemas';
 
@@ -14,6 +14,9 @@ export type LessonMeta = {
 
 export const lessons = data.lessons as LessonMeta[];
 export const placementQuestions = data.placement as Question[];
+const versions = data.versions as Record<Level, string>;
+/** Content hash of a level's lesson file, used to bust caches when the curriculum changes. */
+export function contentVersion(level: Level): string {return versions[level];}
 
 const byId = new Map(lessons.map(lesson => [lesson.id, lesson]));
 const lessonOfQuestion = new Map(lessons.flatMap(lesson => lesson.questionIds.map(id => [id, lesson] as const)));

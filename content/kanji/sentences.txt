@@ -1,0 +1,21 @@
+# Extra example sentences for kanji writing practice, for kanji the curriculum has few sentences for.
+# Used by `npm run kanji` together with the lesson examples.
+# kanji | sentence with furigana as 漢字{かんじ} | English | Russian
+四 | 四月{しがつ}に日本{にほん}へ行{い}きます。 | I am going to Japan in April. | В апреле я поеду в Японию.
+四 | りんごを四{よっ}つください。 | Four apples, please. | Дайте, пожалуйста, четыре яблока.
+万 | この時計{とけい}は一万円{いちまんえん}です。 | This watch is ten thousand yen. | Эти часы стоят десять тысяч иен.
+万 | 三万人{さんまんにん}が来{き}ました。 | Thirty thousand people came. | Пришло тридцать тысяч человек.
+木 | 木{き}の下{した}で本{ほん}を読{よ}みます。 | I read a book under the tree. | Я читаю книгу под деревом.
+木 | 木曜日{もくようび}に会{あ}いましょう。 | Let’s meet on Thursday. | Давайте встретимся в четверг.
+半 | 毎朝{まいあさ}七時半{しちじはん}に起{お}きます。 | I get up at half past seven every morning. | Каждое утро я встаю в половине восьмого.
+半 | パンを半分{はんぶん}食{た}べました。 | I ate half of the bread. | Я съел половину хлеба.
+午 | 午後{ごご}三時{さんじ}に来{き}てください。 | Please come at three in the afternoon. | Приходите, пожалуйста, в три часа дня.
+午 | 午前中{ごぜんちゅう}は家{いえ}にいます。 | I am at home in the morning. | До обеда я дома.
+左 | 次{つぎ}の角{かど}を左{ひだり}に曲{ま}がってください。 | Please turn left at the next corner. | На следующем углу поверните, пожалуйста, налево.
+左 | 駅{えき}は左{ひだり}にあります。 | The station is on the left. | Станция находится слева.
+西 | 西{にし}の空{そら}が赤{あか}いです。 | The western sky is red. | Небо на западе красное.
+西 | 駅{えき}の西口{にしぐち}で待{ま}っています。 | I am waiting at the west exit of the station. | Я жду у западного выхода станции.
+南 | 冬{ふゆ}は南{みなみ}の国{くに}へ行{い}きたいです。 | In winter I want to go to a southern country. | Зимой я хочу поехать в южную страну.
+南 | 駅{えき}の南口{みなみぐち}で会{あ}いましょう。 | Let’s meet at the south exit of the station. | Давайте встретимся у южного выхода станции.
+耳 | 耳{みみ}が痛{いた}いです。 | My ear hurts. | У меня болит ухо.
+耳 | うさぎは耳{みみ}が長{なが}いです。 | Rabbits have long ears. | У кроликов длинные уши.

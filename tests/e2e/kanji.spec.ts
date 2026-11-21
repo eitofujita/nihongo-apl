@@ -37,3 +37,66 @@ test('writing strokes out of order is caught', async ({page}) => {
   await expect(page.getByRole('status')).toContainText('later stroke');
   await expect(page.getByRole('status')).not.toContainText('Stroke 2');
 });
+
+test('a kanji page shows how it is used, and hides the kanji while writing from memory', async ({page}) => {
+  await page.goto('/en/kanji/065e5'); // 日
+  const usage = page.getByRole('region', {name: 'How it’s used'});
+  await expect(usage.getByText('今日', {exact: true})).toBeVisible();
+  await expect(usage.getByText('every day', {exact: true})).toBeVisible();
+  await expect(usage.getByText('Example sentences')).toBeVisible();
+
+  await page.getByRole('button', {name: 'From memory'}).click();
+  await expect(usage.getByText('今□', {exact: true})).toBeVisible();
+  await expect(usage).not.toContainText('今日');
+});
+
+test('a self-chosen kanji test grades each answer and lets you retest misses', async ({page}) => {
+  await page.goto('/en/kanji');
+  await page.getByRole('link', {name: 'Test yourself'}).click();
+  await expect(page.getByRole('heading', {name: 'Kanji test'})).toBeVisible();
+  const start = page.getByRole('button', {name: /^Start test/});
+  await expect(start).toBeDisabled();
+  await page.getByRole('button', {name: /^一/}).click();
+  await expect(page.getByRole('button', {name: /^一/})).toHaveAttribute('aria-pressed', 'true');
+  await expect(page.getByText('1 kanji selected')).toBeVisible();
+  await start.click();
+
+  // The kanji is hidden: only its meaning and readings are given.
+  await expect(page.getByText('Question 1 of 1')).toBeVisible();
+  await expect(page.getByRole('heading', {name: 'one'})).toBeVisible();
+  await expect(page.getByRole('button', {name: 'Show stroke order'})).toHaveCount(0);
+  await page.getByRole('button', {name: 'I don’t know'}).click();
+  await expect(page.getByRole('status')).toContainText('The answer is 一');
+  await page.getByRole('button', {name: 'See results'}).click();
+  await expect(page.getByText('0 / 1 correct')).toBeVisible();
+
+  await page.getByRole('button', {name: 'Retest missed (1)'}).click();
+  await draw(page, line([12, 54], [90, 52]));
+  await expect(page.getByRole('status')).toHaveText('Correct! No mistakes.');
+  await page.getByRole('button', {name: 'See results'}).click();
+  await expect(page.getByText('1 / 1 correct')).toBeVisible();
+  await page.getByRole('link', {name: 'All kanji'}).click();
+  await expect(page.getByRole('link', {name: /^一/})).toContainText('From memory');
+});
+
+test('kanji can be searched by meaning, reading or romaji, also when choosing a test', async ({page}) => {
+  await page.goto('/en/kanji');
+  const search = page.getByRole('searchbox', {name: 'Search kanji'});
+  await search.fill('mizu');
+  await expect(page.getByText(/kanji found/)).toBeVisible();
+  await expect(page.getByRole('link', {name: /^水/})).toBeVisible();
+  await expect(page.getByRole('link', {name: /^一/})).toHaveCount(0);
+
+  await search.fill('学校');
+  await expect(page.getByText('2 kanji found')).toBeVisible();
+  await search.fill('zzzz');
+  await expect(page.getByText(/No kanji match “zzzz”/)).toBeVisible();
+  await page.getByRole('button', {name: 'Clear search'}).click();
+  await expect(page.getByRole('link', {name: /^一/})).toBeVisible();
+
+  await page.goto('/en/kanji/test');
+  await page.getByRole('searchbox', {name: 'Search kanji'}).fill('water');
+  await page.getByRole('button', {name: /^水/}).click();
+  await page.getByRole('searchbox', {name: 'Search kanji'}).fill('');
+  await expect(page.getByText('1 kanji selected')).toBeVisible();
+});

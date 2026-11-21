@@ -27,6 +27,31 @@ describe('kanji data', () => {
     }
     expect(existsSync('public/kanji/LICENSE.txt')).toBe(true);
   });
+
+  it('shows how every kanji is used, with words and sentences that contain it', () => {
+    for (const kanji of index) {
+      const detail = JSON.parse(readFileSync(`public/kanji/${kanji.id}.json`, 'utf8')) as {
+        words: {japanese: string; reading: string; meanings: {en: string; ru: string}}[];
+        sentences: {japanese: string; ruby?: string; translations: {en: string; ru: string}}[];
+      };
+      expect(detail.words.length, kanji.char).toBeGreaterThanOrEqual(1);
+      expect(detail.words.length).toBeLessThanOrEqual(4);
+      for (const word of detail.words) {
+        expect(word.japanese, kanji.char).toContain(kanji.char);
+        expect(word.reading).toMatch(/^[ぁ-ゖァ-ヺー・〜～／]+$/);
+        expect(word.meanings.en && word.meanings.ru).toBeTruthy();
+      }
+      expect(new Set(detail.words.map(word => word.japanese)).size).toBe(detail.words.length);
+      for (const sentence of detail.sentences) {
+        expect(sentence.japanese, kanji.char).toContain(kanji.char);
+        expect(sentence.japanese).toMatch(/[。？！?!]$/);
+        expect(sentence.translations.en && sentence.translations.ru).toBeTruthy();
+        // Furigana notation must spell out the same sentence once the readings are removed.
+        if (sentence.ruby) expect(sentence.ruby.replace(/\{[^}]*\}/g, '')).toBe(sentence.japanese);
+      }
+      expect(detail.sentences.length, `${kanji.char} has no example sentence`).toBeGreaterThanOrEqual(1);
+    }
+  });
 });
 
 describe('stroke geometry', () => {

@@ -1,6 +1,7 @@
 // Builds the curriculum from content/ into src/content/generated and the Supabase seed.
 // Run: npm run content   (validates everything; fails on any authoring error)
-import {readFileSync, writeFileSync, mkdirSync, readdirSync, existsSync} from 'node:fs';
+import {readFileSync, writeFileSync, mkdirSync, readdirSync, existsSync, rmSync} from 'node:fs';
+import {createHash} from 'node:crypto';
 import {fileURLToPath} from 'node:url';
 import {z} from 'zod';
 import {align, createAnnotator} from './furigana.mts';
@@ -274,8 +275,18 @@ const catalog = {
   lessons: all.map(l => ({id: l.id, number: l.number, levelNumber: l.levelNumber, level: l.level, category: l.category, title: l.title, description: l.description, glyph: l.glyph, color: l.color, wordCount: l.words.length, questionIds: l.questions.map(q => q.id)})),
   placement
 };
-writeFileSync(path('src/content/generated/catalog.json'), json(catalog));
-for (const level of LEVELS) writeFileSync(path(`src/content/generated/${level.toLowerCase()}.json`), json(all.filter(l => l.level === level)));
+// Lesson bodies are static files under public/content: the browser fetches one level when needed,
+// and they never become part of the server bundle (which keeps the Cloudflare Worker small).
+// The catalog records a content hash per level so a changed file is never served from a stale cache.
+mkdirSync(path('public/content'), {recursive: true});
+const versions: Record<string, string> = {};
+for (const level of LEVELS) {
+  const body = json(all.filter(l => l.level === level));
+  versions[level] = createHash('sha256').update(body).digest('hex').slice(0, 12);
+  writeFileSync(path(`public/content/${level.toLowerCase()}.json`), body);
+}
+writeFileSync(path('src/content/generated/catalog.json'), json({...catalog, versions}));
+for (const level of LEVELS) rmSync(path(`src/content/generated/${level.toLowerCase()}.json`), {force: true});
 
 // Supabase seed for everything beyond the original 100-question migration.
 const legacyIds = new Set(legacy.lessons.flatMap(l => l.questions.map(q => q.id)));

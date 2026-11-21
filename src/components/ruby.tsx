@@ -24,24 +24,31 @@ export function useFurigana(): [boolean, (on: boolean) => void] {
   return [on, set];
 }
 
+/** Wraps every occurrence of `mark` (one kanji) in <mark>, so it stands out in a word or sentence. */
+export function emphasize(text: string, mark: string | undefined, key: string | number = 0): ReactNode {
+  if (!mark || !text.includes(mark)) return text;
+  const parts = text.split(mark);
+  return <span key={key}>{parts.flatMap((part, i) => i === 0 ? [part] : [<mark key={i}>{mark}</mark>, part])}</span>;
+}
+
 /** Renders 漢字{かんじ} notation as <ruby>. Falls back to the plain text when there is no annotation. */
-export function Ruby({text, ruby}: {text: string; ruby?: string}): ReactNode {
+export function Ruby({text, ruby, mark}: {text: string; ruby?: string; mark?: string}): ReactNode {
   const [on] = useFurigana();
-  if (!on || !ruby) return text;
+  if (!on || !ruby) return emphasize(text, mark);
   const nodes: ReactNode[] = [];
   const pattern = /([^{}]+?)\{([^{}]+)\}/g;
   let last = 0;
   for (const match of ruby.matchAll(pattern)) {
     // The base is the trailing kanji run of the matched text; anything before it is plain.
     const [, chunk, reading] = match;
-    const base = chunk.match(/[㐀-鿿豈-﫿々〆ヶ]+$/)?.[0] ?? chunk;
+    const base = chunk.match(/[㐀-鿿豈-﫿々〆ヶ□]+$/)?.[0] ?? chunk;
     const plain = chunk.slice(0, chunk.length - base.length);
-    if (match.index > last) nodes.push(ruby.slice(last, match.index));
-    if (plain) nodes.push(plain);
-    nodes.push(<ruby key={match.index}>{base}<rt>{reading}</rt></ruby>);
+    if (match.index > last) nodes.push(emphasize(ruby.slice(last, match.index), mark, `g${match.index}`));
+    if (plain) nodes.push(emphasize(plain, mark, `p${match.index}`));
+    nodes.push(<ruby key={match.index}>{emphasize(base, mark)}<rt>{reading}</rt></ruby>);
     last = match.index + match[0].length;
   }
-  if (last < ruby.length) nodes.push(ruby.slice(last));
+  if (last < ruby.length) nodes.push(emphasize(ruby.slice(last), mark, 'end'));
   return <>{nodes}</>;
 }
 

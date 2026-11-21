@@ -22,7 +22,8 @@
     "deploy:cloudflare": "node --experimental-strip-types scripts/cloudflare.mts deploy",
     "test:e2e:cloudflare": "playwright test --config playwright.cloudflare.config.ts",
     "content": "node --experimental-strip-types scripts/build-content.mts",
-    "kanji": "node --experimental-strip-types scripts/build-kanji.mts"
+    "kanji": "node --experimental-strip-types scripts/build-kanji.mts",
+    "sentences": "node --experimental-strip-types scripts/build-sentences.mts"
   },
   "dependencies": {
     "@fontsource-variable/dm-sans": "^5.2.8",

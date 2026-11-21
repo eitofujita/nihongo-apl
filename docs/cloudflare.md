@@ -54,9 +54,19 @@ npm run test:e2e:cloudflare
 - **公開先**: https://nihongo-ai.fifatvgame.workers.dev（Version 479e9baa-920e-468b、Workers Free）。初回は「No access to the specified resource」で失敗し、`npx wrangler logout` → `npx wrangler login --device --browser=false` で再認証して成功しました。
 - **ページ途中停止（解決済み）**: 公開直後の確認では、SSRの本文が約20KBで途切れたように見えました。2026-11-19に再確認したところ、全画面が200で`</html>`まで届き、本人のブラウザでも表示・回答・ログイン保存に問題はありませんでした。静的アセット（Workerを通らない）の取得も遅かったため、原因は公開直後の反映待ちと、検証環境（WSL）の回線の遅さと判断しました。
 - **調査の制約**: WSLからは`wrangler tail`が「fetch failed」になります。CPU超過などを疑うときは、ダッシュボードの「Workers & Pages → nihongo-ai → Metrics」で確認してください。
+- **Workerの軽量化（2026-11-20）**: 教材本文（N5〜N3、約3.9MB）を`public/content/`の静的ファイルに移し、ブラウザが必要なときに取得する方式にしました。Workerはgzip 2,924KiB → 2,157KiB（無料枠の上限3MiB）になりました。漢字の書き順・使用例も`public/kanji/`の静的ファイルで、Workerの容量に含まれません。残りの大部分はNext.js・Reactなどのフレームワーク本体です。
 - **今後の改善候補**: 約400KBのクライアントJSチャンクに、教材カタログ（約280KB）が含まれている可能性があります。分割すれば初回表示が速くなります。
 - **公開待ちの変更**: 選択問題の1クリック判定。コミット済みで、まだデプロイしていません（効果音とエアロ風テーマは試した後に削除しました）。
 - **デプロイの方法**: 本人のターミナルで `npm run deploy:cloudflare` を実行します。Claudeは実行しません。
+
+## 公開前チェック（2026-11-22）
+
+- 型チェック・Lint・Vitest **117件成功**。教材・漢字・例文の生成物は元データから再生成しても差分なし。
+- 本番の依存パッケージに既知の脆弱性なし（`npm audit --omit=dev`）。開発用のOpenNext内部（glob/minimatch）に中程度3件あり、ビルド時のみ使用で公開物には含まれない。
+- **セキュリティヘッダーを追加**: 本番ビルドでContent-Security-Policy（外部への接続・外部スクリプトを禁止、`frame-ancestors 'none'`）。Workerを通らない静的ファイル（教材JSON・漢字データ）にも`public/_headers`でnosniff・DENY・Referrer-Policyを付与。開発サーバーでは自動更新のためCSPを付けない。
+- 公開用設定を読まない別コピーでOpenNextビルド成功。Wrangler dry-runでWorker **gzip 2,162KiB**（上限3,072KiB）、アセット638ファイル。
+- workerdのローカル実行でPC・モバイルのPlaywright **57件成功**（PC不要のモバイル専用1件除外）。主要12画面と、レッスン・例文・漢字の操作でCSP違反・コンソールエラーなし。
+- サーバー側（認証・進捗API）は前回公開から変更なし。同一オリジン検査・サイズ制限・レート制限（Cloudflare binding、障害時は拒否）を再確認。
 
 ## 確認済みの範囲と残作業
 

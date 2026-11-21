@@ -26,7 +26,8 @@
 - 間違えた問題の復習キュー：10分後、正解後は1日・3日・7日後
 - 言語に依存しない教材ID・進捗保存、日次目標設定、確認ダイアログ付きリセット
 - AIチューターの説明サンプル、料金案内（支払いは無効）
-- N5漢字103字の書き取り練習（試作）：なぞる→グリッドのみ→意味と読みだけの3段階。書き順・位置・向きをブラウザ内で判定し、進捗は端末内のみ保存（[詳細](docs/curriculum.md#漢字の書き取り試作n5のみ)）
+- 文を作る練習（試作）：英露の訳を見て日本語の語句を並べ替える。N5〜N3の例文から1回10文（[詳細](docs/curriculum.md#文を作る練習試作)）
+- N5漢字103字の書き取り練習（試作）：なぞる→グリッドのみ→意味と読みだけの3段階。書き順・位置・向きをブラウザ内で判定し、進捗は端末内のみ保存。漢字を含む単語・例文の表示と、自分で選んだ漢字のテスト（`/kanji/test`）つき（[詳細](docs/curriculum.md#漢字の書き取り試作n5のみ)）
 - PC・スマートフォン向けUI、キーボード操作、フォントのローカル配信
 - Zodによる教材・入力・保存データの検証、破損データのフォールバック
 - VitestとPlaywrightのテスト
@@ -77,7 +78,8 @@ npm run build:cloudflare # Workers用ビルド（ローカル検証時はURLを8
 npm run check:cloudflare # アップロードしない設定・容量検査
 npm run preview:cloudflare # ビルド済みWorkerをローカルで起動
 npm run test:e2e:cloudflare # Workers上のPC・モバイルテスト
-npm run kanji -- <KanjiVGのkanji/> # 漢字索引と書き順データを再生成
+npm run kanji -- <KanjiVGのkanji/> # 漢字索引と書き順・使用例データを再生成（引数なしなら使用例だけ更新）
+npm run sentences  # 文を作る練習の問題を教材から再生成（npm run content のあと）
 
 npx playwright install chromium
 npm run test:e2e   # ChromiumでPC・モバイルを確認
@@ -157,7 +159,9 @@ Cloudflare対応では、型チェック・Lint・通常テスト98件、Workers
 
 ```text
 content/kanji/n5.txt      N5漢字の読み・意味（npm run kanji の入力）
-public/kanji/             KanjiVG由来の書き順データ（CC BY-SA 3.0）
+public/sentences/         文を作る練習の問題（npm run sentences の生成物）
+public/content/           レベル別の教材本文（npm run content の生成物。Workerに含めない静的ファイル）
+public/kanji/             KanjiVG由来の書き順データ（CC BY-SA 3.0）と教材からの使用例
 messages/                 英語・ロシア語のUI翻訳（同一キー）
 src/
   app/
@@ -170,10 +174,11 @@ src/
   content/
     schemas.ts             教材・問題・単語のZod定義
     catalog.ts             全ページで使う軽量な教材索引
-    load.ts                レベル別の教材本文を必要時に読み込み
+    load.ts                レベル別の教材本文（public/content/）を必要時に取得
     lessons.ts             全教材（テスト用）
-    generated/             npm run content / npm run kanji の生成物（手で編集しない）
-    kanji.ts               漢字索引の読み込み
+    generated/             npm run content / npm run kanji の生成物（索引。手で編集しない）
+    kanji.ts               漢字索引と、書き順・使用例の読み込み
+    sentences.ts           文を作る練習の問題の読み込みと判定
     grammar.ts             追加の文法レッスン・固定問題
     vocabulary.ts          共通の日本語100語・読み・英露の意味
   i18n/                   next-intlのルーティング・リクエスト設定

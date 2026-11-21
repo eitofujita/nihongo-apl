@@ -1,20 +1,24 @@
-// Client-side loading of full lesson bodies, one JLPT level per chunk.
-import {getLessonMeta, lessonForQuestion, type Level} from './catalog';
+// Client-side loading of full lesson bodies, one JLPT level per request. The bodies are static files
+// (public/content/<level>.json, written by `npm run content`), so they stay out of every JS bundle and
+// out of the Cloudflare Worker; the hash in the catalog makes each content change a new URL.
+import {contentVersion, getLessonMeta, lessonForQuestion, type Level} from './catalog';
 import type {Lesson, Question} from './schemas';
 
 export type FullLesson = Lesson & {level: Level; levelNumber: number};
 
-const loaders: Record<Level, () => Promise<{default: unknown}>> = {
-  N5: () => import('./generated/n5.json'),
-  N4: () => import('./generated/n4.json'),
-  N3: () => import('./generated/n3.json')
-};
+async function fetchLevel(level: Level): Promise<FullLesson[]> {
+  const response = await fetch(`/content/${level.toLowerCase()}.json?v=${contentVersion(level)}`);
+  if (!response.ok) throw new Error(`Lessons ${level}: ${response.status}`);
+  const body: unknown = await response.json();
+  if (!Array.isArray(body)) throw new Error(`Lessons ${level}: bad format`);
+  return body as FullLesson[];
+}
 const cache = new Map<Level, Promise<FullLesson[]>>();
 
 export function loadLevel(level: Level): Promise<FullLesson[]> {
   let pending = cache.get(level);
   if (!pending) {
-    pending = loaders[level]().then(module => module.default as FullLesson[]);
+    pending = fetchLevel(level);
     pending.catch(() => cache.delete(level));
     cache.set(level, pending);
   }
