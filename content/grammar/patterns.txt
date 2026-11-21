@@ -1,0 +1,266 @@
+# Grammar forms shown in each lesson ("How to build it").
+# lesson id | form ; form ; …   Tokens in {braces} are translated by scripts/build-content.mts:
+# {N} noun  {V-dict} {V-masu} {V-te} {V-ta} {V-nai} {V-nai-stem} {V-ba} {V-vol} {V-pot} {V-plain}
+# {A-i} {A-i-stem} {A-na} {plain} {Q} {S} {num} {person} {place} {time} {neg} {V-caus} {V-caus-te} {V-pass}
+# [English~Russian] is a short note shown in the learner's language.
+n5-wa-desu | {N}は {N}です
+n5-ka | {S} + か
+n5-kore | これ・それ・あれ・どれ + は {N}です
+n5-no | {N}の{N}
+n5-negative | {N}ではありません ; {N}じゃありません ; {N}じゃないです
+n5-mo | {N}も
+n5-wo | {N}を + {V}
+n5-de | {place}で + {V}
+n5-time-ni | {time}に + {V}
+n5-direction | {place}へ + 行きます・来ます・帰ります
+n5-arimasu | {place}に {N}があります ; {N}は {place}にあります
+n5-imasu | {place}に {person}がいます ; {person}は {place}にいます
+n5-verbs | {V-masu} + ます ; {V-masu} + ません
+n5-past | {V-masu} + ました ; {V-masu} + ませんでした
+n5-i-adjectives | {A-i} + です ; {A-i-stem} + くないです ; {A-i} + {N}
+n5-na-adjectives | {A-na} + です ; {A-na} + ではありません ; {A-na} + な + {N}
+n5-kono | この・その・あの・どの + {N}
+n5-suki | {N}が好きです ; {N}が好きではありません
+n5-te-kudasai | {V-te} + ください
+n5-invitations | {V-masu} + ましょう ; {V-masu} + ませんか
+n5-ga-subject | {N}が + {V} ; {Q}が + {V}か
+n5-to-and | {N}と{N} ; {person}と + {V}
+n5-ya | {N}や{N}など
+n5-kara-made | {time}・{place}から {time}・{place}まで
+n5-kara-reason | {S}（です・ます）から、{S}
+n5-ga-but | {S}（です・ます）が、{S}
+n5-koko | ここ・そこ・あそこ・どこ ; {N}は ここです ; {N}は どこですか
+n5-question-words | 何・だれ・いつ・どこ + ですか ; {Q}が・を + {V}か
+n5-ikura | {N}はいくらですか ; {N}はいくつありますか
+n5-doushite | どうして・なぜ + {S}か ; {S}から [(answer)~(ответ)]
+n5-ne-yo | {S} + ね ; {S} + よ
+n5-counters-tsu | ひとつ…とお ; {N}を + {num} + {V}
+n5-counters | {num} + 人・枚・本・冊・台・匹 ; {N}を + {num} + {V}
+n5-plain-da | {N}・{A-na} + だ ; {N}・{A-na} + だった ; {N}・{A-na} + じゃない
+n5-dictionary-form | 食べます → 食べる ; 書きます → 書く ; します → する ; 来ます → 来る
+n5-nai-form | 食べる → 食べない ; 書く → 書かない ; 会う → 会わない ; する → しない ; 来る → 来ない ; ある → ない
+n5-ta-form | 食べる → 食べた ; 書く → 書いた ; 飲む → 飲んだ ; 待つ → 待った ; 行く → 行った ; する → した
+n5-te-form | {V-te}、{V-te}、{V} ; 書く → 書いて ; 飲む → 飲んで ; 待つ → 待って ; 行く → 行って
+n5-te-iru | {V-te} + います ; {V-te} + いません
+n5-te-iru-state | 住んでいます・結婚しています・知っています ; 知りません [(negative)~(отрицание)]
+n5-tai | {V-masu} + たいです ; {V-masu} + たくないです ; {V-masu} + たかったです
+n5-hoshii | {N}がほしいです ; {N}はほしくないです
+n5-te-mo-ii | {V-te} + もいいですか ; {V-te} + もいいです
+n5-te-wa-ikenai | {V-te} + はいけません
+n5-nakereba | {V-nai-stem} + なければなりません ; {V-nai-stem} + なければいけません
+n5-nakute-mo-ii | {V-nai-stem} + なくてもいいです
+n5-naide-kudasai | {V-nai} + でください
+n5-mae-ni | {V-dict} + まえに ; {N}のまえに
+n5-ato-de | {V-ta} + あとで ; {N}のあとで
+n5-te-kara | {V-te} + から、{S}
+n5-toki | {V-plain}・{A-i} + とき ; {A-na} + なとき ; {N}のとき
+n5-nagara | {V-masu} + ながら + {V}
+n5-tari | {V-ta} + り、{V-ta} + りします
+n5-deshou | {plain} + でしょう ; {N}・{A-na} + でしょう
+n5-ni-iku | {place}へ + {V-masu} + に行きます ; {place}へ + {N} + に行きます
+n5-ichiban | {N}の中で {N}がいちばん + {A-i}・{A-na}
+n5-yori-hou | AはBより + {A-i}・{A-na} ; Bより Aのほうが + {A-i}・{A-na} ; AとBとどちらが…か
+n5-naru | {A-i-stem} + くなる ; {A-na}・{N} + になる
+n5-mou-mada | もう + {V-masu}ました ; まだ + {V-te}いません ; まだ + {V-te}います
+n5-amari | あまり + {neg} ; ぜんぜん + {neg}
+n5-adj-te | {A-i-stem} + くて、… ; {A-na}・{N} + で、… ; いい → よくて
+n5-adj-past | {A-i-stem} + かったです ; {A-i-stem} + くなかったです ; いい → よかった
+n5-na-past | {A-na}・{N} + でした ; {A-na}・{N} + ではありませんでした
+n5-gurai-goro | {num}・時間 + ぐらい ; {time} + ごろ
+n5-dake | {N}・{num} + だけ
+n5-ga-wakaru | {N}が分かります ; {N}ができます ; {N}が上手です・下手です
+n5-adverbs | {A-i-stem} + く + {V} ; {A-na} + に + {V}
+n5-no-one | {A-i} + の ; {N}の（もの）
+n5-mashou-ka | {V-masu} + ましょうか
+n5-dore | どれ [(of three or more)~(из трёх и более)] ; どの + {N} ; どちら [(of two)~(из двух)]
+n5-wo-kudasai | {N}をください ; {N}を + {num} + ください
+n5-ka-or | {N}か{N}
+n5-nanimo | 何も + {neg} ; だれも + {neg} ; どこへも・どこにも + {neg}
+n4-potential | 食べる → 食べられる ; 書く → 書ける ; する → できる ; 来る → 来られる ; {N}が + {V-pot}
+n4-koto-ga-dekiru | {V-dict} + ことができる ; {N}ができる
+n4-ta-koto-ga-aru | {V-ta} + ことがある ; {V-ta} + ことがない
+n4-koto-ga-aru-sometimes | {V-dict} + ことがある ; {V-nai} + ことがある
+n4-tsumori | {V-dict} + つもりです ; {V-nai} + つもりです
+n4-yotei | {V-dict} + 予定です ; {N}の予定です
+n4-volitional | 食べる → 食べよう ; 行く → 行こう ; する → しよう ; 来る → 来よう
+n4-you-to-omou | {V-vol} + と思っています ; {V-vol} + と思います
+n4-you-ni-suru | {V-dict} + ようにする ; {V-nai} + ようにする
+n4-you-ni-naru | {V-dict}・{V-pot} + ようになる ; {V-nai-stem} + なくなる
+n4-tame-ni | {V-dict} + ために ; {N}のために
+n4-you-ni-purpose | {V-dict}・{V-pot} + ように ; {V-nai} + ように
+n4-sou-looks | {V-masu} + そうだ ; {A-i-stem}・{A-na} + そうだ ; いい → よさそう ; ない → なさそう
+n4-sou-hearsay | {plain} + そうだ ; {N}・{A-na} + だそうだ
+n4-you-da | {plain} + ようだ ; {A-na} + なようだ ; {N}のようだ
+n4-mitai | {plain} + みたいだ ; {N}・{A-na} + みたいだ ; {N}みたいな{N}
+n4-rashii | {plain} + らしい ; {N}らしい [(typical of)~(типичный для)]
+n4-hazu | {plain} + はずだ ; {A-na} + なはずだ ; {N}のはずだ ; はずがない
+n4-kamo-shirenai | {plain} + かもしれない ; {N}・{A-na} + かもしれない
+n4-to-omou | {plain} + と思う ; {N}・{A-na} + だと思う
+n4-to-iu-quote | 「…」と言う ; {plain} + と言う ; {Q}…か + 聞く
+n4-to-iu-named | AというB ; Aというのは…です
+n4-to-conditional | {V-dict} + と、{S}
+n4-ba | {V-ba} ; {A-i-stem} + ければ ; {N}・{A-na} + なら ; どう + すればいいですか
+n4-tara | {V-ta} + ら、{S} ; {A-i-stem} + かったら ; {N}・{A-na} + だったら
+n4-nara | {plain} + なら ; {N}なら
+n4-temo | {V-te} + も ; {A-i-stem} + くても ; {N}・{A-na} + でも ; いくら + {V-te}も
+n4-noni | {plain} + のに ; {N}・{A-na} + なのに
+n4-node | {plain} + ので ; {N}・{A-na} + なので
+n4-shi | {plain} + し、{plain} + し ; {N}・{A-na} + だし
+n4-sugiru | {V-masu} + すぎる ; {A-i-stem}・{A-na} + すぎる
+n4-yasui-nikui | {V-masu} + やすい ; {V-masu} + にくい
+n4-kata | {V-masu} + 方 ; {N}の + {V-masu}方
+n4-compound-verbs | {V-masu} + 始める ; {V-masu} + 終わる ; {V-masu} + 続ける
+n4-te-shimau | {V-te} + しまう ; 〜てしまった → 〜ちゃった
+n4-te-oku | {V-te} + おく ; 〜ておく → 〜とく
+n4-te-aru | {N}が + {V-te}ある [(transitive verb)~(переходный глагол)]
+n4-te-miru | {V-te} + みる
+n4-te-iku-kuru | {V-te} + いく ; {V-te} + くる
+n4-giving | {person}に{N}をあげる ; {person}が（私に）{N}をくれる ; {person}に・から{N}をもらう
+n4-te-ageru | {V-te} + あげる ; {V-te} + くれる ; {person}に + {V-te}もらう
+n4-causative | 食べる → 食べさせる ; 書く → 書かせる ; する → させる ; {person}に・を + {V-caus}
+n4-sasete-kudasai | {V-caus-te} + ください
+n4-passive | 食べる → 食べられる ; 書く → 書かれる ; する → される ; {person}に + {V-pass}
+n4-causative-passive | 食べる → 食べさせられる ; 飲む → 飲まされる ; する → させられる
+n4-honorific-verbs | いらっしゃる ; おっしゃる ; 召し上がる ; ご覧になる ; なさる ; くださる
+n4-o-ni-naru | お + {V-masu} + になる ; ご + {N} + になる
+n4-humble-verbs | 参る ; 申す ; いただく ; 拝見する ; いたす ; おる ; 伺う ; 差し上げる
+n4-o-suru | お + {V-masu} + する・いたす ; ご + {N} + する・いたす
+n4-imperative | 書く → 書け ; 食べる → 食べろ ; する → しろ ; 来る → 来い ; {V-dict} + な ; {V-masu} + なさい
+n4-ka-douka | {plain} + かどうか ; {Q}… + か
+n4-no-wa | {plain} + のが好き ; {plain} + のを忘れる ; {plain} + のは…
+n4-koto-ni-suru | {V-dict}・{V-nai} + ことにする ; 〜ことにしている
+n4-koto-ni-naru | {V-dict}・{V-nai} + ことになる ; 〜ことになっている
+n4-tokoro | {V-dict} + ところだ ; {V-te}いる + ところだ ; {V-ta} + ところだ
+n4-ta-bakari | {V-ta} + ばかりだ
+n4-made-ni | {time} + まで [(until, continuously)~(до, всё время)] ; {time} + までに [(by a deadline)~(к сроку)]
+n4-aida | {V-te}いる・{N}の + 間 [(the whole time)~(всё время)] ; {V-te}いる・{N}の + 間に [(at some point during)~(в какой-то момент)]
+n4-naide | {V-nai} + で、{V}
+n4-zu-ni | {V-nai-stem} + ずに ; する → せずに
+n4-nakute | {V-nai-stem} + なくて、{S}
+n4-hodo-nai | AはBほど + {neg}
+n4-shika | {N}・{num} + しか + {neg}
+n4-demo | {N}でも + {V-masu}ませんか ; {N}でも [(even)~(даже)] ; {Q} + でも
+n4-mo-emphasis | {num} + も ; 一人・一度 + も + {neg}
+n4-hou-ga-ii | {V-ta} + ほうがいい ; {V-nai} + ほうがいい
+n4-tara-dou | {V-ta} + らどうですか
+n4-nakucha | {V-nai-stem} + なきゃ ; {V-nai-stem} + なくちゃ
+n4-te-mo-kamawanai | {V-te} + もかまいません ; {V-nai-stem} + なくてもかまいません
+n4-tte | {plain} + って [(quote)~(цитата)] ; {N}って [(topic)~(тема)]
+n4-ga-suru | におい・音・味・気 + がする
+n4-ni-suru | {N}にする
+n4-ku-suru | {A-i-stem} + くする ; {A-na}・{N} + にする
+n4-baai | {plain} + 場合は ; {N}の場合は
+n4-oki-ni | {num} + おきに
+n4-nakanaka | なかなか + {neg} ; なかなか + {A-i} [(quite)~(довольно)]
+n4-sa | {A-i-stem} + さ ; {A-na} + さ
+n4-te-hoshii | {person}に + {V-te}ほしい ; {person}に + {V-nai}でほしい
+n4-garu | {A-i-stem}・{A-na} + がる ; {V-masu} + たがる
+n4-itadakemasen-ka | {V-te} + いただけませんか ; {V-te} + もらえませんか ; {V-te} + くれませんか
+n4-n-desu | {plain} + んです ; {N}・{A-na} + なんです
+n4-mama | {V-ta} + まま ; {V-nai} + まま ; {N}のまま
+n4-you-ni-iu | {V-dict}・{V-nai} + ように言う・頼む・注意する
+n4-toka | {N}とか{N}とか ; {plain} + とか
+n3-uchi-ni | {V-dict}・{V-te}いる + うちに ; {A-i} + うちに ; {V-nai} + うちに
+n3-okage-de | {plain} + おかげで ; {N}のおかげで
+n3-sei-de | {plain} + せいで ; {N}のせいで ; 〜せいか
+n3-ni-yotte | {N}によって ; {N}による + {N}
+n3-ni-yoru-to | {N}によると ; {N}によれば
+n3-ni-tsuite | {N}について ; {N}に関して ; {N}に関する + {N}
+n3-ni-taishite | {N}に対して ; {plain} + のに対して ; {N}に対する + {N}
+n3-ni-totte | {N}にとって
+n3-to-shite | {N}として ; {N}としての + {N}
+n3-wake-da | {plain} + わけだ ; {A-na} + なわけだ
+n3-wake-dewa-nai | {plain} + わけではない ; {A-na} + なわけではない
+n3-wake-ga-nai | {plain} + わけがない
+n3-wake-ni-wa-ikanai | {V-dict} + わけにはいかない ; {V-nai} + わけにはいかない
+n3-koto-wa-nai | {V-dict} + ことはない
+n3-beki | {V-dict} + べきだ ; {V-dict} + べきではない ; する → すべき
+n3-ni-chigai-nai | {plain} + に違いない ; {N}・{A-na} + に違いない
+n3-kawari-ni | {N}のかわりに ; {V-dict} + かわりに
+n3-kuse-ni | {plain} + くせに ; {A-na} + なくせに ; {N}のくせに
+n3-tatoe-temo | たとえ + {V-te}も ; たとえ + {N}でも
+n3-to-shite-mo | {plain} + としても
+n3-ni-shite-wa | {plain}・{N} + にしては
+n3-wari-ni | {plain} + わりに ; {N}のわりに
+n3-hodo-degree | {plain} + ほど
+n3-ba-hodo | {V-ba} + {V-dict}ほど ; {A-i-stem}ければ + {A-i}ほど
+n3-sae | {N}さえ ; {N}でさえ
+n3-sae-ba | {N}さえ + {V-ba} ; {V-masu}さえすれば
+n3-koso | {N}こそ ; {plain}からこそ
+n3-nante | {N}なんか ; {plain}・{N} + なんて
+n3-mono-da | {V-dict} + ものだ ; {V-ta} + ものだ
+n3-mono-reason | だって、{plain} + もん・もの
+n3-kara-ni-kakete | Aから Bにかけて
+n3-wo-chuushin-ni | {N}を中心に
+n3-wo-toshite | {N}を通して ; {N}を通じて
+n3-ni-kurabete | {N}に比べて ; {N}に比べると
+n3-ni-kuwaete | {N}に加えて
+n3-ni-tsurete | {V-dict}・{N} + につれて
+n3-ni-shitagatte | {V-dict} + にしたがって ; {N}にしたがって
+n3-to-tomo-ni | {N}とともに ; {V-dict} + とともに
+n3-ta-totan | {V-ta} + とたん（に）
+n3-tabi-ni | {V-dict} + たびに ; {N}のたびに
+n3-saichuu | {V-te}いる + 最中に ; {N}の最中に
+n3-te-kara-de-nai-to | {V-te} + からでないと + {neg}
+n3-toori | {V-dict}・{V-ta} + とおりに ; {N}のとおりに ; {N}どおりに
+n3-to-iu-koto-da | {plain} + ということだ
+n3-to-iu-yori | AというよりB
+n3-to-ieba | {N}といえば ; {N}というと
+n3-to-sureba | {plain} + とすれば ; {plain} + としたら
+n3-ba-yokatta | {V-ba} + よかった ; {V-nai-stem} + なければよかった
+n3-ppanashi | {V-masu} + っぱなし
+n3-tsuide-ni | {V-dict}・{V-ta} + ついでに ; {N}のついでに
+n3-kiru | {V-masu} + きる ; {V-masu} + きれない
+n3-kakeru | {V-masu} + かける ; {V-masu} + かけの + {N}
+n3-au | {V-masu} + 合う
+n3-naosu | {V-masu} + 直す
+n3-osore-ga-aru | {V-dict} + おそれがある ; {N}のおそれがある
+n3-gachi | {V-masu}・{N} + がち
+n3-gimi | {V-masu}・{N} + 気味
+n3-ppoi | {N}・{A-i-stem}・{V-masu} + っぽい
+n3-darake | {N}だらけ
+n3-muke | {N}向け ; {N}向き
+n3-ippou-da | {V-dict} + 一方だ
+n3-you-to-suru | {V-vol} + とする ; {V-vol} + としない
+n3-tokoro-ni | {V}ところに・ところへ ; {V}ところを
+n3-ta-tokoro | {V-ta} + ところ、{S}
+n3-te-tamaranai | {V-te}・{A-i-stem}くて・{A-na}で + たまらない
+n3-te-shouganai | {V-te}・{A-i-stem}くて・{A-na}で + しょうがない・しかたがない
+n3-nai-koto-wa-nai | {V-nai} + ことはない
+n3-naide-sumu | {V-nai} + で済む ; {V-nai-stem} + ずに済む
+n3-wa-mochiron | Aはもちろん Bも
+n3-dake-de-naku | Aだけでなく Bも ; Aばかりでなく Bも
+n3-ue-ni | {plain} + うえに ; {A-na} + なうえに ; {N}のうえに
+n3-ni-kagiru | {V-dict}・{N} + に限る
+n3-shika-nai | {V-dict} + しかない ; {V-dict} + ほかない
+n3-te-bakari-iru | {V-te} + ばかりいる ; {N}ばかり + {V}
+n3-te-irai | {V-te} + 以来 ; {N}以来
+n3-you-ni-wish | {V-masu} + ますように
+n3-koto-da | {V-dict} + ことだ ; {V-nai} + ことだ
+n3-ge | {A-i-stem}・{A-na} + げ ; 〜げな + {N} ; 〜げに + {V}
+n3-teki | {N} + 的 ; {N}的な + {N} ; {N}的に + {V}
+n3-ippou-de | {plain} + 一方（で） ; {A-na} + な一方で
+n3-hanmen | {plain} + 反面 ; {A-na} + な反面
+n3-wo-hajime | {N}をはじめ ; {N}をはじめとして
+n3-wo-kikkake-ni | {N}をきっかけに ; {plain}ことをきっかけに
+n3-to-wa-kagiranai | {plain} + とは限らない ; 必ずしも…とは限らない
+n3-kara-to-itte | {plain} + からといって + {neg}
+n3-ni-shite-mo | {plain}・{N} + にしても
+n3-kurai-degree | {plain} + くらい・ぐらい ; {N}ぐらい [(at least)~(хотя бы)]
+n3-hodo-wa-nai | Aほど + {A-i}・{A-na} + {N}はない
+n3-te-hajimete | {V-te} + はじめて
+n3-te-mo-shikata-ga-nai | {V-te} + もしかたがない
+n3-ni-kawatte | {N}にかわって
+n3-hazu-datta | {plain} + はずだった ; {N}のはずだった
+n3-ta-tsumori | {V-ta} + つもりだった ; {V-ta} + つもりで
+n3-ka-no-you-ni | {plain} + かのように ; {plain} + かのような + {N}
+n3-you-ni-mieru | {plain} + ように見える ; {N}のように見える
+n3-furi | {plain} + ふりをする ; {A-na} + なふり ; {N}のふり
+n3-te-goran | {V-te} + ごらん（なさい）
+n3-ni-watatte | {N}にわたって ; {N}にわたる + {N}
+n3-ue-de | {V-ta} + 上で ; {V-dict} + 上で
+n3-koto-ni | {A-i}・{A-na}な・{V-ta} + ことに、{S}
+n3-kke | {plain} + っけ ; {N}だっけ・だったっけ
+n3-zu | {V-nai-stem} + ず ; する → せず
+n3-sasete-itadaku | {V-caus-te} + いただく
+n3-bakari-ka | {plain} + ばかりか ; {N}ばかりか、…まで・も
