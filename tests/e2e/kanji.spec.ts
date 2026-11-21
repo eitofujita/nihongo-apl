@@ -98,6 +98,17 @@ test('practising a missed kanji returns to the same test and lets you continue',
   await expect(page.getByText('Question 2 of 2')).toBeVisible();
 });
 
+test('the kanji list keeps the N4 tab when coming back from a kanji page', async ({page}) => {
+  await page.goto('/en/kanji');
+  await page.getByRole('tab', {name: /N4/}).click();
+  await expect(page).toHaveURL(/level=N4/);
+  await page.getByRole('link', {name: /^魚/}).click();
+  await expect(page.getByRole('heading', {name: 'fish'})).toBeVisible();
+  await page.getByRole('link', {name: 'All kanji'}).click();
+  await expect(page.getByRole('tab', {name: /N4/})).toHaveAttribute('aria-selected', 'true');
+  await expect(page.getByRole('link', {name: /^魚/})).toBeVisible();
+});
+
 test('kanji can be searched by meaning, reading or romaji, also when choosing a test', async ({page}) => {
   await page.goto('/en/kanji');
   const search = page.getByRole('searchbox', {name: 'Search kanji'});

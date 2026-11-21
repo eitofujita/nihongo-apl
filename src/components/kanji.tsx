@@ -3,6 +3,7 @@
 import {useEffect, useMemo, useRef, useState, type PointerEvent as ReactPointerEvent} from 'react';
 import {useLocale, useTranslations} from 'next-intl';
 import {ArrowLeft, ArrowRight, Check, ClipboardCheck, Eye, PenLine, RotateCcw, Search, Shuffle, X} from 'lucide-react';
+import {useSearchParams} from 'next/navigation';
 import {Link} from '@/i18n/navigation';
 import {getKanji, kanjiList, loadKanjiDetail, type KanjiDetail, type KanjiInfo} from '@/content/kanji';
 import type {Locale} from '@/i18n/routing';
@@ -22,6 +23,18 @@ const KANJI_LEVELS = ['N5', 'N4'] as const;
 type KanjiLevel = typeof KANJI_LEVELS[number];
 const inLevel = (level: KanjiLevel) => kanjiList.filter(kanji => kanji.level === level);
 
+/** The open level lives in the URL (?level=N4), so coming back from a kanji page reopens the same tab. */
+function useLevelParam(): [KanjiLevel, (level: KanjiLevel) => void] {
+  const fromUrl = useSearchParams().get('level');
+  const [level, setLevel] = useState<KanjiLevel>(KANJI_LEVELS.find(item => item === fromUrl) ?? 'N5');
+  return [level, next => {
+    setLevel(next);
+    const url = new URL(window.location.href);
+    url.searchParams.set('level', next);
+    window.history.replaceState(window.history.state, '', url);
+  }];
+}
+
 /** N5 / N4 switcher; each tab shows how many kanji of that level are written from memory. */
 function KanjiLevelTabs({level, onChange}: {level: KanjiLevel; onChange: (level: KanjiLevel) => void}) {
   const t = useTranslations('App');
@@ -40,7 +53,7 @@ export function KanjiList() {
   const locale = useLocale() as Locale;
   const store = useKanjiProgress();
   const [query, setQuery] = useState('');
-  const [level, setLevel] = useState<KanjiLevel>('N5');
+  const [level, setLevel] = useLevelParam();
   const levelList = useMemo(() => inLevel(level), [level]);
   // A search looks through every level, so learners need not know where a kanji belongs.
   const shown = useMemo(() => query.trim() ? searchKanji(kanjiList, query) : levelList, [query, levelList]);
@@ -256,7 +269,7 @@ function PracticeBoard({kanji, detail, onBack}: {kanji: KanjiInfo; detail: Kanji
 
   return <article className="kanji-practice">
     {onBack ? <button type="button" className="back-link" onClick={onBack}><ArrowLeft size={16}/>{t('kanjiTestBackToTest')}</button>
-      : <Link className="back-link" href="/kanji"><ArrowLeft size={16}/>{t('kanjiBack')}</Link>}
+      : <Link className="back-link" href={`/kanji?level=${kanji.level}`}><ArrowLeft size={16}/>{t('kanjiBack')}</Link>}
     <div className="kanji-layout">
       <section className="kanji-info" aria-label={t('kanjiAbout')}>
         <p className={`kanji-big ${hidden ? 'is-hidden' : ''}`} lang="ja" aria-hidden={hidden}>{hidden ? '?' : kanji.char}</p>
@@ -331,8 +344,9 @@ function TestSetup({selected, onChange, onStart}: {selected: Set<string>; onChan
     if (next.has(id)) next.delete(id); else next.add(id);
     onChange(next);
   };
-  const [level, setLevel] = useState<KanjiLevel>('N5');
+  const [level, setLevel] = useLevelParam();
   const levelList = useMemo(() => inLevel(level), [level]);
+  const unpicked = levelList.filter(kanji => !selected.has(kanji.id));
   // Quick-select buttons act on the open level; picks from other levels stay selected.
   const notMastered = levelList.filter(kanji => store[kanji.char]?.passed !== 'recall');
   const addAll = (items: KanjiInfo[]) => onChange(new Set([...selected, ...items.map(k => k.id)]));
@@ -345,7 +359,7 @@ function TestSetup({selected, onChange, onStart}: {selected: Set<string>; onChan
     <div className="kanji-test-toolbar" role="group" aria-label={t('kanjiTestQuickSelect')}>
       <button className="button outline" onClick={() => addAll(levelList)}>{t('kanjiTestSelectAll')}</button>
       <button className="button outline" onClick={() => addAll(notMastered)} disabled={!notMastered.length}>{t('kanjiTestNotMastered', {count: notMastered.length})}</button>
-      <button className="button outline" onClick={() => addAll(shuffled(levelList.filter(k => !selected.has(k.id))).slice(0, RANDOM_COUNT))}><Shuffle size={15}/>{t('kanjiTestRandom', {count: RANDOM_COUNT})}</button>
+      <button className="button outline" onClick={() => addAll(shuffled(unpicked).slice(0, RANDOM_COUNT))} disabled={!unpicked.length}><Shuffle size={15}/>{t('kanjiTestRandom', {count: RANDOM_COUNT})}</button>
       <button className="button outline" onClick={() => onChange(new Set())} disabled={!selected.size}><X size={15}/>{t('kanjiTestClear')}</button>
     </div>
     <KanjiSearch query={query} onChange={setQuery} count={shown.length}/>
