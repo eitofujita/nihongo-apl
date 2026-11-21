@@ -315,7 +315,14 @@ for (const lesson of all) {
 mkdirSync(path('src/content/generated'), {recursive: true});
 const json = (value: unknown) => JSON.stringify(value) + '\n';
 const catalog = {
-  lessons: all.map(l => ({id: l.id, number: l.number, levelNumber: l.levelNumber, level: l.level, category: l.category, title: l.title, description: l.description, glyph: l.glyph, color: l.color, wordCount: l.words.length, questionIds: l.questions.map(q => q.id)})),
+  // Compact on purpose: this index ships with every page. Order gives the lesson numbers, and question
+  // ids that follow "<lesson>-<n>" are stored as a count (src/content/catalog.ts expands both).
+  lessons: all.map(l => {
+    const ids = l.questions.map(q => q.id);
+    const derived = ids.every((id, i) => id === `${l.id}-${i + 1}`);
+    return {id: l.id, level: l.level, category: l.category, title: l.title, description: l.description, glyph: l.glyph,
+      ...(l.words.length ? {words: l.words.length} : {}), ...(derived ? {questions: ids.length} : {questionIds: ids})};
+  }),
   placement
 };
 // Lesson bodies are static files under public/content: the browser fetches one level when needed,

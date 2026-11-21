@@ -23,7 +23,7 @@ test('a new learner can choose the diagnostic or start lesson one in either lang
     await expect(page.locator('.placement-link')).toHaveCount(0);
     await page.locator('.first-lesson-link').click();
     await expect(page).toHaveURL(new RegExp(`/${locale}/lessons/n5-wa-desu$`));
-    await expect(page.locator('.study-example')).toBeVisible();
+    await expect(page.locator('.study-example').first()).toBeVisible();
   }
 });
 
@@ -148,7 +148,7 @@ test('the tutor provides a Russian explanation without calling a live AI', async
 test('lessons teach before practice and vocabulary includes kana readings in Russian', async ({page}) => {
   await page.goto('/en/lessons/n5-te-kudasai');
   await expect(page.getByText('See it in context')).toBeVisible();
-  await expect(page.locator('.study-example')).toContainText('名前を書いてください');
+  await expect(page.locator('.study-example').first()).toContainText('名前を書いてください');
   await expect(page.getByRole('radio')).toHaveCount(0);
   await page.getByRole('button', {name: 'Start practice'}).click();
   await expect(page.getByRole('radio')).toHaveCount(4);

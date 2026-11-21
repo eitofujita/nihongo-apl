@@ -8,11 +8,18 @@ export type Level = typeof LEVELS[number];
 export type LocalizedText = {en: string; ru: string};
 export type LessonMeta = {
   id: string; number: number; levelNumber: number; level: Level; category: 'grammar' | 'vocabulary';
-  title: LocalizedText; description: LocalizedText; glyph: string; color: 'green' | 'peach' | 'purple';
+  title: LocalizedText; description: LocalizedText; glyph: string;
   wordCount: number; questionIds: string[];
 };
 
-export const lessons = data.lessons as LessonMeta[];
+type StoredLesson = Omit<LessonMeta, 'number' | 'levelNumber' | 'wordCount' | 'questionIds'> & {words?: number; questions?: number; questionIds?: string[]};
+const levelCounters = new Map<string, number>();
+export const lessons: LessonMeta[] = (data.lessons as StoredLesson[]).map(({words, questions, questionIds, ...lesson}, index) => {
+  const levelNumber = (levelCounters.get(lesson.level) ?? 0) + 1;
+  levelCounters.set(lesson.level, levelNumber);
+  return {...lesson, number: index + 1, levelNumber, wordCount: words ?? 0,
+    questionIds: questionIds ?? Array.from({length: questions ?? 0}, (_, i) => `${lesson.id}-${i + 1}`)};
+});
 export const placementQuestions = data.placement as Question[];
 const versions = data.versions as Record<Level, string>;
 /** Content hash of a level's lesson file, used to bust caches when the curriculum changes. */
