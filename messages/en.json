@@ -289,7 +289,7 @@
     "kanji": "Kanji writing",
     "kanjiTitle": "Kanji writing",
     "kanjiSub": "Learn kanji by writing them stroke by stroke, with your finger, a pen, or a mouse.",
-    "kanjiSummary": "JLPT N5 · {count} kanji",
+    "kanjiSummary": "JLPT N5–N4 · {count} kanji",
     "kanjiModesExplained": "Each kanji has three steps: trace the model, write with only the grid, then write from the meaning and readings alone.",
     "kanjiProgress": "{done} / {total} written from memory",
     "kanjiStatus_new": "Not started",

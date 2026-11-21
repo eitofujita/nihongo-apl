@@ -19,3 +19,28 @@
 南 | 駅{えき}の南口{みなみぐち}で会{あ}いましょう。 | Let’s meet at the south exit of the station. | Давайте встретимся у южного выхода станции.
 耳 | 耳{みみ}が痛{いた}いです。 | My ear hurts. | У меня болит ухо.
 耳 | うさぎは耳{みみ}が長{なが}いです。 | Rabbits have long ears. | У кроликов длинные уши.
+# N4 kanji with few curriculum sentences
+同 | 私{わたし}と兄{あに}は同{おな}じ学校{がっこう}に通{かよ}っています。 | My older brother and I go to the same school. | Мы со старшим братом ходим в одну школу.
+同 | 同{おな}じものをもう一{ひと}つください。 | One more of the same, please. | Дайте, пожалуйста, ещё одно такое же.
+主 | この話{はなし}の主人公{しゅじんこう}は小{ちい}さい男{おとこ}の子{こ}です。 | The main character of this story is a little boy. | Главный герой этой истории — маленький мальчик.
+主 | 主{おも}な料理{りょうり}は魚{さかな}です。 | The main dish is fish. | Основное блюдо — рыба.
+売 | この店{みせ}では古{ふる}い本{ほん}を売{う}っています。 | This shop sells old books. | В этом магазине продают старые книги.
+売 | 新{あたら}しいゲームはすぐに売{う}れました。 | The new game sold out right away. | Новая игра сразу раскупилась.
+集 | 朝{あさ}九時{くじ}に駅{えき}の前{まえ}に集{あつ}まってください。 | Please gather in front of the station at nine in the morning. | Соберитесь, пожалуйста, перед станцией в девять утра.
+集 | 弟{おとうと}は切手{きって}を集{あつ}めています。 | My younger brother collects stamps. | Мой младший брат собирает марки.
+別 | 駅{えき}で友達{ともだち}と別{わか}れました。 | I parted from my friend at the station. | Я попрощался с другом на станции.
+別 | 別{べつ}の色{いろ}はありますか。 | Do you have another color? | У вас есть другой цвет?
+品 | この店{みせ}の品物{しなもの}はとても安{やす}いです。 | The goods in this shop are very cheap. | Товары в этом магазине очень дешёвые.
+品 | 食料品{しょくりょうひん}は地下{ちか}で売{う}っています。 | Groceries are sold in the basement. | Продукты продаются на цокольном этаже.
+特 | 今日{きょう}は特{とく}に寒{さむ}いです。 | It is especially cold today. | Сегодня особенно холодно.
+特 | 特急{とっきゅう}で大阪{おおさか}へ行{い}きました。 | I went to Osaka by limited express. | Я поехал в Осаку на скором поезде.
+青 | 今日{きょう}は空{そら}がとても青{あお}いです。 | The sky is very blue today. | Сегодня небо очень синее.
+青 | 信号{しんごう}が青{あお}になったら、渡{わた}ってください。 | Please cross when the light turns green. | Переходите, когда загорится зелёный.
+色 | 好{す}きな色{いろ}は何{なん}ですか。 | What is your favorite color? | Какой у вас любимый цвет?
+色 | 秋{あき}になると、山{やま}の色{いろ}が変{か}わります。 | In autumn, the color of the mountains changes. | Осенью горы меняют цвет.
+洋 | 母{はは}は洋服{ようふく}を作{つく}るのが上手{じょうず}です。 | My mother is good at making Western clothes. | Мама хорошо шьёт западную одежду.
+洋 | 太平洋{たいへいよう}はとても広{ひろ}いです。 | The Pacific Ocean is very wide. | Тихий океан очень большой.
+夕 | 夕方{ゆうがた}六時{ろくじ}に家{いえ}に帰{かえ}ります。 | I go home at six in the evening. | Я возвращаюсь домой в шесть вечера.
+夕 | 夕{ゆう}ご飯{はん}は何{なに}を食{た}べましたか。 | What did you have for dinner? | Что вы ели на ужин?
+堂 | 昼{ひる}ご飯{はん}は学校{がっこう}の食堂{しょくどう}で食{た}べます。 | I eat lunch at the school cafeteria. | Я обедаю в школьной столовой.
+堂 | 卒業式{そつぎょうしき}は講堂{こうどう}で行{おこな}われます。 | The graduation ceremony is held in the auditorium. | Выпускная церемония проходит в актовом зале.

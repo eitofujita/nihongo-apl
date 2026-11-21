@@ -16,7 +16,7 @@ function wobble(points: Point[], dx = 4, dy = -3, amplitude = 3): Point[] {
 }
 
 describe('kanji data', () => {
-  it('has an N5 list with stroke files for every entry', () => {
+  it('has stroke files for every listed kanji', () => {
     expect(index.length).toBeGreaterThanOrEqual(100);
     expect(new Set(index.map(k => k.char)).size).toBe(index.length);
     for (const kanji of index) {
@@ -26,6 +26,11 @@ describe('kanji data', () => {
       expect(kanji.meanings.en && kanji.meanings.ru, kanji.char).toBeTruthy();
     }
     expect(existsSync('public/kanji/LICENSE.txt')).toBe(true);
+  });
+  it('covers N5 and N4 without listing a kanji twice', () => {
+    expect(index.filter(k => k.level === 'N5').length).toBeGreaterThanOrEqual(100);
+    expect(index.filter(k => k.level === 'N4').length).toBeGreaterThanOrEqual(140);
+    expect(index.every(k => k.level === 'N5' || k.level === 'N4')).toBe(true);
   });
 
   it('shows how every kanji is used, with words and sentences that contain it', () => {

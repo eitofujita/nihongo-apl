@@ -18,15 +18,34 @@ const TOLERANCE: Record<KanjiMode, number> = {trace: 1.15, guide: 1, recall: 1};
 const HINT_AFTER = 2;
 const RANDOM_COUNT = 10;
 const MASK = '□';
+const KANJI_LEVELS = ['N5', 'N4'] as const;
+type KanjiLevel = typeof KANJI_LEVELS[number];
+const inLevel = (level: KanjiLevel) => kanjiList.filter(kanji => kanji.level === level);
+
+/** N5 / N4 switcher; each tab shows how many kanji of that level are written from memory. */
+function KanjiLevelTabs({level, onChange}: {level: KanjiLevel; onChange: (level: KanjiLevel) => void}) {
+  const t = useTranslations('App');
+  const store = useKanjiProgress();
+  return <div className="level-tabs kanji-level-tabs" role="tablist" aria-label={t('levelLabel')}>{KANJI_LEVELS.map(item => {
+    const list = inLevel(item);
+    const done = list.filter(kanji => store[kanji.char]?.passed === 'recall').length;
+    return <button key={item} type="button" role="tab" aria-selected={level === item} className={level === item ? 'selected' : ''} onClick={() => onChange(item)}>
+      <strong>{item}</strong><small>{done}/{list.length}</small>
+    </button>;
+  })}</div>;
+}
 
 export function KanjiList() {
   const t = useTranslations('App');
   const locale = useLocale() as Locale;
   const store = useKanjiProgress();
   const [query, setQuery] = useState('');
-  const shown = useMemo(() => searchKanji(kanjiList, query), [query]);
-  const recalled = kanjiList.filter(kanji => store[kanji.char]?.passed === 'recall').length;
-  const percent = Math.round(recalled / kanjiList.length * 100);
+  const [level, setLevel] = useState<KanjiLevel>('N5');
+  const levelList = useMemo(() => inLevel(level), [level]);
+  // A search looks through every level, so learners need not know where a kanji belongs.
+  const shown = useMemo(() => query.trim() ? searchKanji(kanjiList, query) : levelList, [query, levelList]);
+  const recalled = levelList.filter(kanji => store[kanji.char]?.passed === 'recall').length;
+  const percent = Math.round(recalled / levelList.length * 100);
   return <>
     <PageHeading title={t('kanjiTitle')} subtitle={t('kanjiSub')}>
       <Link className="button primary kanji-test-cta" href="/kanji/test"><ClipboardCheck size={17}/>{t('kanjiTestCta')}</Link>
@@ -34,8 +53,9 @@ export function KanjiList() {
     <div className="curriculum-banner"><span className="stat-icon green"><PenLine size={24}/></span><div>
       <h2>{t('kanjiSummary', {count: kanjiList.length})}</h2>
       <p>{t('kanjiModesExplained')}</p>
-      <div className="course-progress"><div className="course-progress-bar" role="progressbar" aria-valuemin={0} aria-valuemax={kanjiList.length} aria-valuenow={recalled} aria-label={t('kanjiProgress', {done: recalled, total: kanjiList.length})}><span style={{width: `${percent}%`}}/></div><span>{t('kanjiProgress', {done: recalled, total: kanjiList.length})}</span></div>
+      <div className="course-progress"><div className="course-progress-bar" role="progressbar" aria-valuemin={0} aria-valuemax={levelList.length} aria-valuenow={recalled} aria-label={t('kanjiProgress', {done: recalled, total: levelList.length})}><span style={{width: `${percent}%`}}/></div><span>{level} · {t('kanjiProgress', {done: recalled, total: levelList.length})}</span></div>
     </div></div>
+    <KanjiLevelTabs level={level} onChange={setLevel}/>
     <KanjiSearch query={query} onChange={setQuery} count={shown.length}/>
     <ul className="kanji-grid">{shown.map(kanji => {
       const passed = store[kanji.char]?.passed ?? null;
@@ -308,16 +328,21 @@ function TestSetup({selected, onChange, onStart}: {selected: Set<string>; onChan
     if (next.has(id)) next.delete(id); else next.add(id);
     onChange(next);
   };
-  const notMastered = kanjiList.filter(kanji => store[kanji.char]?.passed !== 'recall');
+  const [level, setLevel] = useState<KanjiLevel>('N5');
+  const levelList = useMemo(() => inLevel(level), [level]);
+  // Quick-select buttons act on the open level; picks from other levels stay selected.
+  const notMastered = levelList.filter(kanji => store[kanji.char]?.passed !== 'recall');
+  const addAll = (items: KanjiInfo[]) => onChange(new Set([...selected, ...items.map(k => k.id)]));
   const [query, setQuery] = useState('');
-  const shown = useMemo(() => searchKanji(kanjiList, query), [query]);
+  const shown = useMemo(() => query.trim() ? searchKanji(kanjiList, query) : levelList, [query, levelList]);
   return <article className="kanji-test">
     <Link className="back-link" href="/kanji"><ArrowLeft size={16}/>{t('kanjiBack')}</Link>
     <PageHeading title={t('kanjiTestTitle')} subtitle={t('kanjiTestSub')}/>
+    <KanjiLevelTabs level={level} onChange={setLevel}/>
     <div className="kanji-test-toolbar" role="group" aria-label={t('kanjiTestQuickSelect')}>
-      <button className="button outline" onClick={() => onChange(new Set(kanjiList.map(k => k.id)))}>{t('kanjiTestSelectAll')}</button>
-      <button className="button outline" onClick={() => onChange(new Set(notMastered.map(k => k.id)))} disabled={!notMastered.length}>{t('kanjiTestNotMastered', {count: notMastered.length})}</button>
-      <button className="button outline" onClick={() => onChange(new Set(shuffled(kanjiList).slice(0, RANDOM_COUNT).map(k => k.id)))}><Shuffle size={15}/>{t('kanjiTestRandom', {count: RANDOM_COUNT})}</button>
+      <button className="button outline" onClick={() => addAll(levelList)}>{t('kanjiTestSelectAll')}</button>
+      <button className="button outline" onClick={() => addAll(notMastered)} disabled={!notMastered.length}>{t('kanjiTestNotMastered', {count: notMastered.length})}</button>
+      <button className="button outline" onClick={() => addAll(shuffled(levelList.filter(k => !selected.has(k.id))).slice(0, RANDOM_COUNT))}><Shuffle size={15}/>{t('kanjiTestRandom', {count: RANDOM_COUNT})}</button>
       <button className="button outline" onClick={() => onChange(new Set())} disabled={!selected.size}><X size={15}/>{t('kanjiTestClear')}</button>
     </div>
     <KanjiSearch query={query} onChange={setQuery} count={shown.length}/>

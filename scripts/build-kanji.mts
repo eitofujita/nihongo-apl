@@ -20,7 +20,7 @@ if (source && !existsSync(source)) {
   process.exit(1);
 }
 
-const LEVELS = ['N5'] as const;
+const LEVELS = ['N5', 'N4'] as const;
 const CURRICULUM = ['n5', 'n4', 'n3'] as const;
 const MAX_WORDS = 4;
 const MAX_SENTENCES = 3;
