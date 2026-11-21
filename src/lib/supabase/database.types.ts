@@ -9,7 +9,9 @@ export type Database = {
     Functions: {
       get_learning_progress: {Args: Record<string, never>; Returns: Json};
       submit_practice: {Args: {p_session_id: string; p_lesson_id: string; p_duration_seconds: number; p_answers: Json}; Returns: Json};
-      reset_learning_progress: {Args: Record<string, never>; Returns: Json}
+      reset_learning_progress: {Args: Record<string, never>; Returns: Json};
+      get_kanji_progress: {Args: Record<string, never>; Returns: Json};
+      record_kanji_attempt: {Args: {p_kanji: string; p_mode: string; p_mistakes: number}; Returns: Json}
     };
     Enums: Record<string, never>;
     CompositeTypes: Record<string, never>;

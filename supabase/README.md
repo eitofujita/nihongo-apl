@@ -36,6 +36,7 @@
    - `migrations/202611170002_learning_functions.sql`：DB側採点・読込・リセット関数。
    - `migrations/202611170003_question_bank.sql`：固定100問と診断用の対応データ。
    - `migrations/202611180001_curriculum_n5_n3.sql`：N5〜N3の追加教材の正解データ（`npm run content`で自動生成）。**既存プロジェクトでは、これを1回実行しないと、ログイン中の利用者は追加レッスンの結果を保存できません。**
+   - `migrations/202611220001_kanji_progress.sql`：漢字の書き取り進捗をアカウントに保存するテーブルと関数（本人のみ読み取り、書き込みは関数経由のみ）。**既存プロジェクトでは、アプリを公開する前に1回実行してください。未実行のままでも学習はできますが、ログイン中の漢字の進捗は保存されません。**
 
 3. プロジェクトのConnect画面からProject URLとPublishable keyを取得し、アプリの`.env.local`に設定します。
 

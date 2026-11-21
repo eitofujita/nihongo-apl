@@ -40,7 +40,7 @@ beforeAll(async () => {
     grant usage on schema auth to anon, authenticated;
     grant execute on function auth.uid() to anon, authenticated;
   `);
-  for (const file of ['202611170001_initial_schema.sql', '202611170002_learning_functions.sql', '202611170003_question_bank.sql', '202611180001_curriculum_n5_n3.sql']) {
+  for (const file of ['202611170001_initial_schema.sql', '202611170002_learning_functions.sql', '202611170003_question_bank.sql', '202611180001_curriculum_n5_n3.sql', '202611220001_kanji_progress.sql']) {
     await db.exec(await readFile(new URL(`../supabase/migrations/${file}`, import.meta.url), 'utf8'));
   }
 }, 30000);
@@ -52,6 +52,25 @@ beforeEach(async () => {
 afterAll(async () => {await db?.close();});
 
 describe.sequential('PostgreSQL migrations, RLS and server-authored grading', () => {
+  it('stores kanji progress per account through the scoped function only', async () => {
+    const record = async (kanji: string, mode: string, mistakes: number) =>
+      (await db.query<{store: Record<string, {passed: string | null; attempts: number}>}>('select public.record_kanji_attempt($1, $2, $3) as store', [kanji, mode, mistakes])).rows[0].store;
+    expect((await record('水', 'trace', 3))['水']).toMatchObject({passed: null, attempts: 1});
+    expect((await record('水', 'recall', 1))['水']).toMatchObject({passed: 'recall', attempts: 2});
+    // A later, weaker result never lowers the stage.
+    expect((await record('水', 'trace', 0))['水']).toMatchObject({passed: 'recall', attempts: 3});
+    await expect(record('ab', 'trace', 0)).rejects.toThrow(/Invalid attempt/);
+    await expect(record('水', 'expert', 0)).rejects.toThrow(/Invalid attempt/);
+    await expect(db.query("insert into public.kanji_progress(user_id, kanji, passed) values ($1, '火', 'recall')", [A])).rejects.toThrow(/permission denied/i);
+    await expect(db.query("update public.kanji_progress set passed = 'recall'")).rejects.toThrow(/permission denied/i);
+    await asUser(B);
+    expect((await db.query('select * from public.kanji_progress')).rows).toEqual([]);
+    expect((await db.query<{store: object}>('select public.get_kanji_progress() as store')).rows[0].store).toEqual({});
+    await db.exec('reset role');
+    await expect(db.query('select public.get_kanji_progress()')).resolves.toBeDefined();
+    await db.exec('set role anon');
+    await expect(db.query('select public.get_kanji_progress()')).rejects.toThrow(/permission denied/i);
+  });
   it('runs the SQL Editor verification repeatedly without changing existing history or users', async () => {
     const existing = await submit();
     await db.exec('reset role');

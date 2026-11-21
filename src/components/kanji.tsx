@@ -8,7 +8,8 @@ import {Link} from '@/i18n/navigation';
 import {getKanji, kanjiList, loadKanjiDetail, type KanjiDetail, type KanjiInfo} from '@/content/kanji';
 import type {Locale} from '@/i18n/routing';
 import {gradeStrokeAt, pathLength, pathToPoints, type Point, type StrokeResult} from '@/lib/kanji-stroke';
-import {KANJI_MODES, PASS_MISTAKES, saveKanjiAttempt, useKanjiProgress, type KanjiMode} from '@/lib/kanji-progress';
+import {KANJI_MODES, PASS_MISTAKES, type KanjiMode} from '@/lib/kanji-progress';
+import {useKanjiProgress, useKanjiSavedToAccount, useSaveKanjiAttempt} from './kanji-progress-hooks';
 import {searchKanji} from '@/lib/kanji-search';
 import {PageHeading} from './dashboard';
 import {EmptyState} from './learning';
@@ -99,7 +100,8 @@ function KanjiSearch({query, onChange, count}: {query: string; onChange: (value:
 
 function KanjiFootnote() {
   const t = useTranslations('App');
-  return <p className="section-note kanji-footnote">{t('kanjiLocalNote')} {t.rich('kanjiAttribution', {link: chunks => <a href="https://kanjivg.tagaini.net" target="_blank" rel="noreferrer">{chunks}</a>})}</p>;
+  const toAccount = useKanjiSavedToAccount();
+  return <p className="section-note kanji-footnote">{t(toAccount ? 'kanjiAccountNote' : 'kanjiLocalNote')} {t.rich('kanjiAttribution', {link: chunks => <a href="https://kanjivg.tagaini.net" target="_blank" rel="noreferrer">{chunks}</a>})}</p>;
 }
 
 /** Strokes and usage examples for one kanji, fetched from the static /kanji/<id>.json file. */
@@ -249,6 +251,7 @@ function PracticeBoard({kanji, detail, onBack}: {kanji: KanjiInfo; detail: Kanji
   const t = useTranslations('App');
   const locale = useLocale() as Locale;
   const store = useKanjiProgress();
+  const saveAttempt = useSaveKanjiAttempt();
   const {strokes} = detail;
   const initialMode: KanjiMode = store[kanji.char]?.passed === 'trace' ? 'guide' : store[kanji.char]?.passed ? 'recall' : 'trace';
   const [mode, setMode] = useState<KanjiMode>(initialMode);
@@ -272,7 +275,7 @@ function PracticeBoard({kanji, detail, onBack}: {kanji: KanjiInfo; detail: Kanji
     if (result.ok) {
       const nextDone = done + 1;
       setDone(nextDone); setMisses(0);
-      if (nextDone === strokes.length) setSaved(saveKanjiAttempt(kanji.char, mode, mistakes));
+      if (nextDone === strokes.length) void saveAttempt(kanji.char, mode, mistakes).then(setSaved);
     } else {
       setMistakes(count => count + 1); setMisses(count => count + 1);
     }
@@ -404,6 +407,7 @@ function TestQuestion({kanji, number, total, nextId, onDone, onQuit}: {
   const t = useTranslations('App');
   const locale = useLocale() as Locale;
   const {detail, failed} = useKanjiDetail(kanji.id);
+  const saveAttempt = useSaveKanjiAttempt();
   const [done, setDone] = useState(0);
   const [mistakes, setMistakes] = useState(0);
   const [feedback, setFeedback] = useState<StrokeResult | null>(null);
@@ -424,7 +428,7 @@ function TestQuestion({kanji, number, total, nextId, onDone, onQuit}: {
   function finish(result: TestResult) {
     setAnswer(result);
     // A give-up counts as an attempt but never as a pass.
-    setSaved(saveKanjiAttempt(kanji.char, 'recall', result.gaveUp ? PASS_MISTAKES + 1 : result.mistakes));
+    void saveAttempt(kanji.char, 'recall', result.gaveUp ? PASS_MISTAKES + 1 : result.mistakes).then(setSaved);
   }
   function onStroke(points: Point[]) {
     if (!detail || answer) return;

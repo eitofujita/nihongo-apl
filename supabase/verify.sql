@@ -16,7 +16,7 @@ declare
   v_b uuid := gen_random_uuid();
 begin
   if current_user <> 'postgres' then raise exception 'Run verification as postgres in SQL Editor'; end if;
-  foreach v_table in array array['profiles', 'practice_sessions', 'practice_answers', 'review_cards', 'entitlements'] loop
+  foreach v_table in array array['profiles', 'practice_sessions', 'practice_answers', 'review_cards', 'entitlements', 'kanji_progress'] loop
     if not coalesce((select relrowsecurity from pg_class where oid = to_regclass('public.' || v_table)), false) then
       raise exception 'RLS is not enabled on %', v_table;
     end if;
@@ -87,7 +87,7 @@ begin
     or auth.uid() is distinct from current_setting('nihongo_qa.user_b')::uuid then
     raise exception 'User B role/identity simulation failed';
   end if;
-  foreach v_table in array array['profiles', 'practice_sessions', 'practice_answers', 'review_cards', 'entitlements'] loop
+  foreach v_table in array array['profiles', 'practice_sessions', 'practice_answers', 'review_cards', 'entitlements', 'kanji_progress'] loop
     execute format('select exists(select 1 from public.%I where user_id <> auth.uid())', v_table) into v_foreign;
     if v_foreign then raise exception 'User B can read another account in %', v_table; end if;
   end loop;
@@ -103,6 +103,9 @@ begin
   if jsonb_array_length(v_progress->'sessions') <> 1 or jsonb_array_length(v_progress->'reviews') <> 1 then
     raise exception 'User B own submission failed';
   end if;
+  if (public.record_kanji_attempt('水', 'trace', 0)->'水'->>'passed') is distinct from 'trace' then
+    raise exception 'User B own kanji progress failed';
+  end if;
 end;
 $$;
 
@@ -113,7 +116,7 @@ set local role authenticated;
 do $$
 declare v_table text; v_foreign boolean; v_progress jsonb;
 begin
-  foreach v_table in array array['profiles', 'practice_sessions', 'practice_answers', 'review_cards', 'entitlements'] loop
+  foreach v_table in array array['profiles', 'practice_sessions', 'practice_answers', 'review_cards', 'entitlements', 'kanji_progress'] loop
     execute format('select exists(select 1 from public.%I where user_id <> auth.uid())', v_table) into v_foreign;
     if v_foreign then raise exception 'User A can read another account in %', v_table; end if;
   end loop;

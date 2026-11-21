@@ -13,6 +13,7 @@ vi.mock('server-only', () => ({}));
 vi.mock('@/lib/supabase/server', () => ({createSupabaseServerClient: sdk.create}));
 import {GET as authGet, POST as authPost} from '@/app/api/auth/[action]/route';
 import {GET as getProgress, POST as postProgress, PATCH as patchProgress, DELETE as deleteProgress} from '@/app/api/progress/route';
+import {GET as getKanji, POST as postKanji} from '@/app/api/kanji-progress/route';
 import {GET as confirm} from '@/app/auth/confirm/route';
 import {GET as callback} from '@/app/auth/callback/route';
 
@@ -218,5 +219,36 @@ describe('Authenticated learning API', () => {
     input.headers.set('X-Nihongo-Account', '00000000-0000-4000-8000-000000000002');
     expect((await postProgress(input)).status).toBe(409);
     expect(sdk.rpc).not.toHaveBeenCalled();
+  });
+});
+
+describe('Kanji progress API', () => {
+  const stored = {'水': {passed: 'recall', attempts: 2, at: '2026-11-22T00:00:00.000Z'}};
+  it('requires a signed-in user and returns only that user\'s validated progress', async () => {
+    sdk.getUser.mockResolvedValueOnce({data: {user: null}, error: null});
+    expect((await getKanji(request('/api/kanji-progress', undefined, 'GET'))).status).toBe(401);
+    expect(sdk.rpc).not.toHaveBeenCalled();
+    sdk.rpc.mockResolvedValue({data: stored, error: null});
+    const response = await getKanji(request('/api/kanji-progress', undefined, 'GET'));
+    expect(await response.json()).toEqual({userId: USER, store: stored});
+    expect(response.headers.get('cache-control')).toContain('no-store');
+  });
+  it('records attempts for practice kanji only, with no extra fields, from this origin', async () => {
+    sdk.rpc.mockResolvedValue({data: stored, error: null});
+    expect((await postKanji(request('/api/kanji-progress', {kanji: '水', mode: 'recall', mistakes: 1}))).status).toBe(200);
+    expect(sdk.rpc).toHaveBeenCalledWith('record_kanji_attempt', {p_kanji: '水', p_mode: 'recall', p_mistakes: 1});
+    for (const body of [{kanji: '鬱', mode: 'recall', mistakes: 0}, {kanji: '水', mode: 'expert', mistakes: 0},
+      {kanji: '水', mode: 'trace', mistakes: -1}, {kanji: '水', mode: 'trace', mistakes: 0, passed: 'recall'}]) {
+      expect((await postKanji(request('/api/kanji-progress', body))).status).toBe(400);
+    }
+    expect((await postKanji(request('/api/kanji-progress', {kanji: '水', mode: 'trace', mistakes: 0}, 'POST', 'https://evil.example'))).status).toBe(403);
+    const forged = new Request('http://localhost:3000/api/kanji-progress', {method: 'POST', headers: {origin: 'http://localhost:3000', 'content-type': 'application/json', 'x-nihongo-account': 'someone-else'}, body: JSON.stringify({kanji: '水', mode: 'trace', mistakes: 0})});
+    expect((await postKanji(forged)).status).toBe(409);
+  });
+  it('reports storage failures and malformed database results instead of claiming success', async () => {
+    sdk.rpc.mockResolvedValue({data: null, error: {code: 'NETWORK_ERROR'}});
+    expect((await postKanji(request('/api/kanji-progress', {kanji: '水', mode: 'trace', mistakes: 0}))).status).toBe(503);
+    sdk.rpc.mockResolvedValue({data: {'水': {passed: 'master'}}, error: null});
+    expect((await getKanji(request('/api/kanji-progress', undefined, 'GET'))).status).toBe(503);
   });
 });
