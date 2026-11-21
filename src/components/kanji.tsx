@@ -179,6 +179,23 @@ function KanjiPad({strokes, done, ghost, demo, hint, revealed = false, onStart, 
   const drawing = useRef<{pointer: number; points: Point[]} | null>(null);
   const finished = revealed || done === strokes.length;
 
+  // In-app browsers (Telegram etc.) move or close the whole page on a downward drag even with
+  // touch-action: none. Cancel touches on the pad natively (React's touch listeners are passive and
+  // cannot), and stop the page from overscrolling while a writing pad is on screen.
+  useEffect(() => {
+    const svg = svgRef.current;
+    if (!svg) return;
+    const block = (event: TouchEvent) => {if (event.cancelable) event.preventDefault();};
+    svg.addEventListener('touchstart', block, {passive: false});
+    svg.addEventListener('touchmove', block, {passive: false});
+    document.documentElement.classList.add('has-writing-pad');
+    return () => {
+      svg.removeEventListener('touchstart', block);
+      svg.removeEventListener('touchmove', block);
+      document.documentElement.classList.remove('has-writing-pad');
+    };
+  }, []);
+
   function toBox(event: {clientX: number; clientY: number}): Point {
     const rect = svgRef.current!.getBoundingClientRect();
     return [(event.clientX - rect.left) / rect.width * BOX, (event.clientY - rect.top) / rect.height * BOX];

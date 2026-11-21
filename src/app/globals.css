@@ -513,3 +513,7 @@ button.back-link { cursor: pointer; }
   .sentence-setup { padding: 20px 16px; }
   .sentence-setup .tabs { width: 100%; }
 }
+
+/* While a kanji writing pad is shown, a drag must not scroll, refresh or pull down the page
+   (in-app browsers such as Telegram treat a downward drag at the top as "close/move the page"). */
+html.has-writing-pad, html.has-writing-pad body { overscroll-behavior: none; }
