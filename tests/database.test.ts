@@ -61,6 +61,8 @@ describe.sequential('PostgreSQL migrations, RLS and server-authored grading', ()
     expect((await record('水', 'trace', 0))['水']).toMatchObject({passed: 'recall', attempts: 3});
     await expect(record('ab', 'trace', 0)).rejects.toThrow(/Invalid attempt/);
     await expect(record('水', 'expert', 0)).rejects.toThrow(/Invalid attempt/);
+    await expect(db.query('select public.record_kanji_attempt($1, null, 0)', ['水'])).rejects.toThrow(/Invalid attempt/);
+    await expect(db.query('select public.record_kanji_attempt(null, $1, 0)', ['trace'])).rejects.toThrow(/Invalid attempt/);
     await expect(db.query("insert into public.kanji_progress(user_id, kanji, passed) values ($1, '火', 'recall')", [A])).rejects.toThrow(/permission denied/i);
     await expect(db.query("update public.kanji_progress set passed = 'recall'")).rejects.toThrow(/permission denied/i);
     await asUser(B);

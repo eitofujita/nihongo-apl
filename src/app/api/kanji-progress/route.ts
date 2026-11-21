@@ -1,8 +1,8 @@
 import {z} from 'zod';
-import {apiFailure, apiJson, ApiError, limitProgressRequest, readJson, requireSameOrigin} from '@/lib/api-security';
+import {apiFailure, apiJson, ApiError, readJson, requireSameOrigin} from '@/lib/api-security';
+import {requireAccount as authenticated} from '@/lib/api-auth';
 import {kanjiList} from '@/content/kanji';
 import {KANJI_MODES, kanjiStoreSchema} from '@/lib/kanji-progress';
-import {createSupabaseServerClient} from '@/lib/supabase/server';
 
 // Kanji handwriting progress for the signed-in account. Guests keep progress in the browser.
 const practiceKanji = new Set(kanjiList.map(kanji => kanji.char));
@@ -12,17 +12,6 @@ const attemptSchema = z.object({
   mistakes: z.number().int().min(0).max(1000)
 }).strict();
 
-async function authenticated(request: Request) {
-  const client = await createSupabaseServerClient();
-  if (!client) throw new ApiError(503, 'not_configured');
-  const {data, error} = await client.auth.getUser();
-  if (error || !data.user) throw new ApiError(401, 'unauthorized');
-  // Concurrency precondition only (see /api/progress): a queued request never writes into another account.
-  const expected = request.headers.get('x-nihongo-account');
-  if (expected && expected !== data.user.id) throw new ApiError(409, 'account_changed');
-  await limitProgressRequest(data.user.id);
-  return {client, userId: data.user.id};
-}
 function parseStore(data: unknown) {
   const parsed = kanjiStoreSchema.safeParse(data);
   if (!parsed.success) throw new ApiError(503, 'storage_unavailable');

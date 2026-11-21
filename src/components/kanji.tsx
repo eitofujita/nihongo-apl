@@ -253,8 +253,11 @@ function PracticeBoard({kanji, detail, onBack}: {kanji: KanjiInfo; detail: Kanji
   const store = useKanjiProgress();
   const saveAttempt = useSaveKanjiAttempt();
   const {strokes} = detail;
-  const initialMode: KanjiMode = store[kanji.char]?.passed === 'trace' ? 'guide' : store[kanji.char]?.passed ? 'recall' : 'trace';
-  const [mode, setMode] = useState<KanjiMode>(initialMode);
+  // Until the learner picks a stage or starts writing, follow their saved progress, which for a
+  // signed-in account arrives a moment after the page opens.
+  const suggestedMode: KanjiMode = store[kanji.char]?.passed === 'trace' ? 'guide' : store[kanji.char]?.passed ? 'recall' : 'trace';
+  const [chosenMode, setChosenMode] = useState<KanjiMode | null>(null);
+  const mode = chosenMode ?? suggestedMode;
   const [done, setDone] = useState(0);
   const [mistakes, setMistakes] = useState(0);
   const [misses, setMisses] = useState(0); // On the current stroke, for showing a hint.
@@ -267,9 +270,10 @@ function PracticeBoard({kanji, detail, onBack}: {kanji: KanjiInfo; detail: Kanji
   const nextKanji = kanjiList[(index + 1) % kanjiList.length];
 
   function reset(nextMode = mode) {
-    setMode(nextMode); setDone(0); setMistakes(0); setMisses(0); setFeedback(null); setDemo(0);
+    setChosenMode(nextMode); setDone(0); setMistakes(0); setMisses(0); setFeedback(null); setDemo(0);
   }
   function onStroke(points: Point[]) {
+    setChosenMode(mode); // Writing has started: the stage no longer changes underneath the learner.
     const result = gradeStrokeAt(points, expected, done, TOLERANCE[mode]);
     setFeedback(result);
     if (result.ok) {

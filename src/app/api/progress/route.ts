@@ -1,21 +1,9 @@
-import {apiFailure, apiJson, ApiError, limitProgressRequest, readJson, requireSameOrigin} from '@/lib/api-security';
+import {apiFailure, apiJson, ApiError, readJson, requireSameOrigin} from '@/lib/api-security';
+import {requireAccount as authenticated} from '@/lib/api-auth';
 import {preferencesSchema, submissionSchema} from '@/lib/auth-schemas';
 import {loadCloudProgress} from '@/lib/cloud-progress';
 import {progressSchema} from '@/lib/progress';
-import {createSupabaseServerClient} from '@/lib/supabase/server';
 
-async function authenticated(request?: Request) {
-  const client = await createSupabaseServerClient();
-  if (!client) throw new ApiError(503, 'not_configured');
-  const {data, error} = await client.auth.getUser();
-  if (error || !data.user) throw new ApiError(401, 'unauthorized');
-  // This is a concurrency precondition, never an authorization source.
-  // It stops a queued request from account A being written after a tab signs into B.
-  const expected = request?.headers.get('x-nihongo-account');
-  if (expected && expected !== data.user.id) throw new ApiError(409, 'account_changed');
-  await limitProgressRequest(data.user.id);
-  return {client, userId: data.user.id};
-}
 export async function GET(request: Request) {
   try {
     const {client, userId} = await authenticated(request);

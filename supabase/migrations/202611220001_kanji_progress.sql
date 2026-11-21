@@ -40,7 +40,7 @@ declare
   v_rank_new integer; v_rank_old integer; v_previous text; v_passed text;
 begin
   if v_user is null then raise exception 'Authentication required' using errcode = '42501'; end if;
-  if p_kanji is null or p_kanji !~ '^[㐀-鿿豈-﫿々]$' or p_mode not in ('trace', 'guide', 'recall')
+  if p_kanji is null or p_kanji !~ '^[㐀-鿿豈-﫿々]$' or coalesce(p_mode, '') not in ('trace', 'guide', 'recall')
     or p_mistakes is null or p_mistakes not between 0 and 1000 then
     raise exception 'Invalid attempt' using errcode = '22023';
   end if;
