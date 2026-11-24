@@ -4,8 +4,8 @@ import {useEffect, useRef, useState} from 'react';
 import {useLocale, useNow, useTranslations} from 'next-intl';
 import {ArrowLeft, ArrowRight, BookOpen, Check, CheckCircle2, Keyboard, PenLine, RotateCcw, Search, Sparkles, Sprout, X} from 'lucide-react';
 import {Link} from '@/i18n/navigation';
-import {getLessonMeta, isCorrect, LEVELS, lessons, levelStats, placementQuestions, type Level} from '@/content/catalog';
-import {loadLesson, loadQuestions, type FullLesson} from '@/content/load';
+import {getLessonMeta, isCorrect, LEVELS, lessons, levelStats, placementQuestions, PRACTICE_SIZE, type Level} from '@/content/catalog';
+import {loadLesson, loadPracticeQuestions, loadQuestions, type FullLesson} from '@/content/load';
 import type {Question} from '@/content/schemas';
 import type {Locale} from '@/i18n/routing';
 import type {SubmittedAnswer} from '@/lib/auth-schemas';
@@ -31,18 +31,33 @@ export function LessonDetail({lessonId}: {lessonId: string}) {
 function LessonBody({lesson}: {lesson: FullLesson}) {
   const t = useTranslations('App');
   const locale = useLocale() as Locale;
-  const [practicing, setPracticing] = useState(false);
-  if (practicing) return <Practice lessonId={lesson.id} questions={lesson.questions} onExit={() => {setPracticing(false); window.scrollTo({top: 0});}}/>;
+  const [practice, setPractice] = useState<Question[] | null>(null);
+  const [starting, setStarting] = useState(false);
+  const [startError, setStartError] = useState(false);
+  async function start() {
+    setStarting(true); setStartError(false);
+    try {setPractice(await loadPracticeQuestions(lesson)); window.scrollTo({top: 0});}
+    catch {setStartError(true);}
+    finally {setStarting(false);}
+  }
+  if (practice) return <Practice lessonId={lesson.id} questions={practice} onExit={() => {setPractice(null); window.scrollTo({top: 0});}}/>;
   return <article className="lesson-study">
     <Link className="back-link" href="/lessons"><ArrowLeft size={16}/>{t('backLessons')}</Link>
     <PageHeading title={lesson.title[locale]} subtitle={`JLPT ${lesson.level} · ${t('lessonNumber', {number: lesson.levelNumber})} · ${t(lesson.category)}`}/>
     <section className="study-section"><h2>{t('studyTitle')}</h2><p>{lesson.study[locale]}</p></section>
     {lesson.forms && <section className="study-section"><h2>{t('formsTitle')}</h2><ul className="grammar-forms">{lesson.forms[locale].map(form => <li key={form} lang="ja"><GrammarForm form={form}/></li>)}</ul></section>}
+    {lesson.notes && <section className="study-section"><h2>{t('notesTitle')}</h2><ul className="grammar-notes">{lesson.notes.map(note => <li key={note.en}>{note[locale]}</li>)}</ul></section>}
+    {lesson.mistakes && <section className="study-section"><div className="section-title-row"><h2>{t('mistakesTitle')}</h2><FuriganaToggle label={t('furigana')}/></div><ul className="grammar-mistakes">{lesson.mistakes.map(mistake => <li key={mistake.wrong}>
+      <p className="mistake-wrong"><X size={16} aria-label={t('mistakeWrong')}/><span lang="ja"><Ruby text={mistake.wrong} ruby={mistake.rubyWrong}/></span></p>
+      <p className="mistake-right"><Check size={16} aria-label={t('mistakeRight')}/><span lang="ja"><Ruby text={mistake.right} ruby={mistake.rubyRight}/></span></p>
+      <p className="mistake-why">{mistake.why[locale]}</p></li>)}</ul></section>}
+    {lesson.compare && <section className="study-section"><h2>{t('compareTitle')}</h2><dl className="grammar-compare">{lesson.compare.map(item => <div key={item.with}><dt lang="ja">{item.with}</dt><dd>{item.note[locale]}</dd></div>)}</dl></section>}
     {lesson.words.length > 0 ? <section className="study-section"><h2>{t('wordList')}</h2><div className="word-table"><table><thead><tr><th>{t('japaneseLabel')}</th><th>{t('readingLabel')}</th><th>{t('meaningLabel')}</th></tr></thead><tbody>{lesson.words.map(word => <tr key={word.id}><td lang="ja">{word.japanese}</td><td lang="ja">{word.reading}</td><td>{word.meanings[locale]}</td></tr>)}</tbody></table></div></section> : <section className="study-section"><div className="section-title-row"><h2>{t('examplesTitle')}</h2><FuriganaToggle label={t('furigana')}/></div>
       {lesson.examples.map(example => <div className="study-example" key={example.japanese}><p lang="ja"><Ruby text={example.japanese} ruby={example.ruby}/></p><p>{example.translations[locale]}</p></div>)}
       {questionExamples(lesson).map(example => <div className="study-example is-more" key={example.id}><p lang="ja"><Ruby text={example.before} ruby={example.rubyBefore}/><mark>{example.answer}</mark><Ruby text={example.after} ruby={example.rubyAfter}/></p><p>{example.translation[locale]}</p></div>)}
     </section>}
-    <div className="study-action"><span>{t('questions', {count: lesson.questions.length})}</span><button className="button primary" onClick={() => {setPracticing(true); window.scrollTo({top: 0});}}>{t('startPractice')}<ArrowRight size={17}/></button></div>
+    <div className="study-action"><span>{t('questions', {count: Math.max(PRACTICE_SIZE, lesson.questions.length)})}{lesson.questions.length < PRACTICE_SIZE && ` · ${t('practiceMix', {own: lesson.questions.length, earlier: PRACTICE_SIZE - lesson.questions.length})}`}</span><button className="button primary" onClick={start} disabled={starting}>{t(starting ? 'loading' : 'startPractice')}<ArrowRight size={17}/></button></div>
+    {startError && <p className="auth-error" role="alert">{t('errorText')}</p>}
   </article>;
 }
 
@@ -196,7 +211,7 @@ export function Practice({lessonId, questions, onExit}: {lessonId: string; quest
     : lessonId === 'placement' ? <Link className="back-link" href="/"><ArrowLeft size={16}/>{t('backOverview')}</Link>
     : <Link className="back-link" href="/lessons"><ArrowLeft size={16}/>{t('backLessons')}</Link>;
   const progressPercent = (index + (checked ? 1 : 0)) / questions.length * 100;
-  return <div className="practice-container">{backLink}<div className="practice-title"><div><span className="eyebrow">{lesson ? `${t(lesson.category)} · JLPT ${lesson.level}` : `${t(lessonId === 'placement' ? 'placementLabel' : 'review')} · JLPT`}</span><h1>{lesson ? lesson.title[locale] : t(lessonId === 'placement' ? 'placementLabel' : 'review')}</h1></div><div className="practice-meta"><FuriganaToggle label={t('furigana')}/><span className="question-progress">{t('questionProgress', {current: index + 1, total: questions.length})}</span></div></div><div className="progress-track" role="progressbar" aria-valuemin={0} aria-valuemax={questions.length} aria-valuenow={index + (checked ? 1 : 0)} aria-label={t('questionProgress', {current: index + 1, total: questions.length})}><span style={{width: `${progressPercent}%`}}/></div><section className="question-card panel"><div className="question-type"><span>{String(index + 1).padStart(2, '0')}</span>{t(question.type === 'fill' ? 'typeAnswer' : 'chooseAnswer')}</div><h2 className="japanese-question" lang="ja" tabIndex={-1} ref={promptRef}><Ruby text={question.prompt} ruby={question.ruby?.prompt}/></h2><p className="question-translation">{question.translation[locale]}</p><form ref={formRef} onKeyDown={event => {if (event.key === 'Enter' && event.nativeEvent.isComposing) event.preventDefault();}} onSubmit={event => {event.preventDefault(); if (checked) next(); else check();}}>
+  return <div className="practice-container">{backLink}<div className="practice-title"><div><span className="eyebrow">{lesson ? `${t(lesson.category)} · JLPT ${lesson.level}` : `${t(lessonId === 'placement' ? 'placementLabel' : 'review')} · JLPT`}</span><h1>{lesson ? lesson.title[locale] : t(lessonId === 'placement' ? 'placementLabel' : 'review')}</h1></div><div className="practice-meta"><FuriganaToggle label={t('furigana')}/><span className="question-progress">{t('questionProgress', {current: index + 1, total: questions.length})}</span></div></div><div className="progress-track" role="progressbar" aria-valuemin={0} aria-valuemax={questions.length} aria-valuenow={index + (checked ? 1 : 0)} aria-label={t('questionProgress', {current: index + 1, total: questions.length})}><span style={{width: `${progressPercent}%`}}/></div><section className="question-card panel" data-question={question.id}><div className="question-type"><span>{String(index + 1).padStart(2, '0')}</span>{t(question.type === 'fill' ? 'typeAnswer' : 'chooseAnswer')}{lesson && !lesson.questionIds.includes(question.id) && <small className="question-earlier"><RotateCcw size={12}/>{t('fromEarlierLesson')}</small>}</div><h2 className="japanese-question" lang="ja" tabIndex={-1} ref={promptRef}><Ruby text={question.prompt} ruby={question.ruby?.prompt}/></h2><p className="question-translation">{question.translation[locale]}</p><form ref={formRef} onKeyDown={event => {if (event.key === 'Enter' && event.nativeEvent.isComposing) event.preventDefault();}} onSubmit={event => {event.preventDefault(); if (checked) next(); else check();}}>
     {question.type === 'choice' ? <fieldset className="answer-options" disabled={checked || !ready}><legend className="sr-only">{t('chooseAnswer')}</legend>{question.choices.map((choice, i) => <label key={choice} className={`answer-option ${selected === choice ? 'selected' : ''} ${checked && choice === question.answer ? 'right-answer' : ''} ${checked && selected === choice && !correct ? 'wrong-answer' : ''}`}><input type="radio" name={question.id} value={choice} checked={selected === choice} onChange={() => choose(choice)}/><span className="answer-letter">{String.fromCharCode(65 + i)}</span><span lang="ja"><Ruby text={choice} ruby={question.ruby?.choices[i]}/></span>{checked && choice === question.answer && <Check size={18}/>}</label>)}</fieldset> : <input className="fill-answer" aria-label={t('answerPlaceholder')} placeholder={t('answerPlaceholder')} value={selected} maxLength={120} disabled={checked || !ready} onChange={event => {startedAt.current ??= Date.now(); setSelected(event.target.value);}} autoComplete="off" lang="ja"/>}
     {checked && <div role="status" className={`answer-feedback ${correct ? 'correct' : 'incorrect'}`}><div className="feedback-heading">{correct ? <CheckCircle2 size={21}/> : <X size={21}/>}<h3>{t(correct ? 'correct' : 'incorrect')}</h3></div>{!correct && <strong>{t('correctAnswer', {answer: question.answer})}</strong>}<p>{question.explanation[locale]}</p><Link href="/tutor">{t('askTutor')}<Sparkles size={14}/></Link></div>}
     <div className="practice-actions">{saveError && <p className="auth-error" role="alert">{t('saveProgressError')}</p>}<span className="muted practice-hint"><Keyboard size={14}/>{t(question.type === 'choice' ? 'keyboardHintChoice' : 'keyboardHintFill')}</span><button ref={submitRef} type="submit" className="button primary" disabled={!selected.trim() || !ready || saving}>{t(saving ? 'savingProgress' : checked ? (index === questions.length - 1 ? 'finishLesson' : 'nextQuestion') : 'checkAnswer')}<ArrowRight size={17}/></button></div></form></section><p className="practice-local"><Sprout size={14}/>{t(account.user ? 'accountPracticeNotice' : 'savedLocally')}</p></div>;

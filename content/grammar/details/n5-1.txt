@@ -1,0 +1,226 @@
+# N5 grammar details, part 1 (starter lessons 1–20).
+# Format: see "Grammar details" in scripts/build-content.mts.
+
+@ n5-wa-desu
+N: は marks the topic: what the sentence is about. Think of it as “as for X, …”. Everything after は is a comment on that topic. | は обозначает тему — то, о чём идёт речь. Думайте о нём как о «что касается X, …». Всё, что идёт после は, — это высказывание об этой теме.
+N: The particle is written は but always pronounced “wa”. In ordinary words, such as はな (flower), it is still read “ha”. | Частица пишется は, но всегда произносится «ва». В обычных словах, например はな (цветок), она по-прежнему читается «ха».
+N: です makes the sentence polite and works like “am / is / are”. It does not change with the person: わたしは学生です and 田中さんは学生です both use です. | です делает фразу вежливой и соответствует «есть / являюсь». Она не меняется по лицам: и わたしは学生です, и 田中さんは学生です используют です.
+N: Japanese often drops the topic when it is clear. Introducing yourself, 学生です alone already means “I am a student.” Saying わたしは in every sentence sounds unnatural. | В японском тему часто опускают, если она ясна. Представляясь, достаточно сказать 学生です — «Я студент». Повторять わたしは в каждой фразе неестественно.
+N: Japanese has no articles (a / the) and nouns have no plural ending: 学生 is “a student”, “the student” or “students” depending on context. | В японском нет артиклей, а у существительных нет формы множественного числа: 学生 — это «студент» или «студенты» в зависимости от контекста.
+X: わたしわ学生です。 | わたしは学生です。 | The particle is pronounced “wa” but is always written は, never わ. | Частица произносится «ва», но всегда пишется は, а не わ.
+X: わたしは学生。です | わたしは学生です。 | です comes at the very end, and the full stop 。 goes after it. | です стоит в самом конце, а точка 。 ставится после неё.
+C: が | は presents a known topic and comments on it; が points out a subject, often as new information. You will meet が in its own lesson. | は вводит известную тему и говорит о ней; が выделяет подлежащее, часто как новую информацию. が разбирается в отдельном уроке.
+E: 田中さんは先生です。 | Mr. Tanaka is a teacher. | Господин Танака — учитель.
+E: アンナです。どうぞよろしく。 | I'm Anna. Nice to meet you. | Я Анна. Приятно познакомиться.
+
+@ n5-ka
+N: Japanese makes a question without changing the word order: just add か to the end. 学生です → 学生ですか. | Японский вопрос строится без изменения порядка слов: просто добавьте か в конце. 学生です → 学生ですか.
+N: In writing, a sentence with か ends in 。, not ？. The question mark is used in casual writing, but か already does its job. | На письме предложение с か заканчивается на 。, а не на ？. Вопросительный знак встречается в неформальном письме, но か уже выполняет его роль.
+N: Answer “yes” with はい and “no” with いいえ, then repeat the statement: はい、学生です。 / いいえ、学生ではありません。 | Отвечайте «да» — はい, «нет» — いいえ, а затем повторите утверждение: はい、学生です。 / いいえ、学生ではありません。
+N: With a question word, the question word goes where the answer will be: これは何ですか。…本です。 | С вопросительным словом оно стоит там, где будет ответ: これは何ですか。…本です。
+N: Spoken with a falling tone, そうですか means “I see” — it is a reaction, not a real question. | Сказанное с понижением тона そうですか означает «Вот как» — это реакция, а не настоящий вопрос.
+X: ですか学生。 | 学生ですか。 | か goes after です at the end; the word order of the statement stays the same. | か ставится после です в конце; порядок слов не меняется.
+X: はい、学生ではありません。 | いいえ、学生ではありません。 | When the answer is negative, start with いいえ. | Если ответ отрицательный, начинайте с いいえ.
+C: よ / ね | か asks; よ tells the listener something new; ね checks that the listener agrees. | か спрашивает; よ сообщает собеседнику новое; ね проверяет, согласен ли собеседник.
+E: 先生ですか。…はい、そうです。 | Are you a teacher? — Yes, I am. | Вы учитель? — Да.
+E: 田中さんは会社員ですか。 | Is Mr. Tanaka an office worker? | Господин Танака — служащий компании?
+
+@ n5-kore
+N: こ・そ・あ・ど is a system: こ = near me, そ = near you, あ = over there (away from both), ど = which? The same pattern appears in これ・それ・あれ・どれ, この・その・あの・どの and ここ・そこ・あそこ・どこ. | こ・そ・あ・ど — это система: こ = рядом со мной, そ = рядом с вами, あ = вон там (далеко от обоих), ど = какой? Тот же ряд есть в これ・それ・あれ・どれ, この・その・あの・どの и ここ・そこ・あそこ・どこ.
+N: これ・それ・あれ are pronouns: they stand in place of a noun and are usually followed by a particle, as in これは or それを. | これ・それ・あれ — местоимения: они заменяют существительное, и после них обычно идёт частица: これは, それを.
+N: When the speaker and listener stand together, both say これ for things near them and あれ for things far away. | Если говорящий и слушающий стоят рядом, оба говорят これ о близких вещах и あれ о далёких.
+N: これ・それ・あれ are for things, not people. For a person, say この人 or, politely, こちら. | これ・それ・あれ — для предметов, не для людей. О человеке говорят この人 или вежливо こちら.
+X: これ本は新しいです。 | この本は新しいです。 | これ cannot come directly before a noun; use この + noun. | これ не может стоять прямо перед существительным; используйте この + существительное.
+X: これは田中さんです。 | こちらは田中さんです。 | When you introduce a person, こちら is polite; これ is for things. | Представляя человека, вежливо говорить こちら; これ — для предметов.
+C: この・その・あの | これ stands alone (これは本です); この needs a noun after it (この本は新しいです). | これ стоит отдельно (これは本です); после この нужно существительное (この本は新しいです).
+E: それは何ですか。…これは辞書です。 | What is that? — This is a dictionary. | Что это у вас? — Это словарь.
+E: あれは学校です。 | That (over there) is a school. | Вон то — школа.
+
+@ n5-no
+N: In A の B, B is the main noun and A describes it. The order is the reverse of English “B of A”: 日本の車 = “a car of Japan / a Japanese car”. | В A の B главное слово — B, а A его описывает. Порядок обратный русскому «B из A»: 日本の車 = «машина из Японии / японская машина».
+N: の has many meanings: owner (わたしの本), place or origin (日本の車), content (日本語の本), affiliation (会社の人), and time (朝のニュース). | У の много значений: владелец (わたしの本), место или происхождение (日本の車), содержание (日本語の本), принадлежность (会社の人), время (朝のニュース).
+N: You can chain の: わたしの友達の車 = “my friend's car”. | の можно соединять цепочкой: わたしの友達の車 = «машина моего друга».
+N: If the second noun is clear, it can be dropped: このかばんはわたしのです (This bag is mine). | Если второе существительное понятно, его можно опустить: このかばんはわたしのです (Эта сумка — моя).
+X: かばんの田中さん | 田中さんのかばん | The owner comes first, then の, then the thing: “Mr. Tanaka's bag”. | Сначала владелец, затем の, затем предмет: «сумка господина Танаки».
+X: 新しいの本 | 新しい本 | い-adjectives go straight before a noun with no の. | い-прилагательные ставятся прямо перед существительным без の.
+C: な (静かな部屋) | Nouns join other nouns with の; な-adjectives join nouns with な. | Существительные соединяются с существительными через の; な-прилагательные — через な.
+E: これは田中さんのかさです。 | This is Mr. Tanaka's umbrella. | Это зонт господина Танаки.
+E: 日本語の先生はやさしいです。 | The Japanese teacher is kind. | Учитель японского добрый.
+
+@ n5-negative
+N: ではありません is the polite negative of です: 学生です → 学生ではありません. It is used after nouns and な-adjectives. | ではありません — вежливое отрицание です: 学生です → 学生ではありません. Используется после существительных и な-прилагательных.
+N: じゃありません is a contraction of ではありません and sounds a little more conversational. じゃないです is even more casual but still polite. All three mean the same. | じゃありません — сокращение ではありません, звучит чуть разговорнее. じゃないです ещё проще, но всё равно вежливо. Все три означают одно и то же.
+N: In ではありません, the は is the particle, so it is pronounced “dewa arimasen”. | В ではありません は — это частица, поэтому произносится «дэва аримасэн».
+N: Verbs do not use ではありません. A verb's polite negative ends in ません: 食べません (I don't eat). | Глаголы не используют ではありません. Вежливое отрицание глагола оканчивается на ません: 食べません (не ем).
+X: わたしは学生ありません。 | わたしは学生ではありません。 | では cannot be left out after a noun. | После существительного нельзя пропускать では.
+X: 食べるではありません。 | 食べません。 | Verbs make their own negative with ません. | Глаголы образуют отрицание сами, через ません.
+C: くないです (高くないです) | い-adjectives are not negated with ではありません: 高い → 高くないです. | い-прилагательные не отрицаются через ではありません: 高い → 高くないです.
+E: これはわたしのかばんではありません。 | This is not my bag. | Это не моя сумка.
+E: 田中さんは先生じゃありません。学生です。 | Mr. Tanaka is not a teacher. He is a student. | Господин Танака не учитель. Он студент.
+
+@ n5-mo
+N: も replaces は (or が) when you say the same thing about a second topic: 田中さんは学生です。山田さんも学生です。 | も заменяет は (или が), когда то же самое говорится о второй теме: 田中さんは学生です。山田さんも学生です。
+N: も replaces を too: パンを食べます。りんごも食べます。 (I eat bread. I eat apples too.) | も заменяет и を: パンを食べます。りんごも食べます。 (Ем хлеб. Яблоки тоже ем.)
+N: With other particles, も is added after them: 東京にも行きました (I went to Tokyo too), 友達とも話しました. | После других частиц も добавляется следом за ними: 東京にも行きました (Ездил и в Токио), 友達とも話しました.
+N: も also works in negative sentences: わたしも行きません (I'm not going either). | も работает и в отрицательных предложениях: わたしも行きません (Я тоже не пойду).
+X: 山田さんはも学生です。 | 山田さんも学生です。 | も takes the place of は; they are never used together. | も занимает место は; вместе они не употребляются.
+X: りんごをも食べます。 | りんごも食べます。 | も replaces を; をも is not used in everyday Japanese. | も заменяет を; をも в обычной речи не используется.
+C: は | は sets a topic; も says “this one too”. In a contrast, such as 「肉は食べますが、魚は食べません」, は is used. | は задаёт тему; も говорит «и этот тоже». При противопоставлении, как в 「肉は食べますが、魚は食べません」, используется は.
+E: わたしも日本語を勉強しています。 | I'm studying Japanese too. | Я тоже изучаю японский.
+E: 今日も明日も休みです。 | Both today and tomorrow are days off. | И сегодня, и завтра — выходные.
+
+@ n5-wo
+N: を marks the thing an action is done to: 水を飲みます (drink water), 本を読みます (read a book). | を обозначает то, над чем совершается действие: 水を飲みます (пить воду), 本を読みます (читать книгу).
+N: を is pronounced “o”, exactly like お. It is used almost only as this particle. | を произносится «о», так же как お. Этот знак используется почти только как частица.
+N: The verb comes last in Japanese: “I read a book” is 本を読みます — object first, verb at the end. | В японском глагол стоит в конце: «Я читаю книгу» — 本を読みます: сначала объект, глагол последним.
+N: With verbs of movement, を also marks the place you move through or leave: 公園を散歩します (walk through the park), 道を渡ります (cross the road). | С глаголами движения を обозначает место, по которому движутся или которое покидают: 公園を散歩します (гулять по парку), 道を渡ります (переходить дорогу).
+X: 本お読みます。 | 本を読みます。 | The particle is written を, even though it sounds like お. | Частица пишется を, хотя звучит как お.
+X: 日本語を分かります。 | 日本語が分かります。 | 分かる takes が, not を. A few verbs and adjectives work this way. | 分かる требует が, а не を. Так ведут себя некоторые глаголы и прилагательные.
+C: が (日本語が分かります) | を marks the object of an action verb; が marks the object of 分かる, できる, 好き and similar words. | を отмечает объект действия; が — объект с 分かる, できる, 好き и подобными словами.
+E: 毎朝コーヒーを飲みます。 | I drink coffee every morning. | Каждое утро я пью кофе.
+E: 日曜日に部屋を掃除します。 | I clean my room on Sundays. | По воскресеньям я убираю комнату.
+
+@ n5-de
+N: で marks where an action takes place: 図書館で勉強します, レストランで食べます. | で обозначает место, где происходит действие: 図書館で勉強します, レストランで食べます.
+N: で also marks the means or tool: バスで行きます (go by bus), はしで食べます (eat with chopsticks), 日本語で話します (speak in Japanese). | で обозначает также средство или инструмент: バスで行きます (ехать на автобусе), はしで食べます (есть палочками), 日本語で話します (говорить по-японски).
+N: Ask yourself: is something happening there (で), or is something simply there (に)? | Спросите себя: там что-то происходит (で) или что-то просто находится (に)?
+N: Walking somewhere is 歩いて行きます. “By foot” is not 足で. | Идти пешком — 歩いて行きます. «Пешком» — это не 足で.
+X: 部屋で猫がいます。 | 部屋に猫がいます。 | います and あります show existence, so the place takes に. | います и あります выражают наличие, поэтому место отмечается に.
+X: 図書館に勉強します。 | 図書館で勉強します。 | Studying is an action, so its place takes で. | Учёба — это действие, поэтому место отмечается で.
+C: に (place of existence) | で = where something happens; に = where something is, or where it goes. | で — где что-то происходит; に — где что-то находится или куда направляется.
+E: 駅の前で友達を待ちます。 | I wait for my friend in front of the station. | Я жду друга перед станцией.
+E: 電車で会社へ行きます。 | I go to work by train. | Я езжу на работу на электричке.
+
+@ n5-time-ni
+N: に marks a point in time that has a number or a name: 七時に (at seven), 月曜日に (on Monday), 三月に (in March), 2026年に. | に отмечает момент времени с числом или названием: 七時に (в семь), 月曜日に (в понедельник), 三月に (в марте), 2026年に.
+N: Words that are relative to now take no に: 今日, 明日, 昨日, 毎日, 今, 来週, 去年. | Слова, отсчитываемые от «сейчас», не берут に: 今日, 明日, 昨日, 毎日, 今, 来週, 去年.
+N: Days of the week may take に or drop it in speech; with clock times, に is needed. | Дни недели в речи могут употребляться с に или без; с часами に нужна.
+N: Time words usually come near the start of the sentence: 明日七時に起きます. | Слова времени обычно стоят в начале предложения: 明日七時に起きます.
+X: 明日に行きます。 | 明日行きます。 | 明日 is relative to today, so it takes no に. | 明日 отсчитывается от сегодняшнего дня, поэтому без に.
+X: 七時で起きます。 | 七時に起きます。 | A point in time takes に, not で. | Момент времени отмечается に, а не で.
+C: ごろ / から | 七時に = at seven exactly; 七時ごろ = around seven; 七時から = from seven. | 七時に — ровно в семь; 七時ごろ — около семи; 七時から — с семи.
+E: 毎日十二時に昼ご飯を食べます。 | Every day I have lunch at twelve. | Каждый день я обедаю в двенадцать.
+E: 土曜日に友達に会います。 | I'll meet a friend on Saturday. | В субботу я встречусь с другом.
+
+@ n5-direction
+N: へ marks the direction of movement and is pronounced “e”. It is used with 行きます, 来ます, 帰ります. | へ обозначает направление движения и произносится «э». Используется с 行きます, 来ます, 帰ります.
+N: に can replace へ with these verbs: 駅に行きます. に stresses the arrival point; へ stresses the direction. At N5 both are correct. | С этими глаголами вместо へ можно сказать に: 駅に行きます. に подчёркивает точку прибытия, へ — направление. На уровне N5 оба варианта правильны.
+N: 行きます = go (away from here), 来ます = come (toward here), 帰ります = return home or to one's base. | 行きます — идти (отсюда), 来ます — приходить (сюда), 帰ります — возвращаться домой или к себе.
+N: The means of travel takes で: 電車で東京へ行きます. A companion takes と: 友達と行きます. | Средство передвижения отмечается で: 電車で東京へ行きます. Спутник — と: 友達と行きます.
+X: うちへ行きます。 | うちへ帰ります。 | Going back to your own home is 帰ります, not 行きます. | Возвращаться к себе домой — это 帰ります, а не 行きます.
+X: 駅え行きます。 | 駅へ行きます。 | The particle is pronounced “e” but written へ. | Частица произносится «э», но пишется へ.
+C: に (駅に行きます) | へ = toward; に = to (the point you reach). Both work with 行く・来る・帰る. | へ — в сторону; に — до (точки прибытия). Оба подходят к 行く・来る・帰る.
+E: 来年日本へ行きます。 | I'll go to Japan next year. | В следующем году я поеду в Японию.
+E: 何時にうちへ帰りますか。 | What time will you go home? | Во сколько вы пойдёте домой?
+
+@ n5-arimasu
+N: あります is for things that do not move by themselves: books, buildings, plants, and also events: 明日テストがあります (There's a test tomorrow). | あります — для того, что не движется само: книги, здания, растения, а также события: 明日テストがあります (Завтра контрольная).
+N: Two word orders: 机の上に本があります (On the desk there is a book — new information) and 本は机の上にあります (The book is on the desk — answers “where?”). | Два порядка слов: 机の上に本があります (На столе есть книга — новая информация) и 本は机の上にあります (Книга на столе — ответ на «где?»).
+N: あります also means “to have”: お金があります (I have money), 時間がありません (I don't have time). | あります значит также «иметь»: お金があります (У меня есть деньги), 時間がありません (Нет времени).
+N: Position words use の: 机の上 (on the desk), 箱の中 (in the box), 駅の前 (in front of the station), いすの下 (under the chair). | Слова места присоединяются через の: 机の上 (на столе), 箱の中 (в коробке), 駅の前 (перед станцией), いすの下 (под стулом).
+X: 机の上で本があります。 | 机の上に本があります。 | Where something exists takes に, not で. | Место нахождения отмечается に, а не で.
+X: 公園に子供があります。 | 公園に子供がいます。 | People and animals take います. | Для людей и животных — います.
+C: います | あります for things and plants; います for people and animals. | あります — для вещей и растений; います — для людей и животных.
+E: 駅の近くにコンビニがあります。 | There is a convenience store near the station. | Рядом со станцией есть магазин.
+E: 今日は時間がありません。 | I don't have time today. | Сегодня у меня нет времени.
+
+@ n5-imasu
+N: います is for living things that move by themselves: people and animals. Plants and objects use あります. | います — для живых существ, которые двигаются сами: людей и животных. Растения и предметы — あります.
+N: Like あります, います has two word orders: 庭に犬がいます (There is a dog in the garden) and 犬は庭にいます (The dog is in the garden). | Как и у あります, у います два порядка слов: 庭に犬がいます (В саду есть собака) и 犬は庭にいます (Собака в саду).
+N: います also expresses family: 兄弟がいます (I have siblings), 子供が二人います (I have two children). | います выражает и наличие родственников: 兄弟がいます (У меня есть братья/сёстры), 子供が二人います (У меня двое детей).
+N: The number goes before います without a particle: 学生が三人います. | Число ставится перед います без частицы: 学生が三人います.
+X: 犬があります。 | 犬がいます。 | Animals are living beings, so use います. | Животные — живые существа, поэтому います.
+X: 姉が一人あります。 | 姉が一人います。 | Family members take います. | Для членов семьи используется います.
+C: あります | あります for objects, plants and events; います for people and animals. | あります — для предметов, растений и событий; います — для людей и животных.
+E: 教室に学生が十人います。 | There are ten students in the classroom. | В классе десять студентов.
+E: 田中さんは今どこにいますか。 | Where is Mr. Tanaka now? | Где сейчас господин Танака?
+
+@ n5-verbs
+N: The ます form covers both present habits and future plans: 毎日食べます (I eat every day) and 明日食べます (I will eat tomorrow). Japanese has no separate future tense. | Форма на ます охватывает и привычные действия, и будущее: 毎日食べます (ем каждый день) и 明日食べます (съем завтра). Отдельного будущего времени нет.
+N: The verb always comes at the end. The basic order is: topic は — time — place で — object を — verb. | Глагол всегда стоит в конце. Базовый порядок: тема は — время — место で — объект を — глагол.
+N: ます forms are polite and safe with strangers, teachers and colleagues. Friends use the plain (dictionary) form, which you will learn later. | Формы на ます вежливые и подходят для незнакомых, учителей и коллег. С друзьями используют простую (словарную) форму — она будет позже.
+N: The negative only changes ます to ません: 行きます → 行きません, します → しません. | В отрицании меняется только ます на ません: 行きます → 行きません, します → しません.
+X: 毎日コーヒーを飲むます。 | 毎日コーヒーを飲みます。 | ます attaches to the ます stem (飲み), not to the dictionary form (飲む). | ます присоединяется к основе (飲み), а не к словарной форме (飲む).
+X: わたしは食べますパン。 | わたしはパンを食べます。 | The object comes before the verb, and the verb ends the sentence. | Объект стоит перед глаголом, а глагол — в конце.
+C: ました | ます = now or future; ました = past. | ます — настоящее или будущее; ました — прошедшее.
+E: わたしは毎晩テレビを見ません。 | I don't watch TV in the evenings. | По вечерам я не смотрю телевизор.
+E: 明日、図書館へ行きます。 | Tomorrow I'll go to the library. | Завтра я пойду в библиотеку.
+
+@ n5-past
+N: The four polite verb forms: 食べます (eat), 食べません (don't eat), 食べました (ate), 食べませんでした (didn't eat). | Четыре вежливые формы глагола: 食べます (ем), 食べません (не ем), 食べました (ел), 食べませんでした (не ел).
+N: Past time words such as 昨日 (yesterday), 先週 (last week) and 去年 (last year) need a past verb. | Слова прошедшего времени — 昨日 (вчера), 先週 (на прошлой неделе), 去年 (в прошлом году) — требуют глагола в прошедшем.
+N: To ask “Did you …?”, add か: 昨日勉強しましたか。…はい、しました。 / いいえ、しませんでした。 | Чтобы спросить «Вы …?», добавьте か: 昨日勉強しましたか。…はい、しました。 / いいえ、しませんでした。
+N: “Not yet” is not ませんでした but まだ…ていません; you will learn it in the もう・まだ lesson. | «Ещё не» — это не ませんでした, а まだ…ていません; это будет в уроке もう・まだ.
+X: 昨日映画を見ます。 | 昨日映画を見ました。 | 昨日 (yesterday) needs the past form ました. | 昨日 (вчера) требует прошедшей формы ました.
+X: 昨日は勉強しないでした。 | 昨日は勉強しませんでした。 | The polite past negative is ませんでした. | Вежливое прошедшее отрицание — ませんでした.
+C: ます | ました = past; ます = habit or future. | ました — прошлое; ます — привычка или будущее.
+E: 先週、京都へ行きました。 | Last week I went to Kyoto. | На прошлой неделе я ездил в Киото.
+E: 今朝は朝ご飯を食べませんでした。 | I didn't eat breakfast this morning. | Сегодня утром я не завтракал.
+
+@ n5-i-adjectives
+N: An い-adjective ends in い and can be used without anything else before a noun: 高い山 (a high mountain), おもしろい本 (an interesting book). | い-прилагательное оканчивается на い и ставится прямо перед существительным: 高い山 (высокая гора), おもしろい本 (интересная книга).
+N: Negative: drop い and add くない (くないです politely): 高い → 高くないです. A more formal alternative is くありません. | Отрицание: уберите い и добавьте くない (вежливо くないです): 高い → 高くないです. Более формальный вариант — くありません.
+N: いい (good) is irregular: its forms come from よい, so the negative is よくないです. | いい (хороший) — неправильное: его формы образуются от よい, поэтому отрицание — よくないです.
+N: Not every word ending in い is an い-adjective: きれい, 有名, きらい are な-adjectives. | Не каждое слово на い — い-прилагательное: きれい, 有名, きらい — な-прилагательные.
+X: この本は高いではありません。 | この本は高くないです。 | い-adjectives make their own negative with くない. | い-прилагательные образуют отрицание через くない.
+X: いくないです。 | よくないです。 | The negative of いい is よくない. | Отрицание いい — よくない.
+X: 高いな本 | 高い本 | い-adjectives go before a noun without な. | い-прилагательные ставятся перед существительным без な.
+C: な-adjectives | い-adjective: 高い本, 高くないです. な-adjective: 静かな部屋, 静かではありません. | い-прилагательное: 高い本, 高くないです. な-прилагательное: 静かな部屋, 静かではありません.
+E: 日本語はむずかしくないです。 | Japanese is not difficult. | Японский несложный.
+E: 今日はとても暑いです。 | It's very hot today. | Сегодня очень жарко.
+
+@ n5-na-adjectives
+N: A な-adjective adds な only before a noun: 静かな町 (a quiet town). At the end of a sentence it takes です without な: この町は静かです. | な-прилагательное добавляет な только перед существительным: 静かな町 (тихий город). В конце предложения — です без な: この町は静かです.
+N: The negative works like a noun: 静かではありません / 静かじゃないです. | Отрицание строится как у существительного: 静かではありません / 静かじゃないです.
+N: Common な-adjectives: 元気, 静か, 有名, 便利, 親切, ひま, 好き, きらい, 上手, 下手, きれい. | Частые な-прилагательные: 元気, 静か, 有名, 便利, 親切, ひま, 好き, きらい, 上手, 下手, きれい.
+N: きれい and きらい end in い but are な-adjectives: きれいな花, not きれい花. | きれい и きらい оканчиваются на い, но это な-прилагательные: きれいな花, а не きれい花.
+X: 静かな です。 | 静かです。 | な is used only before a noun, not before です. | な ставится только перед существительным, а не перед です.
+X: きれくないです。 | きれいではありません。 | きれい is a な-adjective, so its negative is きれいではありません. | きれい — な-прилагательное, поэтому отрицание — きれいではありません.
+C: の | Nouns join nouns with の (日本の車); な-adjectives join nouns with な (有名な車). | Существительные соединяются с существительными через の (日本の車); な-прилагательные — через な (有名な車).
+E: 田中さんはとても親切な人です。 | Mr. Tanaka is a very kind person. | Господин Танака — очень добрый человек.
+E: この町は便利ではありません。 | This town is not convenient. | Этот город неудобный.
+
+@ n5-kono
+N: この・その・あの・どの always need a noun right after them: この本, その人, あの店, どのかばん. | После この・その・あの・どの всегда нужно существительное: この本, その人, あの店, どのかばん.
+N: この人 (this person) is neutral; この方 is more polite. | この人 (этот человек) — нейтрально; この方 — вежливее.
+N: In conversation, その can also point to something just mentioned: その話 (that story you mentioned). | В разговоре その может указывать и на только что упомянутое: その話 (та история, о которой вы говорили).
+N: To ask “which (noun)?”, use どの + noun: どの本ですか. Without a noun, use どれ. | Чтобы спросить «который (предмет)?», используйте どの + существительное: どの本ですか. Без существительного — どれ.
+X: この は わたしの本です。 | これはわたしの本です。 | この needs a noun after it; on its own, use これ. | После この нужно существительное; отдельно используйте これ.
+X: どれ本ですか。 | どの本ですか。 | Before a noun, use どの, not どれ. | Перед существительным — どの, а не どれ.
+C: これ・それ・あれ | これ = this thing (stands alone); この + noun = this (noun). | これ — эта вещь (стоит отдельно); この + существительное — этот (предмет).
+E: その傘はいくらですか。 | How much is that umbrella (near you)? | Сколько стоит этот зонт (у вас)?
+E: あの人はだれですか。 | Who is that person over there? | Кто вон тот человек?
+
+@ n5-suki
+N: 好き is a な-adjective meaning “liked”. The thing you like is marked with が: 音楽が好きです (I like music; literally, “music is liked”). | 好き — な-прилагательное со значением «нравящийся». То, что нравится, отмечается が: 音楽が好きです (Я люблю музыку; дословно «музыка любима»).
+N: The person who likes is the topic with は: わたしは犬が好きです. | Тот, кому нравится, — тема с は: わたしは犬が好きです.
+N: 大好き means “love, like very much”. きらい (dislike) is also a な-adjective: 魚がきらいです. きらい is strong, so people often say あまり好きではありません instead. | 大好き — «очень люблю». きらい (не люблю) — тоже な-прилагательное: 魚がきらいです. きらい звучит резко, поэтому часто говорят あまり好きではありません.
+N: Before a noun: 好きな食べ物 (favorite food), 好きな人 (a person you like). | Перед существительным: 好きな食べ物 (любимая еда), 好きな人 (человек, который нравится).
+X: わたしは音楽を好きです。 | わたしは音楽が好きです。 | 好き is not a verb; what you like takes が. | 好き — не глагол; то, что нравится, отмечается が.
+X: 好き食べ物は何ですか。 | 好きな食べ物は何ですか。 | 好き is a な-adjective, so it needs な before a noun. | 好き — な-прилагательное, перед существительным нужно な.
+C: 上手・分かる | 好き, きらい, 上手, 下手, 分かる and できる all mark their object with が. | 好き, きらい, 上手, 下手, 分かる и できる отмечают объект с помощью が.
+E: どんな音楽が好きですか。 | What kind of music do you like? | Какую музыку вы любите?
+E: わたしは野菜があまり好きではありません。 | I don't like vegetables much. | Я не очень люблю овощи.
+
+@ n5-te-kudasai
+N: て-form + ください is a polite request, but it is direct: teachers, shop staff and signs use it. To a superior, ていただけませんか is softer (later level). | て-форма + ください — вежливая, но прямая просьба: её используют учителя, продавцы, таблички. Начальнику мягче сказать ていただけませんか (более высокий уровень).
+N: How to make the て-form: ru-verbs drop る and add て (食べる → 食べて). U-verbs: う・つ・る → って; む・ぶ・ぬ → んで; く → いて; ぐ → いで; す → して. Irregular: する → して, 来る → 来て, 行く → 行って. | Как образовать て-форму: ru-глаголы убирают る и добавляют て (食べる → 食べて). U-глаголы: う・つ・る → って; む・ぶ・ぬ → んで; く → いて; ぐ → いで; す → して. Неправильные: する → して, 来る → 来て, 行く → 行って.
+N: To ask for an item rather than an action, use noun + をください: 水をください. | Чтобы попросить предмет, а не действие, используйте существительное + をください: 水をください.
+N: ちょっと待ってください (Please wait a moment) and もう一度言ってください (Please say it again) are very useful phrases. | ちょっと待ってください (Подождите немного) и もう一度言ってください (Повторите, пожалуйста) — очень полезные фразы.
+X: 書きてください。 | 書いてください。 | く verbs change to いて: 書く → 書いて. | Глаголы на く меняются на いて: 書く → 書いて.
+X: 行いてください。 | 行ってください。 | 行く is the one exception: 行って. | 行く — единственное исключение: 行って.
+X: 名前を書くください。 | 名前を書いてください。 | ください follows the て-form, not the dictionary form. | ください идёт после て-формы, а не словарной.
+C: ないでください | てください = please do; ないでください = please don't. | てください — сделайте, пожалуйста; ないでください — не делайте, пожалуйста.
+E: ここに住所を書いてください。 | Please write your address here. | Напишите, пожалуйста, здесь свой адрес.
+E: もう少しゆっくり話してください。 | Please speak a little more slowly. | Говорите, пожалуйста, чуть медленнее.
+
+@ n5-invitations
+N: ませんか is a polite invitation that leaves the other person free to refuse: 映画を見に行きませんか (Would you like to go see a movie?). | ませんか — вежливое приглашение, оставляющее право отказаться: 映画を見に行きませんか (Не хотите сходить в кино?).
+N: ましょう is “let's”. It is used when both people already agree, or to accept: いいですね。行きましょう。 | ましょう — «давайте». Её используют, когда оба уже согласны, или чтобы принять приглашение: いいですね。行きましょう。
+N: A typical flow: invite with ませんか, accept with ええ、いいですね, then decide details with ましょう. | Обычный порядок: пригласить через ませんか, согласиться ええ、いいですね, затем договориться через ましょう.
+N: To refuse politely, do not say いいえ directly. Say すみません、ちょっと… or 今日はちょっと… and let the sentence trail off. | Чтобы вежливо отказаться, не говорят прямо いいえ. Говорят すみません、ちょっと… или 今日はちょっと… и не договаривают.
+X: 一緒に食べますか。 | 一緒に食べませんか。 | ますか only asks for information; an invitation uses ませんか. | ますか просто спрашивает о факте; приглашение — ませんか.
+X: いいえ、行きません。 | すみません、明日はちょっと…。 | A flat いいえ sounds rude to an invitation; refuse softly. | Прямое いいえ на приглашение звучит грубо; отказывайте мягко.
+C: ましょうか | ましょう = let's; ましょうか = shall we? / shall I? (offering help). | ましょう — давайте; ましょうか — может, нам…? / давайте я… (предложение помощи).
+E: 日曜日にテニスをしませんか。…ええ、しましょう。 | Would you like to play tennis on Sunday? — Yes, let's. | Не хотите поиграть в теннис в воскресенье? — Да, давайте.
+E: 少し休みましょう。 | Let's take a short break. | Давайте немного отдохнём.

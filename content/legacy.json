@@ -88,6 +88,146 @@
       "en": "Use は to introduce わたし as the topic. The pattern is A は B です: “A is B”.",
       "ru": "Частица は вводит わたし как тему. Шаблон A は B です означает «A — это B»."
      }
+    },
+    {
+     "id": "wa-4",
+     "prompt": "山田さん（　）医者です。",
+     "translation": {
+      "en": "Mr. Yamada is a doctor.",
+      "ru": "Господин Ямада — врач."
+     },
+     "type": "choice",
+     "choices": [
+      "は",
+      "を",
+      "に",
+      "で"
+     ],
+     "answer": "は",
+     "explanation": {
+      "en": "は marks 山田さん as the topic: “As for Mr. Yamada, (he) is a doctor.”",
+      "ru": "は отмечает 山田さん как тему: «Что касается Ямады, он врач»."
+     }
+    },
+    {
+     "id": "wa-5",
+     "prompt": "わたしは会社員（　）。",
+     "translation": {
+      "en": "I am an office worker.",
+      "ru": "Я служащий компании."
+     },
+     "type": "choice",
+     "choices": [
+      "です",
+      "ます",
+      "は",
+      "を"
+     ],
+     "answer": "です",
+     "explanation": {
+      "en": "です ends a polite statement after a noun such as 会社員 (office worker).",
+      "ru": "です завершает вежливое утверждение после существительного 会社員 (служащий)."
+     }
+    },
+    {
+     "id": "wa-6",
+     "prompt": "（　）は学生です。",
+     "translation": {
+      "en": "I am a student.",
+      "ru": "Я студент."
+     },
+     "type": "choice",
+     "choices": [
+      "わたし",
+      "です",
+      "は",
+      "を"
+     ],
+     "answer": "わたし",
+     "explanation": {
+      "en": "The topic comes before は. Here the topic is わたし (I).",
+      "ru": "Тема стоит перед は. Здесь тема — わたし (я)."
+     }
+    },
+    {
+     "id": "wa-7",
+     "prompt": "アンナさんは（　）です。",
+     "translation": {
+      "en": "Anna is Russian.",
+      "ru": "Анна — русская."
+     },
+     "type": "choice",
+     "choices": [
+      "ロシア人",
+      "は",
+      "です",
+      "を"
+     ],
+     "answer": "ロシア人",
+     "explanation": {
+      "en": "The pattern is A は B です. B is the noun that describes A: ロシア人 (a Russian).",
+      "ru": "Шаблон — A は B です. B — существительное, описывающее A: ロシア人 (русский человек)."
+     }
+    },
+    {
+     "id": "wa-8",
+     "prompt": "（　）さんは先生です。",
+     "translation": {
+      "en": "Mr. Tanaka is a teacher.",
+      "ru": "Господин Танака — учитель."
+     },
+     "type": "choice",
+     "choices": [
+      "田中",
+      "わたし",
+      "は",
+      "です"
+     ],
+     "answer": "田中",
+     "explanation": {
+      "en": "さん is added after another person's name: 田中さん. Never add さん to your own name.",
+      "ru": "さん добавляют к имени другого человека: 田中さん. К своему имени さん не добавляют."
+     }
+    },
+    {
+     "id": "wa-9",
+     "prompt": "マリアさん（　）学生です。",
+     "translation": {
+      "en": "Maria is a student.",
+      "ru": "Мария — студентка."
+     },
+     "type": "fill",
+     "choices": [
+      "は",
+      "を",
+      "に",
+      "の"
+     ],
+     "answer": "は",
+     "explanation": {
+      "en": "Use は after the topic マリアさん, then the comment 学生です.",
+      "ru": "После темы マリアさん ставится は, затем высказывание 学生です."
+     }
+    },
+    {
+     "id": "wa-10",
+     "prompt": "わたしはエンジニア（　）。",
+     "translation": {
+      "en": "I am an engineer.",
+      "ru": "Я инженер."
+     },
+     "type": "fill",
+     "choices": [
+      "です",
+      "は",
+      "を",
+      "か"
+     ],
+     "answer": "です",
+     "explanation": {
+      "en": "A polite statement about a noun ends with です.",
+      "ru": "Вежливое утверждение о существительном заканчивается на です."
+     }
     }
    ]
   },
@@ -294,6 +434,132 @@
       "ru": "猫 читается ねこ и означает «кошка». Повторяйте чтение вместе со значением."
      },
      "wordId": "n5-everyday-w4"
+    },
+    {
+     "id": "word-5",
+     "prompt": "ことばを えらびましょう。",
+     "translation": {
+      "en": "Which word means “dog”?",
+      "ru": "Какое слово означает «собака»?"
+     },
+     "type": "choice",
+     "choices": [
+      "犬",
+      "猫",
+      "机",
+      "水"
+     ],
+     "answer": "犬",
+     "explanation": {
+      "en": "犬 is read いぬ and means “dog”. Do not confuse it with 猫 (ねこ, cat).",
+      "ru": "犬 читается いぬ и означает «собака». Не путайте с 猫 (ねこ, кошка)."
+     },
+     "wordId": "n5-everyday-w5"
+    },
+    {
+     "id": "word-6",
+     "prompt": "これは（　）です。",
+     "translation": {
+      "en": "Choose “desk”: This is a desk.",
+      "ru": "Выберите «письменный стол»: Это стол."
+     },
+     "type": "choice",
+     "choices": [
+      "机",
+      "椅子",
+      "本",
+      "電話"
+     ],
+     "answer": "机",
+     "explanation": {
+      "en": "机 (つくえ, tsukue) means “desk”. 椅子 (いす) is the chair next to it.",
+      "ru": "机 (つくえ, цукуэ) означает «письменный стол». 椅子 (いす) — стул рядом с ним."
+     },
+     "wordId": "n5-everyday-w6"
+    },
+    {
+     "id": "word-7",
+     "prompt": "ことばを えらびましょう。",
+     "translation": {
+      "en": "Which word means “chair”?",
+      "ru": "Какое слово означает «стул»?"
+     },
+     "type": "choice",
+     "choices": [
+      "椅子",
+      "机",
+      "時計",
+      "かばん"
+     ],
+     "answer": "椅子",
+     "explanation": {
+      "en": "椅子 is read いす and means “chair”. It is often written in kana: いす.",
+      "ru": "椅子 читается いす и означает «стул». Часто пишется каной: いす."
+     },
+     "wordId": "n5-everyday-w7"
+    },
+    {
+     "id": "word-8",
+     "prompt": "これは（　）です。",
+     "translation": {
+      "en": "Choose “watch”: This is a watch.",
+      "ru": "Выберите «часы»: Это часы."
+     },
+     "type": "choice",
+     "choices": [
+      "時計",
+      "電話",
+      "犬",
+      "学校"
+     ],
+     "answer": "時計",
+     "explanation": {
+      "en": "時計 (とけい, tokei) means both “clock” and “watch”.",
+      "ru": "時計 (とけい, токэй) означает и настенные, и наручные часы."
+     },
+     "wordId": "n5-everyday-w8"
+    },
+    {
+     "id": "word-9",
+     "prompt": "ことばを えらびましょう。",
+     "translation": {
+      "en": "Which word means “telephone”?",
+      "ru": "Какое слово означает «телефон»?"
+     },
+     "type": "choice",
+     "choices": [
+      "電話",
+      "時計",
+      "水",
+      "猫"
+     ],
+     "answer": "電話",
+     "explanation": {
+      "en": "電話 is read でんわ and means “telephone”. 電話をします means “to make a phone call”.",
+      "ru": "電話 читается でんわ и означает «телефон». 電話をします — «звонить по телефону»."
+     },
+     "wordId": "n5-everyday-w9"
+    },
+    {
+     "id": "word-10",
+     "prompt": "これは（　）です。",
+     "translation": {
+      "en": "Choose “bag”: This is a bag.",
+      "ru": "Выберите «сумка»: Это сумка."
+     },
+     "type": "choice",
+     "choices": [
+      "かばん",
+      "椅子",
+      "本",
+      "犬"
+     ],
+     "answer": "かばん",
+     "explanation": {
+      "en": "かばん (kaban) means “bag”. It is usually written in hiragana.",
+      "ru": "かばん (кабан) означает «сумка». Обычно пишется хираганой."
+     },
+     "wordId": "n5-everyday-w10"
     }
    ]
   },
@@ -385,6 +651,86 @@
       "en": "The question particle か comes after です in this basic polite question.",
       "ru": "В этом простом вежливом вопросе вопросительная частица か ставится после です."
      }
+    },
+    {
+     "id": "ka-4",
+     "prompt": "学生ですか。…（　）、学生です。",
+     "translation": {
+      "en": "Are you a student? — Yes, I am a student.",
+      "ru": "Вы студент? — Да, студент."
+     },
+     "type": "choice",
+     "choices": [
+      "はい",
+      "いいえ",
+      "か",
+      "は"
+     ],
+     "answer": "はい",
+     "explanation": {
+      "en": "はい means “yes”. After はい, repeat the statement: 学生です.",
+      "ru": "はい означает «да». После はい повторяют утверждение: 学生です."
+     }
+    },
+    {
+     "id": "ka-5",
+     "prompt": "医者ですか。…（　）、学生です。",
+     "translation": {
+      "en": "Are you a doctor? — No, I am a student.",
+      "ru": "Вы врач? — Нет, я студент."
+     },
+     "type": "choice",
+     "choices": [
+      "いいえ",
+      "はい",
+      "か",
+      "です"
+     ],
+     "answer": "いいえ",
+     "explanation": {
+      "en": "いいえ means “no”. Here the person is not a doctor but a student.",
+      "ru": "いいえ означает «нет». Человек не врач, а студент."
+     }
+    },
+    {
+     "id": "ka-6",
+     "prompt": "アンナさん（　）ロシア人ですか。",
+     "translation": {
+      "en": "Is Anna Russian?",
+      "ru": "Анна — русская?"
+     },
+     "type": "choice",
+     "choices": [
+      "は",
+      "か",
+      "を",
+      "で"
+     ],
+     "answer": "は",
+     "explanation": {
+      "en": "In a question, the topic still takes は; か goes only at the end.",
+      "ru": "В вопросе тема по-прежнему с は; か ставится только в конце."
+     }
+    },
+    {
+     "id": "ka-7",
+     "prompt": "山田さんは会社員です（　）。",
+     "translation": {
+      "en": "Is Mr. Yamada an office worker?",
+      "ru": "Господин Ямада — служащий компании?"
+     },
+     "type": "fill",
+     "choices": [
+      "か",
+      "は",
+      "を",
+      "に"
+     ],
+     "answer": "か",
+     "explanation": {
+      "en": "Add か after です to turn the statement into a question.",
+      "ru": "Добавьте か после です, чтобы превратить утверждение в вопрос."
+     }
     }
    ]
   },
@@ -475,6 +821,46 @@
      "explanation": {
       "en": "あれ points to something far from both the speaker and the listener.",
       "ru": "あれ указывает на предмет, удалённый и от говорящего, и от собеседника."
+     }
+    },
+    {
+     "id": "kore-4",
+     "prompt": "それは何ですか。…（　）は時計です。",
+     "translation": {
+      "en": "What is that (near you)? — This is a watch.",
+      "ru": "Что это у вас? — Это часы."
+     },
+     "type": "choice",
+     "choices": [
+      "これ",
+      "それ",
+      "あれ",
+      "どれ"
+     ],
+     "answer": "これ",
+     "explanation": {
+      "en": "The listener asked about something near you (それ). From your side it is near you, so answer with これ.",
+      "ru": "Собеседник спросил о предмете рядом с вами (それ). Для вас он рядом, поэтому отвечаете これ."
+     }
+    },
+    {
+     "id": "kore-5",
+     "prompt": "あれは学校ですか。…はい、（　）は学校です。",
+     "translation": {
+      "en": "Is that (over there) a school? — Yes, that is a school.",
+      "ru": "Вон то — школа? — Да, это школа."
+     },
+     "type": "choice",
+     "choices": [
+      "あれ",
+      "これ",
+      "それ",
+      "どれ"
+     ],
+     "answer": "あれ",
+     "explanation": {
+      "en": "The school is far from both people, so both say あれ.",
+      "ru": "Школа далеко от обоих, поэтому оба говорят あれ."
      }
     }
    ]
@@ -773,6 +1159,48 @@
       "ru": "ご飯 читается ごはん и означает «варёный рис; еда». Повторяйте чтение вместе со значением."
      },
      "wordId": "n5-food-w4"
+    },
+    {
+     "id": "food-5",
+     "prompt": "（　）を食べます。",
+     "translation": {
+      "en": "Choose “meat”: I eat meat.",
+      "ru": "Выберите «мясо»: Я ем мясо."
+     },
+     "type": "choice",
+     "choices": [
+      "肉",
+      "牛乳",
+      "お茶",
+      "コーヒー"
+     ],
+     "answer": "肉",
+     "explanation": {
+      "en": "肉 (にく, niku) means “meat”. Drinks such as 牛乳 and お茶 go with 飲みます, not 食べます.",
+      "ru": "肉 (にく, нику) означает «мясо». Напитки вроде 牛乳 и お茶 сочетаются с 飲みます, а не с 食べます."
+     },
+     "wordId": "n5-food-w5"
+    },
+    {
+     "id": "food-6",
+     "prompt": "ことばを えらびましょう。",
+     "translation": {
+      "en": "Which word means “egg”?",
+      "ru": "Какое слово означает «яйцо»?"
+     },
+     "type": "choice",
+     "choices": [
+      "卵",
+      "野菜",
+      "果物",
+      "パン"
+     ],
+     "answer": "卵",
+     "explanation": {
+      "en": "卵 is read たまご and means “egg”.",
+      "ru": "卵 читается たまご и означает «яйцо»."
+     },
+     "wordId": "n5-food-w6"
     }
    ]
   },

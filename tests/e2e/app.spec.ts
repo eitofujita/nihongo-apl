@@ -1,7 +1,23 @@
-import {expect, test} from '@playwright/test';
-import {placementQuestions} from '../../src/content/lessons';
+import {expect, test, type Page} from '@playwright/test';
+import {allQuestions, placementQuestions} from '../../src/content/lessons';
 import catalogData from '../../src/content/generated/catalog.json';
 const catalog = catalogData.lessons;
+const questionById = new Map(allQuestions.map(question => [question.id, question]));
+
+/** Answers every question of the running practice correctly (it may mix in earlier lessons), then finishes. */
+async function answerAll(page: Page) {
+  for (;;) {
+    const question = questionById.get((await page.locator('.question-card').getAttribute('data-question'))!)!;
+    if (question.type === 'choice') await page.locator(`input[value="${question.answer}"]`).check();
+    else {
+      await page.getByRole('textbox').fill(question.answer);
+      await page.getByRole('button', {name: 'Check answer'}).click();
+    }
+    const finish = page.getByRole('button', {name: 'Finish lesson'});
+    if (await finish.isVisible()) {await finish.click(); return;}
+    await page.getByRole('button', {name: 'Next question'}).click();
+  }
+}
 
 test('English and Russian pages render with localized metadata and no horizontal overflow', async ({page}) => {
   for (const locale of ['en', 'ru']) {
@@ -29,24 +45,22 @@ test('a new learner can choose the diagnostic or start lesson one in either lang
 
 test('a real practice result survives a locale switch and page reload', async ({page}) => {
   await page.goto('/en/lessons/n5-wa-desu');
+  await expect(page.locator('.study-action')).toContainText('10 questions');
   await page.getByRole('button', {name: 'Start practice'}).click();
+  await expect(page.locator('.question-progress')).toHaveText('Question 1 of 10');
   await page.locator('input[value="は"]').check();
   await expect(page.getByRole('status')).toContainText("That's right");
   await page.getByRole('button', {name: 'Next question'}).click();
-  await page.locator('input[value="です"]').check();
-  await page.getByRole('button', {name: 'Next question'}).click();
-  await page.getByRole('textbox').fill('は');
-  await page.getByRole('button', {name: 'Check answer'}).click();
-  await page.getByRole('button', {name: 'Finish lesson'}).click();
+  await answerAll(page);
   await expect(page.getByRole('heading', {level: 1})).toContainText('complete');
   await expect(page.locator('.result-next .button')).toHaveAttribute('href', '/en/lessons/n5-everyday');
   await page.goto('/en/history');
-  await expect(page.locator('tbody')).toContainText('3 / 3');
+  await expect(page.locator('tbody')).toContainText('10 / 10');
   await page.getByRole('combobox', {name: 'Language', exact: true}).selectOption('ru');
   await expect(page).toHaveURL(/\/ru\/history/);
-  await expect(page.locator('tbody')).toContainText('3 / 3');
+  await expect(page.locator('tbody')).toContainText('10 / 10');
   await page.reload();
-  await expect(page.locator('tbody')).toContainText('3 / 3');
+  await expect(page.locator('tbody')).toContainText('10 / 10');
 });
 
 test('lesson filters, empty search, daily goals, and reset confirmation work', async ({page}) => {
@@ -189,13 +203,7 @@ test('a lesson result leads to due review rather than opening another lesson', a
   })));
   await page.goto('/en/lessons/n5-wa-desu');
   await page.getByRole('button', {name: 'Start practice'}).click();
-  for (const answer of ['は', 'です']) {
-    await page.locator(`input[value="${answer}"]`).check();
-    await page.getByRole('button', {name: 'Next question'}).click();
-  }
-  await page.getByRole('textbox').fill('は');
-  await page.getByRole('button', {name: 'Check answer'}).click();
-  await page.getByRole('button', {name: 'Finish lesson'}).click();
+  await answerAll(page);
   await expect(page.locator('.result-next .button')).toHaveAttribute('href', '/en/review');
   await page.locator('.result-next .button').click();
   await expect(page).toHaveURL(/\/en\/review$/);

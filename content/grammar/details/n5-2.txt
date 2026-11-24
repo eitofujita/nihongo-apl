@@ -1,0 +1,221 @@
+# N5 grammar details, part 2.
+
+@ n5-ga-subject
+N: は says what you are talking about; が points out who or what does it. Compare 田中さんは来ました (As for Tanaka, he came) with 田中さんが来ました (It was Tanaka who came). | は говорит, о чём речь; が указывает, кто или что совершает действие. Сравните 田中さんは来ました (Что касается Танаки, он пришёл) и 田中さんが来ました (Пришёл именно Танака).
+N: Question words (だれ, 何, どれ, どこ) can never take は as subjects; they always take が. The answer keeps が. | Вопросительные слова (だれ, 何, どれ, どこ) в роли подлежащего никогда не берут は — только が. В ответе が сохраняется.
+N: が is natural when you report something you just noticed: あ、雨が降っています (Oh, it's raining). | が естественно, когда сообщаешь о только что замеченном: あ、雨が降っています (Ой, дождь идёт).
+N: Inside a description of a noun, the subject takes が, not は: 母が作った料理 (the food my mother made). | Внутри описания существительного подлежащее берёт が, а не は: 母が作った料理 (еда, которую приготовила мама).
+X: だれは来ましたか。 | だれが来ましたか。 | A question word as subject always takes が. | Вопросительное слово в роли подлежащего всегда с が.
+X: 何は好きですか。 | 何が好きですか。 | 何 asks for new information, so it takes が. | 何 спрашивает о новой информации, поэтому с が.
+C: は | は = known topic plus comment (often contrast); が = identifies the subject, often new information. | は — известная тема и высказывание о ней (часто противопоставление); が — выделяет подлежащее, часто новую информацию.
+E: どの人が田中さんですか。…あの人が田中さんです。 | Which person is Mr. Tanaka? — That person is Mr. Tanaka. | Кто из них господин Танака? — Вон тот человек.
+E: 空に月が出ています。 | The moon is out in the sky. | На небе взошла луна.
+
+@ n5-to-and
+N: と joins only nouns. It cannot join verbs or adjectives: “eat and drink” uses the て-form, not と. | と соединяет только существительные. Глаголы и прилагательные им не соединяют: «есть и пить» строится через て-форму, а не と.
+N: と means the list is complete: りんごとみかん = apples and mandarins (and nothing else). | と означает, что перечень полный: りんごとみかん — яблоки и мандарины (и больше ничего).
+N: Person + と = “with”: 友達と映画を見ます. With 会う, 話す, 結婚する, と shows a mutual action: 友達と会います. | Человек + と — «с»: 友達と映画を見ます. С 会う, 話す, 結婚する と показывает взаимное действие: 友達と会います.
+N: 一緒に (together) often follows: 母と一緒に買い物に行きます. | Часто добавляется 一緒に (вместе): 母と一緒に買い物に行きます.
+X: 食べてと飲みます。 | 食べて、飲みます。 | と does not join verbs; use the て-form. | と не соединяет глаголы; используйте て-форму.
+X: 安いとおいしいです。 | 安くておいしいです。 | Adjectives are joined with くて / で, not と. | Прилагательные соединяются через くて / で, а не と.
+C: や | と = complete list; や = some examples, others too. | と — полный перечень; や — несколько примеров, есть и другое.
+E: 父と母は今日本にいます。 | My father and mother are in Japan now. | Мои отец и мать сейчас в Японии.
+E: 昨日、先生と話しました。 | Yesterday I talked with the teacher. | Вчера я поговорил с учителем.
+
+@ n5-ya
+N: Use や when you name only some of the things: 机の上に本やペンがあります means there are other things as well. | や используется, когда называют лишь часть вещей: 机の上に本やペンがあります означает, что там есть и другое.
+N: など can be added after the last item to make “and so on” explicit, but it is optional. | После последнего пункта можно добавить など, чтобы явно сказать «и так далее», но это необязательно.
+N: Like と, や joins only nouns. | Как и と, や соединяет только существительные.
+N: The particle of the whole phrase comes after the last item: 本やノートを買いました. | Частица всего словосочетания ставится после последнего пункта: 本やノートを買いました.
+X: 本をやノートを買いました。 | 本やノートを買いました。 | を comes once, after the whole list. | を ставится один раз, после всего перечня.
+X: 映画を見たや、本を読みました。 | 映画を見たり、本を読んだりしました。 | や lists nouns; example actions use たり…たりする. | や перечисляет существительные; примеры действий — たり…たりする.
+C: と | や = “such as … (and others)”; と = “exactly these”. | や — «такие как … (и прочее)»; と — «именно эти».
+E: 冷蔵庫に肉や野菜があります。 | There's meat, vegetables and so on in the fridge. | В холодильнике мясо, овощи и прочее.
+E: 京都や奈良などへ行きました。 | I went to Kyoto, Nara and other places. | Я ездил в Киото, Нару и другие места.
+
+@ n5-kara-made
+N: から and まで can be used separately: 九時から働きます (I work from nine), 五時まで働きます (I work until five). | から и まで можно употреблять по отдельности: 九時から働きます (работаю с девяти), 五時まで働きます (работаю до пяти).
+N: から…まで can be followed directly by です: 昼休みは十二時から一時までです. | После から…まで может сразу идти です: 昼休みは十二時から一時までです.
+N: まで (until) is the end of a continuing action. For a deadline (by), use までに: 金曜日までに出します (I'll hand it in by Friday). | まで (до) — конец длящегося действия. Для срока (не позднее) используется までに: 金曜日までに出します (Сдам до пятницы).
+N: から also marks where something comes from: 友達から手紙をもらいました (I got a letter from a friend). | から обозначает и источник: 友達から手紙をもらいました (Я получил письмо от друга).
+X: 九時までに五時まで働きます。 | 九時から五時まで働きます。 | The start point takes から. | Начальная точка отмечается から.
+X: 金曜日まで宿題を出します。 | 金曜日までに宿題を出します。 | A one-time action before a deadline needs までに. | Однократное действие до срока требует までに.
+C: までに | まで = continue until; までに = do (once) no later than. | まで — продолжать до; までに — сделать (один раз) не позднее.
+E: 夏休みは七月から八月までです。 | Summer vacation is from July to August. | Летние каникулы — с июля по август.
+E: うちから駅まで十分かかります。 | It takes ten minutes from my house to the station. | От дома до станции десять минут.
+
+@ n5-kara-reason
+N: The order is always reason + から, result: 雨ですから、行きません. The opposite of English “I won't go because it's raining”. | Порядок всегда: причина + から, следствие: 雨ですから、行きません. В русском можно и наоборот, в японском — нет.
+N: から can follow polite forms (ですから, ますから) or plain forms (だから, 行くから). Polite is safer at N5. | から может идти после вежливых форм (ですから, ますから) или простых (だから, 行くから). На уровне N5 надёжнее вежливые.
+N: The answer to どうして often ends in から: どうして食べませんか。…おなかがいっぱいですから。 | Ответ на どうして часто кончается на から: どうして食べませんか。…おなかがいっぱいですから。
+N: After a noun or な-adjective in plain style, use だから: 休みだから, ひまだから. | После существительного или な-прилагательного в простом стиле — だから: 休みだから, ひまだから.
+X: 行きません、雨ですから。 | 雨ですから、行きません。 | In a normal sentence, the reason with から comes first. | В обычном предложении причина с から стоит первой.
+X: 休みから、遊びます。 | 休みだから、遊びます。 | A noun needs だ (or です) before から. | После существительного перед から нужно だ (или です).
+C: から (from) | Reason から follows a whole clause; place/time から follows a noun: 東京から (from Tokyo). | から причины идёт после целого предложения; から места/времени — после существительного: 東京から (из Токио).
+E: 明日は試験がありますから、今晩勉強します。 | I have an exam tomorrow, so I'll study tonight. | Завтра экзамен, поэтому сегодня вечером буду заниматься.
+E: この店は安いですから、いつも人が多いです。 | This shop is cheap, so it's always crowded. | Этот магазин дешёвый, поэтому там всегда много людей.
+
+@ n5-ga-but
+N: The が of “but” comes after a full clause and is followed by a comma: 高いですが、おいしいです. The が of the subject comes after a noun. | が в значении «но» стоит после целого предложения, затем запятая: 高いですが、おいしいです. が подлежащего стоит после существительного.
+N: The two parts should be in the same style: polite ですが with a polite ending. | Обе части должны быть в одном стиле: вежливое ですが и вежливое окончание.
+N: が also opens a conversation softly without real contrast: すみませんが、駅はどこですか (Excuse me, but where is the station?). | が мягко начинает разговор без настоящего противопоставления: すみませんが、駅はどこですか (Извините, где станция?).
+N: でも at the start of a new sentence also means “but”: 高いです。でも、おいしいです。 | でも в начале нового предложения тоже значит «но»: 高いです。でも、おいしいです。
+X: 高いですでも、おいしいです。 | 高いですが、おいしいです。 / 高いです。でも、おいしいです。 | でも starts a new sentence; inside one sentence use が. | でも начинает новое предложение; внутри одного предложения — が.
+C: けど / でも | が is neutral and polite; けど is conversational; でも starts the next sentence. | が нейтральное и вежливое; けど разговорное; でも начинает следующее предложение.
+E: 日本語はむずかしいですが、おもしろいです。 | Japanese is difficult, but interesting. | Японский трудный, но интересный.
+E: 行きたいですが、時間がありません。 | I want to go, but I don't have time. | Хочу пойти, но нет времени.
+
+@ n5-koko
+N: ここ・そこ・あそこ・どこ are place words and follow the same こ・そ・あ・ど logic as これ・それ・あれ・どれ. | ここ・そこ・あそこ・どこ — слова места; они подчиняются той же логике こ・そ・あ・ど, что и これ・それ・あれ・どれ.
+N: Polite versions are こちら・そちら・あちら・どちら, used by shop staff and in formal speech: お手洗いはあちらです. | Вежливые варианты — こちら・そちら・あちら・どちら; их используют продавцы и в официальной речи: お手洗いはあちらです.
+N: Two patterns: トイレはどこですか (Where is the toilet?) and ここはどこですか (Where am I?). | Два шаблона: トイレはどこですか (Где туалет?) и ここはどこですか (Где я нахожусь?).
+N: どこ also asks about a company or country: 会社はどこですか (Which company do you work for?). | どこ спрашивает и о компании или стране: 会社はどこですか (В какой компании вы работаете?).
+X: どこはトイレですか。 | トイレはどこですか。 | The thing you are looking for is the topic; どこ goes where the answer will be. | Искомое — тема; どこ стоит на месте ответа.
+X: （場所を聞く）これはどこですか。 | ここはどこですか。 | To ask about the place you are in, use ここ; これ is for things. | Чтобы спросить о месте, где вы находитесь, используйте ここ; これ — для предметов.
+C: こちら・そちら | ここ is everyday; こちら is the polite form and can also mean “this person” or “this way”. | ここ — повседневное; こちら — вежливое и может означать «этот человек» или «сюда».
+E: すみません、駅はどこですか。…あそこです。 | Excuse me, where is the station? — It's over there. | Извините, где станция? — Вон там.
+E: ここで靴を脱いでください。 | Please take off your shoes here. | Снимите обувь здесь, пожалуйста.
+
+@ n5-question-words
+N: 何 is read なん before d, t and n sounds and before counters (何ですか, 何時, 何人), and なに elsewhere (何を, 何が). | 何 читается なん перед звуками д, т, н и перед счётными суффиксами (何ですか, 何時, 何人), а в остальных случаях — なに (何を, 何が).
+N: だれ is “who”; the polite form is どなた: あの方はどなたですか. | だれ — «кто»; вежливая форма — どなた: あの方はどなたですか.
+N: いつ (when) takes no に: いつ行きますか. | いつ (когда) не берёт に: いつ行きますか.
+N: The sentence keeps the same word order as the answer; only the question word replaces the information: 田中さんは九時に来ます → 田中さんは何時に来ますか. | Порядок слов тот же, что в ответе; вопросительное слово просто заменяет информацию: 田中さんは九時に来ます → 田中さんは何時に来ますか.
+X: いつに行きますか。 | いつ行きますか。 | いつ does not take に. | いつ не берёт に.
+X: だれは先生ですか。 | だれが先生ですか。 | A question word as subject takes が. | Вопросительное слово в роли подлежащего — с が.
+C: 何時・何曜日 | いつ = when (any time); 何時 = what time; 何曜日 = what day of the week; these can take に: 何時に. | いつ — когда (вообще); 何時 — во сколько; 何曜日 — в какой день недели; после них можно ставить に: 何時に.
+E: それは何ですか。…日本のお菓子です。 | What's that? — It's a Japanese sweet. | Что это? — Японская сладость.
+E: 誕生日に何がほしいですか。 | What do you want for your birthday? | Что ты хочешь на день рождения?
+
+@ n5-ikura
+N: いくら asks about price or amount of money: 全部でいくらですか (How much is it altogether?). | いくら спрашивает о цене или сумме: 全部でいくらですか (Сколько всего?).
+N: いくつ asks how many general things (one, two, three…), and also a person's age: おいくつですか is the polite way. | いくつ спрашивает о количестве обычных предметов (один, два, три…), а также о возрасте: вежливо — おいくつですか.
+N: For things with a specific counter, use 何 + counter: 何人 (how many people), 何枚 (how many sheets), 何本 (how many long things). | Для предметов со своим счётным словом используется 何 + суффикс: 何人 (сколько человек), 何枚 (сколько листов), 何本 (сколько длинных предметов).
+N: Prices: 百 (100), 千 (1,000), 一万 (10,000). Japanese counts in units of 万, so 50,000 yen is 五万円. Note sound changes: 三百 (さんびゃく), 六百 (ろっぴゃく), 八百 (はっぴゃく), 三千 (さんぜん). | Цены: 百 (100), 千 (1 000), 一万 (10 000). Японцы считают десятками тысяч (万), поэтому 50 000 иен — 五万円. Звуковые изменения: 三百 (さんびゃく), 六百 (ろっぴゃく), 八百 (はっぴゃく), 三千 (さんぜん).
+X: このかばんはいくつですか。 | このかばんはいくらですか。 | Price is いくら; いくつ asks how many. | Цена — いくら; いくつ спрашивает «сколько штук».
+X: 学生はいくついますか。 | 学生は何人いますか。 | People are counted with 人, so ask 何人. | Людей считают с 人, поэтому спрашивают 何人.
+C: どのぐらい | いくら = price; いくつ = number of things / age; どのぐらい = how long / how much (amount or time). | いくら — цена; いくつ — количество штук / возраст; どのぐらい — как долго / сколько (количество или время).
+E: りんごはいくつありますか。…五つあります。 | How many apples are there? — There are five. | Сколько яблок? — Пять.
+E: 東京までの切符はいくらですか。 | How much is a ticket to Tokyo? | Сколько стоит билет до Токио?
+
+@ n5-doushite
+N: どうして (why) is conversational and gentle; なぜ is more formal or written. Both are answered with から or ので. | どうして (почему) — разговорное и мягкое; なぜ — более официальное или письменное. На оба отвечают с から или ので.
+N: The answer can be a whole sentence + から: 頭が痛いですから. | Ответ может быть целым предложением + から: 頭が痛いですから.
+N: どうしてですか alone asks “Why is that?” after someone's statement. | どうしてですか отдельно означает «Почему?» в ответ на чьи-то слова.
+N: Asking “why” directly about someone's choice can sound like criticism. どうしてですか in a soft voice, or adding ちょっと, helps. | Прямой вопрос «почему» о чужом решении может звучать как упрёк. Помогает мягкий тон или ちょっと.
+X: どうして遅れましたか。…電車が遅れました。から | …電車が遅れましたから。 | から comes after the reason, before 。. | から ставится после причины, перед 。.
+X: どうしてですから。 | どうしてですか。 | A question ends in か; から belongs in the answer. | Вопрос заканчивается на か; から — в ответе.
+C: なぜ / どうやって | どうして・なぜ = why; どうやって = how (by what method). | どうして・なぜ — почему; どうやって — как (каким способом).
+E: どうして日本語を勉強していますか。…日本のアニメが好きですから。 | Why are you studying Japanese? — Because I like Japanese anime. | Почему вы изучаете японский? — Потому что люблю японские аниме.
+E: どうして昨日来ませんでしたか。 | Why didn't you come yesterday? | Почему ты вчера не пришёл?
+
+@ n5-ne-yo
+N: ね asks the listener to share your feeling or confirm: いい天気ですね (Nice weather, isn't it?). It is like “isn't it?” or “right?”. | ね приглашает собеседника разделить чувство или подтвердить: いい天気ですね (Хорошая погода, правда?). Похоже на «не так ли?» или «да?».
+N: よ gives the listener information they do not have: この電車は東京へ行きますよ (This train goes to Tokyo, you know). | よ сообщает собеседнику то, чего он не знает: この電車は東京へ行きますよ (Этот поезд идёт в Токио, между прочим).
+N: よね combines both: “…, right?” when you are fairly sure: 明日は休みですよね. | よね объединяет оба: «…, верно?», когда вы почти уверены: 明日は休みですよね.
+N: Overusing よ toward superiors can sound pushy. ね is used much more often in friendly conversation. | Злоупотребление よ с вышестоящими звучит напористо. ね в дружеской беседе используется гораздо чаще.
+X: 雨ですねよ。 | 雨ですよね。 | The combination is よね, in that order. | Сочетание — よね, именно в таком порядке.
+X: （初めて教える）この店は安いですね。 | この店は安いですよ。 | When the listener doesn't know yet, use よ to tell them; ね is for shared knowledge. | Если собеседник ещё не знает, сообщайте через よ; ね — для общего знания.
+C: か | か asks a real question; ね asks for agreement; よ informs. | か задаёт настоящий вопрос; ね просит согласия; よ сообщает.
+E: この料理、おいしいですね。…ええ、本当に。 | This dish is delicious, isn't it? — Yes, really. | Вкусное блюдо, правда? — Да, очень.
+E: 傘を忘れましたよ。 | You forgot your umbrella. | Вы забыли зонт.
+
+@ n5-counters-tsu
+N: The full set: ひとつ, ふたつ, みっつ, よっつ, いつつ, むっつ, ななつ, やっつ, ここのつ, とお. From 11 on, use 十一, 十二 without つ. | Полный ряд: ひとつ, ふたつ, みっつ, よっつ, いつつ, むっつ, ななつ, やっつ, ここのつ, とお. С 11 используются 十一, 十二 без つ.
+N: They are used for things without a special counter: fruit, eggs, boxes, ideas, also orders in a shop: コーヒーをふたつください. | Они используются для предметов без особого счётного слова: фрукты, яйца, коробки, идеи, а также при заказе: コーヒーをふたつください.
+N: The number usually goes after the particle, right before the verb: りんごを三つ買いました, not 三つのりんごを買いました (possible, but less common). | Число обычно стоит после частицы, прямо перед глаголом: りんごを三つ買いました, а не 三つのりんごを買いました (возможно, но реже).
+N: とお (ten) has no つ. | とお (десять) пишется без つ.
+X: りんごをさんつ買いました。 | りんごをみっつ買いました。 | つ counters use native Japanese numbers: みっつ, not さんつ. | Счёт на つ использует японские числа: みっつ, а не さんつ.
+X: 学生が三ついます。 | 学生が三人います。 | People are never counted with つ; use 人. | Людей никогда не считают на つ; используйте 人.
+C: 〜個 | 〜個 (いっこ, にこ…) also counts small objects and works above ten. | 〜個 (いっこ, にこ…) тоже считает небольшие предметы и подходит для чисел больше десяти.
+E: 卵を四つ使います。 | I'll use four eggs. | Я использую четыре яйца.
+E: 質問がふたつあります。 | I have two questions. | У меня два вопроса.
+
+@ n5-counters
+N: Main counters: 〜人 people, 〜枚 flat things (paper, shirts, stamps), 〜本 long thin things (pens, bottles, umbrellas), 〜冊 books, 〜台 machines and cars, 〜匹 small animals, 〜杯 cups and glasses. | Основные счётные слова: 〜人 — люди, 〜枚 — плоские предметы (бумага, рубашки, марки), 〜本 — длинные тонкие (ручки, бутылки, зонты), 〜冊 — книги, 〜台 — машины и техника, 〜匹 — мелкие животные, 〜杯 — чашки и стаканы.
+N: People: ひとり, ふたり, then さんにん, よにん, ごにん… | Люди: ひとり, ふたり, далее さんにん, よにん, ごにん…
+N: Sounds change with 本, 杯, 匹: いっぽん, にほん, さんぼん, ろっぽん, はっぽん, じゅっぽん; いっぴき, さんびき. | Звуки меняются с 本, 杯, 匹: いっぽん, にほん, さんぼん, ろっぽん, はっぽん, じゅっぽん; いっぴき, さんびき.
+N: Ask with 何 + counter: 何人, 何枚, 何本 (なんぼん), 何冊, 何台, 何匹 (なんびき). | Вопрос: 何 + счётное слово: 何人, 何枚, 何本 (なんぼん), 何冊, 何台, 何匹 (なんびき).
+X: 学生が一人人います。 | 学生が一人います。 | 一人 (ひとり) already contains the counter 人. | 一人 (ひとり) уже содержит счётное слово 人.
+X: ペンがさんほんあります。 | ペンがさんぼんあります。 | 3 + 本 is read さんぼん. | 3 + 本 читается さんぼん.
+C: つ | Use つ when there is no special counter; with people, flat or long things, use the specific counter. | つ — когда нет особого счётного слова; для людей, плоских или длинных предметов — специальное.
+E: ビールを二本ください。 | Two bottles of beer, please. | Две бутылки пива, пожалуйста.
+E: うちに猫が二匹います。 | I have two cats at home. | У меня дома две кошки.
+
+@ n5-plain-da
+N: Plain forms of です: だ (is), じゃない (is not), だった (was), じゃなかった (was not). | Простые формы です: だ (есть), じゃない (не есть), だった (было), じゃなかった (не было).
+N: だ is used with nouns and な-adjectives. い-adjectives never take だ: “it's hot” in plain style is just 暑い. | だ используется с существительными и な-прилагательными. い-прилагательные никогда не берут だ: «жарко» в простом стиле — просто 暑い.
+N: In casual speech, だ at the end of a sentence is often dropped, especially by women and in questions: 学生？ うん、学生。 | В разговоре だ в конце часто опускают, особенно в вопросах: 学生？ うん、学生。
+N: Plain style is for friends, family, diaries and before certain patterns (と思う, から). Polite style is the default with people you do not know well. | Простой стиль — для друзей, семьи, дневников и перед некоторыми конструкциями (と思う, から). С малознакомыми по умолчанию — вежливый.
+X: 今日は暑いだ。 | 今日は暑い。 | い-adjectives do not take だ. | い-прилагательные не берут だ.
+X: 昨日は雨だだった。 | 昨日は雨だった。 | The past of だ is だった. | Прошедшее от だ — だった.
+C: です | です・でした (polite) ↔ だ・だった (plain). The meaning is the same; only the politeness differs. | です・でした (вежливо) ↔ だ・だった (просто). Смысл один, разная лишь степень вежливости.
+E: 明日は日曜日だ。 | Tomorrow is Sunday. | Завтра воскресенье.
+E: 子供のころ、野菜がきらいだった。 | As a child, I hated vegetables. | В детстве я терпеть не мог овощи.
+
+@ n5-dictionary-form
+N: Japanese verbs are in three groups. Group 1 (u-verbs): 書く, 飲む, 話す. Group 2 (ru-verbs): end in -iru or -eru, such as 食べる, 見る, 起きる. Group 3 (irregular): する and 来る. | Японские глаголы делятся на три группы. Группа 1 (u-глаголы): 書く, 飲む, 話す. Группа 2 (ru-глаголы): оканчиваются на -иру или -эру: 食べる, 見る, 起きる. Группа 3 (неправильные): する и 来る.
+N: From ます to dictionary form: Group 2 — drop ます, add る (食べます → 食べる). Group 1 — change the i-sound before ます to u (書きます → 書く, 飲みます → 飲む). します → する, 来ます → 来る (くる). | Из ます в словарную форму: группа 2 — убрать ます и добавить る (食べます → 食べる). Группа 1 — заменить звук «и» перед ます на «у» (書きます → 書く, 飲みます → 飲む). します → する, 来ます → 来る (くる).
+N: Some verbs look like ru-verbs but are u-verbs: 帰る (帰ります), 入る (入ります), 走る (走ります), 知る (知ります), 切る (切ります). | Некоторые глаголы похожи на ru-глаголы, но относятся к u-глаголам: 帰る (帰ります), 入る (入ります), 走る (走ります), 知る (知ります), 切る (切ります).
+N: The dictionary form is the casual “do / will do”, and it is what you look up in a dictionary. | Словарная форма — это разговорное «делаю / сделаю»; именно её ищут в словаре.
+X: 帰ます | 帰ります | 帰る is a Group 1 verb: its ます form is 帰ります. | 帰る — глагол группы 1: его форма на ます — 帰ります.
+X: 来る（きる） | 来る（くる） | 来る is read くる in the dictionary form. | В словарной форме 来る читается くる.
+C: ます form | ます form = polite; dictionary form = plain. 行きます ↔ 行く. | Форма на ます — вежливая; словарная — простая. 行きます ↔ 行く.
+E: 毎朝六時に起きる。 | I get up at six every morning. | Каждое утро я встаю в шесть.
+E: 週末は友達と映画を見る。 | At the weekend I'll see a movie with a friend. | В выходные пойду в кино с другом.
+
+@ n5-nai-form
+N: Group 2: drop る and add ない (食べる → 食べない, 見る → 見ない). | Группа 2: убрать る и добавить ない (食べる → 食べない, 見る → 見ない).
+N: Group 1: change the last u-sound to a-sound and add ない: 書く → 書かない, 飲む → 飲まない, 話す → 話さない, 待つ → 待たない. Verbs ending in う use わ: 買う → 買わない. | Группа 1: заменить последний звук «у» на «а» и добавить ない: 書く → 書かない, 飲む → 飲まない, 話す → 話さない, 待つ → 待たない. Глаголы на う используют わ: 買う → 買わない.
+N: Irregular: する → しない, 来る → 来ない (こない). ある → ない. | Неправильные: する → しない, 来る → 来ない (こない). ある → ない.
+N: The ない form is the base for ないでください, なければならない and なくてもいい. | Форма на ない — основа для ないでください, なければならない и なくてもいい.
+X: 買あない | 買わない | Verbs ending in う change to わ, not あ. | Глаголы на う меняются на わ, а не на あ.
+X: あらない | ない | The negative of ある is simply ない. | Отрицание ある — просто ない.
+X: 来ない（きない） | 来ない（こない） | 来る becomes こない. | 来る становится こない.
+C: ません | ません = polite negative; ない = plain negative. 行きません ↔ 行かない. | ません — вежливое отрицание; ない — простое. 行きません ↔ 行かない.
+E: わたしはお酒を飲まない。 | I don't drink alcohol. | Я не пью алкоголь.
+E: 明日は会社に来ない。 | He won't come to the office tomorrow. | Завтра он не придёт на работу.
+
+@ n5-ta-form
+N: Make the た form exactly like the て form, then change て → た and で → だ: 書いて → 書いた, 飲んで → 飲んだ, 食べて → 食べた. | た-форма строится как て-форма, затем て → た, で → だ: 書いて → 書いた, 飲んで → 飲んだ, 食べて → 食べた.
+N: The plain past negative comes from the ない form: ない → なかった (行かない → 行かなかった). | Простое прошедшее отрицание образуется от формы на ない: ない → なかった (行かない → 行かなかった).
+N: The た form is needed for たことがある, たあとで and たり. | た-форма нужна для たことがある, たあとで и たり.
+N: 行く is irregular: 行った. する → した, 来る → 来た (きた). | 行く — исключение: 行った. する → した, 来る → 来た (きた).
+X: 書きた | 書いた | Follow the て-form change: 書く → 書いて → 書いた. | Следуйте изменению て-формы: 書く → 書いて → 書いた.
+X: 飲みた | 飲んだ | む verbs become んだ. | Глаголы на む становятся んだ.
+C: ました | ました = polite past; た = plain past. 食べました ↔ 食べた. | ました — вежливое прошедшее; た — простое. 食べました ↔ 食べた.
+E: 昨日、友達と話した。 | I talked with a friend yesterday. | Вчера я поговорил с другом.
+E: 宿題はもうした。 | I've already done my homework. | Домашнее задание я уже сделал.
+
+@ n5-te-form
+N: Rules: Group 2 — る → て (食べて). Group 1 — う・つ・る → って (買って, 待って, 帰って); む・ぶ・ぬ → んで (飲んで, 遊んで, 死んで); く → いて (書いて); ぐ → いで (泳いで); す → して (話して). Irregular: する → して, 来る → 来て, 行く → 行って. | Правила: группа 2 — る → て (食べて). Группа 1 — う・つ・る → って (買って, 待って, 帰って); む・ぶ・ぬ → んで (飲んで, 遊んで, 死んで); く → いて (書いて); ぐ → いで (泳いで); す → して (話して). Неправильные: する → して, 来る → 来て, 行く → 行って.
+N: Linking with て shows order: actions happen in the sequence they are said. The tense and politeness are shown only by the last verb. | Связывание через て показывает порядок: действия происходят в той последовательности, в которой названы. Время и вежливость выражает только последний глагол.
+N: The て form is the base of many patterns: てください, ている, てもいい, てはいけない, てから. | て-форма — основа многих конструкций: てください, ている, てもいい, てはいけない, てから.
+N: A common memory aid is to sing the rules: “う・つ・る → って, む・ぶ・ぬ → んで, く → いて, ぐ → いで, す → して”. | Правила удобно запомнить как песенку: «う・つ・る → って, む・ぶ・ぬ → んで, く → いて, ぐ → いで, す → して».
+X: 朝起きました、ご飯を食べました。 | 朝起きて、ご飯を食べました。 | Join actions in one sentence with the て-form; only the last verb shows the tense. | Объединяйте действия в одном предложении через て-форму; время показывает только последний глагол.
+X: 話いて | 話して | す verbs become して. | Глаголы на す становятся して.
+C: てから | て = and then (simple order); てから = only after A, then B (stresses A comes first). | て — и потом (просто порядок); てから — только после A, затем B (подчёркивает, что A сначала).
+E: 駅まで歩いて、電車に乗ります。 | I walk to the station and take the train. | Дохожу до станции пешком и сажусь на поезд.
+E: デパートへ行って、くつを買いました。 | I went to the department store and bought shoes. | Я пошёл в универмаг и купил обувь.
+
+@ n5-te-iru
+N: ている can mean an action in progress: 今、ご飯を食べています (I'm eating now). | ている может означать действие в процессе: 今、ご飯を食べています (Я сейчас ем).
+N: It also means a habit or repeated action: 毎朝ジョギングをしています (I jog every morning), 銀行で働いています (I work at a bank). | Также оно означает привычку или повторяющееся действие: 毎朝ジョギングをしています (Каждое утро бегаю), 銀行で働いています (Работаю в банке).
+N: In speech, い is often dropped: 食べてる, 見てる. | В речи い часто выпадает: 食べてる, 見てる.
+N: Plain forms: ている / ていない; polite: ています / ていません. | Простые формы: ている / ていない; вежливые: ています / ていません.
+X: 今、テレビを見ます。 | 今、テレビを見ています。 | For “right now, in progress”, use ています. | Для «прямо сейчас, в процессе» — ています.
+X: 雨が降ていいます。 | 雨が降っています。 | 降る becomes 降って; then add います. | 降る становится 降って; затем добавляется います.
+C: ます | ます = habit or future; ています = in progress now (or ongoing habit/state). | ます — привычка или будущее; ています — процесс сейчас (или длительная привычка/состояние).
+E: 子供たちは公園で遊んでいます。 | The children are playing in the park. | Дети играют в парке.
+E: 兄は大学で経済を勉強しています。 | My older brother studies economics at university. | Мой старший брат изучает экономику в университете.
+
+@ n5-te-iru-state
+N: With verbs of change — 結婚する, 住む, 知る, 持つ, 着る, 太る, 起きる — ている describes the state after the change, not an action in progress. | С глаголами изменения — 結婚する, 住む, 知る, 持つ, 着る, 太る, 起きる — ている описывает состояние после изменения, а не процесс.
+N: 結婚しています = “is married” (got married and still is). 結婚します = “will get married”. | 結婚しています — «женат / замужем» (женился и остаётся). 結婚します — «поженится».
+N: 知っています means “I know”, but the negative is 知りません: 「田中さんを知っていますか」「いいえ、知りません」. | 知っています — «знаю», но отрицание — 知りません: 「田中さんを知っていますか」「いいえ、知りません」.
+N: For worn clothes: 赤いシャツを着ています (He's wearing a red shirt). For hats, 帽子をかぶっています; for shoes and trousers, はいています. | Об одежде: 赤いシャツを着ています (На нём красная рубашка). О шапке — 帽子をかぶっています; об обуви и брюках — はいています.
+X: 東京に住みます。（今の状態） | 東京に住んでいます。 | Where you live now is a state, so it takes ている. | Где вы живёте сейчас — это состояние, поэтому ている.
+X: いいえ、知っていません。 | いいえ、知りません。 | “I don't know” is 知りません. | «Не знаю» — это 知りません.
+C: ている (progress) | 食べています = is eating (action); 結婚しています = is married (state). Which meaning depends on the verb. | 食べています — ест (процесс); 結婚しています — женат (состояние). Значение зависит от глагола.
+E: 姉は結婚して、子供が二人います。 | My older sister is married and has two children. | Моя старшая сестра замужем, у неё двое детей.
+E: 田中さんは眼鏡をかけています。 | Mr. Tanaka wears glasses. | Господин Танака носит очки.

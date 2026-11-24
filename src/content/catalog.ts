@@ -33,6 +33,32 @@ export function lessonForQuestion(questionId: string): LessonMeta | undefined {r
 export function isKnownQuestion(questionId: string): boolean {return lessonOfQuestion.has(questionId);}
 export function isVocabularyQuestion(questionId: string): boolean {return lessonOfQuestion.get(questionId)?.category === 'vocabulary';}
 
+/** A lesson's practice has this many questions: its own, topped up with questions from earlier lessons. */
+export const PRACTICE_SIZE = 10;
+export function practiceSize(lesson: LessonMeta): number {return Math.max(PRACTICE_SIZE, lesson.questionIds.length);}
+/** Whether a question comes from a lesson before this one (so it may be mixed into this lesson's practice). */
+export function isEarlierQuestion(lesson: LessonMeta, questionId: string): boolean {
+  const owner = lessonOfQuestion.get(questionId);
+  return Boolean(owner && owner.number < lesson.number);
+}
+/**
+ * Question ids that top a lesson up to PRACTICE_SIZE: drawn from the most recent earlier lessons of the
+ * same kind (grammar or vocabulary), then any earlier lesson if those are too few. `random` is injectable for tests.
+ */
+export function pickEarlierQuestionIds(lesson: LessonMeta, random: () => number = Math.random): string[] {
+  const need = PRACTICE_SIZE - lesson.questionIds.length;
+  if (need <= 0) return [];
+  const earlier = lessons.filter(other => other.number < lesson.number).reverse();
+  const pool: string[] = [];
+  for (const group of [earlier.filter(other => other.category === lesson.category), earlier.filter(other => other.category !== lesson.category)]) {
+    // Recent lessons first: a pool about four times the need keeps the mix close to what was just learned.
+    for (const other of group) {if (pool.length >= need * 4) break; pool.push(...other.questionIds);}
+    if (pool.length >= need) break;
+  }
+  for (let i = pool.length - 1; i > 0; i--) {const j = Math.floor(random() * (i + 1)); [pool[i], pool[j]] = [pool[j], pool[i]];}
+  return pool.slice(0, need);
+}
+
 export function levelStats(level?: Level) {
   const scope = level ? lessons.filter(lesson => lesson.level === level) : lessons;
   return {

@@ -123,19 +123,19 @@ describe('Cloud progress, retry and account isolation', () => {
   });
   it('does not report saved on failure, and retries the same id with raw answers', async () => {
     network.mockResolvedValueOnce(Response.json({error: 'storage_unavailable'}, {status: 503}));
-    render(wrap(<><Practice lessonId="n5-wa-desu" questions={getLesson("n5-wa-desu")!.questions}/><Snapshot/></>, accountA));
-    for (const answer of ['は', 'です']) {
+    render(wrap(<><Practice lessonId="n5-no" questions={getLesson("n5-no")!.questions}/><Snapshot/></>, accountA));
+    for (const answer of ['の', 'の']) {
       fireEvent.click(screen.getAllByRole('radio').find(input => (input as HTMLInputElement).value === answer)!);
       fireEvent.click(screen.getByRole('button', {name: 'Next question'}));
     }
-    fireEvent.change(screen.getByRole('textbox'), {target: {value: 'は'}});
+    fireEvent.change(screen.getByRole('textbox'), {target: {value: 'の'}});
     fireEvent.click(screen.getByRole('button', {name: 'Check answer'}));
     fireEvent.click(screen.getByRole('button', {name: 'Finish lesson'}));
     expect((await screen.findByRole('alert')).textContent).toContain('not been confirmed as saved');
     expect(screen.getByTestId('snapshot').textContent).toContain('"sessions":0');
     const first = JSON.parse(String(network.mock.calls[0][1]?.body)) as {id: string; answers: {questionId: string; answer: string}[]};
-    expect(first.answers).toEqual([{questionId: 'wa-1', answer: 'は'}, {questionId: 'wa-2', answer: 'です'}, {questionId: 'wa-3', answer: 'は'}]);
-    const saved: Progress = {...initialProgress, sessions: [{id: first.id, lessonId: 'n5-wa-desu', at: new Date().toISOString(), durationSeconds: 0, answers: first.answers.map(a => ({questionId: a.questionId, correct: true}))}]};
+    expect(first.answers).toEqual([{questionId: 'no-1', answer: 'の'}, {questionId: 'no-2', answer: 'の'}, {questionId: 'no-3', answer: 'の'}]);
+    const saved: Progress = {...initialProgress, sessions: [{id: first.id, lessonId: 'n5-no', at: new Date().toISOString(), durationSeconds: 0, answers: first.answers.map(a => ({questionId: a.questionId, correct: true}))}]};
     network.mockResolvedValueOnce(Response.json({userId: USER_A, progress: saved}));
     fireEvent.click(screen.getByRole('button', {name: 'Finish lesson'}));
     await waitFor(() => expect(screen.getByRole('heading', {level: 1}).textContent).toContain('complete'));
@@ -144,7 +144,7 @@ describe('Cloud progress, retry and account isolation', () => {
     expect(localStorage.getItem(STORAGE_KEY)).toBeNull();
   });
   it('disables learning when the account database failed to load', () => {
-    render(wrap(<><Practice lessonId="n5-wa-desu" questions={getLesson("n5-wa-desu")!.questions}/><Snapshot/></>, {...accountA, progress: null, loadError: true}));
+    render(wrap(<><Practice lessonId="n5-no" questions={getLesson("n5-no")!.questions}/><Snapshot/></>, {...accountA, progress: null, loadError: true}));
     expect(screen.getByTestId('snapshot').textContent).toContain('"ready":false');
     expect((screen.getByRole('button', {name: 'Check answer'}) as HTMLButtonElement).disabled).toBe(true);
     expect(network).not.toHaveBeenCalled();

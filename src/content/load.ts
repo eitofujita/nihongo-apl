@@ -1,7 +1,7 @@
 // Client-side loading of full lesson bodies, one JLPT level per request. The bodies are static files
 // (public/content/<level>.json, written by `npm run content`), so they stay out of every JS bundle and
 // out of the Cloudflare Worker; the hash in the catalog makes each content change a new URL.
-import {contentVersion, getLessonMeta, lessonForQuestion, type Level} from './catalog';
+import {contentVersion, getLessonMeta, lessonForQuestion, pickEarlierQuestionIds, type Level} from './catalog';
 import type {Lesson, Question} from './schemas';
 
 export type FullLesson = Lesson & {level: Level; levelNumber: number};
@@ -37,4 +37,11 @@ export async function loadQuestions(ids: string[]): Promise<Question[]> {
   const chunks = await Promise.all(levels.map(loadLevel));
   const byId = new Map(chunks.flat().flatMap(lesson => lesson.questions.map(question => [question.id, question] as const)));
   return ids.map(id => byId.get(id)).filter((question): question is Question => Boolean(question));
+}
+
+/** A lesson's practice: its own questions first, then earlier-lesson questions up to PRACTICE_SIZE. */
+export async function loadPracticeQuestions(lesson: FullLesson): Promise<Question[]> {
+  const meta = getLessonMeta(lesson.id);
+  const extra = meta ? await loadQuestions(pickEarlierQuestionIds(meta)) : [];
+  return [...lesson.questions, ...extra];
 }

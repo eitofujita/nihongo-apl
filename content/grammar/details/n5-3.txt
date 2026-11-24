@@ -1,0 +1,187 @@
+# N5 grammar details, part 3.
+
+@ n5-tai
+N: たい attaches to the ます stem: 飲みます → 飲みたい, 行きます → 行きたい, します → したい. | たい присоединяется к основе на ます: 飲みます → 飲みたい, 行きます → 行きたい, します → したい.
+N: It describes the speaker's own wish. For a third person, Japanese avoids たい directly and says たがっています or たいと言っています (later level). | たい выражает желание самого говорящего. О третьем лице прямо たい не говорят — используют たがっています или たいと言っています (более высокий уровень).
+N: Asking a superior 「飲みたいですか」 can sound too direct; offer instead: 「コーヒーはいかがですか」. | Спрашивать старшего 「飲みたいですか」 слишком прямо; лучше предложить: 「コーヒーはいかがですか」.
+N: Forms follow い-adjectives: 行きたくない (don't want to go), 行きたかった (wanted to go), 行きたくなかった (didn't want to go). | Формы — как у い-прилагательных: 行きたくない (не хочу идти), 行きたかった (хотел пойти), 行きたくなかった (не хотел идти).
+X: 日本へ行くたいです。 | 日本へ行きたいです。 | たい attaches to the ます stem (行き), not the dictionary form. | たい присоединяется к основе на ます (行き), а не к словарной форме.
+X: 行きたいではありません。 | 行きたくないです。 | たい is an い-adjective, so its negative is たくない. | たい — это い-прилагательное, поэтому отрицание — たくない.
+C: ほしい | たい = want to do (verb); ほしい = want a thing (noun が ほしい). | たい — хочу сделать (глагол); ほしい — хочу вещь (существительное が ほしい).
+E: 今日は何も食べたくないです。 | I don't want to eat anything today. | Сегодня я ничего не хочу есть.
+E: 子供のとき、先生になりたかったです。 | As a child, I wanted to be a teacher. | В детстве я хотел стать учителем.
+
+@ n5-hoshii
+N: ほしい is an い-adjective. The thing you want takes が: 新しい靴がほしいです. | ほしい — い-прилагательное. То, что хочется, отмечается が: 新しい靴がほしいです.
+N: Like たい, ほしい expresses the speaker's own desire. About others, say ほしがっています (later level). | Как и たい, ほしい выражает желание самого говорящего. О других — ほしがっています (более высокий уровень).
+N: Ask friends 何がほしい？ (What do you want?). For guests, いかがですか is more polite. | Друзей спрашивают 何がほしい？ (Что хочешь?). Гостям вежливее сказать いかがですか.
+N: Forms: ほしくない (don't want), ほしかった (wanted), ほしくなかった (didn't want). | Формы: ほしくない (не хочу), ほしかった (хотел), ほしくなかった (не хотел).
+X: 車をほしいです。 | 車がほしいです。 | ほしい is an adjective; the wanted thing takes が. | ほしい — прилагательное; желаемое отмечается が.
+X: 車がほしたいです。 | 車がほしいです。 | ほしい already means “want”; do not add たい. | ほしい уже значит «хочу»; たい добавлять не нужно.
+C: たい | ほしい + noun (a thing); ます stem + たい (an action): 水がほしい / 水が飲みたい. | ほしい + существительное (вещь); основа на ます + たい (действие): 水がほしい / 水が飲みたい.
+E: 誕生日に時計がほしいです。 | I want a watch for my birthday. | На день рождения хочу часы.
+E: 今は何もほしくないです。 | I don't want anything now. | Сейчас мне ничего не нужно.
+
+@ n5-te-mo-ii
+N: て-form + もいいです = “it's okay to …, you may …”. As a question, ても いいですか asks for permission. | て-форма + もいいです — «можно …». В вопросе てもいいですか — просьба о разрешении.
+N: Answers: yes — ええ、どうぞ / はい、いいですよ. No (softly) — すみません、ちょっと… | Ответы: да — ええ、どうぞ / はい、いいですよ. Нет (мягко) — すみません、ちょっと…
+N: A strong “no” is てはいけません, but it sounds like a rule; in conversation people prefer すみません、ちょっと… | Жёсткое «нельзя» — てはいけません, но это звучит как правило; в разговоре предпочитают すみません、ちょっと…
+N: In casual speech: 入ってもいい？ (Can I come in?) — うん、いいよ. | В разговоре: 入ってもいい？ (Можно войти?) — うん、いいよ.
+X: 窓を開けるもいいですか。 | 窓を開けてもいいですか。 | もいい follows the て-form. | もいい идёт после て-формы.
+X: ここに座ってもいいですか。…いいえ、座ってもいいではありません。 | …すみません、ここはちょっと…。 | The negative answer is not ~てもいいではありません; refuse softly or say てはいけません. | Отрицательный ответ — не ~てもいいではありません; откажите мягко или скажите てはいけません.
+C: てはいけない | てもいい = allowed; てはいけない = not allowed. | てもいい — разрешено; てはいけない — запрещено.
+E: このペンを使ってもいいですか。…ええ、どうぞ。 | May I use this pen? — Sure, go ahead. | Можно воспользоваться этой ручкой? — Да, пожалуйста.
+E: 明日は休んでもいいですよ。 | You can take tomorrow off. | Завтра можете не приходить.
+
+@ n5-te-wa-ikenai
+N: て-form + はいけません forbids something. It is used for rules, by teachers and parents, and on signs. | て-форма + はいけません выражает запрет. Его используют для правил, учителя и родители, а также на табличках.
+N: In speech, ては often becomes ちゃ (and では becomes じゃ): 食べちゃいけない, 飲んじゃだめ. | В речи ては часто превращается в ちゃ (а では — в じゃ): 食べちゃいけない, 飲んじゃだめ.
+N: It is the natural “no” answer to てもいいですか when you mean a firm rule: 「ここで写真をとってもいいですか」「いいえ、とってはいけません」. | Это естественный ответ «нет» на てもいいですか, если речь о строгом правиле: 「ここで写真をとってもいいですか」「いいえ、とってはいけません」.
+N: For a polite request not to do something, ないでください is softer. | Для вежливой просьбы не делать чего-то мягче ないでください.
+X: ここでたばこを吸うはいけません。 | ここでたばこを吸ってはいけません。 | はいけません follows the て-form. | はいけません идёт после て-формы.
+X: 先生に「ここに座ってはいけません」（お願い） | 先生に「ここに座らないでください」 | Toward a superior, use ないでください (a request), not a prohibition. | По отношению к старшему используйте ないでください (просьба), а не запрет.
+C: ないでください | てはいけない = a rule (it's not allowed); ないでください = a personal request. | てはいけない — правило (не разрешается); ないでください — личная просьба.
+E: 授業中に携帯電話を使ってはいけません。 | You must not use mobile phones during class. | На уроке нельзя пользоваться телефоном.
+E: このボタンを押してはいけません。 | You must not press this button. | Эту кнопку нажимать нельзя.
+
+@ n5-nakereba
+N: Formation: ない form → drop い → add ければなりません: 行かない → 行かなければなりません, 食べない → 食べなければなりません, しない → しなければなりません. | Образование: форма на ない → убрать い → добавить ければなりません: 行かない → 行かなければなりません, 食べない → 食べなければなりません, しない → しなければなりません.
+N: Literally “if I don't go, it won't do” — a double negative meaning “must”. | Дословно «если не пойду — не годится» — двойное отрицание со значением «должен».
+N: なければいけません is a little more personal; なければなりません sounds like a general duty. In speech: なきゃ (行かなきゃ!). | なければいけません чуть более личное; なければなりません звучит как общая обязанность. В речи: なきゃ (行かなきゃ!).
+N: The opposite, “don't have to”, is なくてもいいです. | Противоположное — «не обязательно» — なくてもいいです.
+X: 行くなければなりません。 | 行かなければなりません。 | Build it from the ない form: 行かない → 行かなければ. | Стройте от формы на ない: 行かない → 行かなければ.
+X: 勉強しなければありません。 | 勉強しなければなりません。 | The ending is なりません (or いけません), not ありません. | Окончание — なりません (или いけません), а не ありません.
+C: なくてもいい | なければならない = must; なくてもいい = don't have to. | なければならない — должен; なくてもいい — не обязательно.
+E: 毎日薬を飲まなければなりません。 | I have to take medicine every day. | Мне нужно каждый день принимать лекарство.
+E: もう帰らなければいけません。 | I have to go home now. | Мне уже пора домой.
+
+@ n5-nakute-mo-ii
+N: Formation: ない form → drop い → add くてもいいです: 来ない → 来なくてもいいです, 書かない → 書かなくてもいいです. | Образование: форма на ない → убрать い → добавить くてもいいです: 来ない → 来なくてもいいです, 書かない → 書かなくてもいいです.
+N: It answers a なければなりませんか question: 「明日来なければなりませんか」「いいえ、来なくてもいいです」. | Это ответ на вопрос с なければなりませんか: 「明日来なければなりませんか」「いいえ、来なくてもいいです」.
+N: It removes an obligation; it does not forbid. 書かなくてもいい = you may write if you want, but you don't have to. | Конструкция снимает обязанность, но не запрещает. 書かなくてもいい — можно написать, но не обязательно.
+N: In speech: 来なくていい (no も). | В речи: 来なくていい (без も).
+X: 来ないてもいいです。 | 来なくてもいいです。 | ない → なくて (like an い-adjective), not ないて. | ない → なくて (как у い-прилагательного), а не ないて.
+X: 書かなくてはいけません。（意味：書かなくてもいい） | 書かなくてもいいです。 | なくてはいけません means “must”; “don't have to” is なくてもいい. | なくてはいけません значит «должен»; «не обязательно» — なくてもいい.
+C: てはいけない | なくてもいい = not necessary; てはいけない = not allowed. | なくてもいい — не нужно; てはいけない — нельзя.
+E: 名前は書かなくてもいいです。 | You don't have to write your name. | Имя писать не обязательно.
+E: 急がなくてもいいですよ。まだ時間がありますから。 | You don't need to hurry. There's still time. | Не нужно спешить. Время ещё есть.
+
+@ n5-naide-kudasai
+N: Formation: ない form + でください: 行かない → 行かないでください, 忘れない → 忘れないでください. | Образование: форма на ない + でください: 行かない → 行かないでください, 忘れない → 忘れないでください.
+N: It is a polite request, softer than a prohibition. It can also express care: 心配しないでください (Please don't worry). | Это вежливая просьба, мягче запрета. Она выражает и заботу: 心配しないでください (Не волнуйтесь, пожалуйста).
+N: Among friends, drop ください: 忘れないで (Don't forget). | Среди друзей ください опускают: 忘れないで (Не забудь).
+N: The positive request is てください; the negative is ないでください. | Положительная просьба — てください; отрицательная — ないでください.
+X: 写真をとらなくてください。 | 写真をとらないでください。 | The form is ないで + ください, not なくて. | Форма — ないで + ください, а не なくて.
+X: 忘れませんでください。 | 忘れないでください。 | Use the plain ない form, not ません. | Используйте простую форму на ない, а не ません.
+C: てはいけない | ないでください = please don't (request); てはいけない = must not (rule). | ないでください — не делайте, пожалуйста (просьба); てはいけない — нельзя (правило).
+E: ここに車を止めないでください。 | Please don't park here. | Пожалуйста, не ставьте здесь машину.
+E: 遅れないでくださいね。 | Please don't be late, OK? | Только не опаздывайте, хорошо?
+
+@ n5-mae-ni
+N: The verb before まえに is always the dictionary form, even when the whole sentence is about the past: 寝るまえに本を読みました. | Глагол перед まえに всегда в словарной форме, даже если всё предложение о прошлом: 寝るまえに本を読みました.
+N: With nouns: noun + のまえに: 食事のまえに, 授業のまえに. | С существительными: существительное + のまえに: 食事のまえに, 授業のまえに.
+N: With a length of time, no の: 三年まえに日本へ来ました (I came to Japan three years ago). | С отрезком времени の не нужно: 三年まえに日本へ来ました (Я приехал в Японию три года назад).
+N: まえ alone also means “in front of” for places: 駅のまえ. Context makes it clear. | まえ само по себе значит и «перед» в пространстве: 駅のまえ. Смысл ясен из контекста.
+X: 寝たまえに歯をみがきました。 | 寝るまえに歯をみがきました。 | Before まえに, always the dictionary form. | Перед まえに — всегда словарная форма.
+X: 食事まえに手を洗います。 | 食事のまえに手を洗います。 | A noun needs の before まえに. | Существительному перед まえに нужно の.
+C: あとで | まえに + dictionary form = before; あとで + た form = after. | まえに + словарная форма — до; あとで + た-форма — после.
+E: 出かけるまえに天気予報を見ます。 | Before going out, I check the weather forecast. | Перед выходом я смотрю прогноз погоды.
+E: 五年まえに結婚しました。 | I got married five years ago. | Я женился пять лет назад.
+
+@ n5-ato-de
+N: The verb before あとで is always the た form, even for future plans: 食べたあとで、散歩します. | Глагол перед あとで всегда в た-форме, даже о будущем: 食べたあとで、散歩します.
+N: With nouns: noun + のあとで: 仕事のあとで, 授業のあとで. | С существительными: существительное + のあとで: 仕事のあとで, 授業のあとで.
+N: あとで alone means “later”: あとで電話します (I'll call you later). | Отдельное あとで значит «потом»: あとで電話します (Я позвоню позже).
+N: The で can be dropped (たあと) with little change in meaning. | で можно опустить (たあと) почти без изменения смысла.
+X: 食べるあとで、散歩します。 | 食べたあとで、散歩します。 | Before あとで, always the た form. | Перед あとで — всегда た-форма.
+X: 授業あとで、図書館へ行きます。 | 授業のあとで、図書館へ行きます。 | A noun needs の before あとで. | Существительному перед あとで нужно の.
+C: てから | たあとで = after A (time order); てから = once A is done, then B (stresses A first). Both are often interchangeable. | たあとで — после A (порядок во времени); てから — когда A сделано, тогда B (подчёркивает A). Часто взаимозаменяемы.
+E: 映画を見たあとで、レストランで食事をしました。 | After seeing the movie, we ate at a restaurant. | После фильма мы поужинали в ресторане.
+E: 会議のあとで、少し話しませんか。 | Shall we talk a little after the meeting? | Давайте поговорим немного после совещания?
+
+@ n5-te-kara
+N: てから stresses that B happens only after A is finished: 宿題をしてから、テレビを見ます (I'll watch TV only after my homework). | てから подчёркивает, что B происходит только после завершения A: 宿題をしてから、テレビを見ます (Телевизор — только после домашнего задания).
+N: It also marks a starting point in time: 日本へ来てから、三年になります (It has been three years since I came to Japan). | Также обозначает начальную точку во времени: 日本へ来てから、三年になります (С тех пор как я приехал в Японию, прошло три года).
+N: The tense is shown by the final verb: 手を洗ってから食べました (past). | Время выражает последний глагол: 手を洗ってから食べました (прошедшее).
+N: Do not confuse with reason から; that follows a full sentence (ですから), while this follows the て-form. | Не путайте с から причины: та идёт после целого предложения (ですから), а эта — после て-формы.
+X: 手を洗うから、食べます。（意味：洗ったあとで） | 手を洗ってから、食べます。 | “After” uses てから; dictionary form + から means “because”. | «После» — это てから; словарная форма + から значит «потому что».
+C: たあとで | てから focuses on order (first A, then B); たあとで simply places B after A in time. | てから подчёркивает порядок (сначала A, потом B); たあとで просто ставит B после A во времени.
+E: シャワーを浴びてから、寝ます。 | I'll take a shower and then go to bed. | Приму душ и лягу спать.
+E: 大学を卒業してから、銀行で働いています。 | Since graduating from university, I've worked at a bank. | После окончания университета я работаю в банке.
+
+@ n5-toki
+N: とき connects like a noun: plain verb + とき (行くとき), い-adjective + とき (寒いとき), な-adjective + なとき (ひまなとき), noun + のとき (子供のとき). | とき присоединяется как существительное: простой глагол + とき (行くとき), い-прилагательное + とき (寒いとき), な-прилагательное + なとき (ひまなとき), существительное + のとき (子供のとき).
+N: Verb tense matters: 日本へ行くとき、カメラを買いました = I bought a camera before going (on the way). 日本へ行ったとき、カメラを買いました = I bought it after arriving in Japan. | Время глагола важно: 日本へ行くとき、カメラを買いました — купил до поездки (собираясь ехать). 日本へ行ったとき、カメラを買いました — купил, уже приехав в Японию.
+N: に may follow とき for a specific moment: 帰るときに電話します. | После とき можно поставить に для конкретного момента: 帰るときに電話します.
+N: とき also works with negatives: 分からないとき、先生に聞きます (When I don't understand, I ask the teacher). | とき работает и с отрицаниями: 分からないとき、先生に聞きます (Когда не понимаю, спрашиваю учителя).
+X: 子供とき、よく泳ぎました。 | 子供のとき、よく泳ぎました。 | A noun needs の before とき. | Существительному перед とき нужно の.
+X: ひまとき、本を読みます。 | ひまなとき、本を読みます。 | A な-adjective needs な before とき. | な-прилагательному перед とき нужно な.
+C: たら (later level) | とき = at the time when; たら = if / once (condition). | とき — в то время, когда; たら — если / как только (условие).
+E: 寒いとき、温かいお茶を飲みます。 | When it's cold, I drink hot tea. | Когда холодно, я пью горячий чай.
+E: 学生のとき、毎日アルバイトをしていました。 | When I was a student, I worked part-time every day. | Когда я был студентом, я каждый день подрабатывал.
+
+@ n5-nagara
+N: ながら attaches to the ます stem: 聞きます → 聞きながら, 歩きます → 歩きながら. | ながら присоединяется к основе на ます: 聞きます → 聞きながら, 歩きます → 歩きながら.
+N: Both actions are done by the same person at the same time. The main action is the last verb; the ながら action is secondary. | Оба действия совершает один человек одновременно. Главное действие — последний глагол; действие с ながら — второстепенное.
+N: The tense is shown only by the final verb: 音楽を聞きながら勉強しました. | Время выражает только последний глагол: 音楽を聞きながら勉強しました.
+N: For two different people, ながら cannot be used; use 〜ている間に (later level). | Для двух разных людей ながら не используется; есть 〜ている間に (более высокий уровень).
+X: テレビを見るながら、ご飯を食べます。 | テレビを見ながら、ご飯を食べます。 | ながら follows the ます stem (見), not the dictionary form. | ながら идёт после основы на ます (見), а не словарной формы.
+X: 母が料理をしながら、わたしはテレビを見ました。 | わたしはテレビを見ながら、ご飯を食べました。 | ながら needs one person doing both actions. | ながら требует, чтобы оба действия совершал один человек.
+C: て (sequence) | ながら = at the same time; て = one after the other. | ながら — одновременно; て — одно за другим.
+E: コーヒーを飲みながら、新聞を読みます。 | I read the newspaper while drinking coffee. | Читаю газету за чашкой кофе.
+E: 運転しながら電話をしてはいけません。 | You must not talk on the phone while driving. | Нельзя говорить по телефону за рулём.
+
+@ n5-tari
+N: Formation: た form + り. 読んだ → 読んだり, 見た → 見たり. End with する (します, しました) — and the tense goes on する. | Образование: た-форма + り. 読んだ → 読んだり, 見た → 見たり. В конце — する (します, しました), и время выражается на する.
+N: たり…たりする gives examples from a longer list of activities, with no fixed order: 買い物をしたり、料理をしたりしました. | たり…たりする приводит примеры из более длинного списка дел без строгого порядка: 買い物をしたり、料理をしたりしました.
+N: One たり alone is possible and means “things like …”: 週末は映画を見たりします. | Можно и одно たり: «например…»: 週末は映画を見たりします.
+N: It can also show alternation: 雨が降ったり止んだりしています (It keeps raining on and off). | Также передаёт чередование: 雨が降ったり止んだりしています (Дождь то идёт, то перестаёт).
+X: 本を読んだり、映画を見ました。 | 本を読んだり、映画を見たりしました。 | Each action takes たり, and the list ends with する. | Каждое действие получает たり, а перечень заканчивается на する.
+X: 掃除するたり、洗濯するたりします。 | 掃除したり、洗濯したりします。 | たり follows the た form (した), not the dictionary form. | たり идёт после た-формы (した), а не словарной.
+C: て | て = actions in order (all of them); たり = some examples (others too). | て — действия по порядку (все); たり — несколько примеров (есть и другие).
+E: 夏休みは海で泳いだり、山に登ったりしました。 | During summer vacation I swam in the sea, climbed mountains and so on. | На летних каникулах я плавал в море, ходил в горы и т. п.
+E: 日曜日は家で本を読んだりします。 | On Sundays I do things like reading at home. | По воскресеньям я, например, читаю дома.
+
+@ n5-deshou
+N: でしょう follows a plain form: 雨が降るでしょう, 寒いでしょう. After a noun or な-adjective, it replaces だ: 雨でしょう, 静かでしょう. | でしょう идёт после простой формы: 雨が降るでしょう, 寒いでしょう. После существительного или な-прилагательного заменяет だ: 雨でしょう, 静かでしょう.
+N: Weather forecasts use でしょう a lot: 明日は晴れるでしょう. | В прогнозах погоды でしょう употребляется очень часто: 明日は晴れるでしょう.
+N: たぶん (probably) and きっと (surely) often appear at the start: たぶん来るでしょう. | В начале часто стоят たぶん (наверное) и きっと (наверняка): たぶん来るでしょう.
+N: With a rising tone, でしょう？ (casual: だろう？ / でしょ？) asks for agreement: ね、きれいでしょう？ | С повышением тона でしょう？ (разг. だろう？ / でしょ？) просит согласия: ね、きれいでしょう？
+X: 明日は雨だでしょう。 | 明日は雨でしょう。 | でしょう replaces だ; do not use both. | でしょう заменяет だ; вместе их не используют.
+X: 明日は晴れますでしょう。 | 明日は晴れるでしょう。 | でしょう usually follows the plain form. | でしょう обычно идёт после простой формы.
+C: と思います | でしょう = probably (a guess, often impersonal); と思います = I think (personal opinion). | でしょう — вероятно (предположение, часто безличное); と思います — я думаю (личное мнение).
+E: 田中さんはもう家に帰ったでしょう。 | Mr. Tanaka has probably gone home already. | Господин Танака, наверное, уже ушёл домой.
+E: このテストはむずかしくないでしょう。 | This test probably won't be difficult. | Этот тест, наверное, будет нетрудным.
+
+@ n5-ni-iku
+N: Purpose + に + verb of movement: 映画を見に行きます (go to see a movie), 遊びに来てください (come to visit). Use the ます stem: 見ます → 見に. | Цель + に + глагол движения: 映画を見に行きます (идти смотреть фильм), 遊びに来てください (приходите в гости). Используется основа на ます: 見ます → 見に.
+N: With する-nouns, the noun can come directly: 買い物に行きます, 散歩に行きます. | С существительными с する можно использовать само существительное: 買い物に行きます, 散歩に行きます.
+N: The place takes へ or に, the purpose takes に: 図書館へ本を借りに行きます. | Место отмечается へ или に, цель — に: 図書館へ本を借りに行きます.
+N: This pattern works only with 行く, 来る, 帰る and similar movement verbs. | Эта конструкция работает только с 行く, 来る, 帰る и похожими глаголами движения.
+X: 映画を見るに行きます。 | 映画を見に行きます。 | Use the ます stem (見) before に. | Перед に используется основа на ます (見).
+X: 本を読みに勉強します。 | 本を読みに図書館へ行きます。 | Purpose に only goes with movement verbs such as 行く・来る. | に цели сочетается только с глаголами движения, такими как 行く・来る.
+C: ために (later level) | ます stem + に is used only with going/coming; ために expresses purpose with any verb. | Основа на ます + に используется только с «идти/приходить»; ために выражает цель с любым глаголом.
+E: 昼ご飯を食べに帰ります。 | I'm going home to have lunch. | Я иду домой пообедать.
+E: 日本へ日本語を勉強しに来ました。 | I came to Japan to study Japanese. | Я приехал в Японию изучать японский.
+
+@ n5-ichiban
+N: The group is marked with の中で: スポーツの中で, クラスの中で, 一年の中で. Then: X が いちばん + adjective. | Группа отмечается の中で: スポーツの中で, クラスの中で, 一年の中で. Затем: X が いちばん + прилагательное.
+N: For places, で alone is enough: 日本で富士山がいちばん高いです. | Для мест достаточно で: 日本で富士山がいちばん高いです.
+N: Questions use a question word + が: 何がいちばん好きですか, だれがいちばん背が高いですか, いつがいちばんいいですか. | В вопросах используется вопросительное слово + が: 何がいちばん好きですか, だれがいちばん背が高いですか, いつがいちばんいいですか.
+N: いちばん can also be used alone as “best / most”: これがいちばんです. | いちばん может употребляться и само по себе как «лучше всего»: これがいちばんです.
+X: 果物の中でりんごはいちばん好きです。 | 果物の中でりんごがいちばん好きです。 | The top item is marked with が. | Выделяемый предмет отмечается が.
+X: いちばん好きなのはりんごがです。 | いちばん好きなのはりんごです。 | In the のは…です pattern, the answer takes no particle. | В конструкции のは…です ответ идёт без частицы.
+C: より・ほうが | いちばん = the most in a group (3+); より・ほうが = comparing two. | いちばん — самый в группе (из 3+); より・ほうが — сравнение двух.
+E: 一年の中でいつがいちばん好きですか。…秋がいちばん好きです。 | Which time of year do you like best? — I like autumn best. | Какое время года вы любите больше всего? — Осень.
+E: クラスでだれがいちばん歌が上手ですか。 | Who sings best in the class? | Кто лучше всех в классе поёт?
+
+@ n5-yori-hou
+N: A は B より + adjective: 東京は大阪より大きいです (Tokyo is bigger than Osaka). より = “than”. | A は B より + прилагательное: 東京は大阪より大きいです (Токио больше Осаки). より — «чем».
+N: The question pattern: A と B と どちらが + adjective + ですか. Answer: A のほうが + adjective + です. | Вопрос: A と B と どちらが + прилагательное + ですか. Ответ: A のほうが + прилагательное + です.
+N: Both can be combined: 電車はバスより速い / バスより電車のほうが速い. | Их можно сочетать: 電車はバスより速い / バスより電車のほうが速い.
+N: “Both are the same” is どちらも同じです or 同じぐらいです. | «Одинаково» — どちらも同じです или 同じぐらいです.
+X: 東京は大阪より大きいほうです。 | 東京は大阪より大きいです。 | With A は B より, just use the adjective; ほう goes with the A のほうが pattern. | С A は B より просто используйте прилагательное; ほう — в конструкции A のほうが.
+X: 肉と魚と、どれが好きですか。 | 肉と魚と、どちらが好きですか。 | When comparing two things, ask with どちら. | При сравнении двух вещей спрашивайте どちら.
+C: いちばん | Compare two with より・ほうが; pick the top of three or more with いちばん. | Сравнивают два через より・ほうが; самое из трёх и более — いちばん.
+E: 犬と猫と、どちらが好きですか。…猫のほうが好きです。 | Which do you like better, dogs or cats? — I like cats better. | Кого вы любите больше: собак или кошек? — Кошек.
+E: 今日は昨日より寒いですね。 | It's colder today than yesterday, isn't it? | Сегодня холоднее, чем вчера, правда?

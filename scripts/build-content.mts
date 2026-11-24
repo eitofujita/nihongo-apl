@@ -260,6 +260,46 @@ readFileSync(path('content/grammar/patterns.txt'), 'utf8').split('\n').forEach((
   forms.set(id, {en: list.map(f => localizeForm(f, 0, where)), ru: list.map(f => localizeForm(f, 1, where))});
 });
 
+// ---------- Grammar details (content/grammar/details/*.txt) ----------
+// @ lesson-id
+// N: note en | note ru                          (usage point; one or more)
+// X: wrong japanese | right japanese | why en | why ru   (typical mistake)
+// C: similar grammar | difference en | difference ru     (comparison)
+// E: japanese | en | ru                          (extra example, added after the lesson's own)
+type Details = Pick<Lesson, 'notes' | 'mistakes' | 'compare'> & {examples: Lesson['examples']};
+const details = new Map<string, Details>();
+const detailsDir = path('content/grammar/details');
+for (const file of existsSync(detailsDir) ? readdirSync(detailsDir).filter(f => f.endsWith('.txt')).sort() : []) {
+  let current: Details | null = null;
+  readFileSync(`${detailsDir}/${file}`, 'utf8').split('\n').forEach((raw, index) => {
+    const line = raw.trim();
+    const where = `details/${file}:${index + 1}`;
+    if (!line || line.startsWith('#')) return;
+    if (line.startsWith('@')) {
+      const id = line.slice(1).trim();
+      if (details.has(id)) fail(where, `duplicate details for ${id}`);
+      current = {notes: [], mistakes: [], compare: [], examples: []};
+      details.set(id, current);
+      return;
+    }
+    if (!current) {fail(where, 'content before first @'); return;}
+    const tag = line.slice(0, 2);
+    const parts = line.slice(2).split('|').map(s => s.trim());
+    const need = {'N:': 2, 'X:': 4, 'C:': 3, 'E:': 3}[tag];
+    if (!need) {fail(where, `unknown line: ${line.slice(0, 40)}`); return;}
+    if (parts.length !== need || parts.some(p => !p)) {fail(where, `${tag} needs ${need} non-empty fields, got ${parts.length}`); return;}
+    if (tag === 'N:') current.notes!.push({en: parts[0], ru: parts[1]});
+    if (tag === 'X:') {
+      if (parts[0] === parts[1]) fail(where, 'wrong and right are the same');
+      current.mistakes!.push({wrong: parts[0], right: parts[1], why: {en: parts[2], ru: parts[3]}});
+    }
+    if (tag === 'C:') current.compare!.push({with: parts[0], note: {en: parts[1], ru: parts[2]}});
+    if (tag === 'E:') current.examples.push({japanese: parts[0], translations: {en: parts[1], ru: parts[2]}});
+  });
+}
+// Levels whose every grammar lesson must have details (the rest are being written).
+const DETAILED_LEVELS: Level[] = ['N5'];
+
 type Full = Lesson & {level: Level; levelNumber: number};
 const all: Full[] = [];
 let number = 0;
@@ -272,7 +312,18 @@ for (const level of LEVELS) {
     number++;
     const form = lesson.category === 'grammar' ? forms.get(lesson.id) : undefined;
     if (lesson.category === 'grammar' && !form) fail(lesson.id, 'no form in content/grammar/patterns.txt');
-    const full: Full = {...lesson, number, levelNumber: i + 1, color: lesson.color ?? COLORS[number % 3], words: lesson.words ?? [], ...(form ? {forms: form} : {})};
+    const detail = lesson.category === 'grammar' ? details.get(lesson.id) : undefined;
+    if (lesson.category === 'grammar' && !detail && DETAILED_LEVELS.includes(level)) fail(lesson.id, 'no details in content/grammar/details');
+    let extra: Partial<Lesson> = {};
+    if (detail) {
+      const seen = new Set(lesson.examples.map(e => e.japanese));
+      for (const e of detail.examples) {if (seen.has(e.japanese)) fail(lesson.id, `duplicate example ${e.japanese}`); seen.add(e.japanese);}
+      if (!detail.notes!.length) fail(lesson.id, 'details need at least one N: note');
+      extra = {examples: [...lesson.examples, ...detail.examples],
+        ...(detail.notes!.length ? {notes: detail.notes} : {}), ...(detail.mistakes!.length ? {mistakes: detail.mistakes} : {}),
+        ...(detail.compare!.length ? {compare: detail.compare} : {})};
+    }
+    const full: Full = {...lesson, ...extra, number, levelNumber: i + 1, color: lesson.color ?? COLORS[number % 3], words: lesson.words ?? [], ...(form ? {forms: form} : {})};
     const parsed = lessonSchema.safeParse(full);
     if (!parsed.success) fail(full.id, parsed.error.issues.map(i => `${i.path.join('.')}: ${i.message}`).join('; '));
     all.push(full);
@@ -281,6 +332,7 @@ for (const level of LEVELS) {
 
 const lessonIds = new Set<string>(); const questionIds = new Set<string>();
 for (const id of forms.keys()) if (!all.some(lesson => lesson.id === id && lesson.category === 'grammar')) fail('patterns.txt', `no grammar lesson ${id}`);
+for (const id of details.keys()) if (!all.some(lesson => lesson.id === id && lesson.category === 'grammar')) fail('details', `no grammar lesson ${id}`);
 for (const lesson of all) {
   if (lessonIds.has(lesson.id)) fail(lesson.id, 'duplicate lesson id');
   lessonIds.add(lesson.id);
@@ -305,6 +357,11 @@ const annotate = (text: string) => {
 // Mutates in place so the placement list (built from the same objects) is annotated too.
 for (const lesson of all) {
   for (const example of lesson.examples) {const ruby = annotate(example.japanese); if (ruby !== example.japanese) example.ruby = ruby;}
+  for (const mistake of lesson.mistakes ?? []) {
+    const wrong = annotateText(mistake.wrong); const right = annotateText(mistake.right);
+    if (wrong !== mistake.wrong) mistake.rubyWrong = wrong;
+    if (right !== mistake.right) mistake.rubyRight = right;
+  }
   for (const question of lesson.questions) {
     const prompt = annotate(question.prompt); const choices = question.choices.map(annotate);
     if (prompt !== question.prompt || choices.some((c, i) => c !== question.choices[i])) question.ruby = {prompt, choices};
@@ -354,16 +411,35 @@ const seed = bank.length ? [
 ].join('\n') : '-- GENERATED: no additional curriculum.\n';
 writeFileSync(path('supabase/migrations/202611180001_curriculum_n5_n3.sql'), seed);
 
-// Keep the one-shot setup file in sync for new projects.
+// Idempotent sync of every answer and lesson link (including questions added to the original lessons).
+// Safe to run again: re-run it in the SQL Editor after any content change.
+const allLinks = [
+  ...all.flatMap(l => l.questions.map((q, i) => `(${sql(l.id)}, ${sql(q.id)}, ${i})`)),
+  ...legacy.placementQuestionIds.map((id, i) => `('placement', ${sql(id)}, ${i})`)
+];
+const sync = [
+  '-- GENERATED by scripts/build-content.mts from content/. Do not edit by hand.',
+  `-- Upserts all ${questionIds.size} answers and ${allLinks.length} lesson links. Safe to run again after any content change.`,
+  'begin;',
+  `insert into private.question_bank (id, correct_answer) values\n${all.flatMap(l => l.questions.map(q => `(${sql(q.id)}, ${sql(q.answer)})`)).join(',\n')}\non conflict (id) do update set correct_answer = excluded.correct_answer;`,
+  `insert into private.lesson_questions (lesson_id, question_id, position) values\n${allLinks.join(',\n')}\non conflict (lesson_id, question_id) do update set position = excluded.position;`,
+  'commit;', ''
+].join('\n');
+writeFileSync(path('supabase/migrations/202611240002_curriculum_sync.sql'), sync);
+
+// Keep the one-shot setup file in sync for new projects: the later migrations, then the full curriculum.
 const setupPath = path('supabase/setup.sql');
 const setup = readFileSync(setupPath, 'utf8');
 const begin = '-- BEGIN GENERATED CURRICULUM (scripts/build-content.mts)';
 const end = '-- END GENERATED CURRICULUM';
-const inner = seed.replace(/^begin;\n/m, '').replace(/^commit;\n/m, '');
+const unwrap = (text: string) => text.replace(/^begin;\n/m, '').replace(/^commit;\n/m, '');
+const inner = `-- Source: 202611240001_mixed_practice.sql\n${unwrap(readFileSync(path('supabase/migrations/202611240001_mixed_practice.sql'), 'utf8'))}\n` +
+  `-- Source: 202611240002_curriculum_sync.sql\n${unwrap(sync)}`;
 const block = `${begin}\n${inner}${end}\n`;
+// Replacer functions, not strings: the SQL contains $$, which a replacement string would turn into $.
 const next = setup.includes(begin)
-  ? setup.replace(new RegExp(`${begin.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}[\\s\\S]*?${end}\\n`), block)
-  : setup.replace(/\ncommit;\s*$/, `\n\n${block}\ncommit;\n`);
+  ? setup.replace(new RegExp(`${begin.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}[\\s\\S]*?${end}\\n`), () => block)
+  : setup.replace(/\ncommit;\s*$/, () => `\n\n${block}\ncommit;\n`);
 writeFileSync(setupPath, next);
 
 const count = (level: Level, category: string) => all.filter(l => l.level === level && l.category === category).length;

@@ -526,3 +526,25 @@ html.has-writing-pad, html.has-writing-pad body { overscroll-behavior: none; }
 .study-example mark { background: #fdf1d6; color: inherit; padding: 0 2px; border-radius: 3px; font-weight: 600; }
 .study-example.is-more p[lang] { font-size: 21px; }
 @media (max-width: 600px) { .grammar-forms li { font-size: 16px; } .study-example.is-more p[lang] { font-size: 18px; } }
+
+/* Grammar lesson details: usage notes, common mistakes and comparisons. */
+.grammar-notes { margin: 0; padding-left: 1.2em; display: grid; gap: 10px; font-size: 15px; line-height: 1.9; color: var(--text); }
+.grammar-notes li::marker { color: var(--green); }
+.grammar-mistakes { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
+.grammar-mistakes li { padding: 16px 18px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); }
+.grammar-mistakes p { display: flex; align-items: baseline; gap: 10px; }
+.grammar-mistakes p[class^="mistake-"] svg { position: relative; top: 2px; }
+.mistake-wrong span, .mistake-right span { font-family: 'Noto Sans JP', sans-serif; font-size: 19px; line-height: 1.9; }
+.mistake-wrong { color: #a4554b; }
+.mistake-wrong span { text-decoration: line-through; text-decoration-color: #d79c93; text-decoration-thickness: 1px; }
+.mistake-right { color: var(--green); }
+.mistake-why { margin-top: 8px; font-size: 14px; line-height: 1.8; color: var(--muted); display: block !important; }
+.grammar-mistakes rt { font-size: .45em; color: var(--muted); text-decoration: none; }
+.grammar-compare { margin: 0; display: grid; gap: 12px; }
+.grammar-compare div { padding: 14px 18px; border-left: 3px solid #b1c69f; background: #f5f8f1; border-radius: 0 10px 10px 0; }
+.grammar-compare dt { font-family: 'Noto Sans JP', sans-serif; font-weight: 600; font-size: 16px; color: var(--ink); margin-bottom: 4px; }
+.grammar-compare dd { margin: 0; font-size: 14px; line-height: 1.85; color: var(--text); }
+@media (max-width: 600px) { .mistake-wrong span, .mistake-right span { font-size: 17px; } .grammar-notes { font-size: 14px; } }
+
+/* Practice: a question mixed in from an earlier lesson. */
+.question-earlier { margin-left: auto; display: inline-flex; align-items: center; gap: 5px; padding: 3px 9px; border-radius: 999px; background: #f3f0e6; color: #8a7a55; font-size: 11px; }

@@ -338,6 +338,13 @@
     "sentenceYours": "Ваш вариант:",
     "kanjiTestBackToTest": "Вернуться к тесту",
     "formsTitle": "Как это строится",
+    "notesTitle": "Что важно запомнить",
+    "mistakesTitle": "Типичные ошибки",
+    "mistakeWrong": "Неправильно",
+    "mistakeRight": "Правильно",
+    "compareTitle": "Сравните с похожей грамматикой",
+    "practiceMix": "{own} из этого урока + {earlier} из прошлых уроков",
+    "fromEarlierLesson": "Из прошлого урока",
     "kanjiAccountNote": "Прогресс письма сохраняется в вашем аккаунте."
   }
 }

@@ -25,7 +25,13 @@ export const lessonSchema = z.object({
   examples: z.array(z.object({japanese: z.string().min(1), translations: localizedText, ruby: z.string().optional()})).min(1),
   words: z.array(wordSchema).default([]), questions: z.array(questionSchema).min(1),
   // How a grammar point is built ("V-dict + つもりです"), one line per form, in each display language.
-  forms: z.object({en: z.array(z.string().min(1)).min(1), ru: z.array(z.string().min(1)).min(1)}).optional()
+  forms: z.object({en: z.array(z.string().min(1)).min(1), ru: z.array(z.string().min(1)).min(1)}).optional(),
+  // Textbook-depth detail for grammar lessons (content/grammar/details): usage notes, typical
+  // learner mistakes (wrong → right, with the reason) and how the point differs from similar ones.
+  notes: z.array(localizedText).optional(),
+  mistakes: z.array(z.object({wrong: z.string().min(1), right: z.string().min(1), why: localizedText,
+    rubyWrong: z.string().optional(), rubyRight: z.string().optional()})).optional(),
+  compare: z.array(z.object({with: z.string().min(1), note: localizedText})).optional()
 });
 export type Lesson = z.infer<typeof lessonSchema>;
 

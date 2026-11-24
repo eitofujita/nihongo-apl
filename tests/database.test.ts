@@ -40,7 +40,7 @@ beforeAll(async () => {
     grant usage on schema auth to anon, authenticated;
     grant execute on function auth.uid() to anon, authenticated;
   `);
-  for (const file of ['202611170001_initial_schema.sql', '202611170002_learning_functions.sql', '202611170003_question_bank.sql', '202611180001_curriculum_n5_n3.sql', '202611220001_kanji_progress.sql']) {
+  for (const file of ['202611170001_initial_schema.sql', '202611170002_learning_functions.sql', '202611170003_question_bank.sql', '202611180001_curriculum_n5_n3.sql', '202611220001_kanji_progress.sql', '202611240001_mixed_practice.sql', '202611240002_curriculum_sync.sql']) {
     await db.exec(await readFile(new URL(`../supabase/migrations/${file}`, import.meta.url), 'utf8'));
   }
 }, 30000);
@@ -131,7 +131,7 @@ describe.sequential('PostgreSQL migrations, RLS and server-authored grading', ()
   it('grades raw answers and ignores forged correct flags or owner fields', async () => {
     const answers = correctAnswers.map((answer, index) => ({...answer, answer: index === 0 ? 'を' : answer.answer, correct: true, userId: B}));
     const stored = await submit(SESSION_A, answers);
-    expect(stored.sessions[0].answers.map(a => a.correct)).toEqual([false, true, true]);
+    expect(stored.sessions[0].answers.map(a => a.correct)).toEqual(correctAnswers.map((_, index) => index !== 0));
     expect(stored.reviews[0].questionId).toBe('wa-1');
     await asUser(B);
     expect((await progress()).sessions).toHaveLength(0);
@@ -154,9 +154,22 @@ describe.sequential('PostgreSQL migrations, RLS and server-authored grading', ()
   it('rolls back incomplete, duplicate and mismatched lesson submissions', async () => {
     await expect(submit(SESSION_A, correctAnswers.slice(0, 1))).rejects.toThrow(/Invalid lesson/i);
     await expect(submit(SESSION_A, [correctAnswers[0], correctAnswers[0], correctAnswers[2]])).rejects.toThrow(/Invalid submission/i);
-    await expect(submit(SESSION_A, correctAnswers, 'n5-ka')).rejects.toThrow(/Invalid question/i);
+    await expect(submit(SESSION_A, correctAnswers, 'n5-ka')).rejects.toThrow(/Invalid lesson/i);
     await expect(submit(SESSION_A, correctAnswers, FIRST.id, 4000)).rejects.toThrow(/Invalid submission/i);
     expect((await progress()).sessions).toHaveLength(0);
+  });
+  it('accepts a lesson topped up to ten with earlier questions, but never without its own', async () => {
+    const own = getLesson('n5-no')!.questions.map(q => ({questionId: q.id, answer: q.answer}));
+    const earlier = correctAnswers.slice(0, 10 - own.length);
+    const saved = await submit(SESSION_A, [...own, ...earlier], 'n5-no');
+    expect(saved.sessions[0].answers).toHaveLength(10);
+    expect(saved.sessions[0].answers.every(a => a.correct)).toBe(true);
+    await expect(submit(SESSION_B, [...own.slice(1), ...earlier], 'n5-no')).rejects.toThrow(/Invalid lesson/i);
+    await expect(submit(SESSION_B, [...own, ...correctAnswers.slice(0, 8)], 'n5-no')).rejects.toThrow(/Invalid lesson/i);
+    await expect(submit(SESSION_B, [...own, {questionId: 'nope-1', answer: 'x'}], 'n5-no')).rejects.toThrow(/Unknown question/i);
+    const placement = placementQuestions.map(q => ({questionId: q.id, answer: q.answer}));
+    await expect(submit(SESSION_B, [...placement, {questionId: 'wa-2', answer: 'です'}], 'placement')).rejects.toThrow(/Invalid lesson/i);
+    expect((await progress()).sessions).toHaveLength(1);
   });
   it('only permits due reviews and advances the server-side repetition interval', async () => {
     await submit(SESSION_A, correctAnswers.map((answer, i) => ({...answer, answer: i === 0 ? 'を' : answer.answer})));

@@ -18,8 +18,8 @@ import {GET as confirm} from '@/app/auth/confirm/route';
 import {GET as callback} from '@/app/auth/callback/route';
 
 const USER = '00000000-0000-4000-8000-000000000001';
-const submission = {id: '10000000-0000-4000-8000-000000000001', lessonId: 'n5-wa-desu', durationSeconds: 90, answers: [
-  {questionId: 'wa-1', answer: 'は'}, {questionId: 'wa-2', answer: 'です'}, {questionId: 'wa-3', answer: 'は'}
+const submission = {id: '10000000-0000-4000-8000-000000000001', lessonId: 'n5-no', durationSeconds: 90, answers: [
+  {questionId: 'no-1', answer: 'の'}, {questionId: 'no-2', answer: 'の'}, {questionId: 'no-3', answer: 'の'}
 ]};
 function request(path: string, body?: unknown, method = 'POST', origin = 'http://localhost:3000') {
   return new Request(`http://localhost:3000${path}`, {method, headers: {origin, 'content-type': 'application/json'}, body: body === undefined ? undefined : JSON.stringify(body)});

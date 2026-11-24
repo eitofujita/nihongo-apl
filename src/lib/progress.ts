@@ -14,8 +14,9 @@ const sessionSchema = z.object({
     context.addIssue({code: 'custom', message: 'A session cannot contain the same question twice'});
   }
   const lesson = getLessonMeta(session.lessonId);
-  if (lesson && session.answers.some(a => !lesson.questionIds.includes(a.questionId))) {
-    context.addIssue({code: 'custom', message: 'Question does not belong to this lesson'});
+  // Stored history is parsed leniently: any known question may follow the lesson's own (mixed practice).
+  if (lesson && !lesson.questionIds.some(id => session.answers.some(a => a.questionId === id))) {
+    context.addIssue({code: 'custom', message: 'Session has none of this lesson\'s questions'});
   }
 });
 const reviewSchema = z.object({questionId: knownQuestion, due: z.iso.datetime(), step: z.number().int().min(0).max(3)});

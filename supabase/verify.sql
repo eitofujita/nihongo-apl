@@ -60,8 +60,8 @@ begin
     or (select count(*) from public.entitlements where plan = 'free' and status = 'inactive') <> 1 then
     raise exception 'User A profile/entitlement isolation failed';
   end if;
-  v_progress := public.submit_practice(v_session, 'n5-wa-desu', 60,
-    '[{"questionId":"wa-1","answer":"を","correct":true},{"questionId":"wa-2","answer":"です"},{"questionId":"wa-3","answer":"は"}]'::jsonb);
+  v_progress := public.submit_practice(v_session, 'n5-no', 60,
+    '[{"questionId":"no-1","answer":"を","correct":true},{"questionId":"no-2","answer":"の"},{"questionId":"no-3","answer":"の"}]'::jsonb);
   if jsonb_array_length(v_progress->'sessions') <> 1
     or (v_progress #>> '{sessions,0,answers,0,correct}')::boolean is distinct from false
     or (v_progress #>> '{sessions,0,answers,1,correct}')::boolean is distinct from true
@@ -69,8 +69,8 @@ begin
     or jsonb_array_length(v_progress->'reviews') <> 1 then
     raise exception 'Server grading or review creation failed';
   end if;
-  v_progress := public.submit_practice(v_session, 'n5-wa-desu', 60,
-    '[{"questionId":"wa-1","answer":"を"},{"questionId":"wa-2","answer":"です"},{"questionId":"wa-3","answer":"は"}]'::jsonb);
+  v_progress := public.submit_practice(v_session, 'n5-no', 60,
+    '[{"questionId":"no-1","answer":"を"},{"questionId":"no-2","answer":"の"},{"questionId":"no-3","answer":"の"}]'::jsonb);
   if jsonb_array_length(v_progress->'sessions') <> 1 then raise exception 'Retry created a duplicate'; end if;
   update public.profiles set daily_goal_minutes = 10 where user_id = auth.uid();
 end;
@@ -98,8 +98,8 @@ begin
   update public.profiles set daily_goal_minutes = 5 where user_id = current_setting('nihongo_qa.user_a')::uuid;
   get diagnostics v_count = row_count;
   if v_count <> 0 then raise exception 'User B updated user A profile'; end if;
-  v_progress := public.submit_practice(current_setting('nihongo_qa.session_b')::uuid, 'n5-wa-desu', 60,
-    '[{"questionId":"wa-1","answer":"は"},{"questionId":"wa-2","answer":"か"},{"questionId":"wa-3","answer":"は"}]'::jsonb);
+  v_progress := public.submit_practice(current_setting('nihongo_qa.session_b')::uuid, 'n5-no', 60,
+    '[{"questionId":"no-1","answer":"の"},{"questionId":"no-2","answer":"か"},{"questionId":"no-3","answer":"の"}]'::jsonb);
   if jsonb_array_length(v_progress->'sessions') <> 1 or jsonb_array_length(v_progress->'reviews') <> 1 then
     raise exception 'User B own submission failed';
   end if;

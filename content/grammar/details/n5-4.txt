@@ -1,0 +1,179 @@
+# N5 grammar details, part 4.
+
+@ n5-naru
+N: なる describes a change: something was not X and becomes X. Before なる: い-adjective → く (高くなる), な-adjective → に (元気になる), noun → に (先生になる). | なる описывает изменение: не было X — стало X. Перед なる: い-прилагательное → く (高くなる), な-прилагательное → に (元気になる), существительное → に (先生になる).
+N: Natural changes such as seasons and time use なる: 春になりました, 十時になりました, 二十歳になりました. | Естественные изменения — сезоны, время — передаются через なる: 春になりました, 十時になりました, 二十歳になりました.
+N: いい becomes よくなる: 天気がよくなりました. | いい становится よくなる: 天気がよくなりました.
+N: なりました often has the nuance “it has become (and is now)”: 暗くなりました = It has got dark. | なりました часто означает «стало (и теперь так)»: 暗くなりました — Стемнело.
+X: 寒いになりました。 | 寒くなりました。 | い-adjectives change い to く before なる. | い-прилагательные меняют い на く перед なる.
+X: 医者くなりたいです。 | 医者になりたいです。 | Nouns take に before なる. | Существительные берут に перед なる.
+X: いくなりました。 | よくなりました。 | いい changes to よく. | いい меняется на よく.
+C: する (later level) | なる = something changes by itself; する = someone makes it change: 部屋を暖かくする. | なる — что-то меняется само; する — кто-то меняет: 部屋を暖かくする.
+E: 日本語が上手になりましたね。 | Your Japanese has become good. | Ваш японский стал хорошим.
+E: 夜になって、寒くなりました。 | Night fell and it got cold. | Наступила ночь, и стало холодно.
+
+@ n5-mou-mada
+N: もう + affirmative past = already: もう食べました (I've already eaten). | もう + утвердительное прошедшее — уже: もう食べました (Я уже поел).
+N: まだ + ていません = not yet: まだ食べていません (I haven't eaten yet). A short answer is いいえ、まだです. | まだ + ていません — ещё не: まだ食べていません (Я ещё не ел). Краткий ответ — いいえ、まだです.
+N: まだ + affirmative = still: まだ雨が降っています (It's still raining). | まだ + утверждение — всё ещё: まだ雨が降っています (Дождь всё ещё идёт).
+N: もう + negative = not any more: もう痛くないです (It doesn't hurt any more). | もう + отрицание — больше не: もう痛くないです (Больше не болит).
+X: まだ食べませんでした。 | まだ食べていません。 | “Not yet” describes the current state, so it uses ていません. | «Ещё не» описывает нынешнее состояние, поэтому используется ていません.
+X: もう宿題をしましたか。…いいえ、しませんでした。 | …いいえ、まだです。 | When it will still happen, answer まだです, not しませんでした. | Если это ещё произойдёт, отвечайте まだです, а не しませんでした.
+C: もう・まだ | もう + positive = already; もう + negative = no longer; まだ + positive = still; まだ + negative = not yet. | もう + утверждение — уже; もう + отрицание — больше не; まだ + утверждение — всё ещё; まだ + отрицание — ещё не.
+E: 田中さんはもう帰りましたか。…いいえ、まだ会社にいます。 | Has Mr. Tanaka gone home yet? — No, he's still at the office. | Господин Танака уже ушёл? — Нет, он ещё на работе.
+E: この本はもう読みました。 | I've already read this book. | Эту книгу я уже прочитал.
+
+@ n5-amari
+N: あまり must be followed by a negative: あまり好きではありません (I don't like it much), あまり食べません (I don't eat much). | После あまり обязательно отрицание: あまり好きではありません (не очень люблю), あまり食べません (ем немного).
+N: ぜんぜん + negative = not at all: ぜんぜん分かりません. In casual talk, young people also use ぜんぜん with positives (ぜんぜん大丈夫), but use the negative in tests. | ぜんぜん + отрицание — совсем не: ぜんぜん分かりません. Молодёжь в разговоре говорит ぜんぜん и с утверждением (ぜんぜん大丈夫), но в тестах — только с отрицанием.
+N: Scale of frequency: いつも (always) → よく (often) → ときどき (sometimes) → あまり…ない (not often) → ぜんぜん…ない (never). | Шкала частоты: いつも (всегда) → よく (часто) → ときどき (иногда) → あまり…ない (нечасто) → ぜんぜん…ない (никогда).
+N: Scale of degree: とても (very) → 少し (a little) → あまり…ない (not very) → ぜんぜん…ない (not at all). | Шкала степени: とても (очень) → 少し (немного) → あまり…ない (не очень) → ぜんぜん…ない (совсем не).
+X: この映画はあまりおもしろいです。 | この映画はあまりおもしろくないです。 | あまり needs a negative after it. | После あまり нужно отрицание.
+X: とてもおいしくないです。 | あまりおいしくないです。 | For “not very”, use あまり + negative; とても normally goes with positives. | Для «не очень» — あまり + отрицание; とても обычно сочетается с утверждением.
+C: とても | とても + positive = very; あまり + negative = not very. | とても + утверждение — очень; あまり + отрицание — не очень.
+E: 朝ご飯はあまり食べません。 | I don't eat much breakfast. | Я мало ем на завтрак.
+E: 昨日はぜんぜん寝ませんでした。 | I didn't sleep at all yesterday. | Вчера я совсем не спал.
+
+@ n5-adj-te
+N: い-adjective: drop い, add くて: 安い → 安くて, 広い → 広くて. いい → よくて. | い-прилагательное: убрать い, добавить くて: 安い → 安くて, 広い → 広くて. いい → よくて.
+N: な-adjective and noun: add で: 静か → 静かで, 学生 → 学生で. | な-прилагательное и существительное: добавить で: 静か → 静かで, 学生 → 学生で.
+N: Join two qualities that go in the same direction (both good or both bad). For contrasting qualities, use が: 安いですが、おいしくないです. | Соединяйте два качества одного «знака» (оба хорошие или оба плохие). Для противоположных используйте が: 安いですが、おいしくないです.
+N: くて / で can also give a reason: 暑くて、寝られません (It's so hot I can't sleep). | くて / で может выражать и причину: 暑くて、寝られません (Так жарко, что не уснуть).
+X: 安いでおいしいです。 | 安くておいしいです。 | い-adjectives join with くて. | い-прилагательные соединяются через くて.
+X: 静かくてきれいです。 | 静かできれいです。 | な-adjectives join with で. | な-прилагательные соединяются через で.
+X: この部屋は狭くて、明るいです。（意味：but） | この部屋は狭いですが、明るいです。 | A good point after a bad one is a contrast; use が. | Хорошее после плохого — это противопоставление; используйте が.
+C: と | と joins nouns only; adjectives join with くて / で. | と соединяет только существительные; прилагательные — через くて / で.
+E: 田中さんは親切で、おもしろい人です。 | Mr. Tanaka is kind and funny. | Господин Танака добрый и весёлый.
+E: このかばんは軽くて、便利です。 | This bag is light and convenient. | Эта сумка лёгкая и удобная.
+
+@ n5-adj-past
+N: い-adjective past: い → かったです: 楽しい → 楽しかったです. Past negative: い → くなかったです: 楽しくなかったです. | Прошедшее い-прилагательного: い → かったです: 楽しい → 楽しかったです. Прошедшее отрицание: い → くなかったです: 楽しくなかったです.
+N: The past is shown on the adjective, not on です: 楽しかったです, not 楽しいでした. | Прошедшее выражается в прилагательном, а не в です: 楽しかったです, а не 楽しいでした.
+N: いい: よかったです / よくなかったです. よかった! alone also means “What a relief!” | いい: よかったです / よくなかったです. Отдельное よかった! значит и «Слава богу!».
+N: A more formal past negative is くありませんでした. | Более формальное прошедшее отрицание — くありませんでした.
+X: 楽しいでした。 | 楽しかったです。 | い-adjectives change to かった; でした is for nouns and な-adjectives. | い-прилагательные меняются на かった; でした — для существительных и な-прилагательных.
+X: いかったです。 | よかったです。 | いい becomes よかった. | いい становится よかった.
+C: でした (na-adjectives) | 寒かったです (い-adjective) vs. 静かでした (な-adjective). | 寒かったです (い-прилагательное) vs 静かでした (な-прилагательное).
+E: 旅行はとても楽しかったです。 | The trip was a lot of fun. | Поездка была очень весёлой.
+E: テストはあまりむずかしくなかったです。 | The test wasn't very hard. | Тест был не очень трудным.
+
+@ n5-na-past
+N: な-adjectives and nouns work exactly like です: 静かでした (was quiet), 静かではありませんでした (was not quiet). | な-прилагательные и существительные изменяются так же, как です: 静かでした (было тихо), 静かではありませんでした (не было тихо).
+N: Casual forms: だった (was), じゃなかった (was not). | Разговорные формы: だった (было), じゃなかった (не было).
+N: Watch out for きれい and 有名: they end in い but are な-adjectives, so きれいでした, not きれかった. | Осторожно с きれい и 有名: они оканчиваются на い, но это な-прилагательные — きれいでした, а не きれかった.
+N: じゃありませんでした is the conversational version of ではありませんでした. | じゃありませんでした — разговорный вариант ではありませんでした.
+X: きれかったです。 | きれいでした。 | きれい is a な-adjective. | きれい — な-прилагательное.
+X: 雨ではありませんだった。 | 雨ではありませんでした。 | The polite past negative ends in ませんでした. | Вежливое прошедшее отрицание заканчивается на ませんでした.
+C: かった (い-adjectives) | な-adjectives and nouns use でした; い-adjectives use かったです. | な-прилагательные и существительные — でした; い-прилагательные — かったです.
+E: 子供のころ、この町は静かでした。 | When I was a child, this town was quiet. | Когда я был ребёнком, этот город был тихим.
+E: 昨日は休みじゃありませんでした。 | Yesterday wasn't a day off. | Вчера был не выходной.
+
+@ n5-gurai-goro
+N: ぐらい (also くらい) means “about” for amounts, lengths of time and distance: 一時間ぐらい, 千円ぐらい, 十キロぐらい. | ぐらい (или くらい) значит «примерно» для количества, длительности и расстояния: 一時間ぐらい, 千円ぐらい, 十キロぐらい.
+N: ごろ means “around” a point in time: 三時ごろ, 五月ごろ. | ごろ значит «около» для момента времени: 三時ごろ, 五月ごろ.
+N: With ごろ, に is often dropped: 七時ごろ起きます. ぐらい can also be used with points in time in speech (三時ぐらい), but ごろ is the textbook choice. | После ごろ に часто опускают: 七時ごろ起きます. В речи ぐらい встречается и с моментом времени (三時ぐらい), но по учебнику — ごろ.
+N: Ask with どのぐらい / どれぐらい (how long / how much): 駅までどのぐらいかかりますか. | Вопрос — どのぐらい / どれぐらい (сколько по времени / количеству): 駅までどのぐらいかかりますか.
+X: 二時間ごろ勉強しました。 | 二時間ぐらい勉強しました。 | A length of time takes ぐらい, not ごろ. | Длительность — ぐらい, а не ごろ.
+X: 何時ぐらいごろ来ますか。 | 何時ごろ来ますか。 | Use one: ごろ for a point in time. | Выберите одно: ごろ для момента времени.
+C: ぐらい vs ごろ | ぐらい = how much / how long; ごろ = around what time. | ぐらい — сколько / как долго; ごろ — около какого времени.
+E: 駅まで歩いて十五分ぐらいです。 | It's about fifteen minutes on foot to the station. | До станции пешком около пятнадцати минут.
+E: 毎朝七時ごろ家を出ます。 | I leave home around seven every morning. | Каждое утро я выхожу из дома около семи.
+
+@ n5-dake
+N: だけ means “only / just” and sits right after what it limits: 水だけ (only water), 一つだけ (just one), 日曜日だけ (only on Sunday). | だけ значит «только» и стоит сразу после того, что ограничивает: 水だけ (только вода), 一つだけ (только один), 日曜日だけ (только в воскресенье).
+N: だけ replaces が and を, or comes before other particles: 水だけ飲みます, 友達にだけ話しました. | だけ заменяет が и を или ставится перед другими частицами: 水だけ飲みます, 友達にだけ話しました.
+N: だけ is neutral. しか + negative also means “only” but stresses that it is not enough (later level): 千円しかありません. | だけ нейтрально. しか + отрицание тоже значит «только», но подчёркивает, что этого мало (более высокий уровень): 千円しかありません.
+N: これだけ means “just this” — useful in shops: これだけです (That's all). | これだけ значит «только это» — полезно в магазине: これだけです (Это всё).
+X: 一つだけをください。 | 一つだけください。 | After a number, だけ directly precedes the verb; を is not needed. | После числа だけ стоит прямо перед глаголом; を не нужно.
+X: だけ水を飲みます。 | 水だけ飲みます。 | だけ comes after the word it limits. | だけ ставится после ограничиваемого слова.
+C: しか…ない | だけ = only (neutral); しか…ない = only, nothing more (often “not enough”). | だけ — только (нейтрально); しか…ない — только, и больше ничего (часто «маловато»).
+E: 日曜日だけ休みです。 | Only Sunday is a day off. | Выходной только в воскресенье.
+E: 少しだけ待ってください。 | Please wait just a little. | Подождите совсем чуть-чуть.
+
+@ n5-ga-wakaru
+N: These words take が for what is understood, possible, liked or skilled: 分かる (understand), できる (can do), 好き, きらい, 上手, 下手, ほしい, ある, いる. | Эти слова отмечают объект частицей が: 分かる (понимать), できる (уметь), 好き, きらい, 上手, 下手, ほしい, ある, いる.
+N: The person is the topic with は: わたしは日本語が少し分かります. | Человек — тема с は: わたしは日本語が少し分かります.
+N: できる also means “be able to” with a する-noun: 料理ができます (can cook), 運転ができます (can drive). | できる с существительным на する значит «уметь»: 料理ができます (умею готовить), 運転ができます (умею водить).
+N: Degree words help: よく分かります (understand well), 少し分かります (understand a little), ぜんぜん分かりません. | Помогают слова степени: よく分かります (хорошо понимаю), 少し分かります (немного понимаю), ぜんぜん分かりません.
+X: ピアノをできます。 | ピアノができます。 | できる takes が. | できる требует が.
+X: 料理を上手です。 | 料理が上手です。 | 上手 is a な-adjective and takes が. | 上手 — な-прилагательное, требует が.
+C: を | Action verbs (食べる, 書く) take を; 分かる, できる, 好き and similar words take が. | Глаголы действия (食べる, 書く) — を; 分かる, できる, 好き и подобные — が.
+E: 弟はギターが上手です。 | My younger brother is good at the guitar. | Мой младший брат хорошо играет на гитаре.
+E: すみません、意味が分かりません。 | Sorry, I don't understand the meaning. | Извините, я не понимаю смысла.
+
+@ n5-adverbs
+N: い-adjective → adverb: change い to く: 早い → 早く (early), 大きい → 大きく (big), いい → よく (well). | い-прилагательное → наречие: い меняется на く: 早い → 早く (рано), 大きい → 大きく (крупно), いい → よく (хорошо).
+N: な-adjective → adverb: add に: 静か → 静かに (quietly), きれい → きれいに (neatly), 上手 → 上手に (skillfully). | な-прилагательное → наречие: добавить に: 静か → 静かに (тихо), きれい → きれいに (аккуратно), 上手 → 上手に (умело).
+N: The adverb comes before the verb it describes: 早く起きます, 静かに話してください. | Наречие стоит перед глаголом: 早く起きます, 静かに話してください.
+N: Some words are adverbs by themselves: ゆっくり (slowly), もっと (more), すぐ (immediately), よく (often / well). | Некоторые слова — наречия сами по себе: ゆっくり (медленно), もっと (больше), すぐ (сразу), よく (часто / хорошо).
+X: 早い起きます。 | 早く起きます。 | Before a verb, an い-adjective becomes く. | Перед глаголом い-прилагательное становится く.
+X: 静かな話してください。 | 静かに話してください。 | Before a verb, な becomes に. | Перед глаголом な меняется на に.
+C: なる | Same forms as with なる: 大きくなる / 大きく書く; 静かになる / 静かに話す. | Формы те же, что с なる: 大きくなる / 大きく書く; 静かになる / 静かに話す.
+E: 字をきれいに書いてください。 | Please write the letters neatly. | Пишите, пожалуйста, аккуратно.
+E: 今日は早く寝ます。 | I'll go to bed early today. | Сегодня лягу пораньше.
+
+@ n5-no-one
+N: の replaces a noun that both people already know: 赤いのをください (the red one), 大きいのがいいです (the big one is better). | の заменяет существительное, известное обоим: 赤いのをください (красный), 大きいのがいいです (большой лучше).
+N: After a な-adjective, use なの: 静かなのがいいです. After a noun, use の (the second noun is dropped): これは田中さんのです. | После な-прилагательного — なの: 静かなのがいいです. После существительного — の (второе существительное опускается): これは田中さんのです.
+N: After a verb in plain form: 昨日買ったのはこれです (What I bought yesterday is this). | После глагола в простой форме: 昨日買ったのはこれです (Вот что я купил вчера).
+N: の as “one” is for things, not people. For people, say 人: 背が高い人. | の в значении «тот, который» — для вещей, не для людей. Для людей — 人: 背が高い人.
+X: 赤いをください。 | 赤いのをください。 | An adjective cannot stand alone before a particle; add の. | Прилагательное не может стоять перед частицей одно; добавьте の.
+X: 静かのがいいです。 | 静かなのがいいです。 | な-adjectives keep な before の. | な-прилагательные сохраняют な перед の.
+C: もの | の is the everyday replacement; もの means “thing” and is more explicit: 安いもの. | の — повседневная замена; もの — «вещь», звучит конкретнее: 安いもの.
+E: このシャツは小さいです。もっと大きいのはありますか。 | This shirt is small. Do you have a bigger one? | Эта рубашка маленькая. Есть побольше?
+E: わたしのはこの青いのです。 | Mine is this blue one. | Мой — вот этот синий.
+
+@ n5-mashou-ka
+N: ましょうか offers to do something for the listener: 手伝いましょうか (Shall I help?). The speaker does the action. | ましょうか — предложение сделать что-то для собеседника: 手伝いましょうか (Помочь?). Действие совершает говорящий.
+N: It also suggests something together, softly: そろそろ帰りましょうか (Shall we head home?). | Также это мягкое предложение сделать что-то вместе: そろそろ帰りましょうか (Может, пойдём домой?).
+N: Answers: yes — ええ、お願いします / すみません、お願いします; no — いいえ、大丈夫です / けっこうです. | Ответы: да — ええ、お願いします / すみません、お願いします; нет — いいえ、大丈夫です / けっこうです.
+N: Casual form: volitional + か: 手伝おうか？ (later level). | Разговорная форма: волитив + か: 手伝おうか？ (более высокий уровень).
+X: 荷物を持ちますか。（申し出） | 荷物を持ちましょうか。 | ますか asks what the listener will do; to offer your help, use ましょうか. | ますか спрашивает, что сделает собеседник; чтобы предложить помощь, используйте ましょうか.
+X: 窓を開けましょうか。…はい、開けましょう。 | …はい、お願いします。 | When someone offers to do something for you, answer お願いします. | Когда вам предлагают помощь, отвечайте お願いします.
+C: ませんか | ましょうか = Shall I / Shall we (offer or suggestion); ませんか = Won't you (invitation). | ましょうか — давайте я / может, нам (предложение); ませんか — не хотите ли (приглашение).
+E: 寒いですね。窓を閉めましょうか。 | It's cold, isn't it? Shall I close the window? | Холодно, правда? Закрыть окно?
+E: タクシーを呼びましょうか。…ええ、お願いします。 | Shall I call a taxi? — Yes, please. | Вызвать такси? — Да, пожалуйста.
+
+@ n5-dore
+N: どれ = which one (from three or more), used alone: どれがいいですか. | どれ — который (из трёх и более), употребляется отдельно: どれがいいですか.
+N: どの + noun = which (noun): どの電車, どの人. | どの + существительное — какой (предмет): どの電車, どの人.
+N: どちら = which of two: コーヒーと紅茶とどちらがいいですか. It is also the polite word for どこ (where) and どれ: お国はどちらですか. | どちら — который из двух: コーヒーと紅茶とどちらがいいですか. Это также вежливый вариант どこ (где) и どれ: お国はどちらですか.
+N: どっち is the casual form of どちら. | どっち — разговорная форма どちら.
+X: どれ車ですか。 | どの車ですか。 | Before a noun, use どの. | Перед существительным — どの.
+X: AとB、どれがいいですか。 | AとB、どちらがいいですか。 | For two choices, use どちら. | При выборе из двух — どちら.
+C: これ・この | The answer mirrors the question: どれ → これ; どの本 → この本; どちら → こちら. | Ответ зеркалит вопрос: どれ → これ; どの本 → この本; どちら → こちら.
+E: どの店で買いましたか。…あの店です。 | Which shop did you buy it at? — That one over there. | В каком магазине вы купили? — Вон в том.
+E: 赤いのと青いのと、どちらが好きですか。 | Which do you like, the red one or the blue one? | Какой вам нравится: красный или синий?
+
+@ n5-wo-kudasai
+N: Noun + をください asks for a thing: 水をください. For actions, use て-form + ください. | Существительное + をください — просьба о вещи: 水をください. Для действий — て-форма + ください.
+N: Number goes after を: りんごを三つください, 切符を二枚ください. | Число ставится после を: りんごを三つください, 切符を二枚ください.
+N: In a shop, これをください (I'll take this one) is very useful. | В магазине очень пригодится これをください (Дайте вот это).
+N: More polite: お願いします — コーヒーをお願いします. It works for things and services. | Вежливее: お願いします — コーヒーをお願いします. Подходит и для вещей, и для услуг.
+X: 三つりんごをください。 | りんごを三つください。 | The usual order is item を + number + ください. | Обычный порядок: предмет を + число + ください.
+X: 水がください。 | 水をください。 | The thing you ask for takes を. | Просимый предмет отмечается を.
+C: てください | をください = give me (a thing); てください = please do (an action). | をください — дайте (вещь); てください — сделайте, пожалуйста (действие).
+E: すみません、メニューをください。 | Excuse me, the menu, please. | Извините, меню, пожалуйста.
+E: この絵はがきを五枚ください。 | Five of these picture postcards, please. | Пять таких открыток, пожалуйста.
+
+@ n5-ka-or
+N: A か B = A or B: 月曜日か火曜日 (Monday or Tuesday). Like と and や, it joins nouns. | A か B — A или B: 月曜日か火曜日 (понедельник или вторник). Как と и や, соединяет существительные.
+N: The particle for the whole phrase comes after the last item: 電車かバスで行きます. | Частица всей группы ставится после последнего пункта: 電車かバスで行きます.
+N: To ask “A or B?” as a question, say A ですか、B ですか: コーヒーですか、紅茶ですか. | Чтобы спросить «A или B?», скажите A ですか、B ですか: コーヒーですか、紅茶ですか.
+N: Do not confuse with question-ending か; this か sits between two nouns. | Не путайте с か в конце вопроса: эта か стоит между двумя существительными.
+X: 電車でかバスで行きます。 | 電車かバスで行きます。 | Put で once, after the last option. | で ставится один раз, после последнего варианта.
+C: と / や | と = A and B; や = A, B and others; か = A or B. | と — A и B; や — A, B и другие; か — A или B.
+E: ペンか鉛筆で書いてください。 | Please write with a pen or a pencil. | Пишите ручкой или карандашом.
+E: 夏休みに北海道か沖縄へ行きたいです。 | I want to go to Hokkaido or Okinawa for summer vacation. | На летних каникулах хочу поехать на Хоккайдо или Окинаву.
+
+@ n5-nanimo
+N: Question word + も + negative = “no …”: 何も (nothing), だれも (nobody), どこも (nowhere). | Вопросительное слово + も + отрицание — «никто / ничего / нигде»: 何も (ничего), だれも (никто), どこも (нигде).
+N: が and を disappear before も: 何も食べません (not 何をも). Other particles stay before も: どこへも行きません, だれとも話しません, どこにもいません. | が и を перед も исчезают: 何も食べません (не 何をも). Другие частицы остаются перед も: どこへも行きません, だれとも話しません, どこにもいません.
+N: The verb must be negative. 何も分かりません = I understand nothing. | Глагол обязательно в отрицании. 何も分かりません — Я ничего не понимаю.
+N: With a positive meaning, use か: 何か (something), だれか (someone), どこか (somewhere): 何か食べますか. | В утвердительном смысле — か: 何か (что-то), だれか (кто-то), どこか (где-то): 何か食べますか.
+X: 何も食べます。 | 何も食べません。 | 何も needs a negative verb. | После 何も нужен отрицательный глагол.
+X: どこも行きません。 | どこへも行きません。 | Keep へ (or に) before も with places of movement. | С местом направления сохраняйте へ (или に) перед も.
+X: 何かありません。 | 何もありません。 | “Nothing” is 何も + negative; 何か is “something”. | «Ничего» — 何も + отрицание; 何か — «что-то».
+C: 何か | 何か = something (positive questions and statements); 何も + negative = nothing. | 何か — что-то (в вопросах и утверждениях); 何も + отрицание — ничего.
+E: 日曜日はどこへも行きませんでした。 | I didn't go anywhere on Sunday. | В воскресенье я никуда не ходил.
+E: 何か飲みますか。…いいえ、何もいりません。 | Will you drink something? — No, I don't need anything. | Будете что-нибудь пить? — Нет, ничего не нужно.

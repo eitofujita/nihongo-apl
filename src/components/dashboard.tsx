@@ -3,7 +3,7 @@
 import {useLocale, useNow, useTranslations} from 'next-intl';
 import {ArrowRight, BookOpen, Check, CheckCircle2, ChevronRight, Flame, Leaf, RotateCcw, Target, TrendingUp} from 'lucide-react';
 import {Link} from '@/i18n/navigation';
-import {lessons, levelStats, type LessonMeta} from '@/content/catalog';
+import {lessons, levelStats, practiceSize, type LessonMeta} from '@/content/catalog';
 import type {Locale} from '@/i18n/routing';
 import {getRecommendation, getStats} from '@/lib/progress';
 import {useProgress} from './progress-provider';
@@ -19,7 +19,7 @@ export function LessonCard({lesson, done, next}: {lesson: LessonMeta; done: bool
     <span className="simple-lesson-glyph" lang="ja">{lesson.glyph}</span>
     <div className="simple-lesson-text">
       <span className="simple-lesson-meta">
-        <span>{t('lessonNumber', {number: lesson.levelNumber})} · {t(lesson.category)} · {t('questions', {count: lesson.questionIds.length})}</span>
+        <span>{t('lessonNumber', {number: lesson.levelNumber})} · {t(lesson.category)} · {t('questions', {count: practiceSize(lesson)})}</span>
         {done && <span className="lesson-badge done"><CheckCircle2 size={13}/>{t('completed')}</span>}
         {next && !done && <span className="lesson-badge next">{t('nextUp')}</span>}
       </span>

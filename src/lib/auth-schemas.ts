@@ -1,5 +1,5 @@
 import {z} from 'zod';
-import {getLessonMeta, isKnownQuestion, placementQuestions} from '@/content/catalog';
+import {getLessonMeta, isEarlierQuestion, isKnownQuestion, placementQuestions, practiceSize} from '@/content/catalog';
 
 const localeSchema = z.enum(['en', 'ru']);
 export const pkceFlowIdSchema = z.string().regex(/^[a-zA-Z0-9_-]{8,64}$/);
@@ -21,8 +21,10 @@ export const submissionSchema = z.object({
   const ids = value.answers.map(a => a.questionId);
   const lesson = getLessonMeta(value.lessonId);
   const expected = lesson?.questionIds ?? (value.lessonId === 'placement' ? placementQuestions.map(q => q.id) : null);
-  const allowed = (id: string) => value.lessonId === 'review' ? isKnownQuestion(id) : Boolean(expected?.includes(id));
-  if ((!expected && value.lessonId !== 'review') || new Set(ids).size !== ids.length || ids.some(id => !allowed(id)) || (value.lessonId !== 'review' && ids.length !== expected?.length)) {
+  // A lesson's practice holds all of its own questions, topped up to PRACTICE_SIZE from earlier lessons.
+  const allowed = (id: string) => value.lessonId === 'review' ? isKnownQuestion(id) : Boolean(expected?.includes(id) || (lesson && isEarlierQuestion(lesson, id)));
+  const complete = value.lessonId === 'review' || Boolean(expected?.every(id => ids.includes(id)) && ids.length <= (lesson ? practiceSize(lesson) : expected!.length));
+  if ((!expected && value.lessonId !== 'review') || new Set(ids).size !== ids.length || ids.some(id => !allowed(id)) || !complete) {
     context.addIssue({code: 'custom', message: 'Invalid lesson questions'});
   }
 });
