@@ -51,7 +51,7 @@ npm run test:e2e:cloudflare
 
 ## サイト名とURLの変更（2026-11-25）
 
-サイト名を「Nyantan Nihongo」に、Worker名を`nihongo-ai`から`nyantan-nihongo`に変えました。次回の`npm run deploy:cloudflare`で新しいWorkerとして作られ、公開先は https://nyantan-nihongo.fifatvgame.workers.dev になります。
+サイト名を「Nyantan Nihongo」に、Worker名を`nihongo-ai`から`nyantan-nihongo`に変えました。次回の`npm run deploy:cloudflare`で新しいWorkerとして作られ、公開先は https://nyantan-nihongo.nihongo-jp.workers.dev になります。workers.dev のサブドメインも、メールアドレスに近い`fifatvgame`から`nihongo-jp`に変えます（Dashboard の Workers & Pages → Account details → Subdomain。無料。アカウントの全 Worker の URL が変わります）。
 
 - 古いWorker（`nihongo-ai`）は自動では消えません。新しいURLで動作を確かめた後、Dashboardから削除してください（無料枠のまま、残しておいても費用はかかりません）。
 - SupabaseのAuthentication → URL Configurationで、Site URLを新しいURLに変え、Redirect URLsに新しいURLの`/auth/callback**`と`/auth/confirm**`を追加してください。これをしないと、新しいURLで登録確認・パスワード再設定のメールのリンクが使えません。
