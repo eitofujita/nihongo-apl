@@ -1,4 +1,4 @@
-# Nihongo AI
+# Nyantan Nihongo
 
 英語・ロシア語話者向けの日本語学習アプリ。Next.js App Router / TypeScript strict / React / Tailwind CSS / next-intl / Zod で実装しています。
 

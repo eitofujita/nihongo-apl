@@ -2,7 +2,8 @@
 
 import {useState, type ReactNode} from 'react';
 import {useLocale, useTranslations} from 'next-intl';
-import {BookOpen, ChartNoAxesCombined, ChevronDown, ChevronRight, House, Menu, PenLine, Puzzle, RotateCcw, Settings, Sparkles, Sprout, X} from 'lucide-react';
+import {BookOpen, ChartNoAxesCombined, ChevronDown, ChevronRight, House, Menu, PenLine, Puzzle, RotateCcw, Settings, Sparkles, X} from 'lucide-react';
+import {CatFace} from './cat';
 import {Link, usePathname, useRouter} from '@/i18n/navigation';
 import {useProgress} from './progress-provider';
 import type {Locale} from '@/i18n/routing';
@@ -27,7 +28,7 @@ export function LanguageSelect({compact = false}: {compact?: boolean}) {
 }
 
 export function Brand() {
-  return <Link href="/" className="brand" aria-label="Nihongo AI"><span className="brand-mark" lang="ja">日<span/></span><span>Nihongo<span className="brand-ai"> AI</span></span></Link>;
+  return <Link href="/" className="brand" aria-label="Nyantan Nihongo"><span className="brand-mark"><CatFace size={42}/></span><span>Nyantan<span className="brand-ai"> Nihongo</span></span></Link>;
 }
 
 export function AppShell({children}: {children: ReactNode}) {
@@ -56,15 +57,15 @@ export function AppShell({children}: {children: ReactNode}) {
       <p className="sidebar-caption account-caption">{t('navAccount')}</p>
       <nav className="main-nav"><Link href="/settings" onClick={() => setMenuOpen(false)} className={`nav-link ${pathname === '/settings' ? 'active' : ''}`}><Settings size={19} strokeWidth={1.8}/><span>{t('settings')}</span></Link></nav>
       <div className="sidebar-bottom"><Link href="/pricing" className="nav-link" onClick={() => setMenuOpen(false)}>{t('pricing')}<ChevronRight size={15}/></Link>
-        <Link href="/login" className="profile" onClick={() => setMenuOpen(false)}><span className="avatar"><Sprout size={21}/></span><span><strong>{t(account.user ? 'accountLabel' : 'login')}</strong></span><ChevronRight size={15}/></Link>
+        <Link href="/login" className="profile" onClick={() => setMenuOpen(false)}><span className="avatar"><CatFace size={30} mood={account.user ? 'happy' : 'calm'}/></span><span><strong>{t(account.user ? 'accountLabel' : 'login')}</strong></span><ChevronRight size={15}/></Link>
       </div>
     </aside>
     <div className="workspace">
-      <header className="topbar"><div className="topbar-left"><button className="icon-button menu-button" onClick={() => setMenuOpen(true)} aria-expanded={menuOpen} aria-label={t('menu')}><Menu size={22}/></button><span className="breadcrumb">{t('breadcrumb')}<ChevronRight size={13}/><strong>{t(currentLabel)}</strong></span><span className="mobile-wordmark">Nihongo <span>AI</span></span></div><div className="topbar-actions"><LanguageSelect/><Link className="topbar-avatar" href="/settings" aria-label={t('settings')}><Sprout size={19}/></Link></div></header>
+      <header className="topbar"><div className="topbar-left"><button className="icon-button menu-button" onClick={() => setMenuOpen(true)} aria-expanded={menuOpen} aria-label={t('menu')}><Menu size={22}/></button><span className="breadcrumb">{t('breadcrumb')}<ChevronRight size={13}/><strong>{t(currentLabel)}</strong></span><span className="mobile-wordmark">Nyantan <span>Nihongo</span></span></div><div className="topbar-actions"><LanguageSelect/><Link className="topbar-avatar" href="/settings" aria-label={t('settings')}><CatFace size={26}/></Link></div></header>
       {storageError && <div className="storage-error" role="alert">{t('storageError')}</div>}
       {syncError && <div className="storage-error" role="alert">{t('cloudError')}<button className="button outline" onClick={() => window.location.reload()}>{t('tryAgain')}</button></div>}
       <main id="main-content" className="main-content">{account.user && !ready && !account.loadError ? <p role="status">{t('loading')}</p> : children}</main>
-      <footer className="footer"><span>© {new Date().getFullYear()} Nihongo AI <span className="footer-dot">·</span> {t('footer')}</span><span><span className="status-dot"/>{t('previewNotice')}</span></footer>
+      <footer className="footer"><span>© {new Date().getFullYear()} Nyantan Nihongo <span className="footer-dot">·</span> {t('footer')}</span><span><span className="status-dot"/>{t('previewNotice')}</span></footer>
     </div>
     <nav className="bottom-nav" aria-label={t('navLearn')}>{bottomNav.map(({href, label, icon: Icon}) => <Link key={href} href={href} className={isActive(href) ? 'active' : ''} aria-current={isActive(href) ? 'page' : undefined}>
       <span className="bottom-nav-icon"><Icon size={21} strokeWidth={1.8}/>{label === 'review' && progress.reviews.length > 0 && <span className="bottom-nav-badge">{progress.reviews.length}</span>}</span>

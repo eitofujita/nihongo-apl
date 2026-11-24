@@ -2,6 +2,7 @@
 
 import {useLocale, useNow, useTranslations} from 'next-intl';
 import {ArrowRight, BookOpen, Check, CheckCircle2, ChevronRight, Flame, Leaf, RotateCcw, Target, TrendingUp} from 'lucide-react';
+import {CatScene} from './cat';
 import {Link} from '@/i18n/navigation';
 import {lessons, levelStats, practiceSize, type LessonMeta} from '@/content/catalog';
 import type {Locale} from '@/i18n/routing';
@@ -75,6 +76,7 @@ export function Dashboard() {
     <PageHeading title={t('hello')} subtitle={t('helloSub')}/>
     {!starting && <TodayGoal seconds={stats.todaySeconds} goal={progress.dailyGoal} streak={stats.streak}/>}
     <section className="next-action panel">
+      <CatScene className="next-action-cat"/>
       <span className="eyebrow">{t('nextStep')}</span>
       <h2>{starting ? t('placementTitle') : due ? t('reviewReady', {count: recommendation.dueCount}) : lesson.title[locale]}</h2>
       <p>{t(starting ? 'placementIntro' : recommendation.reason === 'weak' ? 'recommendWeak' : due ? 'recommendReview' : recommendation.reason === 'complete' ? 'recommendComplete' : 'recommendNext')}</p>

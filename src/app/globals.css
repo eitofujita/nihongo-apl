@@ -548,3 +548,43 @@ html.has-writing-pad, html.has-writing-pad body { overscroll-behavior: none; }
 
 /* Practice: a question mixed in from an earlier lesson. */
 .question-earlier { margin-left: auto; display: inline-flex; align-items: center; gap: 5px; padding: 3px 9px; border-radius: 999px; background: #f3f0e6; color: #8a7a55; font-size: 11px; }
+
+/* ---------- Nyantan Nihongo: the cat theme ----------
+   Matcha greens stay the base; sakura pink and cream fur are the cat's accents. */
+:root { --sakura: #f2b8bc; --sakura-soft: #fdf0ef; --fur: #f7e8d2; --cocoa: #5a4535; }
+body { background-image: radial-gradient(circle at 1px 1px, #ece9df 1px, transparent 0); background-size: 22px 22px; }
+.brand { gap: 8px; }
+.brand .brand-mark, .brand-mark { width: auto; height: auto; background: none; border-radius: 0; }
+.brand-mark .cat-face { display: block; transition: transform .25s; }
+.brand:hover .brand-mark .cat-face { transform: rotate(-8deg); }
+.brand-ai { color: #d38a91; }
+.mobile-wordmark span { color: #d38a91; }
+.avatar, .topbar-avatar { background: var(--sakura-soft); border-color: #f3d9d8; overflow: hidden; }
+.result-sprout, .empty-icon { background: var(--sakura-soft); box-shadow: 0 0 0 6px #fff, 0 0 0 7px #f3d9d8; }
+.result-sprout .cat-face { animation: cat-bounce 1.2s ease-in-out 2; }
+@keyframes cat-bounce { 0%, 100% { transform: translateY(0); } 40% { transform: translateY(-6px) rotate(-4deg); } 70% { transform: translateY(0) rotate(3deg); } }
+@media (prefers-reduced-motion: reduce) { .result-sprout .cat-face, .brand-mark .cat-face { animation: none; transition: none; } }
+
+/* Progress bars end in a paw print. */
+.progress-track { height: 8px; overflow: visible; background: #f1ece2; }
+.progress-track > span { position: relative; min-width: 8px; background: linear-gradient(90deg, #a9c398, #8fb07e); }
+.progress-track > span::after { content: ''; position: absolute; right: -9px; top: 50%; width: 18px; height: 18px; transform: translateY(-50%) rotate(20deg);
+  background: center / contain no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23e98a93'%3E%3Cellipse cx='12' cy='16' rx='6' ry='5'/%3E%3Ccircle cx='5' cy='10' r='2.4'/%3E%3Ccircle cx='9.3' cy='5.6' r='2.4'/%3E%3Ccircle cx='14.7' cy='5.6' r='2.4'/%3E%3Ccircle cx='19' cy='10' r='2.4'/%3E%3C/svg%3E"); }
+
+/* Home: Nyantan reads next to the next step. */
+.next-action { position: relative; overflow: hidden; padding-right: 250px; background: linear-gradient(135deg, #f4f7ef 0%, #fdf3ee 100%); }
+.next-action-cat { position: absolute; right: 10px; bottom: -6px; width: 230px; pointer-events: none; }
+.welcome-scene { bottom: -8px; }
+.welcome-hero { background: linear-gradient(135deg, #eaf1e1 0%, #fbeee9 100%); }
+.curriculum-banner .stat-icon, .practice-local svg, .welcome-features svg { color: #e98a93; }
+.question-earlier { background: var(--sakura-soft); color: #b8686f; }
+.button.primary { border-radius: 999px; }
+.button.outline { border-radius: 999px; }
+@media (max-width: 800px) {
+  .next-action { padding-right: 34px; padding-bottom: 150px; }
+  .next-action-cat { width: 170px; right: 50%; transform: translateX(50%); }
+}
+@media (max-width: 600px) { .next-action { padding-right: 23px; } }
+.brand { white-space: nowrap; font-size: 18px; letter-spacing: -.5px; }
+.brand-mark .cat-face { width: 36px; height: 36px; }
+@media (max-width: 1190px) { .brand { font-size: 16.5px; } .brand-mark .cat-face { width: 32px; height: 32px; } }

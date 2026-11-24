@@ -42,18 +42,26 @@ npm run test:e2e:cloudflare
 
 1. [Cloudflare Dashboard](https://dash.cloudflare.com/sign-up)で無料アカウントを作り、メールを確認します。Workers Freeのまま進め、有料プラン・ドメイン購入・R2追加は行いません。
 2. `npx wrangler login --device --browser=false --scopes account:read user:read workers_scripts:write workers_routes:write`で認証を開始します。CLIが表示する公式URLを自分のブラウザで開き、短いコードを入力して承認します。コードは5分で期限切れになります。APIトークンやパスワードをチャットに貼る必要はありません。デバイス方式はlocalhostへの接続が不要なので、WSLやリモート環境でも使えます。認証後は`npx wrangler whoami`で接続を確認します。契約変更の権限は要求しません。DashboardのWorkersのプランがFree（$0）であることも確認してから公開します。
-3. DashboardのWorkers & Pagesで自分の`workers.dev`サブドメインを確認・設定します。Worker名は`nihongo-ai`なので、公開先は`https://nihongo-ai.<自分のサブドメイン>.workers.dev`です。
+3. DashboardのWorkers & Pagesで自分の`workers.dev`サブドメインを確認・設定します。Worker名は`nyantan-nihongo`なので、公開先は`https://nyantan-nihongo.<自分のサブドメイン>.workers.dev`です。
 4. `.env.cloudflare.example`を`.env.cloudflare.local`へコピーします。`NEXT_PUBLIC_APP_URL`に上の実URL、Supabaseの2項目には既存の`.env.local`と同じ公開設定を入れます。`BILLING_ENABLED=false`を維持し、秘密鍵・service_roleは使用しません。
 5. SupabaseのAuthentication → URL Configurationで、Site URLを実公開URLへ設定します。Redirect URLsには実ドメインの`/auth/callback**`と`/auth/confirm**`を許可します。別のドメインを許可する広いワイルドカードは使いません。ローカル開発の許可URLは別に残せます。独自メールテンプレートの`SiteURL`も実公開先と一致させます。
 6. `npm run deploy:cloudflare`を実行します。localhostや未設定URLではビルド・公開を開始せずに停止します。公開用URLで再ビルドし、同じURLをWorkerの環境変数にも設定します。Dashboardで管理する他の変数は`--keep-vars`で保持します。
 
 公開前に既存の同名Workerがあれば内容を確認してください。アカウント登録完了・CLI認証待ちの現段階では、こちらから作成・上書きは行っていません。
 
-## 現在の状況（2026-11-19）
+## サイト名とURLの変更（2026-11-25）
+
+サイト名を「Nyantan Nihongo」に、Worker名を`nihongo-ai`から`nyantan-nihongo`に変えました。次回の`npm run deploy:cloudflare`で新しいWorkerとして作られ、公開先は https://nyantan-nihongo.fifatvgame.workers.dev になります。
+
+- 古いWorker（`nihongo-ai`）は自動では消えません。新しいURLで動作を確かめた後、Dashboardから削除してください（無料枠のまま、残しておいても費用はかかりません）。
+- SupabaseのAuthentication → URL Configurationで、Site URLを新しいURLに変え、Redirect URLsに新しいURLの`/auth/callback**`と`/auth/confirm**`を追加してください。これをしないと、新しいURLで登録確認・パスワード再設定のメールのリンクが使えません。
+- ゲストの学習記録はブラウザのURLごとに保存されるため、古いURLで記録したゲストの記録は新しいURLには引き継がれません。ログインして保存した記録はそのまま使えます。
+
+## 以前の状況（2026-11-19）
 
 - **公開先**: https://nihongo-ai.fifatvgame.workers.dev（Version 479e9baa-920e-468b、Workers Free）。初回は「No access to the specified resource」で失敗し、`npx wrangler logout` → `npx wrangler login --device --browser=false` で再認証して成功しました。
 - **ページ途中停止（解決済み）**: 公開直後の確認では、SSRの本文が約20KBで途切れたように見えました。2026-11-19に再確認したところ、全画面が200で`</html>`まで届き、本人のブラウザでも表示・回答・ログイン保存に問題はありませんでした。静的アセット（Workerを通らない）の取得も遅かったため、原因は公開直後の反映待ちと、検証環境（WSL）の回線の遅さと判断しました。
-- **調査の制約**: WSLからは`wrangler tail`が「fetch failed」になります。CPU超過などを疑うときは、ダッシュボードの「Workers & Pages → nihongo-ai → Metrics」で確認してください。
+- **調査の制約**: WSLからは`wrangler tail`が「fetch failed」になります。CPU超過などを疑うときは、ダッシュボードの「Workers & Pages → nyantan-nihongo → Metrics」で確認してください。
 - **Workerの軽量化（2026-11-20）**: 教材本文（N5〜N3、約3.9MB）を`public/content/`の静的ファイルに移し、ブラウザが必要なときに取得する方式にしました。Workerはgzip 2,924KiB → 2,157KiB（無料枠の上限3MiB）になりました。漢字の書き順・使用例も`public/kanji/`の静的ファイルで、Workerの容量に含まれません。残りの大部分はNext.js・Reactなどのフレームワーク本体です。
 - **初回表示の軽量化（2026-11-22）**: 全画面を1つのルート（`[[...view]]`）で描画していたため、どのページでも全画面分のJSを読み込んでいました。画面ごとのルートに分け、教材カタログも並び順から番号・問題IDを復元する形に縮めました（284KB→196KB、gzip 67KB→47KB）。ページごとのJS（gzip）は全ページ334KB→282〜305KBです。残りの大半はReact・Next.js本体です。
 - **公開待ちの変更**: 選択問題の1クリック判定。コミット済みで、まだデプロイしていません（効果音とエアロ風テーマは試した後に削除しました）。

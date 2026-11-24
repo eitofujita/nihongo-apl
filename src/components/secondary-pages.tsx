@@ -2,7 +2,7 @@
 
 import {useRef, useState} from 'react';
 import {useLocale, useTranslations} from 'next-intl';
-import {ArrowRight, ArrowUpRight, BookOpen, Check, CheckCircle2, ChevronRight, Globe2, LockKeyhole, ShieldCheck, Sparkles, Sprout, Target, Trash2} from 'lucide-react';
+import {ArrowRight, ArrowUpRight, BookOpen, Check, CheckCircle2, ChevronRight, Globe2, LockKeyhole, ShieldCheck, Sparkles, Target, Trash2} from 'lucide-react';
 import {Link} from '@/i18n/navigation';
 import {getLessonMeta} from '@/content/catalog';
 import {getWeakTopics, localDay} from '@/lib/progress';
@@ -10,7 +10,7 @@ import {LanguageSelect} from './app-shell';
 import {PageHeading, StatsCards} from './dashboard';
 import {EmptyState, PlacementTest} from './learning';
 import {useProgress} from './progress-provider';
-import {JourneyScene} from './journey-scene';
+import {CatFace, CatScene, Paw} from './cat';
 
 export function History() {
   const t = useTranslations('App');
@@ -26,13 +26,13 @@ export function History() {
 export function Tutor() {
   const t = useTranslations('App');
   const [topic, setTopic] = useState<'Wa' | 'Ka' | 'No'>('Wa');
-  return <><PageHeading title={t('tutorPageTitle')} subtitle={t('tutorPageSub')}/><div className="tutor-layout"><section className="tutor-info panel"><span className="tutor-big-icon"><Sparkles size={30}/></span><span className="mode-badge"><span/>{t('tutorMode')}</span><h2>{t('tutorTitle')}</h2><p>{t('tutorIntro')}</p><div className="tutor-topic-list"><h3>{t('tutorTopic')}</h3>{(['Wa', 'Ka', 'No'] as const).map(item => <button key={item} className={topic === item ? 'selected' : ''} aria-pressed={topic === item} onClick={() => setTopic(item)}>{t(`topic${item}`)}<ChevronRight size={16}/></button>)}</div></section><section className="tutor-answer panel" aria-live="polite"><div className="tutor-answer-label"><span className="avatar"><Sprout size={19}/></span>Nihongo AI<span className="sample-label">N5</span></div><h2>{t(`topic${topic}`)}</h2><p>{t(`tutor${topic}`)}</p><div className="tutor-example" lang="ja">{topic === 'Wa' ? '私は学生です。' : topic === 'Ka' ? '学生ですか。' : 'わたしの本'}</div><p className="tutor-disclaimer"><ShieldCheck size={16}/>{t('tutorDisclaimer')}</p></section></div></>;
+  return <><PageHeading title={t('tutorPageTitle')} subtitle={t('tutorPageSub')}/><div className="tutor-layout"><section className="tutor-info panel"><span className="tutor-big-icon"><Sparkles size={30}/></span><span className="mode-badge"><span/>{t('tutorMode')}</span><h2>{t('tutorTitle')}</h2><p>{t('tutorIntro')}</p><div className="tutor-topic-list"><h3>{t('tutorTopic')}</h3>{(['Wa', 'Ka', 'No'] as const).map(item => <button key={item} className={topic === item ? 'selected' : ''} aria-pressed={topic === item} onClick={() => setTopic(item)}>{t(`topic${item}`)}<ChevronRight size={16}/></button>)}</div></section><section className="tutor-answer panel" aria-live="polite"><div className="tutor-answer-label"><span className="avatar"><CatFace size={28}/></span>Nyantan<span className="sample-label">N5</span></div><h2>{t(`topic${topic}`)}</h2><p>{t(`tutor${topic}`)}</p><div className="tutor-example" lang="ja">{topic === 'Wa' ? '私は学生です。' : topic === 'Ka' ? '学生ですか。' : 'わたしの本'}</div><p className="tutor-disclaimer"><ShieldCheck size={16}/>{t('tutorDisclaimer')}</p></section></div></>;
 }
 
 export function Pricing({price}: {price: number}) {
   const t = useTranslations('App');
   const locale = useLocale() as 'en' | 'ru';
-  return <><PageHeading title={t('pricingTitle')} subtitle={t('pricingSub')}/><div className="pricing-grid"><section className="price-card panel"><span className="stat-icon green"><Sprout size={25}/></span><h2>{t('free')}</h2><p>{t('freeDescription')}</p><div className="price">{t('freePrice')}<small>{t('forever')}</small></div><Link href="/lessons" className="button outline">{t('currentPlan')}<ArrowRight size={16}/></Link><ul>{(['freeFeature1', 'freeFeature2', 'freeFeature3'] as const).map(key => <li key={key}><Check size={17}/>{t(key)}</li>)}</ul></section><section className="price-card plus-card panel"><span className="planned-label">{t('planned')}</span><span className="stat-icon green"><Sparkles size={25}/></span><h2>{t('plus')}</h2><p>{t('plusDescription')}</p><div className="price">{new Intl.NumberFormat(locale, {style: 'currency', currency: 'JPY', maximumFractionDigits: 0}).format(price)}<small>{t('perMonth')}</small></div><button className="button primary" disabled><LockKeyhole size={15}/>{t('billingUnavailable')}</button><ul>{(['plusFeature1', 'plusFeature2', 'plusFeature3', 'plusFeature4'] as const).map(key => <li key={key}><Check size={17}/>{t(key)}</li>)}</ul></section></div><p className="pricing-note"><ShieldCheck size={17}/>{t('pricingNote')}</p></>;
+  return <><PageHeading title={t('pricingTitle')} subtitle={t('pricingSub')}/><div className="pricing-grid"><section className="price-card panel"><span className="stat-icon green"><CatFace size={34}/></span><h2>{t('free')}</h2><p>{t('freeDescription')}</p><div className="price">{t('freePrice')}<small>{t('forever')}</small></div><Link href="/lessons" className="button outline">{t('currentPlan')}<ArrowRight size={16}/></Link><ul>{(['freeFeature1', 'freeFeature2', 'freeFeature3'] as const).map(key => <li key={key}><Check size={17}/>{t(key)}</li>)}</ul></section><section className="price-card plus-card panel"><span className="planned-label">{t('planned')}</span><span className="stat-icon green"><Sparkles size={25}/></span><h2>{t('plus')}</h2><p>{t('plusDescription')}</p><div className="price">{new Intl.NumberFormat(locale, {style: 'currency', currency: 'JPY', maximumFractionDigits: 0}).format(price)}<small>{t('perMonth')}</small></div><button className="button primary" disabled><LockKeyhole size={15}/>{t('billingUnavailable')}</button><ul>{(['plusFeature1', 'plusFeature2', 'plusFeature3', 'plusFeature4'] as const).map(key => <li key={key}><Check size={17}/>{t(key)}</li>)}</ul></section></div><p className="pricing-note"><ShieldCheck size={17}/>{t('pricingNote')}</p></>;
 }
 
 export function Settings() {
@@ -54,5 +54,5 @@ export function Placement() {
 
 export function Welcome() {
   const t = useTranslations('App');
-  return <><section className="welcome-hero"><span className="eyebrow">{t('level')}</span><h1>{t('welcomeTitle')}</h1><p>{t('welcomeText')}</p><div className="welcome-actions"><Link href="/lessons" className="button primary">{t('startLearning')}<ArrowRight size={18}/></Link><Link href="/pricing" className="text-link">{t('pricing')}<ArrowUpRight size={16}/></Link></div><JourneyScene className="welcome-scene"/></section><div className="welcome-features">{([{key: 'welcomeFeature1', icon: Sprout}, {key: 'welcomeFeature2', icon: Globe2}, {key: 'welcomeFeature3', icon: Target}] as const).map(({key, icon: Icon}) => <div className="panel" key={key}><Icon size={26}/><h2>{t(key)}</h2></div>)}</div><div className="preview-note"><Sparkles size={18}/><div><strong>{t('previewNotice')}</strong><span>{t('previewDetail')}</span></div></div></>;
+  return <><section className="welcome-hero"><span className="eyebrow">{t('level')}</span><h1>{t('welcomeTitle')}</h1><p>{t('welcomeText')}</p><div className="welcome-actions"><Link href="/lessons" className="button primary">{t('startLearning')}<ArrowRight size={18}/></Link><Link href="/pricing" className="text-link">{t('pricing')}<ArrowUpRight size={16}/></Link></div><CatScene className="welcome-scene"/></section><div className="welcome-features">{([{key: 'welcomeFeature1', icon: Paw}, {key: 'welcomeFeature2', icon: Globe2}, {key: 'welcomeFeature3', icon: Target}] as const).map(({key, icon: Icon}) => <div className="panel" key={key}><Icon size={26}/><h2>{t(key)}</h2></div>)}</div><div className="preview-note"><Sparkles size={18}/><div><strong>{t('previewNotice')}</strong><span>{t('previewDetail')}</span></div></div></>;
 }
